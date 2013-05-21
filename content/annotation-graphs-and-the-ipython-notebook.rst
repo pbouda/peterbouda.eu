@@ -13,10 +13,6 @@ and that allows stand-off annotations so that I can share data and sets
 of annotations independently. GrAF/XML looked like an optimal solution,
 so I gave it a try.
 
-.. raw:: html
-
-   </p>
-
 First, I published a subset of the data of the `QuantHistLing`_ project
 as GrAF/XML files. I wrote a tutorial how to access the data in Python
 `which is available as part of the graf-python documentation`_. But I
@@ -34,13 +30,9 @@ visualize using the `D3 javascript library`_:
 
 .. raw:: html
 
-   </p>
+   <iframe class="gist-src" style="border: 1px solid #DEDEDE; height: 500px; width: 500px;" marginwidth="0" marginheight="0" scrolling="no" src="http://bl.ocks.org/d/4250342/"></iframe>
 
-Published at ``_\ `http://bl.ocks.org/4250342`_\ 
-
-.. raw:: html
-
-   </p>
+Published at http://bl.ocks.org/4250342
 
 You can find an in-depth description about the transformation and the
 complete notebook `in another turotial for graf-python`_. It already
@@ -58,10 +50,6 @@ in an IPython notebook, the “official” solution is to provide an HTML
 representation of the Python objects as far as I understand. My goal is
 to completely decouple the two if possible.
 
-.. raw:: html
-
-   </p>
-
 .. _graf-python: https://github.com/cidles/graf-python
 .. _ISO 24612 - Linguistic annotation framework (LAF): http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326
 .. _QuantHistLing: http://www.quanthistling.info/
@@ -70,6 +58,4 @@ to completely decouple the two if possible.
 .. _IPython notebook: http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html
 .. _networkX: http://networkx.lanl.gov/
 .. _D3 javascript library: http://d3js.org/
-.. _: http://bl.ocks.org/4250342
-.. _`http://bl.ocks.org/4250342`: http://bl.ocks.org/4250342
 .. _in another turotial for graf-python: http://graf-python.readthedocs.org/en/latest/Translation%20Graph%20from%20GrAF.html

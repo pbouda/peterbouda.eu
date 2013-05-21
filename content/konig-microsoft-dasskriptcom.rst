@@ -1,7 +1,6 @@
-König Microsoft @ dasskript.com
-###############################
+König Microsoft
+###############
 :date: 2010-12-21 09:18
-:author: pbouda
 :slug: konig-microsoft-dasskriptcom
 
 Unter den Blinden ist der Einäugige König, sagt man so schön. Und im

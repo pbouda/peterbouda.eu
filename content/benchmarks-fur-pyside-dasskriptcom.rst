@@ -1,5 +1,5 @@
-Benchmarks für PySide @ dasskript.com
-#####################################
+Benchmarks für PySide
+#####################
 :date: 2010-05-12 16:15
 :category: Python
 :slug: benchmarks-fur-pyside-dasskriptcom

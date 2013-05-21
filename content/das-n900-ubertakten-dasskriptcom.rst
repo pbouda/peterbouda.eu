@@ -1,6 +1,7 @@
-Das N900 übertakten @ dasskript.com
-###################################
+Das N900 übertakten
+###################
 :date: 2010-04-05 08:25
+:category: für's Archiv
 :slug: das-n900-ubertakten-dasskriptcom
 
 Bei `anderen mobilen Linux-Plattformen`_ geht das ja schon seit einiger

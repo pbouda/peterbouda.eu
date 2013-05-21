@@ -1,7 +1,7 @@
 Buchempfehlung: Qt4 - Einführung in die Applikationsentwicklung
 ###############################################################
 :date: 2010-04-02 14:03
-:category: Qt
+:category: Bücher
 :slug: buchempfehlung-qt4-einfuhrung-in-die-applikationsentwicklung-dasskriptcom
 
 Ein relevantes Buch über Qt zu schreiben ist keine ganz leichte Aufgabe:

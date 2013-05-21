@@ -1,6 +1,7 @@
-Buchempfehlung: Mastering Regular Expressions von Jeffrey E.F. Friedl @ dasskript.com
-#####################################################################################
+Buchempfehlung: Mastering Regular Expressions von Jeffrey E.F. Friedl
+#####################################################################
 :date: 2011-05-13 10:28
+:category: Bücher
 :slug: buchempfehlung-mastering-regular-expressions-von-jeffrey-ef-friedl-dasskriptcom
 
 Und da dachte ich, ich weiß schon so Einiges über reguläre Ausdrücke.

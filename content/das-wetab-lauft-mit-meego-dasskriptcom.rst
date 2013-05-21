@@ -1,6 +1,7 @@
-Das WeTab läuft mit MeeGo @ dasskript.com
-#########################################
+Das WeTab läuft mit MeeGo
+#########################
 :date: 2010-09-03 11:50
+:category: für's Archiv
 :slug: das-wetab-lauft-mit-meego-dasskriptcom
 
 Feine Sache: das seit Monaten angekündigte `WeTab wird MeeGo als

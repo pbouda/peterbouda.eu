@@ -1,7 +1,7 @@
-Zwischendrin @ dasskript.com
-############################
+Zwischendrin
+############
 :date: 2011-12-29 15:47
-:author: pbouda
+:category: für's Archiv
 :slug: zwischendrin-dasskriptcom
 
 In letzter Zeit war es hier leider recht ruhig, Arbeit und andere

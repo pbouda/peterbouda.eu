@@ -5,20 +5,8 @@ IPython and Javascript interaction
 :tags: Python, Javascript, IPython
 :slug: ipython-and-javascript-interaction
 
-.. raw:: html
-
-   <div class="text_cell_render border-box-sizing rendered_html">
-
-.. raw:: html
-
-   </p>
-
 Interaction with a browser popup window
 =======================================
-
-.. raw:: html
-
-   </p>
 
 This `IPython notebook`_ demonstrates the interaction between Python and
 a popup window that is opened via Javascript. The interaction is one-way
@@ -27,10 +15,6 @@ and call functions in the popup by executing Javascript from within the
 notebook. The goal is to demonstrate some simple interactions. In the
 end, I hope that techniques like these could be used for `livecoding`_
 in Python, with a HTML5 visualization window.
-
-.. raw:: html
-
-   </p>
 
 First, the notebook server and the HTML that we load in the popup must
 be located on the same domain. For this, we need to copy the
@@ -41,353 +25,45 @@ with your config just copy the html file to your home directory. If you
 changed your config you probably know whether you changed the root (it’s
 the setting ``ipython_dir``).
 
-.. raw:: html
-
-   </p>
-
 The ``index.html`` contains an empty `D3 scatterplot`_ that we will fill
 with data from within this notebook. The notebook is available on Github
 here:
 
-.. raw:: html
-
-   </p>
-
-`https://github.com/pbouda/stuff/blob/master/ipynb/Javascript%20Interactions%20I.ipynb`_
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="text_cell_render border-box-sizing rendered_html">
-
-.. raw:: html
-
-   </p>
+https://github.com/pbouda/stuff/blob/master/ipynb/Javascript%20Interactions%20I.ipynb
 
 Open a browser popup
 --------------------
-
-.. raw:: html
-
-   </p>
 
 IPython contains several helper methods in ``IPython.display`` to output
 HTML, Javascript, etc. to the current cell’s output. We use those
 helpers to write Javascript that opens a popup window. We save a
 reference to the opened window in ``window.audiencePopup``. We can later
 access the open popup via this reference. First, we open some URL to see
-if something simple works:
+if something simple works::
 
-.. raw:: html
+   from IPython.display import HTML, Javascript, display
+   js = """window.audiencePopup = window.open('http://www.heise.de','audienceWindow');"""
+   display(Javascript(js))
 
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="cell border-box-sizing code_cell vbox">
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="input hbox">
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="prompt input_prompt">
-
-In [ ]:
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="input_area box-flex1">
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="highlight">
-
-::
-
-    from IPython.display import HTML, Javascript, displayjs = """window.audiencePopup = window.open('http://www.heise.de','audienceWindow');"""display(Javascript(js))
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="text_cell_render border-box-sizing rendered_html">
-
-.. raw:: html
-
-   </p>
 
 Change the location
 -------------------
-
-.. raw:: html
-
-   </p>
 
 We are now able to change the URL of the popup. We set the URL to the
 local ``index.html`` that you downloaded above. We have to prepend
 ``/files/`` so that the IPython server knows that we are looking for a
 local, static file. The notebook server then serves this file to the
-popup window:
+popup window::
 
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="cell border-box-sizing code_cell vbox">
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="input hbox">
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="prompt input_prompt">
-
-In [ ]:
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="input_area box-flex1">
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="highlight">
-
-::
-
-    js = """window.audiencePopup.location.href = "/files/index.html";"""display(Javascript(js))
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="text_cell_render border-box-sizing rendered_html">
-
-.. raw:: html
-
-   </p>
+   js = """window.audiencePopup.location.href = "/files/index.html";"""
+   display(Javascript(js))
 
 As said above, the ``index.html`` has to be served from the same domain
 as your current IPython notebook for security reasons. If everything
 works than you should now see the empty scatterplot in the popup.
 
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="text_cell_render border-box-sizing rendered_html">
-
-.. raw:: html
-
-   </p>
-
 Write some data to the popup
 ----------------------------
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="text_cell_render border-box-sizing rendered_html">
-
-.. raw:: html
-
-   </p>
 
 We will now write some data to the popup. If you look into
 ``index.html`` you will see a Javascript variable ``data`` that contains
@@ -395,377 +71,33 @@ an empty list. The scatterplot is created from coordinates in that list.
 In the first step we will set the ``data`` variable to a Python list of
 coordinates. For this we just have to convert the Python list to a JSON
 string and set the Javascript variabel to a parsed version of that JSON
-string. We use the Javascript function ``JSON.parse``:
+string. We use the Javascript function ``JSON.parse``::
 
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="cell border-box-sizing code_cell vbox">
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="input hbox">
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="prompt input_prompt">
-
-In [ ]:
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="input_area box-flex1">
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="highlight">
-
-::
-
-    import jsondata = [ [0, 0], [1, 1], [0.5, 0.5] ]js = """window.audiencePopup.data = JSON.parse('{0}');""".format(json.dumps(data))display(Javascript(js))
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="text_cell_render border-box-sizing rendered_html">
-
-.. raw:: html
-
-   </p>
+   import jsondata = [ [0, 0], [1, 1], [0.5, 0.5] ]
+   js = """window.audiencePopup.data = JSON.parse('{0}');""".format(json.dumps(data))
+   display(Javascript(js))
 
 The scatterplot don’t change, because we have to tell it to update
 itself first. But you can already have a look the the content of the
 ``data`` variable in the popup window. We just display the value in an
-``alert`` window:
+``alert`` window::
 
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="cell border-box-sizing code_cell vbox">
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="input hbox">
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="prompt input_prompt">
-
-In [ ]:
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="input_area box-flex1">
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="highlight">
-
-::
-
-    js = """alert(window.audiencePopup.data);"""display(Javascript(js))
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="text_cell_render border-box-sizing rendered_html">
-
-.. raw:: html
-
-   </p>
+   js = """alert(window.audiencePopup.data);"""
+   display(Javascript(js))
 
 The ``index.html`` also containts a function ``update()`` that we can
 just call to repaint the scatterplot. Again, we are able to call this
-Javascript function directly from within the current notebook:
+Javascript function directly from within the current notebook::
 
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="cell border-box-sizing code_cell vbox">
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="input hbox">
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="prompt input_prompt">
-
-In [ ]:
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="input_area box-flex1">
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="highlight">
-
-::
-
-    js = """window.audiencePopup.update();"""display(Javascript(js))
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <div class="text_cell_render border-box-sizing rendered_html">
-
-.. raw:: html
-
-   </p>
+   js = """window.audiencePopup.update();"""
+   display(Javascript(js))
 
 You should now see the data points in the scatterplot. You can see a
 screencast where I execute this notebook here:
 
 .. raw:: html
 
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   </div>
-
-.. raw:: html
-
-   </p>
+   <iframe title="YouTube video player" class="youtube-player" type="text/html" width="500" height="300" src="http://www.youtube.com/embed/--4Efcd3UkU" frameborder="0" allowfullscreen></iframe>
 
 .. _IPython notebook: http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html
 .. _livecoding: http://toplap.org/

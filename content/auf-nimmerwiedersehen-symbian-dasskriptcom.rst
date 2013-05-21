@@ -1,6 +1,7 @@
-Auf (Nimmer?)Wiedersehen, Symbian @ dasskript.com
-#################################################
+Auf (Nimmer?)Wiedersehen, Symbian
+#################################
 :date: 2010-10-25 11:13
+:category: für's Archiv
 :slug: auf-nimmerwiedersehen-symbian-dasskriptcom
 
 Mittlerweile `pfeifen es die Spatzen von den Dächern`_: die Zukunft von

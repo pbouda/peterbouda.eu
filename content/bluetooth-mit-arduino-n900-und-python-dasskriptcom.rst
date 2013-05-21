@@ -1,5 +1,5 @@
-Bluetooth mit Arduino, N900 und Python @ dasskript.com
-######################################################
+Bluetooth mit Arduino, N900 und Python
+######################################
 :date: 2011-04-15 08:25
 :category: Python
 :slug: bluetooth-mit-arduino-n900-und-python-dasskriptcom

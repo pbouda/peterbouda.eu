@@ -1,7 +1,7 @@
-Maschinenlernen für Fortgeschrittene @ dasskript.com
-####################################################
+Maschinenlernen für Fortgeschrittene
+####################################
 :date: 2011-10-07 13:57
-:author: pbouda
+:category: Python
 :slug: maschinenlernen-fur-fortgeschrittene-dasskriptcom
 
 `Dieser Artikel`_ beschreibt recht eindrucksvoll mit welchen Methoden
