@@ -18,7 +18,8 @@ TRANSLATION_FEED_ATOM = None
 # Blogroll
 LINKS =  (('Poio - Python for Linguists', 'http://media.cidles.eu/poio/'),
           ('QuantHistLing', 'http://www.quanthistling.info/'),
-          ('CIDLeS', 'http://www.cidles.eu/'),)
+          ('CIDLeS', 'http://www.cidles.eu/'),
+          ('Punk on Bike', 'http://punkonbike.tumblr.com'),)
 
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/legocoder'),
