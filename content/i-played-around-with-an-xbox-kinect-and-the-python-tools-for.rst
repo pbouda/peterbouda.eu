@@ -11,7 +11,6 @@ and `scipy`_ calculations.
 
 https://github.com/pbouda/stuff/tree/master/dances/WaterDance2
 
-
 .. raw:: html
 
    <iframe width="420" height="315" src="http://www.youtube.com/embed/UxeFgbH10HE" frameborder="0" allowfullscreen></iframe>

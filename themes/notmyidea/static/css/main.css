@@ -298,12 +298,11 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 		/*width: 615px;*/
 	}
 	
-	#extras .blogroll li {/*float: left;*/ margin: 0 20px 0 0; width: 155px;}
+	#extras .blogroll li { margin: 0; }
 	
 	/* Social */
 	#extras .social {
 		/*float: right;*/
-		width: 155px;
 		margin-top: 20px;
 	}
 	

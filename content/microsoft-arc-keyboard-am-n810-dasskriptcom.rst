@@ -1,7 +1,7 @@
-Microsoft Arc Keyboard am N810 @ dasskript.com
-##############################################
+Microsoft Arc Keyboard am N810
+##############################
 :date: 2010-03-06 11:08
-:author: pbouda
+:category: für's Archiv
 :slug: microsoft-arc-keyboard-am-n810-dasskriptcom
 
 Ich habe gerade mal spaßeshalber meine neue, kabellose `Microsoft ARC
@@ -18,43 +18,16 @@ kleine Schutztasche zum Transport. Der Empfänger kann einfach per Magnet
 an die Tastatur geklebt werden, und schon hat man mit dem N810 zusammen
 eine Art Notebook :-).
 
-.. raw:: html
-
-   </p>
 
 Hier aber das dazugehörige Video und Bild:
+
+.. raw:: html
+
+   <iframe width="560" height="315" src="http://www.youtube.com/embed/6uu39aDI56w" frameborder="0" allowfullscreen></iframe>
 
 .. figure:: http://mobileqt.de/images/n810_arc.jpg
    :align: center
    :alt: 
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   <script type="text/javascript"></p><p>var flattr_uid = '12306';</p><p>var flattr_tle = 'Microsoft Arc Keyboard am N810';</p><p>var flattr_dsc = 'Ich habe gerade mal spaßeshalber meine neue, kabellose Microsoft ARC Tastatur mit meinem Nokia N810 verbunden, und siehe da: ich kann die Tastatur einwandfrei verwenden, sogar Tasten wie "Alt" und "St...';</p><p>var flattr_cat = 'text';</p><p>var flattr_lng = 'de_DE';</p><p>var flattr_tag = 'Maemo, N810, Hardware';</p><p>var flattr_url = 'http://www.dasskript.com/blogposts/16';</p><p>var flattr_btn = 'compact';</p><p></script>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   <script src="http://api.flattr.com/button/load.js" type="text/javascript"></script>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   </p>
 
 .. _Microsoft ARC Tastatur: http://www.amazon.de/gp/product/B00332Y2DS?ie=UTF8&tag=jsusde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B00332Y2DS
 .. _Nokia N810: http://www.amazon.de/gp/product/B000ZNRCJE?ie=UTF8&tag=jsusde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B000ZNRCJE
