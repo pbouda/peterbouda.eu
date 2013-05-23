@@ -1,7 +1,6 @@
 MeeGo 2011
 ##########
 :date: 2011-01-06 09:52
-:category: für's Archiv
 :slug: meego-2011-dasskriptcom
 
 Erst einmal an dieser Stelle ein **frohes Neues Jahr** an all die

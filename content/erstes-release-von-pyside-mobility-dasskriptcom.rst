@@ -1,7 +1,7 @@
 Erstes Release von PySide Mobility
 ##################################
 :date: 2010-08-23 16:00
-:category: für's Archiv
+:category: Python
 :slug: erstes-release-von-pyside-mobility-dasskriptcom
 
 Ist zwar schon etwas her, hier wurde es aber noch nicht vermeldet: `Eine

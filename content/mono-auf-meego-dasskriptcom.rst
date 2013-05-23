@@ -1,7 +1,6 @@
 Mono auf MeeGo
 ##############
 :date: 2010-04-05 08:35
-:category: für's Archiv
 :slug: mono-auf-meego-dasskriptcom
 
 Die Nachricht ist zwar schon etwas älter, allerdings hab ichs jetzt erst

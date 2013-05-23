@@ -1,8 +1,7 @@
 Das N900 übertakten
 ###################
 :date: 2010-04-05 08:25
-:category: für's Archiv
-:slug: das-n900-ubertakten-dasskriptcom
+:slug: das-n900-ubertakten
 
 Bei `anderen mobilen Linux-Plattformen`_ geht das ja schon seit einiger
 Zeit, jetzt ist auch das N900 dran: es gibt einen modifizierten Kernel

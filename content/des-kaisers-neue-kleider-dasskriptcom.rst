@@ -1,7 +1,6 @@
 Des Kaisers neue Kleider
 ########################
 :date: 2011-02-10 16:00
-:category: für's Archiv
 :slug: des-kaisers-neue-kleider-dasskriptcom
 
 Also nun wird es morgen tatsächlich spannend, wenn der Herr Elop uns die

@@ -1,7 +1,6 @@
 MeeGo auf dem N900
 ##################
 :date: 2010-10-14 07:50
-:category: für's Archiv
 :slug: meego-auf-dem-n900-dasskriptcom
 
 Jetzt wirds langsam ernst: diesen Monat soll ja noch MeeGo in Version

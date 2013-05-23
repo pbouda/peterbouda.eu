@@ -1,7 +1,6 @@
 Microsoft Arc Keyboard am N810
 ##############################
 :date: 2010-03-06 11:08
-:category: für's Archiv
 :slug: microsoft-arc-keyboard-am-n810-dasskriptcom
 
 Ich habe gerade mal spaßeshalber meine neue, kabellose `Microsoft ARC

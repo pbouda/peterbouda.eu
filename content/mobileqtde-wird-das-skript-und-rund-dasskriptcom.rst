@@ -1,8 +1,7 @@
 mobileqt.de wird Das Skript; und rund!
 ######################################
 :date: 2011-03-03 09:55
-:category: für's Archiv
-:slug: mobileqtde-wird-das-skript-und-rund-dasskriptcom
+:slug: mobileqtde-wird-das-skript-und-rund
 
 Wie hier schon erwähnt, plane ich, diese Seite in Zukunft der
 Programmierung mit Skriptsprachen zu widmen. Der erste Teil dazu ist

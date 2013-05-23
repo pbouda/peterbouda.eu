@@ -1,7 +1,6 @@
 MeeGo für Autos
 ###############
 :date: 2010-08-04 10:40
-:category: für's Archiv
 :slug: meego-fur-autos-dasskriptcom
 
 Auch von MeeGo gibt was Neues, nämlich eine `erste Version für

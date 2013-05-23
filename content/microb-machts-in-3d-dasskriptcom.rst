@@ -1,7 +1,6 @@
 MicroB machts in 3D
 ###################
 :date: 2010-06-20 09:17
-:category: für's Archiv
 :slug: microb-machts-in-3d-dasskriptcom
 
 Ich muss sagen, dass mich Nokia nach langer Zeit mal wieder beeindruckt

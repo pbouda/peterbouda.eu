@@ -1,7 +1,6 @@
 MeeGo fürs N900?
 ################
 :date: 2010-03-05 09:18
-:category: für's Archiv
 :slug: meego-furs-n900-dasskriptcom
 
 Die `Spatzen`_ `scheinen`_ es mittlerweile von den Dächern zu pfeifen:

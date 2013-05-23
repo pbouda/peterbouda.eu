@@ -1,8 +1,7 @@
-Tutorial: Wie man ein Qt-Projekt für Maemo erstellt (Teil 2) @ dasskript.com
-############################################################################
+Tutorial: Wie man ein Qt-Projekt für Maemo erstellt (Teil 2)
+############################################################
 :date: 2010-03-05 16:05
-:author: pbouda
-:slug: tutorial-wie-man-ein-qt-projekt-fur-maemo-erstellt-teil-2-dasskriptcom
+:slug: tutorial-wie-man-ein-qt-projekt-fur-maemo-erstellt-teil-2
 
 Hier also nun der zweite Teil des Tutorials über das erstellen eines
 Qt-Projekts für Maemo. Für alle, die neu dabei sind: `hier geht's zum

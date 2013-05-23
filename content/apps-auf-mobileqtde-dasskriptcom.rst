@@ -1,8 +1,7 @@
 Apps auf mobileqt.de
 ####################
 :date: 2010-09-03 11:59
-:category: für's Archiv
-:slug: apps-auf-mobileqtde-dasskriptcom
+:slug: apps-auf-mobileqtde
 
 Ab sofort gibt es auf mobileqt.de einen neuen `Apps-Bereich`_. Da
 veröffentliche ich die von mir entwickelten Qt-Anwendungen, es gibt

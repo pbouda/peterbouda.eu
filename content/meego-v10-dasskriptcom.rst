@@ -1,7 +1,6 @@
 MeeGo, v1.0
 ###########
 :date: 2010-05-26 18:11
-:category: für's Archiv
 :slug: meego-v10-dasskriptcom
 
 Und wieder mal gehts Schlag auf Schlag: nachdem gestern endlich die neue

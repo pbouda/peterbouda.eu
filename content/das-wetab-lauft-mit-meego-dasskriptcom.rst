@@ -1,8 +1,7 @@
 Das WeTab läuft mit MeeGo
 #########################
 :date: 2010-09-03 11:50
-:category: für's Archiv
-:slug: das-wetab-lauft-mit-meego-dasskriptcom
+:slug: das-wetab-lauft-mit-meego
 
 Feine Sache: das seit Monaten angekündigte `WeTab wird MeeGo als
 Betriebssystem erhalten`_. Da hat Intel wohl den ersten zugkräftigen

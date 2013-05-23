@@ -1,7 +1,6 @@
 Linguadict-Wörterbuch im Ovi Store
 ##################################
 :date: 2010-12-20 09:45
-:category: für's Archiv
 :slug: linguadict-worterbuch-im-ovi-store-dasskriptcom
 
 Jetzt hat es also doch geklappt: die Anwendung `Linguadict ist im Ovi

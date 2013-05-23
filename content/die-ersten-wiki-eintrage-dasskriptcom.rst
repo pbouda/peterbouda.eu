@@ -1,7 +1,6 @@
 Die "ersten" Wiki-Einträge
 ##########################
 :date: 2011-03-04 09:39
-:category: für's Archiv
 :slug: die-ersten-wiki-eintrage-dasskriptcom
 
 Werft ruhig mal einen kurzen Blick ins `Wiki`_: die ersten (kleineren)

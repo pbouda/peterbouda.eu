@@ -1,7 +1,6 @@
 Jetzt neu: Entwickler-Wiki bei mobileqt.de
 ##########################################
 :date: 2010-03-07 17:57
-:category: für's Archiv
 :slug: jetzt-neu-entwickler-wiki-bei-mobileqtde-dasskriptcom
 
 Das Qt-Entwickler-Wiki für die Entwicklung mobiler Qt-Anwendungen wurde

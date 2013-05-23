@@ -1,8 +1,7 @@
 Gluon zur Spieleentwicklung mit Qt
 ##################################
 :date: 2010-03-28 16:06
-:category: für's Archiv
-:slug: gluon-zur-spieleentwicklung-mit-qt-dasskriptcom
+:slug: gluon-zur-spieleentwicklung-mit-qt
 
 Spiele mit Qt zu entwickeln ist im Moment noch kein großer Spaß, auch
 wenn mit QGraphicsView und den QGL\*-Klassen Grafikprogrammierung

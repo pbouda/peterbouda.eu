@@ -1,8 +1,7 @@
 Der Berg kreißte...
 ###################
 :date: 2010-05-25 14:15
-:category: für's Archiv
-:slug: der-berg-kreisste-dasskriptcom
+:slug: der-berg-kreisste
 
 Und `heraus kam PR 1.2`_. Endlich. Und mit Qt 4.6.2.Yeah!
 

@@ -1,7 +1,6 @@
 MeeGo ist da
 ############
 :date: 2010-03-31 19:23
-:category: für's Archiv
 :slug: meego-ist-da-dasskriptcom
 
 Tag eins, wie man so schön sagt: `es gibt erste Images von MeeGo`_ für

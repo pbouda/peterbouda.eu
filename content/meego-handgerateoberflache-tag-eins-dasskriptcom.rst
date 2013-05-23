@@ -1,7 +1,6 @@
 MeeGo Handgeräteoberfläche Tag eins
 ###################################
 :date: 2010-07-02 09:09
-:category: für's Archiv
 :slug: meego-handgerateoberflache-tag-eins-dasskriptcom
 
 Das MeeGo-Projekt hat, wie geplant, am ersten Juli eine erste Version

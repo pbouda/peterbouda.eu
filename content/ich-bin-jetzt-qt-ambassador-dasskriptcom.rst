@@ -1,7 +1,6 @@
 Ich bin jetzt Qt Ambassador
 ###########################
 :date: 2011-05-13 09:37
-:category: für's Archiv
 :slug: ich-bin-jetzt-qt-ambassador-dasskriptcom
 
 Vor ein paar Wochen bekam ich von Nokia die freundliche Enladung, mich
