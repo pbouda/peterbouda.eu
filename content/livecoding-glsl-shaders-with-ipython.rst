@@ -52,7 +52,7 @@ just use something like this in IPython::
 	    spec_y = np.sum(fft_data[220:])/(len(fft_data[220:])*chunk*32)
 	    gl.glUniform2f(self.spec, spec_x, spec_y)
 	f_move = types.MethodType(move_stuff, win.widget, GLPlotWidget)    
-	win.widget.move_stuff = f_mov
+	win.widget.move_stuff = f_move
 
 This example changes the location and the size of the two frequency bins. To
 update the fragment shader for example::
