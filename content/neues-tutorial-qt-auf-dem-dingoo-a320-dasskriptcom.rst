@@ -21,5 +21,5 @@ Asteroids auf dem Dingoo, gespielt in der einhändigen Variante ;-):
 
    <iframe width="420" height="315" src="http://www.youtube.com/embed/0U0dR72PpcQ" frameborder="0" allowfullscreen></iframe>
 
-.. _hatte hier ja schon erwähnt: http://www.mobileqt.de/blogposts/18
+.. _hatte hier ja schon erwähnt: |filename|qt-embedded-auf-dingoo-dasskriptcom.rst
 .. _Qt und Asteroids-Demo für Dingux auf dem Dingoo A320: http://www.mobileqt.de/wiki/qt_und_asteroids_demo_fuer_dingux_auf_dem_dingoo_a320
