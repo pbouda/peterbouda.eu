@@ -2,7 +2,7 @@ Erstes Release von PySide Mobility
 ##################################
 :date: 2010-08-23 16:00
 :category: Python
-:slug: erstes-release-von-pyside-mobility-dasskriptcom
+:slug: erstes-release-von-pyside-mobility
 
 Ist zwar schon etwas her, hier wurde es aber noch nicht vermeldet: `Eine
 erste Version (0.1.0) der PySide-Bindings von Qt Mobility wurde

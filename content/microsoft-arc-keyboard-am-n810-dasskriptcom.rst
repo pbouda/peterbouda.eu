@@ -1,7 +1,7 @@
 Microsoft Arc Keyboard am N810
 ##############################
 :date: 2010-03-06 11:08
-:slug: microsoft-arc-keyboard-am-n810-dasskriptcom
+:slug: microsoft-arc-keyboard-am-n810
 
 Ich habe gerade mal spaßeshalber meine neue, kabellose `Microsoft ARC
 Tastatur`_\ |image0| mit meinem `Nokia N810`_\ |image1|
@@ -24,7 +24,7 @@ Hier aber das dazugehörige Video und Bild:
 
    <iframe width="560" height="315" src="http://www.youtube.com/embed/6uu39aDI56w" frameborder="0" allowfullscreen></iframe>
 
-.. figure:: http://mobileqt.de/images/n810_arc.jpg
+.. figure:: /static/images/n810_arc.jpg
    :align: center
    :alt: 
 

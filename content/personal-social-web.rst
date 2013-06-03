@@ -9,8 +9,4 @@ while setup of your own server looks straight-forward. Similar to
 e-mail, as they state. Definitely something I will try out in the near
 future.
 
-.. raw:: html
-
-   </p>
-
 .. _tent.io: https://tent.io/

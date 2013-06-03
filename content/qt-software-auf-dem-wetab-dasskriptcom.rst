@@ -1,8 +1,7 @@
-Qt-Software auf dem WeTab @ dasskript.com
-#########################################
+Qt-Software auf dem WeTab
+#########################
 :date: 2010-10-09 17:00
-:author: pbouda
-:slug: qt-software-auf-dem-wetab-dasskriptcom
+:slug: qt-software-auf-dem-wetab
 
 Widerstand war zwecklos: der Media Markt händigte mir letzte Woche mein
 wohlverdientes `WeTab`_\ |image0|-Exemplar aus. Trotz geringer
@@ -16,43 +15,11 @@ Frühstückstisch! :-) Aber dazu ein anderes Mal mehr, vielleicht haben
 sich dann die meisten Ignoranten wieder beruhigt. Für mich ist das WeTab
 das bessere, weil freie Tablet.
 
-.. raw:: html
-
-   </p>
-
 Ich wollte hiermit nun eigentlich auch nur kundtun, dass sich
 Qt-Software relativ problemlos auf dem WeTab kompilieren und starten
 lässt. Ich habe dazu gleich einen `Wiki-Artikel online gestellt`_, indem
 ihr das Prozedere nachlesen könnt. Hm... Wie startet man nochmal den
 C++-Compiler auf dem iPad?
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   <script type="text/javascript"></p><p>var flattr_uid = '12306';</p><p>var flattr_tle = 'Qt-Software auf dem WeTab';</p><p>var flattr_dsc = 'Widerstand war zwecklos: der Media Markt händigte mir letzte Woche mein wohlverdientes WeTab-Exemplar aus. Trotz geringer Akkulaufzeit und Genöhle im Twitter-Universum kam ich nicht darum herum, schl...';</p><p>var flattr_cat = 'text';</p><p>var flattr_lng = 'de_DE';</p><p>var flattr_tag = 'MeeGo, WeTab';</p><p>var flattr_url = 'http://www.dasskript.com/blogposts/67';</p><p>var flattr_btn = 'compact';</p><p></script>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   <script src="http://api.flattr.com/button/load.js" type="text/javascript"></script>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   </p>
 
 .. _WeTab: http://www.amazon.de/gp/product/B003JFKUSK?ie=UTF8&tag=jsusde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B003JFKUSK
 .. _läuft da MeeGo drauf: http://www.mobileqt.de/blogposts/59

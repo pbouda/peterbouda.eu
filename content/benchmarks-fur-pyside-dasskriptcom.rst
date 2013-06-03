@@ -2,7 +2,7 @@ Benchmarks für PySide
 #####################
 :date: 2010-05-12 16:15
 :category: Python
-:slug: benchmarks-fur-pyside-dasskriptcom
+:slug: benchmarks-fur-pyside
 
 Mit der Veröffentlichung von PySide 0.3 vor einigen Wochen wurde und
 auch ein Benchmark versprochen. Jetzt ist er online, der Vergleich von

@@ -1,8 +1,7 @@
-Servus. Servus! @ dasskript.com
-###############################
+Servus. Servus!
+###############
 :date: 2011-02-15 09:27
-:author: pbouda
-:slug: servus-servus-dasskriptcom
+:slug: servus-servus
 
 Wie man so schön sagt in Bayern. Die `Würfel sind also gefallen`_, und
 meiner Meinung nach ist es die richtige Entscheidung. Es wird nun wieder
@@ -11,10 +10,6 @@ mobilen Betriebssystem doch weiter angleichen als im Moment sowieso
 schon, und wessen Name da dann drauf steht ist zumindest mir ziemlich
 egal. Hauptsache der E-Mail-Client funktioniert und der Browser ist
 schnell. Und das ein oder andere Spiel wäre fein.
-
-.. raw:: html
-
-   </p>
 
 Wo wir auch schon beim Thema wären: meiner Meinung nach wird das Thema
 "Spiele" die Marktaufteilung der nächsten Jahre bestimmen. Und wenn XBox
@@ -27,10 +22,6 @@ werde dann auch nicht lange zögern, und zu einem (billigen) Nokia-Handy
 greifen, wenn die Akku-Laufzeit mal stimmt. Das ganze Gerede über Apps
 verkommt mehr und mehr zu einer großen Werbekampagne, Geld macht derweil
 der Spieleentwickler.
-
-.. raw:: html
-
-   </p>
 
 Symbian und dem ganzen Ovi-Kram muss man dann auch keinerlei Träne
 hinterher weinen. Ein bisserl Schade ist es dagegen um MeeGo, aber ganz
@@ -45,10 +36,6 @@ verfällt (14 Blogeinträge an einem Tag im AppUp-Developer-Program-Blog;
 so viele Informationen über die Vorteile von MeeGo hätten wir uns doch
 früher schon gewünscht, nicht, Intel?), das Projekt wird definitiv
 sterben. Sei's drum.
-
-.. raw:: html
-
-   </p>
 
 Im Moment findet ihr mich aber dann erst einmal auf WebOS. Seit
 Weihnachten bin ich stolzer Besitzer eines Palm Pixi Plus, und ich muss
@@ -66,10 +53,6 @@ Allen Maemo- und MeeGo-Fans sei deswegen der Umstieg auf WebOS wärmstens
 ans Herz gelegt, im Moment die wohl offenste, mobile Plattform mit
 `guten Zukunfts-Aussichten`_. Und `Qt gibt's dafür auch schon`_.
 
-.. raw:: html
-
-   </p>
-
 Was machen wir aber nun hier, mit dieser Seite? "Mobiles Qt" hat sich
 wohl erst einmal erledigt. Ich dachte daran, `meinen alten Blog über
 Skriptsprachen`_ hier weiter zu führen, und somit auch das Forum und das
@@ -79,34 +62,6 @@ Allgemeinen, sowie Perl und Ruby sollen gebührende Aufmerksamkeit
 erhalten. Wenn ich schon keine Qt-App mehr verkaufen kann, dann wechsle
 ich wenigsten von C++ wieder in die heimischen Gefilde der Skripterei.
 Stay tuned!
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   <script type="text/javascript"></p><p>var flattr_uid = '12306';</p><p>var flattr_tle = 'Servus. Servus!';</p><p>var flattr_dsc = 'Wie man so schön sagt in Bayern. Die Würfel sind also gefallen, und meiner Meinung nach ist es die richtige Entscheidung. Es wird nun wieder mal von allerlei Ökosystemen fabuliert, aber am Ende werd...';</p><p>var flattr_cat = 'text';</p><p>var flattr_lng = 'de_DE';</p><p>var flattr_tag = 'Roadmap, Nokia';</p><p>var flattr_url = 'http://www.dasskript.com/blogposts/83';</p><p>var flattr_btn = 'compact';</p><p></script>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   <script src="http://api.flattr.com/button/load.js" type="text/javascript"></script>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   </p>
 
 .. _Würfel sind also gefallen: http://www.heise.de/newsticker/meldung/Nokia-tut-sich-mit-Microsoft-zusammen-1187890.html
 .. _Sony Ericsson mit seinem Playstation-Telefon: http://www.heise.de/mobil/meldung/Playstation-Smartphone-kommt-im-Maerz-1188656.html

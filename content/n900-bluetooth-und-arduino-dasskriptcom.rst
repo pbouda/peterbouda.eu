@@ -1,7 +1,7 @@
 N900, Bluetooth und Arduino
 ###########################
 :date: 2010-11-09 09:01
-:slug: n900-bluetooth-und-arduino-dasskriptcom
+:slug: n900-bluetooth-und-arduino
 
 Das hat mit Qt direkt zwar nix zu tun, aber ich hab mal ein bisschen mit
 einem Arduino-Board herumgespielt, um Daten per Bluetooth mit dem N900

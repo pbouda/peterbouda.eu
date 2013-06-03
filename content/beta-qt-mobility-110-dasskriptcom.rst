@@ -1,7 +1,7 @@
 Beta Qt Mobility 1.1.0
 ######################
 :date: 2010-10-05 12:29
-:slug: beta-qt-mobility-110-dasskriptcom
+:slug: beta-qt-mobility-110
 
 Letzte Woche schon wurde die erste `erste Beta für Qt Mobility 1.1.0
 veröffentlicht`_. Mittlerweile sind wohl auch `Probleme mit den Paketen

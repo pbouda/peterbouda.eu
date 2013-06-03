@@ -1,7 +1,7 @@
 MeeGo 2011
 ##########
 :date: 2011-01-06 09:52
-:slug: meego-2011-dasskriptcom
+:slug: meego-2011
 
 Erst einmal an dieser Stelle ein **frohes Neues Jahr** an all die
 unerschrockenen Leser von mobileqt.de! Die CES läuft mittlerweile und

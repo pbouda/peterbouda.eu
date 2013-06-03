@@ -1,8 +1,7 @@
-Vorläufiges zu MeeGo @ dasskript.com
-####################################
+Vorläufiges zu MeeGo
+####################
 :date: 2010-03-03 11:54
-:author: pbouda
-:slug: vorlaufiges-zu-meego-dasskriptcom
+:slug: vorlaufiges-zu-meego
 
 `MeeGo`_ wird also nun das neue mobile Betriebssystem von Nokia und
 Intel heißen; nach dem `oFono-Projekt`_ jetzt also die zweite große
@@ -18,10 +17,6 @@ Vorgabe RPM bleiben. Genaueres zu MeeGo lassen sich in Nokia
 offizieller`_\ `Software-Strategie`_ sowie in einem hervorragenden
 `Artikel von Zchydem`_ nachlesen.
 
-.. raw:: html
-
-   </p>
-
 Für Qt-Entwickler gibt es ein interessantes Bild, das in den meisten
 Beiträgen auftauchte:
 
@@ -35,10 +30,6 @@ Zukunft interessante Anwendungsmöglichkeiten (Notiz an selbst: Zeit also
 für einen baldigen Artikel zu QWebKit...). Rechen- und Hardwareintensive
 wie Spiele, Fotoapplikationen etc. sollen nativ in Qt bzw. "hybrid"
 entwickelt werden.
-
-.. raw:: html
-
-   </p>
 
 Was bedeutet das nun für den Technologiebegeisterten Qt-Entwickler? Nun,
 aus meiner Sicht würde ich mir ein paar der zukünftige Kerntechnologien
@@ -56,40 +47,8 @@ näher anschauen:
    deute; vielleicht wars aber nur eine Ausrede für den ja so sehr
    kritisierten Kauf von Navteq
 
-.. raw:: html
-
-   </p>
-
 Jedenfalls würde ich das mal als spannende Aussichten für jeden
 Qt-Entwickler bezeichnen!
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   <script type="text/javascript"></p><p>var flattr_uid = '12306';</p><p>var flattr_tle = 'Vorläufiges zu MeeGo';</p><p>var flattr_dsc = 'MeeGo wird also nun das neue mobile Betriebssystem von Nokia und Intel heißen; nach dem oFono-Projekt jetzt also die zweite große Zusammenarbeit zwischen den beiden Firmen. Bei MeeGo handelt es sich ...';</p><p>var flattr_cat = 'text';</p><p>var flattr_lng = 'de_DE';</p><p>var flattr_tag = 'Maemo, Symbian, Roadmap, MeeGo, WRT';</p><p>var flattr_url = 'http://www.dasskript.com/blogposts/9';</p><p>var flattr_btn = 'compact';</p><p></script>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   <script src="http://api.flattr.com/button/load.js" type="text/javascript"></script>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   </p>
 
 .. _MeeGo: http://meego.com/
 .. _oFono-Projekt: http://ofono.org/

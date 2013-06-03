@@ -2,7 +2,7 @@ Memory Profiling Tools für Python, Teil 2
 #########################################
 :date: 2011-09-02 11:33
 :category: Python
-:slug: memory-profiling-tools-fur-python-teil-2-dasskriptcom
+:slug: memory-profiling-tools-fur-python-teil-2
 
 Kaum hatte ich den `vorhergehenden Blogeintrag`_ fertig, bin ich mehr
 oder weniger zufällig auf zwei weitaus interessantere Projekte gestoßen,
@@ -24,7 +24,7 @@ Vollständigkeit halber:
    auf `einen Vortrag auf der PyCon US 2011`_, der sehr schön die
    einzelnen Ansätze zur Speicheranalyse unter Python erklärt.
 
-.. _vorhergehenden Blogeintrag: http://www.dasskript.com/blogposts/93
+.. _vorhergehenden Blogeintrag: |filename|speicherlecks-in-python-skripten-finden-dasskriptcom.rst
 .. _Meliae: https://launchpad.net/meliae
 .. _gdb-heap: https://fedorahosted.org/gdb-heap/
 .. _einen Vortrag auf der PyCon US 2011: http://blip.tv/file/4878749?filename=Pycon-PyCon2011DudeWheresMyRAMADeepDiveIntoHowPythonUses441.ogv

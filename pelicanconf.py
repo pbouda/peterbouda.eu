@@ -4,7 +4,11 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Peter Bouda'
 SITENAME = 'Das Skript.'
-SITEURL = '' # http://www.peterbouda.eu
+SITESUBTITLE = 'Ein Python-Blog.'
+SITEURL = 'http://www.peterbouda.eu' #
+
+DELETE_OUTPUT_DIRECTORY = True
+STATIC_PATHS = ['images', 'tutorials']
 
 TIMEZONE = 'Europe/Lisbon'
 
@@ -16,10 +20,12 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS =  (('Poio - Python for Linguists', 'http://media.cidles.eu/poio/'),
-          ('QuantHistLing', 'http://www.quanthistling.info/'),
-          ('CIDLeS', 'http://www.cidles.eu/'),
-          ('Punk on Bike', 'http://punkonbike.tumblr.com'),)
+LINKS = (('Poio - Python for Linguists', 'http://media.cidles.eu/poio/'),
+         ('QuantHistLing', 'http://www.quanthistling.info/'),
+         ('CIDLeS', 'http://www.cidles.eu/'),
+         #('Punk on Bike', 'http://punkonbike.tumblr.com'),
+         ('Archive', '/archives.html')
+        )
 
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/legocoder'),

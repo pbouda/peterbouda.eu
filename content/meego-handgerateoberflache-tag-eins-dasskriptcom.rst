@@ -1,7 +1,7 @@
 MeeGo Handgeräteoberfläche Tag eins
 ###################################
 :date: 2010-07-02 09:09
-:slug: meego-handgerateoberflache-tag-eins-dasskriptcom
+:slug: meego-handgerateoberflache-tag-eins
 
 Das MeeGo-Projekt hat, wie geplant, am ersten Juli eine erste Version
 der sogenannten `"Handset UI" veröffentlicht`_. Screenshots findet ihr

@@ -1,7 +1,7 @@
 Ein herbstliches Hallo, MeeGo 1.1
 #################################
 :date: 2010-10-30 13:53
-:slug: ein-herbstliches-hallo-meego-11-dasskriptcom
+:slug: ein-herbstliches-hallo-meego-11
 
 Letzte Woche wurde, wie geplant, `MeeGo in Version 1.1 zum Download
 bereit gestellt`_. Nun gibt es also drei offizielle Varianten:

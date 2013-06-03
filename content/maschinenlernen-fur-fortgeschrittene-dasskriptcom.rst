@@ -2,7 +2,7 @@ Maschinenlernen für Fortgeschrittene
 ####################################
 :date: 2011-10-07 13:57
 :category: Python
-:slug: maschinenlernen-fur-fortgeschrittene-dasskriptcom
+:slug: maschinenlernen-fur-fortgeschrittene
 
 `Dieser Artikel`_ beschreibt recht eindrucksvoll mit welchen Methoden
 die Radiochemie heutzutage arbeitet. Und was man doch mit Python alles

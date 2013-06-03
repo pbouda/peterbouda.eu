@@ -1,7 +1,7 @@
 Beta des Nokia Qt SDK veröffentlicht, mit Qt Mobility
 #####################################################
 :date: 2010-04-28 11:22
-:slug: beta-des-nokia-qt-sdk-veroffentlicht-mit-qt-mobility-dasskriptcom
+:slug: beta-des-nokia-qt-sdk-veroffentlicht-mit-qt-mobility
 
 Neben der `Ankündigung des ersten Symbian-3-Mobiltelefons N8`_ wurde
 gestern auch eine erste Beta des Qt SDKs veröffentlicht. Außer den

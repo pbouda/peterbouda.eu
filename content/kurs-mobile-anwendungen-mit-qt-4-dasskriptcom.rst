@@ -1,7 +1,7 @@
 Kurs: Mobile Anwendungen mit Qt 4
 #################################
 :date: 2010-03-15 10:07
-:slug: kurs-mobile-anwendungen-mit-qt-4-dasskriptcom
+:slug: kurs-mobile-anwendungen-mit-qt-4
 
 Für alle Entwickler mit Fortbildungsambitionen und/oder
 fortbildungsfreundlichem Chef: ich gebe im April, Juni und Oktober einen

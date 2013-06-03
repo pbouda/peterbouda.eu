@@ -1,16 +1,11 @@
-Stand der Dinge @ dasskript.com
-###############################
+Stand der Dinge
+###############
 :date: 2011-02-01 12:42
-:author: pbouda
-:slug: stand-der-dinge-dasskriptcom
+:slug: stand-der-dinge
 
 Da ich im Moment beruflich etwas eingespannt bin hier nur kurz eine
 Zusammenfassung, was sich an der Qt- und Nokia-Front so tut. Mit dem
 üblichen Geläster, natürlich:
-
-.. raw:: html
-
-   </p>
 
 -  Vorletzte Woche schon gab es das erste `Technical Preview des
    nächsten Qt SDK 1.1`_. Naja, bei einem TP bin ich immer erst einmal
@@ -43,42 +38,6 @@ Zusammenfassung, was sich an der Qt- und Nokia-Front so tut. Mit dem
    Softwareseite wohl kaum behaupten. Nun, vielleicht kann man dann auf
    das Gerät wenigstens einfach ein anderes Betriebssystem installieren,
    hehe.
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   <script type="text/javascript"></p><p>var flattr_uid = '12306';</p><p>var flattr_tle = 'Stand der Dinge';</p><p>var flattr_dsc = 'Da ich im Moment beruflich etwas eingespannt bin hier nur kurz eine Zusammenfassung, was sich an der Qt- und Nokia-Front so tut. Mit dem üblichen Geläster, natürlich:Vorletzte Woche schon gab es das...';</p><p>var flattr_cat = 'text';</p><p>var flattr_lng = 'de_DE';</p><p>var flattr_tag = 'Roadmap, Qt SDK';</p><p>var flattr_url = 'http://www.dasskript.com/blogposts/81';</p><p>var flattr_btn = 'compact';</p><p></script>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   <script src="http://api.flattr.com/button/load.js" type="text/javascript"></script>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   </p>
 
 .. _Technical Preview des nächsten Qt SDK 1.1: http://labs.qt.nokia.com/2011/01/20/qt-sdk-1-1-technology-preview-released/
 .. _Qt Components findet ab sofort hinter geschlossenen Türen statt: http://labs.qt.nokia.com/2011/01/31/well-be-right-back/

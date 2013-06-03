@@ -2,7 +2,7 @@ Neues Tutorial: Augmented Reality mit Python
 ############################################
 :date: 2011-03-22 15:43
 :category: Python
-:slug: neues-tutorial-augmented-reality-mit-python-dasskriptcom
+:slug: neues-tutorial-augmented-reality-mit-python
 
 Nachdem ich nun alle meine Text über Skriptsprachen ins Wiki umgezogen
 habe, folgt heute der erste Teil einer neuen Tutorial-Reihe, die sich

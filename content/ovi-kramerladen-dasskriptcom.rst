@@ -1,7 +1,6 @@
-Ovi-Krämerladen @ dasskript.com
-###############################
+Ovi-Krämerladen
+###############
 :date: 2010-12-01 10:51
-:author: pbouda
 :slug: ovi-kramerladen-dasskriptcom
 
 Ich bin ja von Nokia mittlerweile so einiges gewohnt, durch zahlreichen
@@ -32,23 +31,15 @@ Veröffentlichungsdatum noch einmal vier Wochen in die Zukunft.
 Kommentarlos. Also eine Mail an den Ovi Publish Support, die Antwort
 dauert nur 3 Tage, erfolgt aber in Form einer Standardmail. Thema
 verfehlt. Also noch eine Mail hinterher, und dieses Mal antwortet
-tatsächlich jemand und sagt:
+tatsächlich jemand und sagt::
 
-.. raw:: html
-
-   </p>
-
-*"After investigating further we found the QA team had indeed change the
-start date to December 1, 2010 as OVI Store Maemo firmware PR1.3 mode
-for N900 is unavailable so instead of failing your app QA team instead
-changed the date till the new firmware PR1.3 is ready. Since QA team
-found your application only works with PR1.3, it cannot be published
-until the store is set to PR1.3 therefore QA team will update the start
-date again on your behalf."*
-
-.. raw:: html
-
-   </p>
+    After investigating further we found the QA team had indeed change the
+    start date to December 1, 2010 as OVI Store Maemo firmware PR1.3 mode
+    for N900 is unavailable so instead of failing your app QA team instead
+    changed the date till the new firmware PR1.3 is ready. Since QA team
+    found your application only works with PR1.3, it cannot be published
+    until the store is set to PR1.3 therefore QA team will update the start
+    date again on your behalf.
 
 Aber Nokia: was genau funktioniert denn nicht? Ich habe alles für PR 1.2
 programmiert, warum sollte es dann nur mit PR 1.3 funktionieren?
@@ -65,10 +56,6 @@ hineinprogrammiert, und die habt ihr ohne Probleme angenommen. Und
 jetzt? Soll ich noch einmal 4 Wochen warten? Und dann noch einmal? Gibt
 es Nokia dann überhaupt noch?
 
-.. raw:: html
-
-   </p>
-
 Was im Moment bei Nokia los ist, weiß der Teufel. Für mich als
 Entwickler ist es aber mehr als frustrierend, wenn man nicht einmal ein
 vernünftiges Feedback bekommen, um eine einfache Anwendung vernünftig
@@ -81,10 +68,6 @@ Anwendungsdaten habe ich vom geänderten Startdatum erfahren. Das ist
 einfach keine Art und Weise mit Entwicklern für das eigene System
 umzugehen, finde ich. Schließlich nehmt ihr dafür auch noch 30 Prozent,
 da darf man wohl ein bisschen Entgegenkommen erwarten.
-
-.. raw:: html
-
-   </p>
 
 Der Frust hat sich jetzt schon länger bei mir aufgebaut: die
 QA-Wartezeiten bei Nokia sind katastrophal, mein zu Entwicklungszwecken
@@ -109,32 +92,3 @@ auf dich kommen lassen, aber mal ganz ehrlich: der Glaube, dass du in
 zwei Jahren noch bzw. wieder konkurrenzfähige Mobiltelefone produzieren
 wirst schwindet bedenklich, und das nicht erst mit Blick auf die
 Konkurrenz.
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   <script type="text/javascript"></p><p>var flattr_uid = '12306';</p><p>var flattr_tle = 'Ovi-Krämerladen';</p><p>var flattr_dsc = 'Ich bin ja von Nokia mittlerweile so einiges gewohnt, durch zahlreichen Workarounds für alle möglichen Bugs in Qt und Qt Mobility für Maemo und Symbian gestählt, aber was im  Moment im Ovi Store pa...';</p><p>var flattr_cat = 'text';</p><p>var flattr_lng = 'de_DE';</p><p>var flattr_tag = 'Ovi Store, Nokia';</p><p>var flattr_url = 'http://www.dasskript.com/blogposts/74';</p><p>var flattr_btn = 'compact';</p><p></script>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   <p>
-
-.. raw:: html
-
-   <script src="http://api.flattr.com/button/load.js" type="text/javascript"></script>
-
-.. raw:: html
-
-   </p>
-
-.. raw:: html
-
-   </p>
-

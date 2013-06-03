@@ -1,7 +1,7 @@
 Auf (Nimmer?)Wiedersehen, Symbian
 #################################
 :date: 2010-10-25 11:13
-:slug: auf-nimmerwiedersehen-symbian-dasskriptcom
+:slug: auf-nimmerwiedersehen-symbian
 
 Mittlerweile `pfeifen es die Spatzen von den Dächern`_: die Zukunft von
 Symbian scheint ungewisser den je. Nachdem sich Samsung schon seit

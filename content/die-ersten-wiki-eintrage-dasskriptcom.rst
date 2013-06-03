@@ -1,7 +1,7 @@
 Die "ersten" Wiki-Einträge
 ##########################
 :date: 2011-03-04 09:39
-:slug: die-ersten-wiki-eintrage-dasskriptcom
+:slug: die-ersten-wiki-eintrage
 
 Werft ruhig mal einen kurzen Blick ins `Wiki`_: die ersten (kleineren)
 Einträge sind erschienen, über Perl, Python und Ruby (on Rails). Da

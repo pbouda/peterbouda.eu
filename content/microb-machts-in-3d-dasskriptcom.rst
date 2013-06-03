@@ -1,7 +1,7 @@
 MicroB machts in 3D
 ###################
 :date: 2010-06-20 09:17
-:slug: microb-machts-in-3d-dasskriptcom
+:slug: microb-machts-in-3d
 
 Ich muss sagen, dass mich Nokia nach langer Zeit mal wieder beeindruckt
 hat, und dass ausgerechnet auf der technischen Seite. Bisher dachte ich,
@@ -24,7 +24,7 @@ sein könnt:
 
 Und wer das Ganze live samt Code sehen will:
 
-http://www.peterbouda.de/webgl.
+http://www.peterbouda.de/webgl
 
 Mittlerweile würde ich es sogar unterschreiben, dass MicroB der
 beste mobile Browser ist. Nicht der Schnellste, aber dank Flash und
@@ -34,4 +34,3 @@ WebGL definitiv der technisch Fortgeschrittenste.
 .. _WebGL: http://en.wikipedia.org/wiki/WebGL
 .. _Gil Thomas: http://learningwebgl.com/blog/?p=2303
 .. _eines der Demos: http://learningwebgl.com/webgl-cube/index-n900-hack.html
-.. _`http://www.peterbouda.de/webgl`: http://www.peterbouda.de/webgl

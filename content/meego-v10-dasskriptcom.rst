@@ -1,7 +1,7 @@
 MeeGo, v1.0
 ###########
 :date: 2010-05-26 18:11
-:slug: meego-v10-dasskriptcom
+:slug: meego-v10
 
 Und wieder mal gehts Schlag auf Schlag: nachdem gestern endlich die neue
 N900-Firmware veröffentlicht wurde, gibt es heute `Version 1.0 von

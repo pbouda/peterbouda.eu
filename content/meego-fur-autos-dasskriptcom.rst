@@ -1,7 +1,7 @@
 MeeGo für Autos
 ###############
 :date: 2010-08-04 10:40
-:slug: meego-fur-autos-dasskriptcom
+:slug: meego-fur-autos
 
 Auch von MeeGo gibt was Neues, nämlich eine `erste Version für
 automobile Unterhaltungssysteme`_. Das Ganze `entsteht unter dem Dach

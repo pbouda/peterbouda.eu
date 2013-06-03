@@ -1,0 +1,65 @@
+#!/usr/bin/env python
+
+# -*- coding: utf-8 -*-
+#
+# WebKitProcessing - PySide WebKit Processing Environment
+# Copyright (c) 2010 Peter Bouda
+#
+# WordByWord is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# WordByWord is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+
+import sys, os
+import glob
+import re
+from distutils.core import setup
+
+# import the pyprocessing module locally for module metadata
+sys.path.insert(0, 'src')
+import webkitprocessing
+
+# files to install
+inst_desktop = [ 'data/webkitprocessing.desktop' ]
+inst_icon_64 = [ 'data/64x64/webkitprocessing.png' ]
+
+# data files
+data_files = [
+    # desktop file and icon are not optified  
+    ('share/applications/hildon', inst_desktop),
+    ('share/icons/hicolor/64x64/hildon', inst_icon_64),
+]
+
+# packages are always installed to the python path
+packages = [
+# if you have classes in src/pyprocessing uncomment this to install them
+#  'pyprocessing',
+]
+
+author, email = re.match(r'^(.*) <(.*)>$', webkitprocessing.__author__).groups()
+
+setup(
+  name             = 'webkitprocessing',
+  version          = webkitprocessing.__version__,
+  package_dir      = { '':'src' },
+  packages         = packages,
+  description      = 'PySide WebKit Processing Environment',
+  long_description = 'Loads a WebKit component to display the Processing.js environment at http://p.altcanvas.com/. This allows touch interfaces through mouse events.',
+  author           = author,
+  author_email     = email,
+  url              = webkitprocessing.__url__,
+  scripts          = glob.glob('bin/*'),
+  data_files       = data_files
+)
+
+

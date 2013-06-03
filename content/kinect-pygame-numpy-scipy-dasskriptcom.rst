@@ -2,7 +2,7 @@ Kinect, PyGame, Numpy, SciPy
 ############################
 :date: 2012-01-26 11:34
 :category: Python
-:slug: kinect-pygame-numpy-scipy-dasskriptcom
+:slug: kinect-pygame-numpy-scipy
 
 Ich habe die letzten Wochen ein bisschen mit den `Python Tools für
 Visual Studio`_ herumgespielt, auf der Website gibt es mit PyKinect

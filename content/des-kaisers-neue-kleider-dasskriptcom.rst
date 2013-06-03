@@ -1,7 +1,7 @@
 Des Kaisers neue Kleider
 ########################
 :date: 2011-02-10 16:00
-:slug: des-kaisers-neue-kleider-dasskriptcom
+:slug: des-kaisers-neue-kleider
 
 Also nun wird es morgen tatsächlich spannend, wenn der Herr Elop uns die
 neue Strategie von Nokia erklärt. Soviel Aufmerksamkeit hatte in letzter

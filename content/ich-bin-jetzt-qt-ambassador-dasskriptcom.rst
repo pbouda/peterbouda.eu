@@ -1,7 +1,7 @@
 Ich bin jetzt Qt Ambassador
 ###########################
 :date: 2011-05-13 09:37
-:slug: ich-bin-jetzt-qt-ambassador-dasskriptcom
+:slug: ich-bin-jetzt-qt-ambassador
 
 Vor ein paar Wochen bekam ich von Nokia die freundliche Enladung, mich
 mit meiner Anwendung `qTranslate`_ beim `Qt-Ambassador-Programm`_ zu

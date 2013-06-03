@@ -1,7 +1,7 @@
 König Microsoft
 ###############
 :date: 2010-12-21 09:18
-:slug: konig-microsoft-dasskriptcom
+:slug: konig-microsoft
 
 Unter den Blinden ist der Einäugige König, sagt man so schön. Und im
 Moment ist, dank Windows Phone 7, Microsoft wohl zum König bei den

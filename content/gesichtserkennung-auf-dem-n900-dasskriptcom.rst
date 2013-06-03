@@ -1,7 +1,7 @@
 Gesichtserkennung auf dem N900
 ##############################
 :date: 2010-03-04 11:19
-:slug: gesichtserkennung-auf-dem-n900-dasskriptcom
+:slug: gesichtserkennung-auf-dem-n900
 
 `BurgerFace`_ ist ein kleines Technologiedemo zur Gesichtserkennung auf
 dem N900. Nett gemacht und die Gesichtserkennung funktioniert recht

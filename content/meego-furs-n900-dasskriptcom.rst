@@ -1,7 +1,7 @@
 MeeGo fürs N900?
 ################
 :date: 2010-03-05 09:18
-:slug: meego-furs-n900-dasskriptcom
+:slug: meego-furs-n900
 
 Die `Spatzen`_ `scheinen`_ es mittlerweile von den Dächern zu pfeifen:
 es wird wohl bald eine erste MeeGo-Version für Atom-Prozessoren und das
