@@ -203,3 +203,6 @@ color:#BB60D5;
 .il {
 color:#208050;
 }
+
+.MathJax .mi { color: inherit }
+.MathJax .mo { color: inherit }
