@@ -28,6 +28,16 @@ benetzte Oberfläche anzeigen:
 
 ![Scheibe rotiert über Flüssigkeit](/static/images/sirupscheibe.png)
 
+Man sieht schnell, dass die benetzte Fläche durch das Eintauchen zunächst einmal
+größer wird. Je tiefer man die Scheibe eintaucht, desto mehr von dieser Fläche
+befindet sich dann aber unter der Oberfläche. Wir wollen jetzt also bestimmen,
+wie tief wir die Scheibe maximal eintauchen dürfen, damit die Fläche über der
+Flüssigkeit möglichst groß bleibt. Dabei lösen wir das Problem einmal empirisch,
+also indem wir alle möglichen Werte ausprobieren und schauen bei welchen Werten
+das Maximum auftritt. So wurde das Problem wohl damals gelöst, vor
+Kurvendiskussionen. Danach werden wir die Formel differenzen und daraus das
+Maximum bestimmten.
+
 Zur Lösung des Problems verwende ich hier die Bibliothek
 [SymPy](http://sympy.org/). Dieser Text wurde als [IPython
 Notebook](http://ipython.org/notebook.html) verfasst, dieses gibt es zum
