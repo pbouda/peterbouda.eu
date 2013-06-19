@@ -25,18 +25,18 @@
                 {% for title, link in MENUITEMS %}
                     <li><a href="{{ link }}">{{ title }}</a></li>
                 {% endfor %}
-                {% if DISPLAY_PAGES_ON_MENU -%}
-                {% for page in PAGES %}
-                    <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-                {% endfor %}
-                {% endif %}
                 {% if DISPLAY_CATEGORIES_ON_MENU -%}
                 {% for cat, null in categories %}
                     <li {% if cat == category %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
                 {% endfor %}
                 {% endif %}
+                {% if DISPLAY_PAGES_ON_MENU -%}
+                {% for page in PAGES %}
+                    <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                {% endfor %}
+                {% endif %}
                 </ul>
-                <span style="float:right;"><a href="http://repl.peterbouda.eu">Start Python!</a></span>
+                <span style="float:right;"><a href="http://repl.peterbouda.eu">Python starten!</a></span>
             </nav>
         </header><!-- /#banner -->
 

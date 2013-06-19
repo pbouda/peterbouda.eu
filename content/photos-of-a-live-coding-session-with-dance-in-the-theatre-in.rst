@@ -1,6 +1,7 @@
 Photos of a live coding session with dance in the theatre in Minde
 ##################################################################
 :date: 2013-03-05 10:26
+:category: Live Coding
 :slug: photos-of-a-live-coding-session-with-dance-in-the-theatre-in
 
 |image0|

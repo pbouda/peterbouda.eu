@@ -1,6 +1,7 @@
 Speicherlecks in Python-Skripten finden
 #######################################
 :date: 2011-08-19 11:10
+:category: Python
 :slug: speicherlecks-in-python-skripten-finden
 
 Da ich gerade ein kleines Speicherproblem mit einer Python-Anwendung

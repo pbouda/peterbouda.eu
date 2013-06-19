@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Peter Bouda'
 SITENAME = 'Das Skript.'
-SITESUBTITLE = 'Ein Python-Blog.'
+SITESUBTITLE = 'Spaß mit Python.'
 SITEURL = 'http://www.peterbouda.eu' #
 
 DELETE_OUTPUT_DIRECTORY = True

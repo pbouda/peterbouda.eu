@@ -1,6 +1,7 @@
 Processing in Javascript in QML in Python
 #########################################
 :date: 2011-09-05 10:31
+:category: Python
 :slug: processing-in-javascript-in-qml-in-python
 
 Es gibt gute und vernünftige Gründe, warum man Desktop-Anwendungen mit
