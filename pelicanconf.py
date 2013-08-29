@@ -3,8 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Peter Bouda'
-SITENAME = 'Das Skript.'
-SITESUBTITLE = 'Spaß mit Python.'
+SITENAME = 'Linguistic Python'
+#SITESUBTITLE = 'Language Processing with Python.'
 SITEURL = 'http://www.peterbouda.eu' #
 
 DELETE_OUTPUT_DIRECTORY = True

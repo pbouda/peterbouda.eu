@@ -1,12 +1,12 @@
-Über
-====
+about
+=====
 
 .. image:: http://www.gravatar.com/avatar/e490fa5bbcc7d1d8e5598bdefa29e842.jpg
 
-Das Skript wird geschrieben von Peter Bouda und handelt hauptsächlich von der Programmiersprache Python und Skriptsprachen im Allgemeinen.
+Das Skript is a blog about linguistics and the programming language Python, written by Peter Bouda.
 
-Entwickler gesucht?
--------------------
+Looking for a developer?
+------------------------
 
 | Peter Bouda
 | Michaeliburgstr. 16
