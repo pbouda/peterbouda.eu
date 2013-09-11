@@ -1,6 +1,6 @@
-Title: Parsing Wikipedia dumps and converting to ISO 24612 (GrAF-XML)
+Title: Parsing Wikipedia dumps and conversion to ISO 24612 (GrAF-XML)
 Date: 2013-09-10 15:53
-Category: Linguistics, Python
+Category: Linguistics
 
 At the moment I am heavily working on our data management and conversion library
 [Poio API](http://media.cidles.eu/poio/poio-api/). Until now it mainly targets
