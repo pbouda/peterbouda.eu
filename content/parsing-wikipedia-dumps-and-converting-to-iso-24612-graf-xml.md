@@ -4,13 +4,13 @@ Category: Linguistics, Python
 
 At the moment I am heavily working on our data management and conversion library
 [Poio API](http://media.cidles.eu/poio/poio-api/). Until now it mainly targets
-files formats used in language documentation, but I alaways interested in using
+files formats used in language documentation, but I am quite interested in using
 the content of Wikipedias to do some linguistic analysis like finding semantic
 classes or testing part-of-speech taggers. As you might know, the original
-[Wikipedia dumps](http://dumps.wikimedia.org/) are kind-of contaminated with
+[Wikipedia dumps](http://dumps.wikimedia.org/) are somehow contaminated with
 Wiki markup that is not easy to erase. There are all kind of historical markup
 structures in there and sometimes the syntax is plainly wrong, but still works
-to generate a good-looking page on the Wikipedia website. In this post I will
+to generate a good-enough page on the Wikipedia website. In this post I will
 explain how to download and clean a Wikipedia dump and then use Poio API to
 transform it into a [GrAF-XML file](http://www.balisage.net/Proceedings/vol10/html/Bouda01/BalisageVol10-Bouda01.html).
 
@@ -19,12 +19,12 @@ transform it into a [GrAF-XML file](http://www.balisage.net/Proceedings/vol10/ht
 Two years ago I tested several Wikipedia extraction tools, and found that the
 [Wikipedia Extractor](http://medialab.di.unipi.it/wiki/Wikipedia_Extractor)
 gives the best output. Things might have changed since then, but I stick to it,
-also because it is only one Python script that I can easily change if I need
+also because it is a single Python script that I can easily change if I need
 to. The newest version can output JSON or XML. As XML was the one and only
-output format two years ago, I stick to the XML output as all my tools are based
-on this format. In fact, it is not *true* XML, as the root element is missing.
-All the Wikipedia articles are just enclosed by `<doc>` tags, one after the
-other:
+output format two years ago I stick to the XML output as all my tools are based
+on this format. In fact, it is not *true* XML, as the root element is missing
+(the Wikipedia Extractor calls the format "tanl"). All the Wikipedia articles
+are just enclosed by `<doc>` tags, one after the other:
 
     <doc id="55" url="http://bar.wikipedia.org/wiki?curid=55" title="Wikipedia:Archiv/Boarische Umschrift">Wikipedia:Archiv/Boarische Umschrift
     Fürs Boarische gibts koa einheitliche Umschrift. Ma orientiert si in da Schreibweis an da deutschen Orthografie....
@@ -36,7 +36,7 @@ other:
 The whole output is split over several files, where the files' size is
 controllable via a command line variable. I use to call the Wikipedia Extractor
 with the following arguments (I use the [Bavarian Wikipedia dump]
-(http://dumps.wikimedia.org/barwiki/20130905/) as an example):
+(http://dumps.wikimedia.org/barwiki/20130905/) as an example here):
 
     WikiExtractor.py -w -f tanl barwiki-20130905-pages-articles.xml.bz2 extracted
 
@@ -45,7 +45,7 @@ This will put all output files into a folder `extracted`.
 # Concatenate and clean the files
 
 The next step is then to create a real XML file from this. It is not too hard,
-we just have to add a root tag and clean the data a bit more, otherwise the XML
+we just have to add a root tag and clean the data a bit more, otherwise an XML
 parser will complain about certain characters like the "lower than" `<`. I
 start with the following code to get rid of certain general problems like
 unparsable characters, add the root tags and concatenate all the files:
@@ -68,6 +68,7 @@ unparsable characters, add the root tags and concatenate all the files:
                 for line in infile:
                     outfile.write(line)
 
+    # first clean step
     f1 = codecs.open("barwiki.xml", "r", "utf-8")
     f2 = codecs.open("barwiki_cleaned.xml", "w", "utf-8")
 
@@ -95,9 +96,11 @@ unparsable characters, add the root tags and concatenate all the files:
 There is one complex regular expression substition here, that cleans the `title`
 attributes of the `<doc>` tags. The titles sometimes contain an apostroph `"`,
 which is also the seperator for attribute values in XML and cannot be used in
-this place. So I just remove them. The output of this script are two files: the
-`barwiki.xml` just contains the concatenated files, the `barwiki_cleaned.xml`
-contains the cleaned XML. In the case of the Bavarian Wikipedia there are still
+this location. So I just remove them. The output of this script are two files:
+the `barwiki.xml` just contains the concatenated files, the `barwiki_cleaned.xml`
+contains the cleaned XML.
+
+In the case of the Bavarian Wikipedia there are still
 some more quirks in the data. You can find out what kind of problems there are
 if you try to parse the file now with the Python ElementTree module, for
 example:
@@ -108,9 +111,10 @@ example:
         import xml.etree.ElementTree as ET
     tree = ET.ElementTree("barwiki_cleaned.xml")
 
-The parser will throw and error and tell you which line and column caused the
+The parser will throw an error and tell you which line and column caused the
 problem. So I went through all the remaining problems in the Bavarian Wikipedia,
-and added several more lines to my clean script that removes them:
+and added several more lines to my clean script to remove or modify the lines
+that cause the problems:
 
     f1 = codecs.open("barwiki_cleaned.xml", "r", "utf-8")
     f2 = codecs.open("barwiki_cleaned2.xml", "w", "utf-8")
@@ -151,6 +155,7 @@ and added several more lines to my clean script that removes them:
 
 In the end I have a clean file `barwiki_cleaned2.xml` that contains XML with
 all the articles of the Bavarian Wikipedia and is parsable with EementTree.
+
 I still add a third cleaning step to remove articles that are not real content.
 Wikipedia contains several helper and meta-data articles that contain
 explanations for authors and other stuff that we don't need. Luckily, those have
@@ -190,11 +195,11 @@ add layers of annotations in the resulting annotation graph.
 The last step is extremely simple, as one of Poio API's core use case is the
 conversion of files. Normally, you would have to write a parser and a writer
 for each of the file formats you want to support. But for the XML output of
-the Wikipedia Extractor there exists already a parser in Poio API, and GrAF-XML
+the Wikipedia Extractor there already exists a parser in Poio API, and GrAF-XML
 is supported as the basic pivot format. Which means that any file format that
 is supported in Poio API can be converted to GrAF-XML. The conversion is
 dead simple: we initialize a `Converter` object with the Wikipedia parser
-and the GrAF writer, and tell the converter to `parse()` and `write()`:
+and the GrAF writer, and then tell the converter to `parse()` and `write()`:
 
     parser = poioapi.io.wikipedia_extractor.Parser("Wikipedia.xml")
     writer = poioapi.io.graf.Writer()
@@ -205,6 +210,6 @@ and the GrAF writer, and tell the converter to `parse()` and `write()`:
 
 This will write a set of GrAF files that you can read and query with the
 [graf-python](http://media.cidles.eu/poio/graf-python/) library or
-with any of the [tools or connectors](http://www.anc.org/software/) that where
+with any of the [tools and connectors](http://www.anc.org/software/) that were
 developed at the American National Corpus to work with their GrAF-XML corpus
 files.
