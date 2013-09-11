@@ -26,6 +26,7 @@ on this format. In fact, it is not *true* XML, as the root element is missing
 (the Wikipedia Extractor calls the format "tanl"). All the Wikipedia articles
 are just enclosed by `<doc>` tags, one after the other:
 
+    :::xml
     <doc id="55" url="http://bar.wikipedia.org/wiki?curid=55" title="Wikipedia:Archiv/Boarische Umschrift">Wikipedia:Archiv/Boarische Umschrift
     Fürs Boarische gibts koa einheitliche Umschrift. Ma orientiert si in da Schreibweis an da deutschen Orthografie....
     </doc><doc id="60" url="http://bar.wikipedia.org/wiki?curid=60" title="Deitschland">Deitschland
@@ -38,6 +39,7 @@ controllable via a command line variable. I use to call the Wikipedia Extractor
 with the following arguments (I use the [Bavarian Wikipedia dump]
 (http://dumps.wikimedia.org/barwiki/20130905/) as an example here):
 
+    :::text
     WikiExtractor.py -w -f tanl barwiki-20130905-pages-articles.xml.bz2 extracted
 
 This will put all output files into a folder `extracted`.
@@ -50,6 +52,7 @@ parser will complain about certain characters like the "lower than" `<`. I
 start with the following code to get rid of certain general problems like
 unparsable characters, add the root tags and concatenate all the files:
 
+    :::python
     import sys
     import re
     import codecs
@@ -105,6 +108,7 @@ some more quirks in the data. You can find out what kind of problems there are
 if you try to parse the file now with the Python ElementTree module, for
 example:
 
+    :::python
     try:
         import xml.etree.cElementTree as ET
     except ImportError:
@@ -116,6 +120,7 @@ problem. So I went through all the remaining problems in the Bavarian Wikipedia,
 and added several more lines to my clean script to remove or modify the lines
 that cause the problems:
 
+    :::python
     f1 = codecs.open("barwiki_cleaned.xml", "r", "utf-8")
     f2 = codecs.open("barwiki_cleaned2.xml", "w", "utf-8")
 
@@ -165,6 +170,7 @@ XML tree. I also remove articles that are smaller than 200
 characters (those are too short to measure semantic similarity, in one of my
 use cases):
 
+    :::python
     tree = ET.ElementTree(file="barwiki_cleaned2.xml")
     root = tree.getroot()
 
@@ -201,6 +207,7 @@ is supported in Poio API can be converted to GrAF-XML. The conversion is
 dead simple: we initialize a `Converter` object with the Wikipedia parser
 and the GrAF writer, and then tell the converter to `parse()` and `write()`:
 
+    :::python
     parser = poioapi.io.wikipedia_extractor.Parser("Wikipedia.xml")
     writer = poioapi.io.graf.Writer()
 
