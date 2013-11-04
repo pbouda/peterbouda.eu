@@ -29,9 +29,11 @@ LINKS = (('Poio - Python for Linguists', 'http://media.cidles.eu/poio/'),
 
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/legocoder'),
-          ('Github', 'https://github.com/pbouda'),
+		  ('Tumblr', 'http://languagediversity.tumblr.com'),
+          ('Google+', 'https://plus.google.com/+PeterBouda'))
           ('LinkedIn', 'http://www.linkedin.com/pub/peter-bouda/9/929/917'),
-          ('E-Mail', 'mailto:pbouda@cidles.eu'),)
+          ('Github', 'https://github.com/pbouda'),
+          ('E-Mail', 'mailto:pbouda@cidles.eu'),
 
 DEFAULT_PAGINATION = 10
 
