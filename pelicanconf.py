@@ -3,8 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Peter Bouda'
-SITENAME = 'Linguistic Python'
-#SITESUBTITLE = 'Language Processing with Python.'
+SITENAME = 'Open Source Language Technologies'
+#SITESUBTITLE = 'Peter writing about Open Source Language Technologies.'
 SITEURL = 'http://www.peterbouda.eu' #
 
 DELETE_OUTPUT_DIRECTORY = True
@@ -20,20 +20,19 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS = (('Poio - Python for Linguists', 'http://media.cidles.eu/poio/'),
+LINKS = (('Poio', 'http://www.poio.eu'),
          ('QuantHistLing', 'http://www.quanthistling.info/'),
          ('CIDLeS', 'http://www.cidles.eu/'),
-         #('Punk on Bike', 'http://punkonbike.tumblr.com'),
          ('Archive', '/archives.html')
         )
 
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/legocoder'),
-		  ('Tumblr', 'http://languagediversity.tumblr.com'),
-          ('Google+', 'https://plus.google.com/+PeterBouda'))
+          ('Tumblr', 'http://languagediversity.tumblr.com'),
+          ('Google+', 'https://plus.google.com/+PeterBouda'),
           ('LinkedIn', 'http://www.linkedin.com/pub/peter-bouda/9/929/917'),
           ('Github', 'https://github.com/pbouda'),
-          ('E-Mail', 'mailto:pbouda@cidles.eu'),
+          ('E-Mail', 'mailto:pbouda@cidles.eu'))
 
 DEFAULT_PAGINATION = 10
 

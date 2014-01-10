@@ -1,8 +1,9 @@
 Annotation graphs and the IPython notebook
 ##########################################
 :date: 2012-12-18 10:53
-:category: Python
+:category: Language Technologies
 :slug: annotation-graphs-and-the-ipython-notebook
+:tags: AG, IPython
 
 I recently became obsessed with annotation graphs and linguistic graphs
 in general. Since September I am working with the `graf-python`_ library

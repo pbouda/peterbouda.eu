@@ -1,8 +1,8 @@
 pressagio: A predictive text system in Python
 #############################################
 :date: 2013-11-04 13:56
-:category: Python
-:tags: Poio, n-gram
+:category: Language Technologies
+:tags: Poio, LM
 
 `Pressagio <http://media.cidles.eu/poio/pressagio/>`_ is a predictive text
 library that I am currently working on. It is written in Python and I started
