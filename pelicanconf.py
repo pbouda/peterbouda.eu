@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Peter Bouda'
-SITENAME = 'Open Source Language Technologies'
+SITENAME = 'peter\'s blog about free language technologies'
 #SITESUBTITLE = 'Peter writing about Open Source Language Technologies.'
 SITEURL = 'http://www.peterbouda.eu' #
 
