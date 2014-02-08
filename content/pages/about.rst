@@ -1,7 +1,7 @@
 About
 =====
 
-.. image:: http://www.gravatar.com/avatar/e490fa5bbcc7d1d8e5598bdefa29e842.jpg
+.. image:: http://www.poio.eu/static/media/img/peter_photo.png
 
 This is my blog about language and visualization of linguistic data. My goal is to explore the beauty of language
 by making natural language processing visible for a wide audience. I focus on languages that we might call 
