@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}        
+
+{% if articles %}
+    {% for article in articles_page.object_list %}        
+
+        {# First item #}
+        {% if loop.first and not articles_page.has_previous() %}
+
+            <article>
+                <header>
+                    <h1>Recently...</h1>
+                </header>
+                <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+                {% include 'article_infos.html' %}{{ article.content }}{% include 'comments.html' %}
+
+            </article>
+
+            <aside>
+                <h3>About Visual Linguistics</h3>
+                <p>This is Peter's blog about language and visualization of linguistic data. My goal is to explore the beauty of language
+                    by making natural language processing visible for a wide audience. I focus on languages that we might call 
+                    "under-resourced", i.e. languages that are normally not in focus of NLP research.
+                </p>
+                <p><a href="/pages/about.html">Read more about me and my work</a></p>
+            </aside>
+
+            {% if loop.length == 1 %}
+                {% include 'pagination.html' %}
+            {% endif %}
+
+            {% if loop.length > 1 %}
+            <article>
+                <header>
+                    <h1>Once upon a time...</h1>
+                </header>
+            </article>
+            {% endif %}
+
+        {% else %} 
+
+            <article>
+
+                <h2 class="article-short"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+                
+                <div class="entry-content">
+                {% include 'article_infos.html' %}
+                {{ article.summary }}
+                <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">read more</a>
+                {% include 'comments.html' %}
+                </div><!-- /.entry-content -->
+
+                <hr />
+
+            </article>
+
+
+            {% if loop.last and (articles_page.has_previous() or not articles_page.has_previous() and loop.length > 1) %}
+                {% include 'pagination.html' %}
+            {% endif %}
+
+        {% endif %}
+        
+    {% endfor %}
+{% endif %}
+
+{% endblock %}

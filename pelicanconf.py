@@ -3,12 +3,14 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Peter Bouda'
-SITENAME = 'peter\'s blog about free language technologies'
+SITENAME = 'Visual Linguistics'
 #SITESUBTITLE = 'Peter writing about Open Source Language Technologies.'
 SITEURL = 'http://www.peterbouda.eu' #
 
 DELETE_OUTPUT_DIRECTORY = True
 STATIC_PATHS = ['images', 'tutorials']
+DISPLAY_PAGES_ON_MENU = True
+DISPLAY_CATEGORIES_ON_MENU = False
 
 TIMEZONE = 'Europe/Lisbon'
 
@@ -36,7 +38,7 @@ SOCIAL = (('Twitter', 'https://twitter.com/legocoder'),
 
 DEFAULT_PAGINATION = 10
 
-THEME = "themes/notmyidea"
+THEME = "themes/initializr"
 
 DISQUS_SITENAME = 'pbouda'
 GOOGLE_ANALYTICS = 'UA-35434502-1'

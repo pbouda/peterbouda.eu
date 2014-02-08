@@ -5,9 +5,6 @@ IPython and Javascript interaction
 :tags: Python, Javascript, IPython
 :slug: ipython-and-javascript-interaction
 
-Interaction with a browser popup window
-=======================================
-
 This `IPython notebook`_ demonstrates the interaction between Python and
 a popup window that is opened via Javascript. The interaction is one-way
 in this case, from the notebook to the popup. We write data to the popup

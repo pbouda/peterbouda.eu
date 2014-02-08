@@ -1,7 +1,7 @@
 Annotation graphs and the IPython notebook
 ##########################################
 :date: 2012-12-18 10:53
-:category: Language Technologies
+:category: Language
 :slug: annotation-graphs-and-the-ipython-notebook
 :tags: AG, IPython
 

@@ -1,7 +1,7 @@
 pressagio: A predictive text system in Python
 #############################################
 :date: 2013-11-04 13:56
-:category: Language Technologies
+:category: Language
 :tags: Poio, LM
 
 `Pressagio <http://media.cidles.eu/poio/pressagio/>`_ is a predictive text

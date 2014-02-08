@@ -1,6 +1,6 @@
 Title: Creating a dictionary: Excel to Toolbox conversion
 Date: 2013-08-29 11:18
-Category: Language Technologies
+Category: Language
 Tags: Toolbox, Excel
 
 In our current dictionary project "Bilingual Dictionary Piação-Portuguese" we
