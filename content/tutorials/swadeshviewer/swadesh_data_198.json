@@ -1,1 +1,1 @@
-{"directed": false, "multigraph": false, "nodes": [{"data_source": "burtch1983", "pos_on_page": "7", "page": "184", "id": "nabeji"}, {"id": "huu"}, {"id": "derecha"}], "graph": [], "links": [{"target": 1, "source": 0}, {"target": 2, "source": 1}]}
+{"graph": [], "multigraph": false, "nodes": [{"page": "184", "pos_on_page": "7", "id": "nabeji", "data_source": "burtch1983"}, {"id": "huu"}, {"id": "derecha"}], "directed": false, "links": [{"source": 0, "target": 1}, {"source": 1, "target": 2}]}

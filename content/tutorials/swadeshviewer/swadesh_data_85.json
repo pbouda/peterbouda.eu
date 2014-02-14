@@ -1,1 +1,1 @@
-{"directed": false, "multigraph": false, "nodes": [], "graph": [], "links": []}
+{"graph": [], "multigraph": false, "nodes": [{"page": "56", "pos_on_page": "20", "id": "i\u0301bano", "data_source": "walton1997"}, {"page": "91", "pos_on_page": "24", "id": "na\u0301a\u0301vono", "data_source": "walton1997"}, {"id": "bmr"}, {"id": "tripas"}], "directed": false, "links": [{"source": 0, "target": 2}, {"source": 1, "target": 2}, {"source": 2, "target": 3}]}

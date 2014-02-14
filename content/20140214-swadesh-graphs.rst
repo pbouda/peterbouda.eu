@@ -340,11 +340,17 @@ like *body parts*, *food*, etc.
         
     for node in combined_graph:
         if "lang" in combined_graph.node[node] and \
-                combined_graph.node[node]["lang"] == "spa" and \
-                node in swadesh_words:
+                combined_graph.node[node]["lang"] == "spa":
             # get the index of the word in the Swadesh list
-            i = swadesh_words.index(node)
-            swadesh_graphs[i].add_node(node)
+            swadesh_index = -1
+            for i, swadesh in enumerate(swadesh_words):
+                concepts = [x.strip() for x in swadesh.split(',')]
+                if node in concepts:
+                    swadesh_index = i
+                    break
+            if swadesh_index == -1:
+                continue
+            swadesh_graphs[swadesh_index].add_node(node)
             
             for n in combined_graph[node]:
                 if "lang" in combined_graph.node[n] and \
@@ -353,13 +359,13 @@ like *body parts*, *food*, etc.
                     lang = combined_graph.node[n]["lang"]
                     page = combined_graph.node[n]["page"]
                     pos_on_page = combined_graph.node[n]["pos_on_page"]
-                    swadesh_graphs[i].add_node(lang)
-                    swadesh_graphs[i].add_edge(node, lang)
-                    swadesh_graphs[i].add_node(word,
+                    swadesh_graphs[swadesh_index].add_node(lang)
+                    swadesh_graphs[swadesh_index].add_edge(node, lang)
+                    swadesh_graphs[swadesh_index].add_node(word,
                         attr_dict={ "data_source": source,
                                     "page": page,
                                     "pos_on_page": pos_on_page })
-                    swadesh_graphs[i].add_edge(lang, word)
+                    swadesh_graphs[swadesh_index].add_edge(lang, word)
 
 
 Export the subgraph as JSON data

@@ -1,1 +1,1 @@
-{"directed": false, "multigraph": false, "nodes": [], "graph": [], "links": []}
+{"graph": [], "multigraph": false, "nodes": [{"id": "culebra"}, {"id": "boa"}, {"page": "75", "pos_on_page": "2", "id": "ji\u0301i\u0301nimo", "data_source": "walton1997"}, {"id": "bmr"}, {"page": "146", "pos_on_page": "22", "id": "i\u0301i\u0301n\u0303imye", "data_source": "thiesen1998"}, {"id": "serpiente"}], "directed": false, "links": [{"source": 0, "target": 1}, {"source": 1, "target": 4}, {"source": 1, "target": 5}, {"source": 2, "target": 3}, {"source": 3, "target": 5}]}
