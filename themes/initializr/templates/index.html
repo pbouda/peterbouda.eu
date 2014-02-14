@@ -7,20 +7,34 @@
         {# First item #}
         {% if loop.first and not articles_page.has_previous() %}
 
-            <article>
-                <header>
-                    <h1>Recently...</h1>
-                </header>
-                <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
-                {% include 'article_infos.html' %}{{ article.content }}{% include 'comments.html' %}
+            {% if article.iframe %}
 
-            </article>
+                <h1>Latest: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+                <div>
+                    <iframe style="border: none; width: 1026px; height: {{ article.iframeheight }}px;" marginwidth="0" marginheight="0" scrolling="no" src="{{ article.iframe }}"></iframe>
+                </div>
+
+                <article>
+                    {% include 'article_infos.html' %}
+                    {{ article.content }}
+                    {% include 'comments.html' %}
+                </article>
+
+            {% else %}
+                <article>
+                    <header>
+                        <h1>Latest article</h1>
+                    </header>
+                    <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+                    {% include 'article_infos.html' %}{{ article.content }}{% include 'comments.html' %}
+                </article>
+            {% endif %}
 
             <aside>
                 <h3>About Visual Linguistics</h3>
                 <p style="text-align:center;"><img src="http://www.poio.eu/static/media/img/peter_photo.png" /></p>
                 <p>This is Peter's blog about language and visualization of linguistic data. My goal is to explore the beauty of language
-                    by making natural language processing visible for a wide audience. I focus on languages that we might call 
+                    by making natural language processing visible for a wide audience. I focus on languages that I call 
                     "under-resourced", i.e. languages that are normally not in focus of NLP research.
                 </p>
                 <p><a href="/pages/about.html">Read more about me and my work</a></p>
@@ -33,7 +47,7 @@
             {% if loop.length > 1 %}
             <article>
                 <header>
-                    <h1>Once upon a time...</h1>
+                    <h1>Other articles</h1>
                 </header>
             </article>
             {% endif %}
