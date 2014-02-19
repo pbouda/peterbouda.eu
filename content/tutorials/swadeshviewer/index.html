@@ -51,13 +51,15 @@ d3.json("swadesh_list.json", function(error, json) {
       .attr('x',function(d,i) {return ((i % 10) * 102) + 10;})
       .attr('y',function(d,i) {return Math.floor(i/ 10) * 15 + 2; })
       //.attr('swadesh_index', function(d,i) {return i;})
-      .style('fill','#1FD26A');
+      .style('fill','#1FD26A')
+      .style('cursor', 'pointer');
 
     button.append("text")
       .attr("text-anchor", "middle")
       .attr('x',function(d,i) {return ((i % 10) * 102) + 56;})
       .attr('y',function(d,i) {return Math.floor(i / 10) * 15 + 12;})
-      .text(function(d) { return d });
+      .text(function(d) { return d })
+      .style('cursor', 'pointer');
 
     button.on("click", function(d, i) {
       e = d3.select(this);
@@ -114,6 +116,13 @@ function show_graph(number) {
             return "#000";
           }
         })
+        .style("cursor", function(d) {
+          if (d.data_source) {
+            return "pointer";
+          } else {
+            return "default";
+          }
+        })        
         .text(function(d) { return d.id })
         .on("click", function(d) {
           if (d.data_source) {
