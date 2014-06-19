@@ -5,6 +5,7 @@ Visualizing Swadesh words in dictionaries
 :tags: IPython, Swadesh, Witotoan
 :iframe: http://www.peterbouda.eu/tutorials/swadeshviewer/index.html
 :iframeheight: 800
+:iframewidth: 1026
 
 Swadesh viewer for dictionary data
 ==================================
