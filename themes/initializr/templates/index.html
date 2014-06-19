@@ -10,11 +10,18 @@
             {% if article.iframe %}
 
                 <h1>Latest: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+                {% if article.iframewidth|int >= 600 %}
                 <div>
                     <iframe style="border: none; width: {{ article.iframewidth }}px; height: {{ article.iframeheight }}px;" marginwidth="0" marginheight="0" scrolling="no" src="{{ article.iframe }}"></iframe>
                 </div>
+                {% endif %}
 
                 <article>
+                    {% if article.iframewidth|int < 600 %}
+                    <div>
+                        <iframe style="border: none; width: {{ article.iframewidth }}px; height: {{ article.iframeheight }}px;" marginwidth="0" marginheight="0" scrolling="no" src="{{ article.iframe }}"></iframe>
+                    </div>
+                    {% endif %}
                     {% include 'article_infos.html' %}
                     {{ article.content }}
                     {% include 'comments.html' %}
@@ -31,13 +38,11 @@
             {% endif %}
 
             <aside>
-                <h3>About Visual Linguistics</h3>
+                <h3>About Programming Society</h3>
                 <p style="text-align:center;"><img src="http://www.poio.eu/static/media/img/peter_photo.png" /></p>
-                <p>This is Peter's blog about language and visualization of linguistic data. My goal is to explore the beauty of language
-                    by making natural language processing visible for a wide audience. I focus on languages that I call 
-                    "under-resourced", i.e. languages that are normally not in focus of NLP research.
+                <p>This site is about ideas and projects that see coding as an algorithmic literacy of processes, essential as learning to read and write, to allow everyone being creative and express themselves with technology and code.
                 </p>
-                <p><a href="/pages/about.html">Read more about me and my work</a></p>
+                <p><a href="/pages/about.html">Read more...</a></p>
             </aside>
 
             {% if loop.length == 1 %}
