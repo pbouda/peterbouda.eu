@@ -18,8 +18,8 @@ Minde/Portugal. Heavily inspired by `dancecoding in Budapest`_. We used
 .. _fluxus: http://www.pawfal.org/fluxus/
 .. _Python Tools for Visual Studio: http://pytools.codeplex.com/
 
-.. |image0| image:: /static/images/dancecoding/tumblr_mj6nonfMZH1qkig5yo1_500.png
-.. |image1| image:: /static/images/dancecoding/tumblr_mj6nonfMZH1qkig5yo2_500.png
-.. |image2| image:: /static/images/dancecoding/tumblr_mj6nonfMZH1qkig5yo3_500.png
-.. |image3| image:: /static/images/dancecoding/tumblr_mj6nonfMZH1qkig5yo4_500.png
-.. |image4| image:: /static/images/dancecoding/tumblr_mj6nonfMZH1qkig5yo5_500.png
+.. |image0| image:: /images/dancecoding/tumblr_mj6nonfMZH1qkig5yo1_500.png
+.. |image1| image:: /images/dancecoding/tumblr_mj6nonfMZH1qkig5yo2_500.png
+.. |image2| image:: /images/dancecoding/tumblr_mj6nonfMZH1qkig5yo3_500.png
+.. |image3| image:: /images/dancecoding/tumblr_mj6nonfMZH1qkig5yo4_500.png
+.. |image4| image:: /images/dancecoding/tumblr_mj6nonfMZH1qkig5yo5_500.png

@@ -7,7 +7,10 @@ The philosophy of hacking things is now roughly 90 years old, starting in the 20
 
 "By sharing our experience and exchanging tips we advance the state of the art and make low cost home computing possible for more folks ... Computers are not magic. And it is important for the general public to begin to understand the limits of these machines and that humans are responsible for the programming."
 
-This simple idea brought computers to every household in the end, while computers where thought to be special purpose devices for big institutions and universities before. We all know the story, I guess. But think about what happened in the 40 years since those words where written: the world we are currently living in is run by computer and networks, but we breed a generation of kids in cages of closed app ecosystems and social networks. What we need right now is a new approach so that we and our kids will be on the right side of the "`program or be programmed`_". And, beside the moral obligation to give freedom back to the people, I believe that a change in the culture around existing eco-systems will have a massive economical impact comparable to the expansion of accessibility to computers during the last decades. Let's start to build the next future!
+This simple idea brought computers to every household in the end, while computers where thought to be special purpose devices for big institutions and universities before. We all know the story, I guess. But think about what happened in the 40 years since those words were written: the world we are currently living in is run by computers and networks, but we breed a generation of kids in cages of closed app ecosystems and social networks. What we need right now is a new approach so that we and our kids will be on the right side of the "`program or be programmed`_". And, beside the moral obligation to give freedom back to the people, I believe that a change in the culture around existing eco-systems will have a massive economical impact comparable to the expansion of accessibility to computers during the last decades. Let's start to build the next future!
+
+Source of this website: https://github.com/pbouda/peterbouda.eu
+
 
 About Me
 --------

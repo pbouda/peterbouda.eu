@@ -30,7 +30,6 @@ LINKS = (('Poio', 'http://www.poio.eu'),
 
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/legocoder'),
-          ('Tumblr', 'http://languagediversity.tumblr.com'),
           ('Google+', 'https://plus.google.com/+PeterBouda'),
           ('LinkedIn', 'http://www.linkedin.com/pub/peter-bouda/9/929/917'),
           ('Github', 'https://github.com/pbouda'),

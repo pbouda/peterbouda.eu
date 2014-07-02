@@ -27,6 +27,26 @@
                     {% include 'comments.html' %}
                 </article>
 
+            {% elif article.image %}
+
+                <h1>Latest: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+                {% if article.imagewidth|int >= 600 %}
+                <div style="margin-bottom:20px;">
+                    <img src="{{ article.image }}" />
+                </div>
+                {% endif %}
+
+                <article>
+                    {% if article.imagewidth|int < 600 %}
+                    <div>
+                        <img src="{{ article.image }}" />
+                    </div>
+                    {% endif %}
+                    {% include 'article_infos.html' %}
+                    {{ article.content }}
+                    {% include 'comments.html' %}
+                </article>
+
             {% else %}
                 <article>
                     <header>
@@ -43,6 +63,7 @@
                 <p>This is Peter's blog about experimental computation and live coding.
                 </p>
                 <p><a href="/pages/about.html">Read more...</a></p>
+                <p><a href="https://github.com/pbouda/peterbouda.eu">View sources...</a></p>
             </aside>
 
             {% if loop.length == 1 %}
