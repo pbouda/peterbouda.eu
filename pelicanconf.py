@@ -12,7 +12,7 @@ STATIC_PATHS = ['images', 'tutorials']
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
 
-TIMEZONE = 'Europe/Lisbon'
+TIMEZONE = 'Europe/London'
 
 DEFAULT_LANG = 'en'
 
