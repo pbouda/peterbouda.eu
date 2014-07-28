@@ -13,6 +13,8 @@ http://projects.goldelico.com/p/gta04-main/
 http://web.media.mit.edu/~mellis/cellphone/
 http://www.davidhunt.ie/piphone-a-raspberry-pi-based-smartphone/
 
+https://ind.ie/phone/
+
 Software:
 https://sailfishos.org/
 https://wiki.merproject.org/wiki/Nemo
@@ -20,3 +22,4 @@ https://wiki.merproject.org/wiki/Community_Workspace/RaspberryPi
 
 Communities:
 http://talk.maemo.org/
+https://ofono.org/
