@@ -23,3 +23,4 @@ https://wiki.merproject.org/wiki/Community_Workspace/RaspberryPi
 Communities:
 http://talk.maemo.org/
 https://ofono.org/
+https://together.jolla.com/questions/

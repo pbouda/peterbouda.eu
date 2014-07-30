@@ -1,7 +1,7 @@
 <footer class="post-info">
     <p>
-        Published <b>{{ article.locale_date }}</b>
-        in <b><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></b>.
+        Published by <a href="http://www.peterbouda.eu" class="p-author h-card">Peter Bouda</a> at <b><time class="dt-published" datetime="{{ article.date }}">{{ article.locale_date }}</time></b>
+        in <b><a class="p-category" href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></b>.
     </p>
     
     {% if PDF_PROCESSOR %}<p><a href="{{ SITEURL }}/pdf/{{ article.slug }}.pdf">get the pdf</a><p>{% endif %}
