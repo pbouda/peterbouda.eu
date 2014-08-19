@@ -70,7 +70,8 @@ coordinates. For this we just have to convert the Python list to a JSON
 string and set the Javascript variabel to a parsed version of that JSON
 string. We use the Javascript function ``JSON.parse``::
 
-   import jsondata = [ [0, 0], [1, 1], [0.5, 0.5] ]
+   import json
+   data = [ [0, 0], [1, 1], [0.5, 0.5] ]
    js = """window.audiencePopup.data = JSON.parse('{0}');""".format(json.dumps(data))
    display(Javascript(js))
 
