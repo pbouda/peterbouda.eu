@@ -20,18 +20,18 @@ About Me
 I am a scientist and freelance developer (Qt, PyQt, Python, Django, Flask...). Author of the book `PyQt und PySide. GUI- und Anwendungsentwicklung mit Python und Qt <http://www.amazon.de/gp/product/3941841505/ref=as_li_tf_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=3941841505&linkCode=as2&tag=jsusde-21>`_. Contact me if you need a lecturer, teacher or programmer:
 
 | Peter Bouda
-| Michaeliburgstr. 16
-| 81671 München
-| Deutschland
+| Rua do Monte Branco Lote 2
+| 2380-057 Alcanena
+| Portugal
 
 | Mail: `pbouda@cidles.eu`_
-| Telefon: `+49 1578 3547470`_
+| Telefon: `+351 917403181`_
 | Skype: peter.bouda
 
 `More about me...`_
 
 
-.. _+49 1578 3547470: tel://49-1578-3547470
+.. _+351 917403181: tel://351-91-7403181
 .. _pbouda@cidles.eu: mailto:pbouda@cidles.eu
 .. _More about me...: http://www.cidles.eu/about/team/peter-bouda/
 .. _algorithmic literacy of processes: http://www.pawfal.org/dave/blog/2012/04/users-drivers-of-software/
