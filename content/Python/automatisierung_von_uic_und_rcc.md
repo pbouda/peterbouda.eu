@@ -8,7 +8,7 @@ In einem PyQt- oder PySide-Projekt verwaltet man oft ein oder mehrere Ressourcen
 
 Ich setze hier voraus, dass ihr ein bestimmtes Projektgerüst verwendet. Die Ressourcendateien, UI-Dateien sowie Python-Code-Dateien befinden sich dabei in je einem eigenen Ordner. Da Ressourcendateien auf projektweite Dateien verweisen, befinden sie sich häufig im Hauptordner des Projekts. Ein typisches PyQt- bzw. PySide-Projekt sieht bei mir folgendermaßen aus:
 
-![Projektgerüst PyQt-Projekt](|filename|tutorials/11/tut11_1.png)
+![Projektgerüst PyQt-Projekt](|filename|../tutorials/11/tut11_1.png)
 
 Der `bin`-Ordner enthält das Einstiegsskript der Anwendung. Dieses lädt die Klasse des Hauptfensters aus dem Package `helloworld`, das sich im Ordner `src` befindet. Die Hauptfensterklasse wiederum lädt den UI-Code aus dem Unterordner `ui`, also aus dem Package `helloworld.ui`. Die Original-UI-Dateien liegen unter `ui`, die Ressourcendatei `helloworld.qrc` liegt im Hauptordner des Projekts. Das Ziel ist es jetzt also, möglichst unkompliziert die UI-Dateien aus `ui` sowie die Ressourcendatei in Python-Code umzuwandeln und in den enstsprechenden Dateien im Ordner `src/helloworld/ui` abzulegen.
 

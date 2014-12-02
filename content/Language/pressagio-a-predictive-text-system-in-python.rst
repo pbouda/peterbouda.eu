@@ -18,7 +18,7 @@ that you want to support via pressagio. First, you have to prepare some text
 file that contains raw text, without markup or any other content. A good
 example is the output of the `Wikipedia to GrAF conversion that I described
 a few weeks ago
-<|filename|/parsing-wikipedia-dumps-and-converting-to-iso-24612-graf-xml.md>`_.
+<|filename|parsing-wikipedia-dumps-and-converting-to-iso-24612-graf-xml.md>`_.
 The GrAF package contains a .txt file that we will use for the tutorial in this
 post.
 

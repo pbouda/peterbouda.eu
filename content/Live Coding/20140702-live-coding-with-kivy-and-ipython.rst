@@ -1,7 +1,6 @@
 Live Coding with Kivy and IPython
 #################################
 :date: 2014-07-02 10:00
-:category: Live Coding
 :tags: Kivy, IPython, Live Coding
 :image: /images/kivy_livecode_screen.png
 :imagewidth: 1026

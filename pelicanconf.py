@@ -7,6 +7,10 @@ SITENAME = 'The Los Alamos Beach and Weather Report'
 #SITESUBTITLE = 'Peter writing about Open Source Language Technologies.'
 SITEURL = 'http://www.peterbouda.eu' #
 
+USE_FOLDER_AS_CATEGORY = True
+ARTICLE_EXCLUDES = [ 'tutorials' ]
+TYPOGRIFY = True
+
 DELETE_OUTPUT_DIRECTORY = True
 STATIC_PATHS = ['images', 'tutorials']
 DISPLAY_PAGES_ON_MENU = True
