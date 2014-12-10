@@ -17,10 +17,9 @@
 
         <meta name="viewport" content="width=device-width">
 
-        <link href='http://fonts.googleapis.com/css?family=Lobster|Roboto:300,700,300italic|Ubuntu:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/normalize.min.css">
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css">
-        <link rel="stylesheet" href="../theme/css/{{ CSS_FILE }}"> <!-- {{ SITEURL }} -->
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}">
         <link rel="webmention" href="https://webmention.herokuapp.com/api/webmention" />
         
         <script src="{{ SITEURL }}/theme/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -34,9 +33,10 @@
             <header class="wrapper clearfix">
                 <a href="{{ SITEURL }}/">
                     <h1 class="title">
-                        <span style="color:#39b1c6;">The</span>
-                        <span style="color:#ec3f8c;">Los Alamos</span><br/>
-                        <span style="color:#39b1c6;">Beach And Weather Report</span>
+                        <span style="color:#39b1c6;">Licht und Ton für</span><br>
+                        <span style="color:#ec3f8c;">Windows</span>
+                        <span style="color:#39b1c6;">und</span>
+                        <span style="color:#ec3f8c;">Windows Phone</span><br>
                     </h1>
                 </a>
                 <nav>
@@ -61,10 +61,11 @@
                     {% endif %}
 
                     </ul>
+
                     <br/>
 
-                    <ul>
-                        <li><a class="grey" href="/archives.html">Archive</a></li>
+                    <ul class="nav2">
+                        <li><a class="grey" href="/archives.html">Archiv</a></li>
                     </ul>
                 </nav>
             </header>

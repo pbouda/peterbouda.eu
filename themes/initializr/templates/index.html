@@ -9,7 +9,7 @@
 
             {% if article.iframe %}
 
-                <h1>Latest: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+                <h1>Neu: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
                 {% if article.iframewidth|int >= 600 %}
                 <div>
                     <iframe style="border: none; width: {{ article.iframewidth }}px; height: {{ article.iframeheight }}px;" marginwidth="0" marginheight="0" scrolling="no" src="{{ article.iframe }}"></iframe>
@@ -30,7 +30,7 @@
 
             {% elif article.image %}
 
-                <h1>Latest: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+                <h1>Neu: <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
                 {% if article.imagewidth|int >= 600 %}
                 <div style="margin-bottom:20px;">
                     <img src="{{ article.image }}" />
@@ -52,7 +52,7 @@
             {% else %}
                 <article class="h-entry">
                     <header>
-                        <h1>Latest article</h1>
+                        <h1>Neueste Artikel</h1>
                     </header>
                     <h2><a class="p-name u-url" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
                     {% include 'article_infos.html' %}{{ article.content }}{% include 'comments.html' %}
@@ -61,12 +61,11 @@
 
             <aside>
                 <span class="h-card">
-                    <h3>About The Los Alamos Beach And Weather Report</h3>
+                    <h3 style="text-align:center;">Über diese Website</h3>
                     <p style="text-align:center;"><img class="u-photo" src="http://www.poio.eu/static/media/img/peter_photo.png" /></p>
-                    <p>This is <a href="http://www.peterbouda.eu" class="p-name p-url">Peter Bouda</a>'s blog about <span class="p-note">experimental computation</span> and <span class="p-note">live coding</span>.
+                    <p style="text-align:justify;">Dies <a href="http://www.peterbouda.eu" class="p-name p-url">Peter Bouda</a>'s Seite über <span class="p-note">Entwicklung von Windows- und Windows-Phone-Anwendungen</span>. Mein Fokus liegt auf <span class="p-note">Grafik- und Spieleprogrammierung</span>.
                     </p>
-                    <p><a href="/pages/about.html">Read more...</a></p>
-                    <p><a href="https://github.com/pbouda/peterbouda.eu">View sources...</a></p>
+                    <p><a href="/pages/kontakt.html">Kontakt...</a></p>
                 </span>
             </aside>
 
@@ -77,7 +76,7 @@
             {% if loop.length > 1 %}
             <article>
                 <header>
-                    <h1>Other articles</h1>
+                    <h1>Weitere Artikel</h1>
                 </header>
             </article>
             {% endif %}
