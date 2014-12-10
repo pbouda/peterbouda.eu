@@ -37,7 +37,7 @@ SOCIAL = (('Twitter', 'https://twitter.com/legocoder'),
           ('Google+', 'https://plus.google.com/+PeterBouda'),
           ('LinkedIn', 'http://www.linkedin.com/pub/peter-bouda/9/929/917'),
           ('Github', 'https://github.com/pbouda'),
-          ('E-Mail', 'mailto:pbouda@cidles.eu'))
+          ('E-Mail', 'mailto:pbouda@outlook.com'))
 
 DEFAULT_PAGINATION = 10
 

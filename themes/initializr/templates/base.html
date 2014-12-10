@@ -20,7 +20,7 @@
         <link href='http://fonts.googleapis.com/css?family=Lobster|Roboto:300,700,300italic|Ubuntu:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/normalize.min.css">
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css">
-        <link rel="stylesheet" href="theme/css/{{ CSS_FILE }}"> <!-- {{ SITEURL }}/theme/css/ -->
+        <link rel="stylesheet" href="../theme/css/{{ CSS_FILE }}"> <!-- {{ SITEURL }} -->
         <link rel="webmention" href="https://webmention.herokuapp.com/api/webmention" />
         
         <script src="{{ SITEURL }}/theme/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -41,6 +41,7 @@
                 </a>
                 <nav>
                     <ul>
+
                         <li><a href="/">Start</a></li>
 
                     {% for title, link in MENUITEMS %}
@@ -59,7 +60,11 @@
                     {% endfor %}
                     {% endif %}
 
-                        <li><a href="/archives.html">Archive</a></li>
+                    </ul>
+                    <br/>
+
+                    <ul>
+                        <li><a class="grey" href="/archives.html">Archive</a></li>
                     </ul>
                 </nav>
             </header>

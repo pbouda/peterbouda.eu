@@ -59,4 +59,4 @@ python generate_ui.py
 
 Und schon habt ihr die Code-Dateien wieder auf dem aktuellen Stand.
 
-Mehr über dieses Thema findet ihr zum Beispiel in meinem Buch <a href="http://www.amazon.de/gp/product/3941841505/ref=as_li_tf_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=3941841505&linkCode=as2&tag=jsusde-21">PyQt und PySide. GUI- und Anwendungsentwicklung mit Python und Qt</a><img src="http://www.assoc-amazon.de/e/ir?t=jsusde-21&l=as2&o=3&a=3941841505" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />.
+Mehr über dieses Thema findet ihr zum Beispiel in meinem Buch <a href="http://www.amazon.de/gp/product/3941841505/ref=as_li_tf_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=3941841505&linkCode=as2&tag=jsusde-21">PyQt und PySide. GUI- und Anwendungsentwicklung mit Python und Qt</a><img src="http://www.assoc-amazon.de/e/ir?t=jsusde-21&l=as2&o=3&a=3941841505" width="1" height="1" border="0" alt="book cover" style="border:none !important; margin:0px !important;" />.

@@ -123,6 +123,10 @@ nav a {
     background: #1fd26a;
 }
 
+nav a.grey {
+    background: #6a6a6a;    
+}
+
 nav a:hover,
 nav a:visited {
     color: #25242c;
@@ -203,6 +207,19 @@ footer div[class='social'] a {
     padding-left: 25px;
 }
 
+.align-left {
+    float: left;
+}
+
+img.align-left {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+div.breakfloat {
+    clear: all;
+}
+
 /* Icons */
 .social a[href*='about.me'] {background-image: url('../img/icons/aboutme.png');}
 .social a[href*='bitbucket.org'] {background-image: url('../img/icons/bitbucket.png');}
@@ -244,10 +261,15 @@ abbr[title] {
     INTERMEDIATE: Menu
    ==================== */
 
+    nav ul {
+        display: block;
+        margin-top: 8%;
+    }
+
     nav a {
         float: left;
         width: 27%;
-        margin: 22% 4.5% 0 4.5%;
+        margin: 0% 4.5% 0 4.5%;
         white-space: nowrap;
     }
 

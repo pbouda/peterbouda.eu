@@ -26,7 +26,7 @@ Hier aber das dazugehörige Video und Bild:
 
 .. figure:: /static/images/n810_arc.jpg
    :align: center
-   :alt: 
+   :alt: Photo of N810 with Arc keyboard
 
 .. _Microsoft ARC Tastatur: http://www.amazon.de/gp/product/B00332Y2DS?ie=UTF8&tag=jsusde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B00332Y2DS
 .. _Nokia N810: http://www.amazon.de/gp/product/B000ZNRCJE?ie=UTF8&tag=jsusde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B000ZNRCJE
