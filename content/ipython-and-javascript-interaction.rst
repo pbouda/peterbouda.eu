@@ -28,6 +28,18 @@ here:
 
 https://github.com/pbouda/stuff/blob/master/ipynb/Javascript%20Interactions%20I.ipynb
 
+.. raw:: html
+
+   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+   <!-- peterbouda.eu -->
+   <ins class="adsbygoogle"
+        style="display:inline-block;width:336px;height:280px"
+        data-ad-client="ca-pub-7147486599727434"
+        data-ad-slot="2540483001"></ins>
+   <script>
+   (adsbygoogle = window.adsbygoogle || []).push({});
+   </script>
+
 Open a browser popup
 --------------------
 
