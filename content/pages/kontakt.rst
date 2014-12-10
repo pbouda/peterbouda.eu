@@ -4,7 +4,7 @@ Kontakt
 .. image:: http://www.poio.eu/static/media/img/peter_photo.png
   :alt: Foto von Peter Bouda
 
-Ich bin freier Programmierer, Berater und Ausbilder für Windows-Plattformen. Mein Spezialgebiet ist die die Grafik- und Spieleprogrammierung. Ich bin außerdem Autor des Buches `PyQt und PySide. GUI- und Anwendungsentwicklung mit Python und Qt <http://www.amazon.de/gp/product/3941841505/ref=as_li_tf_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=3941841505&linkCode=as2&tag=jsusde-21>`_.
+Ich bin freier Programmierer, Berater und Ausbilder für Windows-Plattformen. Mein Spezialgebiet ist Grafik- und Spieleprogrammierung. Ich bin außerdem Autor des Buches `PyQt und PySide. GUI- und Anwendungsentwicklung mit Python und Qt <http://www.amazon.de/gp/product/3941841505/ref=as_li_tf_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=3941841505&linkCode=as2&tag=jsusde-21>`_.
 
 Schreiben Sie einfach, wenn Sie einen Entwickler für grafische Softwareprojekte suchen oder einen Kurs/Vortrag über die Entwicklung von Windows(-Phone)-Spielen organisieren möchten:
 
