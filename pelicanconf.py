@@ -16,9 +16,12 @@ STATIC_PATHS = ['images', 'tutorials']
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
 
-TIMEZONE = 'Europe/London'
+TIMEZONE = 'Europe/Lisbon'
 
-DEFAULT_LANG = 'en'
+DEFAULT_LANG = 'de'
+
+#PLUGIN_PATHS = [ 'plugins' ]
+#PLUGINS = [ 'simple_footnotes' ]
 
 # Feed generation is usually not desired when developing
 #FEED_ALL_ATOM = feeds/all.atom.xml
