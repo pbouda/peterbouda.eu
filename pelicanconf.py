@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Peter Bouda'
-SITENAME = 'Licht und Ton für Windows und Windows Phone'
+SITENAME = 'Qt Hacks'
 #SITESUBTITLE = 'Peter writing about Open Source Language Technologies.'
 SITEURL = 'http://www.peterbouda.eu' #
 

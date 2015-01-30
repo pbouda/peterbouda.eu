@@ -11,9 +11,9 @@ textarea {
 }
 
 body {
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.4;
-    font-family: "Segoe UI", Helvetica, Helvetica Neue, Arial;
+    font-family: "Open Sans",Arial,Helvetica,sans-serif;
 }
 
 ::-moz-selection {
@@ -87,9 +87,10 @@ textarea {
 }
 
 .title {
-    font-family: "Impact", sans-serif;
+    font-family: "Open Sans",Arial,Helvetica,sans-serif;
     color: white;
-    font-size: 2.4em;
+    font-weight: 300;
+    font-size: 3.5em;
     line-height: 1.0em;
     border:none;
     margin-top: 0.4em;
@@ -111,7 +112,7 @@ nav ul {
 }
 
 nav a {
-    font-family: 'Segoe UI Bold', Helvetica, Helvetica Neue, Arial;
+    font-family: "Open Sans",Arial,Helvetica,sans-serif;
     display: block;
     padding: 10px 0;
 
@@ -145,7 +146,8 @@ nav a:hover {
 }
 
 .main h1, h2, h3 {
-    font-family: 'Segoe UI Bold', Helvetica, Helvetica Neue, Arial;
+    font-family: "Open Sans",Arial,Helvetica,sans-serif;
+    font-weight: 300;
 }
 
 .main article h1 {

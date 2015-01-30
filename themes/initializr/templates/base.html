@@ -33,10 +33,8 @@
             <header class="wrapper clearfix">
                 <a href="{{ SITEURL }}/">
                     <h1 class="title">
-                        <span style="color:#39b1c6;">Licht und Ton für</span><br>
-                        <span style="color:#ec3f8c;">Windows</span>
-                        <span style="color:#39b1c6;">und</span>
-                        <span style="color:#ec3f8c;">Windows Phone</span><br>
+                        <span style="color:#39b1c6;">Qt</span>
+                        <span style="color:#ec3f8c;">Hacks</span><br>
                     </h1>
                 </a>
                 <nav>
@@ -56,15 +54,12 @@
 
                     {% if DISPLAY_PAGES_ON_MENU -%}
                     {% for page in PAGES %}
+                        {% if (loop.index%3)==0 %}
+                            </ul><br/><ul class="nav{{(loop.index//3)+1}}">
+                        {% endif %}
                         <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
                     {% endfor %}
                     {% endif %}
-
-                    </ul>
-
-                    <br/>
-
-                    <ul class="nav2">
                         <li><a class="grey" href="/archives.html">Archiv</a></li>
                     </ul>
                 </nav>
