@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Peter Bouda'
 SITENAME = 'cute.dev'
-SITESUBTITLE = 'About Qt, C++, PyQt and Python'
+SITESUBTITLE = 'Peter\'s blog about Qt, C++, PyQt and Python®'
 SITEURL = 'http://www.peterbouda.eu' #
 
 USE_FOLDER_AS_CATEGORY = True

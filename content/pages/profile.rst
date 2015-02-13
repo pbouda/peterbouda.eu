@@ -3,6 +3,11 @@ Profile
 
 .. image:: http://www.poio.eu/static/media/img/peter_photo.png
   :alt: Photo of Peter Bouda
+  :class: left-align
+
+.. image:: ../images/python_logo.png
+  :alt: Photo of Peter Bouda
+
 
 My name is **Peter Bouda** and I am a **developer, project manager and consultant
 with over 15 years of experience** as employee and freelancer in IT. See my
@@ -13,16 +18,16 @@ your project. My areas of expertise include:
 * **Platform-independent desktop and mobile applications** with
   **Qt/C++** and **PyQt**, for Windows (Phone), Mac OS, Linux, iOS, Android, Ubuntu
   Phone, Sailfish OS, Raspberry Pi, embedded devices, ... (since 2003);
-* **Web applications** with **Python (Django, Flask, ...)**, **JavaScript**,
+* **Web applications** with **Python® (Django, Flask, ...)**, **JavaScript**,
   **HTML** and **CSS** (since 1999);
 * Integration and customization of **natural language processing (NLP)**
   technologies and applications like speech recognition, text-to-speech and
   machine translation (since 2004);
-* **Test-driven development** with Python and C++ (since 2008);
+* **Test-driven development** with Python® and C++ (since 2008);
 * **Agile methods** in project management, especially **Kanban** (since 2010).
 
 I support `free software <https://fsfe.org>`_ and am the author of the book
-`PyQt und PySide. GUI- und Anwendungsentwicklung mit Python und Qt 
+`PyQt und PySide. GUI- und Anwendungsentwicklung mit Python® und Qt 
 <http://www.amazon.de/gp/product/3941841505/ref=as_li_tf_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=3941841505&linkCode=as2&tag=jsusde-21>`_,
 published by Open Source Press in Munich, Germany. I was a member of the
 invitation-only, but discontinued Qt Ambassador Program of Nokia. In 2009
@@ -73,6 +78,15 @@ from the start (with the help of the Python library nose) and we applied Kanban
 approach to organize the development in the team. I gave talk about this project
 on events like the Sapo Codebits and the Summer School "Coding for Language
 Communities".
+
+
+Web-based interactive installation Freuden|Tanz
+...............................................
+
+* **Timeframe: 09/2014 -- 11/2014 (3 months)**
+* **Roles: Developer**
+* **Technologies: JavaScript, WebGL, three.js, Leap Motion**
+* **Link:** https://vimeo.com/112967710
 
 
 Web application QuantHistLing
@@ -136,5 +150,3 @@ Linguadict online dictionary. I developed a customized solution to process,
 store and access the dictionary data on low-end mobile devices. I was also
 responsible for the development of the UI on the Nokia Maemo, MeeGo and
 Symbian S60 platforms.
-
-
