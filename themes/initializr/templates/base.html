@@ -19,7 +19,7 @@
 
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/normalize.min.css">
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css">
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}">
+        <link rel="stylesheet" href="../theme/css/{{ CSS_FILE }}">  <!-- {{ SITEURL }}/ -->
         <link rel="webmention" href="https://webmention.herokuapp.com/api/webmention" />
         
         <script src="{{ SITEURL }}/theme/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -31,12 +31,16 @@
 
         <div class="header-container">
             <header class="wrapper clearfix">
-                <a href="{{ SITEURL }}/">
-                    <h1 class="title">
-                        <span style="color:#39b1c6;">Qt</span>
-                        <span style="color:#ec3f8c;">Hacks</span><br>
-                    </h1>
-                </a>
+                <div class="title">
+                    <div class="maintitle">
+                        <a href="{{ SITEURL }}/">
+                            <span style="color:#39b1c6;">cute</span><span style="color:#ec3f8c;">.dev</span>
+                        </a>
+                    </div>
+                    <div class="subtitle">
+                        {{ SITESUBTITLE }}
+                    </div>
+                </div>
                 <nav>
                     <ul>
 
@@ -60,7 +64,7 @@
                         <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
                     {% endfor %}
                     {% endif %}
-                        <li><a class="grey" href="/archives.html">Archiv</a></li>
+                        <li><a class="grey" href="/archives.html">Archive</a></li>
                     </ul>
                 </nav>
             </header>

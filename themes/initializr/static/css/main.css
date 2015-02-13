@@ -87,15 +87,20 @@ textarea {
 }
 
 .title {
-    font-family: "Open Sans",Arial,Helvetica,sans-serif;
+    text-align: left;
     color: white;
-    font-weight: 300;
-    font-size: 3.5em;
-    line-height: 1.0em;
-    border:none;
     margin-top: 0.4em;
     margin-bottom: 0.4em;
-    text-align: left;
+}
+
+.maintitle {
+    font-weight: 300;
+    font-size: 3.5em;
+}
+
+.subtitle {
+    font-weight: 300;
+    font-size: 1.5em;
 }
 
 /* ==============
@@ -115,6 +120,7 @@ nav a {
     font-family: "Open Sans",Arial,Helvetica,sans-serif;
     display: block;
     padding: 10px 0;
+    margin: 5px 0;
 
     text-align: center;
     text-decoration: none;
@@ -203,10 +209,14 @@ article hr {
     padding: 0;
 }
 
-footer div[class='social'] a {
+footer div[class='social'] a, aside div[class='social'] a {
     background-repeat: no-repeat;
     background-position: 3px 3px;
     padding-left: 25px;
+}
+
+aside div[class='social'] p {
+    margin: 0.3em 0;
 }
 
 .align-left {
@@ -223,7 +233,7 @@ div.breakfloat {
 }
 
 /* Icons */
-.social a[href*='about.me'] {background-image: url('../img/icons/aboutme.png');}
+.social a[href*='about.me'] {background-image: url('../img/icons/aboutme.png'); }
 .social a[href*='bitbucket.org'] {background-image: url('../img/icons/bitbucket.png');}
 .social a[href*='delicious.com'] {background-image: url('../img/icons/delicious.png');}
 .social a[href*='digg.com'] {background-image: url('../img/icons/digg.png');}
@@ -350,6 +360,11 @@ abbr[title] {
     .wrapper {
         width: 1026px; /* 1140px - 10% for margins */
         margin: 0 auto;
+    }
+
+    div.page {
+        max-width: 800px;
+        text-align: justify;
     }
 }
 

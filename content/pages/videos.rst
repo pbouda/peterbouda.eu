@@ -1,6 +1,18 @@
 Videos
 ======
 
+Open Source Technologies for Language Diversity
+-----------------------------------------------
+
+Talk by Peter Bouda and Pedro Manha at the Sapo Codebits 2014 festival.
+
+.. raw:: html
+    
+    <p>
+    <iframe src="http://rd3.videos.sapo.pt/playhtml?file=http://rd3.videos.sapo.pt/hNFNWZQAfzrluoonvGjd/mov/1" frameborder="0" scrolling="no" width="560" height="315" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>
+    </p>
+
+
 Live Coding GLSL shaders with IPython
 -------------------------------------
 

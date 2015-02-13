@@ -3,8 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Peter Bouda'
-SITENAME = 'Qt Hacks'
-#SITESUBTITLE = 'Peter writing about Open Source Language Technologies.'
+SITENAME = 'cute.dev'
+SITESUBTITLE = 'About Qt, C++, PyQt and Python'
 SITEURL = 'http://www.peterbouda.eu' #
 
 USE_FOLDER_AS_CATEGORY = True
@@ -18,7 +18,7 @@ DISPLAY_CATEGORIES_ON_MENU = False
 
 TIMEZONE = 'Europe/Lisbon'
 
-DEFAULT_LANG = 'de'
+DEFAULT_LANG = 'en'
 
 #PLUGIN_PATHS = [ 'plugins' ]
 #PLUGINS = [ 'simple_footnotes' ]
