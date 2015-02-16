@@ -10,17 +10,16 @@
       {% include 'twitter.html' %}
     </header>
 
-    {% if article.iframe %}
-    <div>
-        <iframe style="border: none; width: {{ article.iframewidth }}px; height: {{ article.iframeheight }}px;" marginwidth="0" marginheight="0" scrolling="no" src="{{ article.iframe }}"></iframe>
-    </div>    
-    {% elif article.image %}
-    <div style="margin-bottom:20px;">
-        <img src="{{ article.image }}" />
-    </div>
-    {% endif %}
-
     <div class="entry-content">
+      {% if article.iframe %}
+      <div>
+          <iframe style="border: none; width: 100%;" marginwidth="0" marginheight="0" scrolling="no" src="{{ article.iframe }}"></iframe>
+      </div>    
+      {% elif article.image %}
+      <div style="margin-bottom:20px;">
+          <img src="{{ article.image }}" style="width: 100%;" />
+      </div>
+      {% endif %}
       {% include 'article_infos.html' %}
       {{ article.content }}
     </div><!-- /.entry-content -->
@@ -54,5 +53,27 @@
       </script>
     </div>
   </article>
+
+  <aside>
+    <span>
+        <!--<h3 style="text-align:center;">About</h3>-->
+        <p style="text-align:center;"><img class="u-photo" src="http://www.poio.eu/static/media/img/peter_photo.png" /></p>
+        <p style="text-align:justify;">
+          My name is Peter Bouda, I work as freelance developer and am available to work in your project. Read my <a href="/pages/profile.html">freelancer profile</a> and <a href="/pages/contact.html">contact me</a> for more information and to talk about your project.
+        </p>
+    </span>
+    {% if SOCIAL or FEED_ALL_ATOM or FEED_ALL_RSS %}
+    <div class="social">
+        <p><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate">atom feed</a></p>
+        {% if FEED_ALL_RSS %}
+        <p><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate">rss feed</a></p>
+        {% endif %}
+
+        {% for name, link in SOCIAL %}
+            <p><a rel="me" href="{{ link }}">{{ name }}</a></p>
+        {% endfor %}
+    </div><!-- /.social -->
+    {% endif %}                    
+</aside>
 </section>
 {% endblock %}

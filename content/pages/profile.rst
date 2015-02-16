@@ -9,15 +9,16 @@ Profile
   :alt: Photo of Peter Bouda
 
 
-My name is **Peter Bouda** and I am a **developer, project manager and consultant
-with over 15 years of experience** as employee and freelancer in IT. See my
-list of `projects`_ below to read more about past projects and please `contact me
-<{filename}contact.rst>`_ if you are looking for a developer or consultant in
-your project. My areas of expertise include:
+My name is **Peter Bouda** and I am a **developer, project manager, educator and
+consultant with over 15 years of experience** as employee and freelancer in IT.
+See my list of `recent projects`_ below to read more about past projects and
+please `contact me <{filename}contact.rst>`_ if you are looking for a developer,
+educator or consultant in your company or project. My areas of expertise
+include:
 
 * **Platform-independent desktop and mobile applications** with
   **Qt/C++** and **PyQt**, for Windows (Phone), Mac OS, Linux, iOS, Android, Ubuntu
-  Phone, Sailfish OS, Raspberry Pi, embedded devices, ... (since 2003);
+  Phone, Sailfish OS, Tizen, Raspberry Pi, embedded devices, ... (since 2003);
 * **Web applications** with **Python® (Django, Flask, ...)**, **JavaScript**,
   **HTML** and **CSS** (since 1999);
 * Integration and customization of **natural language processing (NLP)**
@@ -49,11 +50,11 @@ I live in Munich, Germany and Alcanena, Portugal, contact details are
 `on my contact page <{filename}contact.rst>`_.
 
 
-Projects
---------
+Recent projects
+---------------
 
-Here is a list of my projects as freelancer and employee, in chronological
-order:
+Here is a list of my recent projects as freelancer and employee, in
+chronological order:
 
 Predictive text system Poio
 ...........................
@@ -88,6 +89,16 @@ Web-based interactive installation Freuden|Tanz
 * **Technologies: JavaScript, WebGL, three.js, Leap Motion**
 * **Link:** https://vimeo.com/112967710
 
+This piece of art was choreographed and designed by Stephan Jürgens, a
+choreographer and dancer living in Lisbon. The installation was first presented
+at the POST SCREEN festival 2014 at the Universidade Lisboa. I implemented the
+WebGL interface based on Photoshop designs by Stephan. We used a Leap Motion
+for hand tracking (the standard Leap Motion JavaScript API plus additional
+smoothing of the tracking data for better user experience) and the three.js
+library as a wrapper for WebGL. I developed a custom solution for platform and
+browser independent input methods, so that the installation is also usable with
+a mouse or a trackpad.
+
 
 Web application QuantHistLing
 .............................
@@ -95,7 +106,16 @@ Web application QuantHistLing
 * **Timeframe: 07/2010 -- 08/2014 (4 years, 2 months)**
 * **Roles: Developer and administrator**
 * **Technologies: Python, Pylons, JavaScript, HTML, CSS, Postgres, Apache, NLP**
-* **Link:** http://quanthistling.info/
+* **Link:** http://quanthistling.info, http://lingpy.org
+
+Within the project "Quantitative Historical Linguistcs" I worked as a software
+developer on the Python web app and on Python libraries to process digitized
+lexical data in a custom research workflow for retro-digitization of printed
+dictionaries. I planned and implemented a solution to convert Microsoft Word
+documents into annotated documents in a Postgres database. The goal was to allow
+researchers to easily query, export and use the data in workflows for
+quantitative language comparison. A Pylons web app to view and manually annotate
+the data was part of the workflow.
 
 
 Web application TypeCraft
@@ -128,6 +148,38 @@ Language data management libraries Poio API and GrAF-Python
 * **Technologies: Python, NLP, test-driven (nose), Kanban**
 * **Link:** http://media.cidles.eu/poio/poio-api/
 
+As a member of the working group "Linguistic Fieldwork, Anthropology, Language
+Typology" of the european CLARIN programme for research infrastructure I was
+part of the planning and implementation team of the two curation projects
+"Poio API – a framework for processing fieldwork data in linguistic research"
+and "Field Linguistic Tool Repository". The software development was done in
+a cooperation between the "Centro Interdisciplinar de Documentação
+Linguística e Social" and the "Cologne Center for eHumanities" at the University
+of Cologne. I was a project manager and developer at CIDLeS, to implement the
+Open Source Python libraries "graf-python" and "Poio API". "graf-python" is a 
+Python implementation of GrAF (ISO 24612, the "Language resource management --
+Linguistic annotation framework"), that we used as internal data model for the
+conversion between different file formats and data models in linguistics. We
+developed the libraries in a test-driven approach and applied Kanban for project
+management.
+
+
+Linguistic analysis tool Poio Analyzer
+......................................
+* **Timeframe: 01/2011 -- 08/2013 (two years, 9 months)**
+* **Roles: Consultant and developer**
+* **Technologies: Python, PyQt, NLP**
+* **Link:** https://github.com/cidles/poio-analyzer
+
+The development of Poio GRAID was a cooperation between the "Centro
+Interdisciplinar de Documentação Linguística e Social" and the University
+of Regensburg. I planned and implemented a software to allow users to search
+and analyze data from language documentation projects. The software supports
+the analysis of data from different file formats in an easy-to-use interface.
+The main goal was to allow linguists with no knowledge of programming or
+statistics to query their language corpus and get meaningful results that they
+may use in research publications like journal articles or descriptive grammars.
+
 
 Annotation software Poio GRAID
 ..............................
@@ -135,6 +187,13 @@ Annotation software Poio GRAID
 * **Timeframe: 01/2011 -- 12/2011 (one year)**
 * **Roles: Consultant and developer**
 * **Technologies: Python, PyQt, NLP**
+
+The development of Poio GRAID was a cooperation between the "Centro
+Interdisciplinar de Documentação Linguística e Social" and the University
+of Bamberg. The goal was to prototype a user interface that allowed linguists
+to annotate data according to the GRAID ("Grammatical Relations and Animacy in
+Discourse") system. I planned and implemented the solution and used PyQt for
+the platform independent user interface.
 
 
 App Linguadict for Nokia Meego and Symbian
