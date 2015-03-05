@@ -1,13 +1,17 @@
 Profile
 =======
 
-.. image:: http://www.poio.eu/static/media/img/peter_photo.png
+.. image:: ../images/peter.jpg
   :alt: Photo of Peter Bouda
-  :class: left-align
+  :class: align-left
+
+.. image:: ../images/qt_logo.png
+  :alt: Qt logo
+  :class: align-left
 
 .. image:: ../images/python_logo.png
-  :alt: Photo of Peter Bouda
-
+  :alt: Python logo
+  :class: breakfloat
 
 My name is **Peter Bouda** and I am a **developer, project manager, educator and
 consultant with over 15 years of experience** as employee and freelancer in IT.

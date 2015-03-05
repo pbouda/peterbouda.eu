@@ -2,7 +2,6 @@ Update für die OpenGL-Renderschleife in PyQt
 ############################################
 :date: 2015-01-30 11:00
 :category: Graphics
-:lang: de
 :tags: PyQt, OpenGL, Raymarching
 :image: /images/pyqt_opengl_raymarching.png
 :imagewidth: 1026
