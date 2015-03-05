@@ -15,3 +15,8 @@ page <{filename}profile.rst>`_.
 | Michaeliburgstr. 16
 | 81671 München
 | Deutschland
+
+
+*"Python" and the Python logos are trademarks or registered trademarks of the
+Python Software Foundation, used by Peter Bouda with permission from the
+Foundation.*
