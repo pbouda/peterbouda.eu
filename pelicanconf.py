@@ -3,8 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Peter Bouda'
-SITENAME = 'cute.dev'
-SITESUBTITLE = 'Peter\'s blog about Qt, C++, PyQt and Python®'
+SITENAME = 'Treasures of the Stupid Ages'
+SITESUBTITLE = 'About (Embedded) Linux, Qt and Python'
 SITEURL = 'http://www.peterbouda.eu' #
 
 USE_FOLDER_AS_CATEGORY = True
@@ -30,14 +30,12 @@ TRANSLATION_FEED_ATOM = None
 
 # Blogroll
 LINKS = (('Poio', 'http://www.poio.eu'),
-         ('QuantHistLing', 'http://www.quanthistling.info/'),
          ('CIDLeS', 'http://www.cidles.eu/'),
          ('Archive', '/archives.html')
         )
 
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/legocoder'),
-          ('Google+', 'https://plus.google.com/+PeterBouda'),
           ('LinkedIn', 'http://www.linkedin.com/pub/peter-bouda/9/929/917'),
           ('Github', 'https://github.com/pbouda'),
           ('E-Mail', 'mailto:pbouda@outlook.com'))
