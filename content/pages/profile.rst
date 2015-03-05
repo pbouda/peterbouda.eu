@@ -65,7 +65,7 @@ Predictive text system Poio
   mongrel, NLP, Kanban, test-driven (nose)**
 * **Link:** http://www.poio.eu
 
-Poio is a predictive text system for under-resourced languages. We developed
+Poio is a predictive text system for under-resourced languages. I developed
 the open source project at the "Centro Interdisciplinar de Documentação
 Linguística e Social" to support under-resourced languages. The data is extracted
 from different online and private sources and processed via a Python-powered
@@ -76,7 +76,7 @@ demo is powered by a Flask web application. Within the project I work as a
 developer and manager, supervising a changing development team that consists
 of interns, freelancers and employees. This project was implemented test-driven
 from the start (with the help of the Python library nose) and we applied Kanban
-approach to organize the development in the team. I gave talk about this project
+approach to organize the development in the team. I gave talks about this project
 on events like the Sapo Codebits and the Summer School "Coding for Language
 Communities".
 
@@ -123,7 +123,7 @@ Web application TypeCraft
 
 * **Timeframe: 10/2013 -- 08/2014 (11 months)**
 * **Roles: Consultant and developer**
-* **Technologies: Java, JSP, Python, HTML, JavaScript, CSS, Postgres, Kanban**
+* **Technologies: Java, JSP, Tomcraft, Python, HTML, JavaScript, CSS, Postgres, Kanban**
 * **Link:** http://typecraft.org
 
 In a cooperation between the "Norges teknisk-naturvitenskapelige universitet" in
@@ -171,7 +171,7 @@ Linguistic analysis tool Poio Analyzer
 * **Technologies: Python, PyQt, NLP**
 * **Link:** https://github.com/cidles/poio-analyzer
 
-The development of Poio GRAID was a cooperation between the "Centro
+The development of Poio Analyzer was a cooperation between the "Centro
 Interdisciplinar de Documentação Linguística e Social" and the University
 of Regensburg. I planned and implemented a software to allow users to search
 and analyze data from language documentation projects. The software supports
