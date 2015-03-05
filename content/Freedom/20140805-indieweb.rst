@@ -3,4 +3,4 @@ IndieWeb
 :date: 2014-08-05 20:31
 :tags: Indie, IndieWeb
 
-This blog is now part of the `IndieWeb <http://indiewebcamp.com/>`_, "a people-focused alternative to the ‘corporate web’.". I am sitting here with `Pierre Ozoux <http://www.pierre-o.fr/blog/2014/07/30/indieweb/>`_ in front of the café "i legal", Alfama, Lisbon at at meetup of the `Internet Freedom Lisbon <http://www.meetup.com/Internet-Freedom-Lisbon/events/197769702/>`_, setting up IndieWeb blogs and translating free software sites.
+This blog is now part of the `IndieWeb <http://indiewebcamp.com/>`_, "a people-focused alternative to the 'corporate web'". I am sitting here with `Pierre Ozoux <http://www.pierre-o.fr/blog/2014/07/30/indieweb/>`_ in front of the café "i legal", Alfama, Lisbon at at meetup of the `Internet Freedom Lisbon <http://www.meetup.com/Internet-Freedom-Lisbon/events/197769702/>`_, setting up IndieWeb blogs and translating free software sites.
