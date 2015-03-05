@@ -44,7 +44,7 @@ DEFAULT_PAGINATION = 10
 
 THEME = "themes/initializr"
 
-DISQUS_SITENAME = 'pbouda'
+#DISQUS_SITENAME = 'pbouda'
 #GOOGLE_ANALYTICS = 'UA-35434502-1'
 
 #GITHUB_URL = 'https://github.com/pbouda'
