@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Peter Bouda'
 SITENAME = 'Treasures of the Stupid Ages'
-SITESUBTITLE = 'About (Embedded) Linux, Qt and Python'
+SITESUBTITLE = 'Peter\'s blog about programming, technology and freedom'
 SITEURL = 'http://www.peterbouda.eu' #
 
 USE_FOLDER_AS_CATEGORY = True
@@ -45,7 +45,7 @@ DEFAULT_PAGINATION = 10
 THEME = "themes/initializr"
 
 DISQUS_SITENAME = 'pbouda'
-GOOGLE_ANALYTICS = 'UA-35434502-1'
+#GOOGLE_ANALYTICS = 'UA-35434502-1'
 
 #GITHUB_URL = 'https://github.com/pbouda'
 

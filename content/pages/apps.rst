@@ -1,7 +1,7 @@
 Apps
 ====
 
-This section presents some of the apps that I developed for Windows and Windows Phone.
+This section presents the apps that I developed and published.
 
 Music In The Sky - OneDrive Music Player
 ----------------------------------------
