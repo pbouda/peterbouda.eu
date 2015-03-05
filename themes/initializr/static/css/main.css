@@ -89,20 +89,20 @@ textarea {
 .title {
     text-align: left;
     color: white;
-    margin-top: 0.4em;
-    margin-bottom: 0.4em;
+    margin-top: 1.0em;
+    margin-bottom: 0.8em;
 }
 
-.maintitle {
+.maintitle a {
     font-weight: 300;
-    font-size: 3em;
-    color:#ec3f8c;
+    font-size: 2.8em;
+    color: #ec3f8c;
 }
 
 .subtitle {
     font-weight: 300;
-    font-size: 1.2em;
-    color:#39b1c6;
+    font-size: 1.4em;
+    color: #39b1c6;
 }
 
 /* ==============
