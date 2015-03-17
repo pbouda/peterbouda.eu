@@ -26,7 +26,7 @@
 
                 <article class="h-entry">
                     <div>
-                        <img src="{{ article.image }}" style="width:100%;" />
+                        <img src="{{ article.image }}" {% if article.imagewidth|int >= 600 %}style="width:100%;"{% endif %} />
                     </div>
                     <h2><a class="p-name u-url" href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
                     {% include 'article_infos.html' %}
@@ -48,22 +48,22 @@
                 <span class="h-card">
                     <!--<h3 style="text-align:center;">About</h3>-->
                     <p style="text-align:center;"><img class="u-photo" src="/images/peter.jpg" /></p>
-                    <p style="text-align:justify;">This is <a href="http://www.peterbouda.eu" class="p-name p-url">Peter Bouda</a>'s site about <span class="p-note">software development with Qt and Python</span>. My focus is on <span class="p-note">Qt for platform-independent development of desktop, embedded and mobile applications</span> and <span class="p-note">Python for web applications (Django, Flask) and graphics programming (PyQt)</span>. There might also be some posts about the <span class="p-note">free software movement and related philosophical topics</a>.
+                    <p style="text-align:justify;">This is <a rel="me" href="http://www.peterbouda.eu" class="p-name p-url">Peter Bouda</a>'s site about <span class="p-note">software development with Qt and Python</span>. My focus is on <span class="p-note">Qt for platform-independent development of desktop, embedded and mobile applications</span> and <span class="p-note">Python for web applications (Django, Flask) and graphics programming (PyQt)</span>. There might also be some posts about the <span class="p-note">free software movement and related philosophical topics</a>.
                     </p>
                     <p><a href="/pages/profile.html">More about me...</a></p>
-                </span>
-                {% if SOCIAL or FEED_ALL_ATOM or FEED_ALL_RSS %}
-                <div class="social">
-                    <p><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate">atom feed</a></p>
-                    {% if FEED_ALL_RSS %}
-                    <p><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate">rss feed</a></p>
-                    {% endif %}
+                    {% if SOCIAL or FEED_ALL_ATOM or FEED_ALL_RSS %}
+                    <div class="social">
+                        <p><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate">atom feed</a></p>
+                        {% if FEED_ALL_RSS %}
+                        <p><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate">rss feed</a></p>
+                        {% endif %}
 
-                    {% for name, link in SOCIAL %}
-                        <p><a rel="me" href="{{ link }}">{{ name }}</a></p>
-                    {% endfor %}
-                </div><!-- /.social -->
-                {% endif %}                    
+                        {% for name, link in SOCIAL %}
+                            <p><a rel="me" href="{{ link }}">{{ name }}</a></p>
+                        {% endfor %}
+                    </div><!-- /.social -->
+                    {% endif %}
+                </span>
             </aside>
 
             {% if loop.length == 1 %}

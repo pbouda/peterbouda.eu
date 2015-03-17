@@ -3,7 +3,7 @@ Profile
 
 .. image:: ../images/peter.jpg
   :alt: Photo of Peter Bouda
-  :class: align-left
+  :class: align-left margin-right-60
 
 .. image:: ../images/qt_logo.png
   :alt: Qt logo
@@ -11,14 +11,15 @@ Profile
 
 .. image:: ../images/python_logo.png
   :alt: Python logo
-  :class: breakfloat
 
-My name is **Peter Bouda** and I am a **developer, project manager, educator and
-consultant with over 15 years of experience** as employee and freelancer in IT.
-See my list of `recent projects`_ below to read more about past projects and
-please `contact me <{filename}contact.rst>`_ if you are looking for a developer,
-educator or consultant in your company or project. My areas of expertise
-include:
+.. container:: breakfloat
+
+  My name is **Peter Bouda** and I am a **developer, project manager, educator and
+  consultant with over 15 years of experience** as employee and freelancer in IT.
+  See my list of `recent projects`_ below to read more about past projects and
+  please `contact me <{filename}contact.rst>`_ if you are looking for a developer,
+  educator or consultant in your company or project. My areas of expertise
+  include:
 
 * **Platform-independent desktop and mobile applications** with
   **Qt/C++** and **PyQt**, for Windows (Phone), Mac OS, Linux, iOS, Android, Ubuntu

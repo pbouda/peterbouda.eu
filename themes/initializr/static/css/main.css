@@ -95,13 +95,13 @@ textarea {
 
 .maintitle a {
     font-weight: 300;
-    font-size: 2.8em;
+    font-size: 2.4em;
     color: #ec3f8c;
 }
 
 .subtitle {
     font-weight: 300;
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: #39b1c6;
 }
 
@@ -230,8 +230,12 @@ img.align-left {
     margin-bottom: 20px;
 }
 
+img.margin-right-60 {
+    margin-right: 60px;
+}
+
 .breakfloat {
-    clear: all;
+    clear: both;
 }
 
 /* Icons */

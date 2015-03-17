@@ -4,42 +4,26 @@
 <section id="content" class="body">
   <article class="h-entry">
     <header>
-      <h2 class="entry-title">
+      <h2 class="entry-title e-title">
         <a class="p-name u-url" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
            title="Permalink to {{ article.title|striptags }}">{{ article.title}}</a></h2>
-      {% include 'twitter.html' %}
     </header>
 
-    <div class="entry-content">
+    <div class="entry-content e-content">
       {% if article.iframe %}
       <div>
           <iframe style="border: none; width: 100%;" marginwidth="0" marginheight="0" scrolling="no" src="{{ article.iframe }}"></iframe>
       </div>    
       {% elif article.image %}
       <div style="margin-bottom:20px;">
-          <img src="{{ article.image }}" style="width: 100%;" />
+          <img src="{{ article.image }}" {% if article.imagewidth|int >= 600 %}style="width:100%;"{% endif %} />
       </div>
       {% endif %}
       {% include 'article_infos.html' %}
       {{ article.content }}
     </div><!-- /.entry-content -->
-    {% if DISQUS_SITENAME and SITEURL and article.status != "draft" %}
-    <div class="comments">
-      <h2>Comments !</h2>
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-        var disqus_identifier = "{{ article.url }}";
-        var disqus_url = "{{ SITEURL }}/{{ article.url }}";
-        (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-    </div>
-    {% endif %}
 
-    <h2>Webmentions</h2>
+    <!--<h2>Webmentions</h2>
     <div>
       <script id="webmention-hosted">
         (function () {
@@ -51,7 +35,8 @@
           s.parentNode.insertBefore(sn, s);
         }());
       </script>
-    </div>
+    </div>-->
+
   </article>
 
   <aside>
