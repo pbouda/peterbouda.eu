@@ -21,6 +21,11 @@
       {% endif %}
       {% include 'article_infos.html' %}
       {{ article.content }}
+      {% if article.twitter %}
+      <div id="twitter">
+        I also published this on <a rel="syndication" class="u-syndication" href="{{ article.twitter }}">Twitter</a>.
+      </div>
+      {% endif %}
     </div><!-- /.entry-content -->
 
     <h2>Webmentions</h2>
