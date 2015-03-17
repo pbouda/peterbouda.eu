@@ -23,19 +23,25 @@
       {{ article.content }}
     </div><!-- /.entry-content -->
 
-    <!--<h2>Webmentions</h2>
-    <div>
-      <script id="webmention-hosted">
-        (function () {
-          var sn = document.createElement("script"), s = document.getElementsByTagName("script")[0], url;
-          url = document.querySelectorAll ? document.querySelectorAll("link[rel~=canonical]") : false;
-          url = url && url[0] ? url[0].href : false;
-          sn.type = "text/javascript"; sn.async = true;
-          sn.src = "//webmention.herokuapp.com/api/embed?url=" + encodeURIComponent(url || window.location);
-          s.parentNode.insertBefore(sn, s);
-        }());
+    <h2>Webmentions</h2>
+    <p><a href="http://indiewebify.me/">How does this work?</a></p>
+    <div class="webmentions">
+      <script type="text/javascript">
+        function f(data) {
+          if (data['links'].length > 0) { 
+            document.write("<p>" + data['links'].length + " mentions:</p>");
+            for (var i=0; i < data['links'].length; i++) {
+              if ('author' in data['links'][i]['data']) 
+                document.write("<p>" + data['links'][i]['data']['author']['name'] + " says: ");
+              document.write(data['links'][i]['data']['name'] + " [<a href=\"" + data['links'][i]['source'] +  "\">" + data['links'][i]['source'] + "</a>]</p>");
+            }
+          } else {
+            document.write("<p>No mentions yet :-P</p>");            
+          }
+        }
       </script>
-    </div>-->
+      <script type="text/javascript" src="http://webmention.io/api/mentions?jsonp=f&target={{ (SITEURL+"/"+article.url)|urlencode }}"></script>
+    </div>
 
   </article>
 
@@ -46,6 +52,7 @@
         <p style="text-align:justify;">
           My name is Peter Bouda, I work as freelance developer and am available to work in your project. Read my <a href="/pages/profile.html">freelancer profile</a> and <a href="/pages/contact.html">contact me</a> for more information and to talk about your project.
         </p>
+        <p>This blog is part of the <a href="http://indiewebcamp.com/">IndieWeb</a>.</p>
     </span>
     {% if SOCIAL or FEED_ALL_ATOM or FEED_ALL_RSS %}
     <div class="social">
