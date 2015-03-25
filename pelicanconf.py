@@ -20,8 +20,9 @@ TIMEZONE = 'Europe/Lisbon'
 
 DEFAULT_LANG = 'en'
 
-#PLUGIN_PATHS = [ 'plugins' ]
-#PLUGINS = [ 'simple_footnotes' ]
+PLUGIN_PATHS = [ 'plugins' ]
+PLUGINS = [ 'pelican_comment_system' ]
+PELICAN_COMMENT_SYSTEM = True
 
 # Feed generation is usually not desired when developing
 #FEED_ALL_ATOM = feeds/all.atom.xml
