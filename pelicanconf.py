@@ -3,8 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Peter Bouda'
-SITENAME = 'Treasures of the Stupid Ages'
-SITESUBTITLE = 'Peter\'s blog about programming, technology and freedom'
+SITENAME = 'Peter Bouda'
+SITESUBTITLE = 'Embedded Qt, Python and JavaScript'
 SITEURL = 'http://www.peterbouda.eu' #
 
 USE_FOLDER_AS_CATEGORY = True
@@ -29,12 +29,6 @@ PELICAN_COMMENT_SYSTEM = True
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
-# Blogroll
-LINKS = (('Poio', 'http://www.poio.eu'),
-         ('CIDLeS', 'http://www.cidles.eu/'),
-         ('Archive', '/archives.html')
-        )
-
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/legocoder'),
           ('LinkedIn', 'http://www.linkedin.com/pub/peter-bouda/9/929/917'),
@@ -43,7 +37,7 @@ SOCIAL = (('Twitter', 'https://twitter.com/legocoder'),
 
 DEFAULT_PAGINATION = 10
 
-THEME = "themes/initializr"
+THEME = "themes/miniport"
 
 #DISQUS_SITENAME = 'pbouda'
 #GOOGLE_ANALYTICS = 'UA-35434502-1'
