@@ -37,7 +37,9 @@ HTML, Javascript, etc. to the current cell’s output. We use those
 helpers to write Javascript that opens a popup window. We save a
 reference to the opened window in ``window.audiencePopup``. We can later
 access the open popup via this reference. First, we open some URL to see
-if something simple works::
+if something simple works:
+
+.. code-block:: python
 
    from IPython.display import HTML, Javascript, display
    js = """window.audiencePopup = window.open('http://www.heise.de','audienceWindow');"""
@@ -51,7 +53,9 @@ We are now able to change the URL of the popup. We set the URL to the
 local ``index.html`` that you downloaded above. We have to prepend
 ``/files/`` so that the IPython server knows that we are looking for a
 local, static file. The notebook server then serves this file to the
-popup window::
+popup window:
+
+.. code-block:: python
 
    js = """window.audiencePopup.location.href = "/files/index.html";"""
    display(Javascript(js))
@@ -69,7 +73,9 @@ an empty list. The scatterplot is created from coordinates in that list.
 In the first step we will set the ``data`` variable to a Python list of
 coordinates. For this we just have to convert the Python list to a JSON
 string and set the Javascript variabel to a parsed version of that JSON
-string. We use the Javascript function ``JSON.parse``::
+string. We use the Javascript function ``JSON.parse``:
+
+.. code-block:: python
 
    import json
    data = [ [0, 0], [1, 1], [0.5, 0.5] ]
@@ -79,14 +85,18 @@ string. We use the Javascript function ``JSON.parse``::
 The scatterplot don’t change, because we have to tell it to update
 itself first. But you can already have a look the the content of the
 ``data`` variable in the popup window. We just display the value in an
-``alert`` window::
+``alert`` window:
+
+.. code-block:: python
 
    js = """alert(window.audiencePopup.data);"""
    display(Javascript(js))
 
 The ``index.html`` also containts a function ``update()`` that we can
 just call to repaint the scatterplot. Again, we are able to call this
-Javascript function directly from within the current notebook::
+Javascript function directly from within the current notebook:
+
+.. code-block:: python
 
    js = """window.audiencePopup.update();"""
    display(Javascript(js))

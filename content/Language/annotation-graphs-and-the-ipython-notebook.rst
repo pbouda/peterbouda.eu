@@ -31,7 +31,7 @@ visualize using the `D3 javascript library`_:
 
 .. raw:: html
 
-   <iframe class="gist-src" style="border: 1px solid #DEDEDE; height: 500px; width: 500px;" marginwidth="0" marginheight="0" scrolling="no" src="http://bl.ocks.org/d/4250342/"></iframe>
+   <iframe class="gist-src" style="border: 1px solid #DEDEDE; height: 500px; width: 100%" marginwidth="0" marginheight="0" scrolling="no" src="http://bl.ocks.org/d/4250342/"></iframe>
 
 Published at http://bl.ocks.org/4250342
 

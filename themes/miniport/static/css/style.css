@@ -138,6 +138,11 @@
 		margin-bottom: 2em;
 	}
 
+	pre
+	{
+		font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+	}
+
 	/* Form */
 	
 		form
@@ -703,6 +708,18 @@
 /*********************************************************************************/
 /* Articles                                                                      */
 /*********************************************************************************/
+
+	section.body {
+		margin-top: 120px;
+		margin-bottom: 20px;
+		margin-left: 50px;
+		margin-right: 100px;		
+		color: black;
+	}
+
+	div.entry-content {
+		margin-bottom: 20px;
+	}
 
 	#top
 	{

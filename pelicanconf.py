@@ -13,8 +13,8 @@ TYPOGRIFY = True
 
 DELETE_OUTPUT_DIRECTORY = True
 STATIC_PATHS = ['images', 'tutorials']
-DISPLAY_PAGES_ON_MENU = True
-DISPLAY_CATEGORIES_ON_MENU = False
+#DISPLAY_PAGES_ON_MENU = True
+#DISPLAY_CATEGORIES_ON_MENU = False
 
 TIMEZONE = 'Europe/Lisbon'
 
@@ -26,8 +26,11 @@ PELICAN_COMMENT_SYSTEM = True
 
 # Feed generation is usually not desired when developing
 #FEED_ALL_ATOM = feeds/all.atom.xml
+FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
 
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/legocoder'),
@@ -35,9 +38,11 @@ SOCIAL = (('Twitter', 'https://twitter.com/legocoder'),
           ('Github', 'https://github.com/pbouda'),
           ('E-Mail', 'mailto:pbouda@outlook.com'))
 
-DEFAULT_PAGINATION = 10
+#DEFAULT_PAGINATION = 10
 
 THEME = "themes/miniport"
+
+PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 
 #DISQUS_SITENAME = 'pbouda'
 #GOOGLE_ANALYTICS = 'UA-35434502-1'

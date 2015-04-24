@@ -3,7 +3,7 @@ The Spelling Loom: a word game for Minderico
 :date: 2014-05-12 11:22
 :category: Language
 :tags: Javascript, Minderico, Game
-:iframe: //www.youtube.com/embed/zGTgbcNJaSs
+:iframe: http://www.youtube.com/embed/zGTgbcNJaSs
 :iframeheight: 315
 :iframewidth: 560
 
