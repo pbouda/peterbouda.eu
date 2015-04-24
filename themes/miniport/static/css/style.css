@@ -352,12 +352,7 @@
 			text-shadow: -1px -1px 0.5px rgba(0,0,0,0.5);
 			overflow: hidden;
 			box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.5), inset 0px 2px 1px 0px rgba(255,255,255,0.75);
-			background: #43B3E0;
-			background-image:	url('images/bg.png'),		-moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
-			background-image:	url('images/bg.png'),		-webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
-			background-image:	url('images/bg.png'),		-o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
-			background-image:	url('images/bg.png'),		-ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
-			background-image:	url('images/bg.png'),		linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.2));
+			background: #39b1c6;
 			-moz-transition: background-color .2s ease-in-out;
 			-webkit-transition: background-color .2s ease-in-out;
 			-o-transition: background-color .2s ease-in-out;
@@ -370,7 +365,7 @@
 			input[type="reset"]:hover,
 			.button:hover
 			{
-				background-color: #43bff0;
+				background-color: #39bdd6;
 				color: #fff !important;
 			}
 			
@@ -574,7 +569,7 @@
 
 		.icon.featured
 		{
-			color: #EA8A95;
+			color: #ec3f8c;
 			display: block;
 			margin: 0 0 1.5em 0;
 			cursor: default;
