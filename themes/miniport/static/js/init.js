@@ -55,6 +55,89 @@
 
 			});
 
+		// send message checks
+			if ($('#sendmessage').length > 0) {
+				$('#sendmessage').submit(function( e ) {
+					// check fields
+					if ($("input#name").val() == "") {
+						$( "div#formError" ).text("Please enter your name.").show();
+						e.preventDefault();
+						return;
+					} else {
+						$( "div#formError" ).text("").show();
+					}
+
+					if ($("input#email").val() == "") {
+						$( "div#formError" ).text("Please enter your e-mail address.").show();
+						e.preventDefault();
+						return;
+					} else {
+						$( "div#formError" ).text("").show();
+					}
+
+					if ($("textarea#message").val() == "") {
+						$( "div#formError" ).text("Please enter a message.").show();
+						e.preventDefault();
+						return;
+					} else {
+						$( "div#formError" ).text("").show();
+					}
+
+					// check if human
+					if ($("#human").val() != "yes") {
+						$( "div#formError" ).text("I currently accept messages from humans only. Please select whether you are human.").show();
+						e.preventDefault();
+						return;
+					} else {
+						$( "div#formError" ).text("").show();
+					}
+				});
+			}
+
+		// comments
+		    function generateMailToLink()
+		    {
+		        var user = 'pbouda'; //user@domain = your email address
+		        var domain = 'outlook.com';
+		        var subject = 'Comment for \'' + $('#commentForm_replytoSlug').val() + '\'' ;
+
+		        var d = new Date();
+		        var body = ''
+		            + 'Hey,\nI posted a new comment on ' + $('#commentForm_replytoSlug').val() + '\n\nGreetings ' + $("#commentForm_inputName").val() + '\n\n\n'
+		            + 'Raw comment data:\n'
+		            + '----------------------------------------\n'
+		            + 'date: ' + d.getFullYear() + '-' + (d.getMonth()+1) + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + '\n'
+		            + 'author: ' + $("#commentForm_inputName").val() + '\n'
+		            + 'site: ' + $("#commentForm_inputSite").val() + '\n';
+
+		        var replyto = $('#commentForm_replyto').val();
+		        if (replyto.length != 0)
+		        {
+		            body += 'replyto: ' + replyto + '\n'
+		        }
+
+		        body += '\n'
+		            + $("#commentForm_inputText").val() + '\n'
+		            + '----------------------------------------\n';
+
+		        var link = 'mailto:' + user + '@' + domain + '?subject='
+		            + encodeURIComponent(subject)
+		            + "&body="
+		            + encodeURIComponent(body);
+		        return link;
+		    }
+
+
+			if ($('#commentForm').length > 0) {
+		    	$('#commentForm').on("submit",
+			        function( event )
+			        {
+			            event.preventDefault();
+			            $(location).attr('href', generateMailToLink());
+			        }
+			    );
+		    }
+
 	});
 
 })(jQuery);

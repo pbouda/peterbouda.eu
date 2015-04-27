@@ -17,7 +17,7 @@
 
 						<div class="row">
 							<div class="12u">
-								<form method="post" action="#">
+								<form method="get" id="sendmessage" action="/cgi-bin/sendmessage.py">
 									<div>
 										<div class="row">
 											<div class="6u">
@@ -39,12 +39,16 @@
 										</div>
 										<div class="row">
 											<div class="12u">
-												<select name="human">
+												<select id="human" name="human">
 													<option value="please">Are you human? Please select...</option>
 													<option value="no">No</option>
 													<option value="yes">Yes</option>
 													<option value="robot">I'm a robot</option>
 												</select>
+											</div>
+										</div>
+										<div class="row">
+											<div class="12u" id="formError">
 											</div>
 										</div>
 										<div class="row 200%">
@@ -80,8 +84,11 @@
 					</div>
 					<footer>
 						<ul id="copyright">
-							<li>&copy; Peter Bouda. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; Peter Bouda. All rights reserved.</li>
+							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
+						<div>DE: Michaeliburgstr. 16, 81671 Munich, Germany, +49 1578 3547470</div>
+						<div>PT: Rua do Monte Branco Lote 2, 2380-057 Alcanena, Portugal, +351 917403181</div>
 					</footer>
 				</article>
 			</div>

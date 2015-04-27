@@ -148,6 +148,11 @@
 		form
 		{
 		}
+
+			form div#formError {
+				color: red;
+			}
+
 		
 			form label
 			{
