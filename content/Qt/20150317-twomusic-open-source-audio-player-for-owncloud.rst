@@ -1,7 +1,7 @@
 TwoMusic: Open Source audio player for ownCloud
 ###############################################
 :date: 2015-03-17 08:30
-:tags: Apps, Music
+:tags: Qt, Apps, Music
 :image: /images/twomusic_player.png
 :imagewidth: 484
 :twitter: https://twitter.com/legocoder/status/577844982838595584

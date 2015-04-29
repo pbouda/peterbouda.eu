@@ -20,6 +20,8 @@ TIMEZONE = 'Europe/Lisbon'
 
 DEFAULT_LANG = 'en'
 
+DEFAULT_PAGINATION = 3
+
 PLUGIN_PATHS = [ 'plugins' ]
 PLUGINS = [ 'pelican_comment_system' ]
 PELICAN_COMMENT_SYSTEM = True

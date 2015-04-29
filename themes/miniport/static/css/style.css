@@ -106,6 +106,7 @@
 	h1
 	{
 		font-weight: 300;
+		line-height: 1.2em;
 	}
 	
 		h1 strong
@@ -136,6 +137,17 @@
 	p, ul, ol, dl, table
 	{
 		margin-bottom: 2em;
+	}
+
+	article.feed p {
+		text-align: left;
+		font-size: 0.9em;
+		line-height: 1.4em;
+	}
+
+	article.feed img {
+		height: 269px;
+		max-width: 100%;
 	}
 
 	pre
