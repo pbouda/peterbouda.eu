@@ -1,9 +1,10 @@
 Die Brummbeere: an embedded ownCloud music player
 =================================================
 :date: 2015-05-04 11:47
-:tags: Qt, Embedded, ownCloud, Music
+:tags: Qt, Embedded, IoT, ownCloud, Music
 :image: http://brummbeere.readthedocs.org/en/latest/_images/brummbeere_raspi.jpg
 :imagewidth: 500
+:twitter: https://twitter.com/legocoder/status/595174587991592961
 
 I recently `published here a short post
 <{filename}/Qt/20150317-twomusic-open-source-audio-player-for-owncloud.rst>`_ about
