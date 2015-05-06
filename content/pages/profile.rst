@@ -17,7 +17,7 @@ Profile
   My name is **Peter Bouda** and I am a **developer, project manager, educator and
   consultant with over 15 years of experience** as employee and freelancer in IT.
   See my list of `recent projects`_ below to read more about past projects and
-  please `contact me <{filename}contact.rst>`_ if you are looking for a developer,
+  please `contact me <http://www.peterbouda.eu/#contact>`_ if you are looking for a developer,
   educator or consultant in your company or project. My areas of expertise
   include:
 
@@ -52,7 +52,7 @@ visit my `profile page at the centre
 <http://www.cidles.eu/about/team/peter-bouda/>`_.
 
 I live in Munich, Germany and Alcanena, Portugal, contact details are
-`on my contact page <{filename}contact.rst>`_.
+`on my contact page <http://www.peterbouda.eu/#contact>`_.
 
 
 Recent projects

@@ -106,7 +106,9 @@ screencast where I execute this notebook here:
 
 .. raw:: html
 
-   <iframe title="YouTube video player" class="youtube-player" type="text/html" width="500" height="300" src="http://www.youtube.com/embed/--4Efcd3UkU" frameborder="0" allowfullscreen></iframe>
+   <video poster="https://owncloud.cidles.eu/public.php?service=files&t=abbd53cf1fd852ebaa4cc91605a5edc5&download" style="width:100%" preload="none" controls="" tabindex="0">
+      <source type="video/mp4" src="https://owncloud.cidles.eu/public.php?service=files&amp;t=09c441364c27a3c2e0cbf19ba7bfa3e6&amp;download"></source>
+   </video>
 
 .. _IPython notebook: http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html
 .. _livecoding: http://toplap.org/
