@@ -31,7 +31,9 @@ https://gist.github.com/pbouda/5531821
 To process the audio I just split the stream in two frequency bins, more or less
 randomly. I didn't rely on anything sophisticated but just used what gave the
 most beautiful visualization in the end. The update function currently looks
-like this::
+like this:
+
+.. code-block:: python
 
 	def move_stuff(self):
 	    a = self.stream.read(chunk)
@@ -43,7 +45,9 @@ like this::
 	    gl.glUniform2f(self.spec, spec_x, spec_y)
 
 You can easily change the `move_stuff` function while the programm is running,
-just use something like this in IPython::
+just use something like this in IPython:
+
+.. code-block:: python
 
 	def move_stuff(self):
 	    a = self.stream.read(chunk)
@@ -57,7 +61,9 @@ just use something like this in IPython::
 	win.widget.move_stuff = f_move
 
 This example changes the location and the size of the two frequency bins. To
-update the fragment shader for example::
+update the fragment shader for example:
+
+.. code-block:: python
 
 	FS = """#version 330
 	uniform vec2 resolution;
