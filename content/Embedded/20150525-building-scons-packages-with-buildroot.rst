@@ -1,7 +1,7 @@
 Building scons packages with buildroot
 ======================================
 :date: 2015-05-25 12:13
-:tags: buildroot, scons
+:tags: Buildroot, Scons, Qt
 
 For my hardware project `Die Brummbeere
 <http://brummbeere.readthedocs.org/en/latest/>`_ I started to work with
