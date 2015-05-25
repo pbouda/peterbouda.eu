@@ -44,7 +44,7 @@ SOCIAL = (('Twitter', 'https://twitter.com/legocoder'),
 
 THEME = "themes/miniport"
 
-PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
+#PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 
 #DISQUS_SITENAME = 'pbouda'
 #GOOGLE_ANALYTICS = 'UA-35434502-1'
