@@ -362,7 +362,7 @@
 				}
 
 	/* Button */
-	
+
 		input[type="button"],
 		input[type="submit"],
 		input[type="reset"],
@@ -388,6 +388,12 @@
 			-ms-transition: background-color .2s ease-in-out;
 			transition: background-color .2s ease-in-out;
 		}
+
+			div.isso-postbox input[type="submit"] {
+				color: #888 !important;
+				text-shadow: none;
+			}
+
 
 			input[type="button"]:hover,
 			input[type="submit"]:hover,

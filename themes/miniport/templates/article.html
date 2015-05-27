@@ -34,6 +34,14 @@
             I also published this on <a rel="syndication" class="u-syndication" href="{{ article.twitter }}">Twitter</a>.
           </div>
           {% endif %}
+
+          <h2>Comments</h2>
+
+          <script data-isso="//comments.peterbouda.eu/"
+            src="//comments.peterbouda.eu/js/embed.min.js"></script>
+
+          <section id="isso-thread"></section>
+
         </div><!-- /.entry-content -->
         <div class="4u">
           <article class="box style2">
@@ -48,40 +56,6 @@
           </artivle>
         </div>
       </div> <!-- end row -->
-
-      <h2>Comments</h2>
-
-      <form role="form" id="commentForm" action="#">
-          <input name="Name" type="text" id="commentForm_inputName" placeholder="Enter your name or synonym" /><br/>
-          <input name="Name" type="text" id="commentForm_inputSite" placeholder="Enter URL to your site" /><br/>
-          <textarea name="Text" id="commentForm_inputText" rows="10" style="resize:vertical;" placeholder="Your comment"></textarea><br/>
-          <button type="submit" id="commentForm_button">Post via email</button>
-          <input name="replyto" type="hidden" id="commentForm_replyto" />
-          <input name="replytoSlug" type="hidden" id="commentForm_replytoSlug" value="{{ article.slug }}" />
-      </form>
-
-      {% if article.comments %}
-          {% for comment in article.comments recursive %}
-              {% if loop.depth0 == 0 %}
-                  {% set marginLeft = 0 %}
-              {% else %}
-                  {% set marginLeft = 50 %}
-              {% endif %}
-                  <article id="comment-{{comment.slug}}" style="border: 1px solid #DDDDDD; padding: 5px 0px 0px 5px; margin: 0px -1px 5px {{marginLeft}}px;">
-                      <a href="{{ SITEURL }}/{{ article.url }}#comment-{{comment.slug}}" rel="bookmark" title="Permalink to this comment">Permalink</a>
-                      <h4>{{ comment.author }}</h4>
-                      <p>Posted on <abbr class="published" title="{{ comment.date.isoformat() }}">{{ comment.locale_date }}</abbr></p>
-                      {{ comment.metadata['my_custom_metadata'] }}
-                      {{ comment.content }}
-                      {% if comment.replies %}
-                          {{ loop(comment.replies) }}
-                      {% endif %}
-                      <button onclick="reply('{{comment.slug | urlencode}}');">Reply</button>
-                  </article>
-          {% endfor %}
-      {% else %}
-          <p>There are no comments yet.<p>
-      {% endif %}  
     
     </div> <!-- end container -->
 
