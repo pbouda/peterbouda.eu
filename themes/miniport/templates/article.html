@@ -19,7 +19,7 @@
               <iframe style="border: none; width: {{ article.iframewidth + 'px' if article.iframewidth else '100%' }}; height:{{ article.iframeheight if article.iframeheight else '600' }}px;" marginwidth="0" marginheight="0" scrolling="no" src="{{ article.iframe }}"></iframe>
           </div>    
           {% elif article.video %}
-          <video tabindex="0" controls="" preload="none" style="width:600px;">
+          <video tabindex="0" controls="" preload="none" style="width:600px;"{% if article.videoposter %} poster="{{ article.videoposter }}"{% endif %}>
             <source src="{{ article.video }}" type="video/mp4" />
           </video>
           {% elif article.image %}
