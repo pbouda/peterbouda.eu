@@ -156,18 +156,20 @@
                                 </div>
 							</div>
 							<div class="6u">
-								{% for article in articles_page.object_list %}
-                                    <article class="box style2 feed">
-                                    <h3><a href="/{{ article.url }}">{{ article.title }}</a></h3>
-                                    {% if article.image %}
-                                    <a href="/{{ article.url }}"><img src="{{ article.image }}" alt="" /></a>
-                                    {% endif %}
-                                    {% include 'article_infos.html' %}
-                                    <p>
-                                        {{ article.summary }}
-                                        <a class="readmore" href="/{{ article.url }}">Read more...</a>
-                                    </p>
-                                    </article>
+								{% for article in dates if article.category != "Videos" %}
+									{% if loop.index < 4 %}
+	                                    <article class="box style2 feed">
+	                                    <h3><a href="/{{ article.url }}">{{ article.title }}</a></h3>
+	                                    {% if article.image %}
+	                                    <a href="/{{ article.url }}"><img src="{{ article.image }}" alt="" /></a>
+	                                    {% endif %}
+	                                    {% include 'article_infos.html' %}
+	                                    <p>
+	                                        {{ article.summary }}
+	                                        <a class="readmore" href="/{{ article.url }}">Read more...</a>
+	                                    </p>
+	                                    </article>
+	                                   {% endif %}
 								{% endfor %}
                                 <div>
                                     <a href="/archives.html">See all posts...</a>
