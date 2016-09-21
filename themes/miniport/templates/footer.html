@@ -2,92 +2,27 @@
 			<div class="wrapper style4" id="contact">
 				<article class="container 75%">
 
-					{% if output_file == 'index.html' %}
-
-					<header>
-						<h2>Send me a message and I will get back to you.</h2>
-					</header>
-
-					{% endif %}
-
-					<div>
-
-						{% if output_file == 'index.html' %}
-
-						<div class="row">
-							<div class="12u">
-								<form method="get" id="sendmessage" action="/cgi-bin/sendmessage.py">
-									<div>
-										<div class="row">
-											<div class="6u">
-												<input type="text" name="name" id="name" placeholder="Name" />
-											</div>
-											<div class="6u">
-												<input type="text" name="email" id="email" placeholder="Email" />
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u">
-												<input type="text" name="subject" id="subject" placeholder="Subject" />
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u">
-												<textarea name="message" id="message" placeholder="Message"></textarea>
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u">
-												<select id="human" name="human">
-													<option value="please">Are you human? Please select...</option>
-													<option value="no">No</option>
-													<option value="yes">Yes</option>
-													<option value="robot">I'm a robot</option>
-												</select>
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u" id="formError">
-											</div>
-										</div>
-										<div class="row 200%">
-											<div class="12u">
-												<ul class="actions">
-													<li><input type="submit" value="Send Message" /></li>
-													<li><input type="reset" value="Clear Form" class="alt" /></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-
-						{% endif %}
-
-
-						<div class="row">
-							<div class="12u">
-								<hr />
-								<h3>Find me on ...</h3>
-								<ul class="social">
-									<li><a href="https://twitter.com/legocoder" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://pt.linkedin.com/in/peterbouda" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/pbouda" class="icon fa-github"><span class="label">Github</span></a></li>
-									<li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" class="icon fa-rss"><span class="label">RSS</span></a></li>
-									<li><a href="mailto:pbouda@cidles.eu" class="icon fa-envelope-o"><span class="label">Mail</span></a></li>
-								</ul>
-								<hr />
-							</div>
+					<div class="row">
+						<div class="12u">
+							<h2>Send me a message and I will get back to you.</h2>
+							<ul class="social">
+								<li><a href="https://twitter.com/legocoder" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://linkedin.com/in/peterbouda" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/pbouda" class="icon fa-github"><span class="label">Github</span></a></li>
+								<li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" class="icon fa-rss"><span class="label">RSS</span></a></li>
+								<li><a href="mailto:hey@peterbouda.eu" class="icon fa-envelope-o"><span class="label">Mail</span></a></li>
+							</ul>
+							<hr />
 						</div>
 					</div>
+
 					<footer>
 						<ul id="copyright">
 							<li>&copy; Peter Bouda. All rights reserved.</li>
 							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
-						<!--<div>DE: Michaeliburgstr. 16, 81671 Munich, Germany, +49 1578 3547470</div>-->
-						<div>Rua do Monte Branco Lote 2, 2380-057 Alcanena, Portugal, +351 917403181</div>
+						<div>DE: Michaeliburgstr. 16, 81671 Munich, Germany, +49 1578 3547470</div>
+						<div>PT: Rua Vila Correia 4/2 esq, 1400-074 Lisbon, Portugal, +351 917403181</div>
 					</footer>
 				</article>
 			</div>

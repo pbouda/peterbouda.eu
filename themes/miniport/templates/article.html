@@ -17,7 +17,7 @@
           {% if article.iframe %}
           <div>
               <iframe style="border: none; width: {{ article.iframewidth + 'px' if article.iframewidth else '100%' }}; height:{{ article.iframeheight if article.iframeheight else '600' }}px;" marginwidth="0" marginheight="0" scrolling="no" src="{{ article.iframe }}"></iframe>
-          </div>    
+          </div>
           {% elif article.video %}
           <video tabindex="0" controls="" preload="none" style="width:600px;"{% if article.videoposter %} poster="{{ article.videoposter }}"{% endif %}>
             <source src="{{ article.video }}" type="video/mp4" />
@@ -35,15 +35,8 @@
             <br/>&nbsp;
           </div>
           {% endif %}
-
-          <h2>Comments</h2>
-
-          <script data-isso="//comments.peterbouda.eu/"
-            src="//comments.peterbouda.eu/js/embed.min.js"></script>
-
-          <section id="isso-thread"></section>
-
         </div><!-- /.entry-content -->
+        
         <div class="4u">
           <article class="box style2">
             <div><img style="border-radius:50%; width:80%;" src="theme/images/pic00.jpg" alt="" /></div>
@@ -57,7 +50,7 @@
           </article>
         </div>
       </div> <!-- end row -->
-    
+
     </div> <!-- end container -->
 
   </article>

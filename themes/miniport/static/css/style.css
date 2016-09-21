@@ -33,7 +33,7 @@
 			-ms-animation: none !important;
 			animation: none !important;
 		}
-	
+
 	a
 	{
 		color: #43B3E0;
@@ -44,7 +44,7 @@
 		-ms-transition: color .2s ease-in-out;
 		transition: color .2s ease-in-out;
 	}
-	
+
 		a:hover
 		{
 			color: #43bff0 !important;
@@ -72,7 +72,7 @@
 		top: 0.5em;
 		font-size: 0.8em;
 	}
-	
+
 	sup
 	{
 		position: relative;
@@ -86,34 +86,34 @@
 		padding: 1em 0 1em 1.5em;
 		font-style: italic;
 	}
-				
+
 	h1, h2, h3, h4, h5, h6
 	{
 		color: #3e3e3e;
 	}
-	
+
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
 		{
 			text-decoration: none;
 			color: inherit;
 		}
-	
+
 	h2, h3, h4, h5, h6
 	{
 		font-weight: 700;
 	}
-	
+
 	h1
 	{
 		font-weight: 300;
 		line-height: 1.2em;
 	}
-	
+
 		h1 strong
 		{
 			font-weight: 700;
 		}
-	
+
 	em, i
 	{
 		font-style: italic;
@@ -123,7 +123,7 @@
 	{
 		clear: both;
 	}
-	
+
 	hr
 	{
 		border: 0;
@@ -133,7 +133,7 @@
 		height: 1px;
 		margin: 3em 0 4em 0;
 	}
-	
+
 	p, ul, ol, dl, table
 	{
 		margin-bottom: 2em;
@@ -146,7 +146,7 @@
 	}
 
 	article.feed img {
-		height: 269px;
+		max-height: 269px;
 		max-width: 100%;
 	}
 
@@ -156,11 +156,11 @@
 	}
 
 	tt.literal {
-		font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;		
+		font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
 	}
 
 	/* Form */
-	
+
 		form
 		{
 		}
@@ -169,7 +169,7 @@
 				color: red;
 			}
 
-		
+
 			form label
 			{
 				color: #3e3e3e;
@@ -177,7 +177,7 @@
 				display: block;
 				margin: 0 0 0.5em 0;
 			}
-		
+
 			form input[type=text],
 			form input[type=email],
 			form input[type=password],
@@ -216,7 +216,7 @@
 			{
 				height: 15em;
 			}
-			
+
 			form .formerize-placeholder
 			{
 				color: #555 !important;
@@ -248,12 +248,12 @@
 			}
 
 	/* Tables */
-	
+
 		table
 		{
 			width: 100%;
 		}
-		
+
 			table.default
 			{
 				width: 100%;
@@ -268,12 +268,12 @@
 					{
 						border-top: 0;
 					}
-			
+
 				table.default td
 				{
 					padding: 0.5em 1em 0.5em 1em;
 				}
-				
+
 				table.default th
 				{
 					text-align: left;
@@ -281,29 +281,29 @@
 					font-weight: 600;
 					margin: 0 0 1em 0;
 				}
-			
+
 				table.default thead
 				{
 					background: #4f4f4f;
 					color: #fff;
 				}
-				
+
 				table.default tfoot
 				{
 				}
-				
+
 				table.default tbody
 				{
 				}
 
 	/* Section/Article */
-	
+
 		section,
 		article
 		{
 			margin-bottom: 3em;
 		}
-		
+
 		section > :last-child,
 		article > :last-child
 		{
@@ -323,7 +323,7 @@
 			display: inline-block;
 			position: relative;
 		}
-		
+
 			.image img
 			{
 				display: block;
@@ -335,20 +335,20 @@
 				display: block;
 				width: 100%;
 			}
-			
+
 			.image.featured
 			{
 				display: block;
 				width: 100%;
 				margin: 0 0 2em 0;
 			}
-			
+
 			.image.left
 			{
 				float: left;
 				margin: 0 2em 2em 0;
 			}
-			
+
 			.image.centered
 			{
 				display: block;
@@ -403,7 +403,7 @@
 				background-color: #39bdd6;
 				color: #fff !important;
 			}
-			
+
 			input[type="button"]:active,
 			input[type="submit"]:active,
 			input[type="reset"]:active,
@@ -412,7 +412,7 @@
 				background-color: #3BA8D3;
 				top: 1px;
 			}
-		
+
 			input[type="button"].alt,
 			input[type="submit"].alt,
 			input[type="reset"].alt,
@@ -430,7 +430,7 @@
 					background-color: #4f4f4f;
 					color: #fff !important;
 				}
-				
+
 				input[type="button"].alt:active,
 				input[type="submit"].alt:active,
 				input[type="reset"].alt:active,
@@ -438,7 +438,7 @@
 				{
 					background-color: #3f3f3f;
 				}
-		
+
 	/* List */
 
 		ul
@@ -450,18 +450,18 @@
 				list-style: disc;
 				padding-left: 1em;
 			}
-			
+
 				ul.default li
 				{
 					padding-left: 0.5em;
 				}
-				
+
 			ul.social
 			{
 				cursor: default;
 				margin: 0;
 			}
-			
+
 				ul.social li
 				{
 					position: relative;
@@ -533,7 +533,7 @@
 						{
 							top: -5px;
 						}
-						
+
 							ul.social li a:hover:before
 							{
 								background-color: transparent;
@@ -548,7 +548,7 @@
 					display: inline-block;
 					margin: 0 0 0 1em;
 				}
-				
+
 					ul.actions li:first-child
 					{
 						margin-left: 0;
@@ -556,7 +556,7 @@
 
 		ol
 		{
-		}	
+		}
 
 			ol.default
 			{
@@ -570,7 +570,7 @@
 				}
 
 	/* Box */
-			
+
 		.box
 		{
 			background: #fff;
@@ -597,7 +597,7 @@
 			-webkit-font-smoothing:antialiased;
 			-moz-osx-font-smoothing:grayscale;
 		}
-		
+
 		.icon > .label {
 			display: none;
 		}
@@ -609,7 +609,7 @@
 			margin: 0 0 1.5em 0;
 			cursor: default;
 		}
-		
+
 			.icon.featured:before
 			{
 				font-size: 6em;
@@ -635,13 +635,13 @@
 			background-image: none;
 			background-color: #fff;
 		}
-		
+
 		.wrapper.style2
 		{
 			background-color: #fafafa;
 			text-shadow: 1px 1px 0px #fff;
 		}
-		
+
 		.wrapper.style3
 		{
 			background-color: #f4f4f4;
@@ -655,11 +655,11 @@
 			text-shadow: -1px -1px 0px #181818;
 		}
 
-			.wrapper.style4 h1, 
-			.wrapper.style4 h2, 
-			.wrapper.style4 h3, 
-			.wrapper.style4 h4, 
-			.wrapper.style4 h5, 
+			.wrapper.style4 h1,
+			.wrapper.style4 h2,
+			.wrapper.style4 h3,
+			.wrapper.style4 h4,
+			.wrapper.style4 h5,
 			.wrapper.style4 h6
 			{
 				color: #fff;
@@ -681,7 +681,7 @@
 			{
 				background: #252525;
 			}
-		
+
 /*********************************************************************************/
 /* Nav                                                                           */
 /*********************************************************************************/
@@ -697,17 +697,17 @@
 		z-index: 10000;
 		cursor: default;
 	}
-	
+
 		#nav ul
 		{
 			margin-bottom: 0;
 		}
-	
+
 		#nav li
 		{
 			display: inline-block;
 		}
-		
+
 		#nav a
 		{
 			position: relative;
@@ -716,12 +716,12 @@
 			text-decoration: none;
 			outline: 0;
 		}
-		
+
 			#nav a:hover
 			{
 				color: #fff !important;
 			}
-			
+
 			#nav a.active:before
 			{
 				content: '';
@@ -734,7 +734,7 @@
 				border-right: solid 0.75em transparent;
 				border-top: solid 0.6em #282828;
 			}
-			
+
 /*********************************************************************************/
 /* Articles                                                                      */
 /*********************************************************************************/
@@ -743,7 +743,7 @@
 		margin-top: 120px;
 		margin-bottom: 20px;
 		margin-left: 50px;
-		margin-right: 100px;		
+		margin-right: 100px;
 		color: black;
 	}
 
@@ -768,7 +768,7 @@
 		#top p
 		{
 		}
-	
+
 			#top p a
 			{
 				color: inherit;
@@ -782,7 +782,7 @@
 	{
 		color: #666;
 	}
-	
+
 		#copyright a
 		{
 			color: inherit;
@@ -793,7 +793,7 @@
 			-ms-transition: color .2s ease-in-out;
 			transition: color .2s ease-in-out;
 		}
-		
+
 		#copyright a:hover
 		{
 			color: #777;

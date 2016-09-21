@@ -36,9 +36,9 @@ AUTHOR_FEED_RSS = None
 
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/legocoder'),
-          ('LinkedIn', 'http://www.linkedin.com/pub/peter-bouda/9/929/917'),
+          ('LinkedIn', 'https://linkedin.com/in/peterbouda'),
           ('Github', 'https://github.com/pbouda'),
-          ('E-Mail', 'mailto:pbouda@outlook.com'))
+          ('E-Mail', 'mailto:hey@peterbouda.eu'))
 
 #DEFAULT_PAGINATION = 10
 
