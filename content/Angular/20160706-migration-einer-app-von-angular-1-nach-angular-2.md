@@ -1,6 +1,6 @@
 Title: Migration einer App von Angular 1 nach Angular 2
 Date: 2016-06-07 14:05
-Tags: Angular, Javascript
+Tags: Angular, JavaScript
 Image: https://cloud.peterbouda.eu/index.php/s/ppol6Io9rSYC8sj/download
 Imagewidth: 500
 
