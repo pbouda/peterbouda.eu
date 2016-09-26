@@ -2,7 +2,7 @@ Embedded Qt with Buildroot
 ##########################
 :date: 2015-06-03 17:04
 :tags: Qt, Buildroot
-:image: https://owncloud.cidles.eu/public.php?service=files&amp;t=2ee6169bb674e8eaf29950f3dd853c86&amp;download
+:image: https://cloud.peterbouda.eu/index.php/s/Guq7fGkURyqf6mG/download
 :imagewidth: 800
 :twitter: https://twitter.com/legocoder/status/606125703055015936
 

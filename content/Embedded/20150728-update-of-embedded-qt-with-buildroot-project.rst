@@ -2,7 +2,7 @@ Update of Embedded Qt with Buildroot project
 ============================================
 :date: 2015-07-28 09:23
 :tags: Qt, Buildroot
-:image: https://owncloud.cidles.eu/public.php?service=files&amp;t=2ee6169bb674e8eaf29950f3dd853c86&amp;download
+:image: https://cloud.peterbouda.eu/index.php/s/Guq7fGkURyqf6mG/download
 :imagewidth: 800
 
 I while ago I published a first version of my `Buildroot configuration for
