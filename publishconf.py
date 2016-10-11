@@ -19,7 +19,7 @@ CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 FEED_ALL_RSS = 'feeds/all.rss'
 CATEGORY_FEED_RSS = 'feeds/%s.rss'
 
-DELETE_OUTPUT_DIRECTORY = True
+DELETE_OUTPUT_DIRECTORY = False
 
 # Following items are often useful when publishing
 

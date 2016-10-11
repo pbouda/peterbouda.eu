@@ -1,7 +1,7 @@
 Title: Making an Angular UI Bootstrap accordion scrolling to top when opening
 Date: 2016-05-12 11:23
 Tags: Angular, JavaScript
-Image: https://cloud.peterbouda.eu/index.php/s/ppol6Io9rSYC8sj/download
+Image: https://cloud.indie.host/index.php/s/wm5qDRyXaMkEt6k/download
 Imagewidth: 500
 
 I am using the [UI Bootstrap Angular directives](https://angular-ui.github.io/bootstrap/),
