@@ -2,7 +2,7 @@ Embedded Qt with Buildroot
 ##########################
 :date: 2015-06-03 17:04
 :tags: Qt, Buildroot
-:image: https://cloud.indie.host/index.php/s/0RiMRTO87fnNTP3/download
+:image: /images/qtberry.jpg
 :imagewidth: 800
 :twitter: https://twitter.com/legocoder/status/606125703055015936
 

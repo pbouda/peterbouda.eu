@@ -29,10 +29,15 @@
           {% endif %}
           {% include 'article_infos.html' %}
           {{ article.content }}
-          {% if article.twitter %}
+          {% if article.twitter or article.linkedin %}
           <div id="twitter">
-            I also published this on <a rel="syndication" class="u-syndication" href="{{ article.twitter }}">Twitter</a>.
-            <br/>&nbsp;
+            {% if article.twitter %}
+            I also published this on <a rel="syndication" class="u-syndication" href="{{ article.twitter }}">Twitter</a>.<br>
+            {% endif %}
+            {% if article.linkedin %}
+            I also published this on <a rel="syndication" class="u-syndication" href="{{ article.linkedin }}">LinkedIn</a>.<br>
+            {% endif %}
+            &nbsp;
           </div>
           {% endif %}
         </div><!-- /.entry-content -->

@@ -1,7 +1,7 @@
 Title: Migration einer App von Angular 1 nach Angular 2
 Date: 2016-06-07 14:05
 Tags: Angular, JavaScript
-Image: https://cloud.indie.host/index.php/s/wm5qDRyXaMkEt6k/download
+Image: /images/angularjs.png
 Imagewidth: 500
 
 Vor zwei Wochen habe ich in Lissabon einen Vortrag über [die Migration von Angular 1 nach Angular 2](http://www.meetup.com/AngularJS-Portugal/events/230723687/) gehalten. Dazu habe ich eine kleine App portiert, die ich vor einiger Zeit schon als Fingerübung als Grundgerüst einer Angular-App in purer ES6-Syntax entwickelt habe. Das Hauptziel war eben jener Minimalismus, also ein möglichst kleiner gulp-Prozess und möglichst wenige Laufzeitabhängigkeiten. Diese App findet ihr hier:
