@@ -2,8 +2,8 @@ Video: Die Brummbeere in Action
 ###############################
 :date: 2015-07-03 12:31
 :tags: Qt, Brummbeere, Buildroot, Raspberry
-:video: https://owncloud.cidles.eu/public.php?service=files&amp;t=a157a731f21f0d267d2fbd30165a422e&amp;download
-:videoposter: https://owncloud.cidles.eu/public.php?service=files&amp;t=29ebe31c9a84a35523bc34186427e3b3&amp;download
+:video: https://s3.amazonaws.com/peterbouda.eu/brummbeere_intro.m4v
+:videoposter: https://s3.amazonaws.com/peterbouda.eu/brummbeere_intro.png
 
 Watch Die Brummbeere in action. More info:
 
