@@ -2,6 +2,7 @@ Title: Angular Workshop at TUGA IT 2017 in Lisbon
 Date: 2017-04-10 16:37
 Tags: Angular, JavaScript, Lisbon
 Image: /images/angular.png
+Twitter: https://twitter.com/legocoder/status/851461396734906368
 
 I am happy to announce my next public Angular workshop, at the
 (http://tugait.pt/2017/)[TUGA IT 2017 conference]. The workshop will take
