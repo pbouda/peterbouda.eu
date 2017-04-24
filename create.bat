@@ -1,1 +1,1 @@
-c:\Python34\Scripts\pelican.exe content -o output -s pelicanconf.py
+c:\Python36\Scripts\pelican.exe content -o output -s pelicanconf.py
