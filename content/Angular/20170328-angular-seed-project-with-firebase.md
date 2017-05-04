@@ -26,7 +26,7 @@ versions of Angular and the CLI are published. Currently it uses Angular 4.0.0
 and version 1.0.0 of the CLI, so everything is shiny new :) The project is
 available on Github:
 
-[https://github.com/pbouda/angular-firebase-seed](https://github.com/pbouda/angular-firebase-seed)
+[https://github.com/ng-lisbon/angular-firebase-seed](https://github.com/ng-lisbon/angular-firebase-seed)
 
 I am happy to get any feedback, let me know what you think about the seed. Is
 it useful, and what could be improved?

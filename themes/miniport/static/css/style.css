@@ -12,6 +12,14 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
+	.article-top-image {
+		margin-bottom:20px;
+	}
+
+		.article-top-image img {
+			width: 100%;
+		}
+
 	body,input,textarea,select
 	{
 		font-family: 'Open Sans', sans-serif;
