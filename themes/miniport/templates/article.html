@@ -1,14 +1,17 @@
-{% extends "base.html" %}
-
-{% block title %}{{ SITENAME }} - {{ article.title|striptags }}{% endblock %}
-
-{% block content %}
+{% extends "base.html" %} {% block title %}{{ SITENAME }} -
+{{ article.title | striptags }}{% endblock %} {% block content %}
 <section id="content" class="body">
   <article class="h-entry">
     <header>
       <h1 class="entry-title e-title">
-        <a class="p-name u-url" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-           title="Permalink to {{ article.title|striptags }}">{{ article.title}}</a></h1>
+        <a
+          class="p-name u-url"
+          href="{{ SITEURL }}/{{ article.url }}"
+          rel="bookmark"
+          title="Permalink to {{ article.title | striptags }}"
+          >{{ article.title }}</a
+        >
+      </h1>
     </header>
 
     <div class="entry-content e-content container">
@@ -16,59 +19,93 @@
         <div class="8u">
           {% if article.iframe %}
           <div>
-              <iframe style="border: none; width: {{ article.iframewidth + 'px' if article.iframewidth else '100%' }}; height:{{ article.iframeheight if article.iframeheight else '600' }}px;" marginwidth="0" marginheight="0" scrolling="no" src="{{ article.iframe }}"></iframe>
+            <iframe
+              style="border: none; width: {{ article.iframewidth + 'px' if article.iframewidth else '100%' }}; height:{{ article.iframeheight if article.iframeheight else '600' }}px;"
+              marginwidth="0"
+              marginheight="0"
+              scrolling="no"
+              src="{{ article.iframe }}"
+            ></iframe>
           </div>
           {% elif article.video %}
-          <video tabindex="0" controls="" preload="none" style="width:600px;"{% if article.videoposter %} poster="{{ article.videoposter }}"{% endif %}>
+          <video
+            tabindex="0"
+            controls=""
+            preload="none"
+            style="width:600px;"
+            {%
+            if
+            article.videoposter
+            %}
+            poster="{{ article.videoposter }}"
+            {%
+            endif
+            %}
+          >
             <source src="{{ article.video }}" type="video/mp4" />
           </video>
           {% elif article.image %}
           <div class="article-top-image">
-              <img src="{{ article.image }}" />
+            <img src="{{ article.image }}" />
           </div>
-          {% endif %}
-          {% include 'article_infos.html' %}
+          {% endif %} {% include 'article_infos.html' %}
           {{ article.content }}
           {% if article.twitter or article.linkedin %}
           <div id="twitter">
-            {% if article.twitter %}
-            I also published this on <a rel="syndication" class="u-syndication" href="{{ article.twitter }}">Twitter</a>.<br>
-            {% endif %}
-            {% if article.linkedin %}
-            I also published this on <a rel="syndication" class="u-syndication" href="{{ article.linkedin }}">LinkedIn</a>.<br>
-            {% endif %}
-            &nbsp;
+            {% if article.twitter %} I also published this on
+            <a
+              rel="syndication"
+              class="u-syndication"
+              href="{{ article.twitter }}"
+              >Twitter</a
+            >.<br />
+            {% endif %} {% if article.linkedin %} I also published this on
+            <a
+              rel="syndication"
+              class="u-syndication"
+              href="{{ article.linkedin }}"
+              >LinkedIn</a
+            >.<br />
+            {% endif %} &nbsp;
           </div>
           {% endif %}
-        </div><!-- /.entry-content -->
+        </div>
+        <!-- /.entry-content -->
 
         <div class="4u">
           <article class="box style2">
-            <div><img style="border-radius:50%; width:80%;" src="theme/images/pic00.jpg" alt="" /></div>
+            <div>
+              <img
+                style="border-radius:50%; width:80%;"
+                src="theme/images/pic00.jpg"
+                alt=""
+              />
+            </div>
             <h3>About me</h3>
             <p>
-                My name is Peter Bouda and I am and Angular/JavaScript coach and consultant at
-                <a href="http://www.ng-lisbon.com/">ng-lisbon.com</a> with more
-                than 18 years of professional experience in web application development. I help you
-                to bring your web product to market as quickly as possible.
+              My name is Peter Bouda and I am and Angular/JavaScript coach and
+              consultant at
+              <a href="http://www.ng-lisbon.com/">ng-lisbon.com</a> with more
+              than 18 years of professional experience in web application
+              development. I help you to bring your web product to market as
+              quickly as possible.
             </p>
-            <p>
+            <!-- <p>
               Join our <a href="http://www.ng-lisbon.com/#trainings">next Angular training</a>
               in Lisbon, October 2-4.
-            </p>
+            </p> -->
             <p>
-              <a href="/#top">Read about my work</a><br/>
-              or<br/>
+              <a href="/#top">Read about my work</a><br />
+              or<br />
               <a href="/#contact">Contact me</a>
             </p>
           </article>
         </div>
-      </div> <!-- end row -->
-
-    </div> <!-- end container -->
-
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
   </article>
-
 </section>
 
 {% endblock %}
