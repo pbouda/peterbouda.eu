@@ -44,6 +44,6 @@ mlab.show()
 
 Übersichtlich, oder? Zunächst erzeugen wir in `r` und `s` die Eingangswerte zwischen 0 und 1 in einem numpy-Grid. Die Funktion der relativen Entropie definieren wir in `d`. Danach erfolgt die Definition der Koordinaten `x`, `y` und `z`. Hier erlaubt mayavi für jede Koordinate die Angabe einer Funktion, so entsteht dann die Oberfläche des Objekts der Klasse `ParametricSurface`. In unserem Fall bilden wir die x- und y-Werte einfach auf die Eingangswerte ab, der z-Wert ist dann der Funktionswert. Wir plotten also einfach die Funktion ins Dreidimensional. Schließlich malen wir das Objekt als `mesh`, fügen noch Achsen per `axes()` hinzu und zeigen das Ganze per `show()`, damit sich das Skript nicht gleich beendet und das Ausgabefenster geöffnet bleibt. Es öffnet sich ein Fenster mit unserer Funktion:
 
-![Visualization of relative entropy](|filename|../tutorials/relative_entropy.png)
+![Visualization of relative entropy](|static|../tutorials/relative_entropy.png)
 
 Schön konvex :-) Das Ausgabefenster lädt zum Herumspielen ein, das Objekt lässt sich drehen, Parallelprojektion einschalten und das komplette Mayavi starten, um weitere Daten und Objekte hinzu zu fügen. Oder man arbeitet mit IPython und macht mit der Shell weiter. Viel Spaß!

@@ -5,7 +5,7 @@ Live Coding with Kivy and IPython
 :image: /images/kivy_livecode_screen.png
 :imagewidth: 1026
 
-I recently began to implement some game prototypes with the help of `Kivy <http://kivy.org/>`_, a very interesting Python library originally developed to prototype innovative user interfaces. Combined with IPython, Kivy could also be interesting for `live coding <{filename}/livecoding-glsl-shaders-with-ipython.rst>`_, and so I checked out how the `input hooks for other event loops <http://minrk.github.io/ipython-doc/dev/api/generated/IPython.lib.inputhook.html>`_ work in IPython. Currently, there are hooks for Qt, glut, pyglet, GTK, wx and tk build in. That means that you can use any of those frameworks to develop GUI apps interactively from within an IPython shell.
+I recently began to implement some game prototypes with the help of `Kivy <http://kivy.org/>`_, a very interesting Python library originally developed to prototype innovative user interfaces. Combined with IPython, Kivy could also be interesting for `live coding <{filename}/Python/livecoding-glsl-shaders-with-ipython.rst>`_, and so I checked out how the `input hooks for other event loops <http://minrk.github.io/ipython-doc/dev/api/generated/IPython.lib.inputhook.html>`_ work in IPython. Currently, there are hooks for Qt, glut, pyglet, GTK, wx and tk build in. That means that you can use any of those frameworks to develop GUI apps interactively from within an IPython shell.
 
 For Kivy, I copied one of the existing hooks and came up with the following code:
 
