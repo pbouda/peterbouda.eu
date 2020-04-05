@@ -52,21 +52,14 @@
           {{ article.content }}
           {% if article.twitter or article.linkedin %}
           <div id="twitter">
-            {% if article.twitter %} I also published this on
-            <a
-              rel="syndication"
-              class="u-syndication"
-              href="{{ article.twitter }}"
-              >Twitter</a
-            >.<br />
-            {% endif %} {% if article.linkedin %} I also published this on
+            {% if article.linkedin %} I also published this on
             <a
               rel="syndication"
               class="u-syndication"
               href="{{ article.linkedin }}"
               >LinkedIn</a
             >.<br />
-            {% endif %} &nbsp;
+            {% endif %}
           </div>
           {% endif %}
           <div id="comments">
