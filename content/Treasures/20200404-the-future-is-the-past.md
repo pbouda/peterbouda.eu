@@ -9,7 +9,7 @@ see that nothing changed. But what would be a "change" anyway? I prefer to see
 the current crisis as an accelerator, so things in a lot of places are moving a
 bit faster in the directions they moved anyway. Home office, authoritarian
 instruments, precariat. Let's see if we later recognize the net outcome as
-positive or negative. And don't forget that people die...
+positive or negative.
 
 It seems to be a good time to think about past, current and future developments,
 so here are some thoughts on how I would like to continue. My personal interest
