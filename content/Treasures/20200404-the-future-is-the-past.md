@@ -1,6 +1,6 @@
 Title: The Future is the Past - Moving on
 Date: 2020-04-04 12:54
-Tags: HCI, Communication design
+Tags: HCI
 Image: https://datapbouda.blob.core.windows.net/peterbouda-eu/dancer_wide.jpg
 
 After reading the millionth "Corona and the future of work" post you might
