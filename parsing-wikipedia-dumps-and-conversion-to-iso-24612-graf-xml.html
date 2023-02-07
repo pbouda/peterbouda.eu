@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<!--
+    Miniport by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Peter Bouda - Natural Language Processing Consultant</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="Natural Language Processing, Python, Software Development, Consultant"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/theme/js/jquery.min.js"></script>
+    <script src="/theme/js/jquery.scrolly.min.js"></script>
+    <script src="/theme/js/skel.min.js"></script>
+    <script src="/theme/js/init.js"></script>
+    <link
+      href="http://www.peterbouda.eu/feeds/all.atom.xml"
+      type="application/atom+xml"
+      rel="alternate"
+      title="Peter Bouda Atom Feed"
+    />
+     <link
+      href="http://www.peterbouda.eu/feeds/all.rss"
+      type="application/rss+xml"
+      rel="alternate"
+      title="Peter Bouda RSS Feed"
+    />
+
+    <link rel="stylesheet" href="/theme/css/pygment.css" />
+
+    <noscript>
+      <link rel="stylesheet" href="/theme/css/skel.css" />
+      <link rel="stylesheet" href="/theme/css/style.css" />
+      <link rel="stylesheet" href="/theme/css/style-desktop.css" />
+    </noscript>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Peter Bouda",
+        "url": "https://www.peterbouda.eu",
+        "jobTitle": "Natural Language Processing Consultant",
+        "alumniOf": "LMU Munich",
+        "gender": "male",
+        "image": "https://www.peterbouda.eu/theme/images/pic00.jpg",
+        "sameAs": ["https://dev.to/pbouda", "https://github.com/pbouda"]
+      }
+    </script>
+
+    <!--[if lte IE 8
+      ]><link rel="stylesheet" href="/theme/css/ie/v8.css"
+    /><![endif]-->
+    <!--[if lte IE 9
+      ]><link rel="stylesheet" href="/theme/css/ie/v9.css"
+    /><![endif]-->
+  </head>
+  <body>
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="/#top">Home</a></li>
+					<!--<li><a href="/#work">Work</a></li>-->
+					<li><a href="/#portfolio">Portfolio</a></li>
+					<li><a href="/#feed">Blog</a></li>
+					<li><a href="/#contact">Contact</a></li>
+				</ul>
+			</nav> <section id="content" class="body">
+  <article class="h-entry">
+    <header>
+      <h1 class="entry-title e-title">
+        <a
+          class="p-name u-url"
+          href="http://www.peterbouda.eu/parsing-wikipedia-dumps-and-conversion-to-iso-24612-graf-xml.html"
+          rel="bookmark"
+          title="Permalink to Parsing Wikipedia dumps and conversion to ISO 24612 (GrAF-XML)"
+          >Parsing Wikipedia dumps and conversion to <span class="caps">ISO</span> 24612 (GrAF-<span class="caps">XML</span>)</a
+        >
+      </h1>
+    </header>
+
+    <div class="entry-content e-content container">
+      <div class="row">
+        <div class="8u">
+ <footer class="post-info">
+    <p>
+        Published by <a href="http://www.peterbouda.eu" class="p-author">Peter Bouda</a> at <b><time class="dt-published" datetime="2013-09-10 15:53:00+01:00">Ter 10 Setembro 2013</time></b>
+        in <b><a class="p-category" href="/category/language.html">Language</a></b>.
+    </p>
+    
+
+        
+</footer><!-- /.post-info -->          <p>At the moment I am heavily working on our data management and conversion library
+<a href="http://media.cidles.eu/poio/poio-api/">Poio <span class="caps">API</span></a>. Until now it mainly targets
+files formats used in language documentation, but I am quite interested in using
+the content of Wikipedias to do some linguistic analysis like finding semantic
+classes or testing part-of-speech taggers. As you might know, the original
+<a href="http://dumps.wikimedia.org/">Wikipedia dumps</a> are somehow contaminated with
+Wiki markup that is not easy to erase. There are all kind of historical markup
+structures in there and sometimes the syntax is plainly wrong, but still works
+to generate a good-enough page on the Wikipedia website. In this post I will
+explain how to download and clean a Wikipedia dump and then use Poio <span class="caps">API</span> to
+transform it into a <a href="http://www.balisage.net/Proceedings/vol10/html/Bouda01/BalisageVol10-Bouda01.html">GrAF-<span class="caps">XML</span> file</a>.</p>
+<h1>The Wikipeda&nbsp;Extractor</h1>
+<p>Two years ago I tested several Wikipedia extraction tools, and found that the
+<a href="http://medialab.di.unipi.it/wiki/Wikipedia_Extractor">Wikipedia Extractor</a>
+gives the best output. Things might have changed since then, but I stick to it,
+also because it is a single Python script that I can easily change if I need
+to. The newest version can output <span class="caps">JSON</span> or <span class="caps">XML</span>. As <span class="caps">XML</span> was the one and only
+output format two years ago I stick to the <span class="caps">XML</span> output as all my tools are based
+on this format. In fact, it is not <em>true</em> <span class="caps">XML</span>, as the root element is missing
+(the Wikipedia Extractor calls the format &#8220;tanl&#8221;). All the Wikipedia articles
+are just enclosed by <code>&lt;doc&gt;</code> tags, one after the&nbsp;other:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;doc</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;55&quot;</span><span class="w"> </span><span class="na">url=</span><span class="s">&quot;http://bar.wikipedia.org/wiki?curid=55&quot;</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Wikipedia:Archiv/Boarische Umschrift&quot;</span><span class="nt">&gt;</span>Wikipedia:Archiv/Boarische<span class="w"> </span>Umschrift
+Fürs<span class="w"> </span>Boarische<span class="w"> </span>gibts<span class="w"> </span>koa<span class="w"> </span>einheitliche<span class="w"> </span>Umschrift.<span class="w"> </span>Ma<span class="w"> </span>orientiert<span class="w"> </span>si<span class="w"> </span>in<span class="w"> </span>da<span class="w"> </span>Schreibweis<span class="w"> </span>an<span class="w"> </span>da<span class="w"> </span>deutschen<span class="w"> </span>Orthografie....
+<span class="nt">&lt;/doc&gt;&lt;doc</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;60&quot;</span><span class="w"> </span><span class="na">url=</span><span class="s">&quot;http://bar.wikipedia.org/wiki?curid=60&quot;</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Deitschland&quot;</span><span class="nt">&gt;</span>Deitschland
+Deitschland<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>Staat<span class="w"> </span>in<span class="w"> </span>Mittleiropa.<span class="w"> </span>Ois<span class="w"> </span>Bundesstaat<span class="w"> </span>wiad<span class="w"> </span>de<span class="w"> </span>&quot;Bundesrepublik<span class="w"> </span>Deutschland&quot;<span class="w"> </span>aus<span class="w"> </span>dena<span class="w"> </span>16<span class="w"> </span>deitschn<span class="w"> </span>Ländan<span class="w"> </span>buidt....
+<span class="nt">&lt;/doc&gt;</span>
+[...]
+</code></pre></div>
+
+<p>The whole output is split over several files, where the files&#8217; size is
+controllable via a command line variable. I use to call the Wikipedia Extractor
+with the following arguments (I use the [Bavarian Wikipedia dump]
+(http://dumps.wikimedia.org/barwiki/20130905/) as an example&nbsp;here):</p>
+<div class="highlight"><pre><span></span><code>WikiExtractor.py -w -f tanl barwiki-20130905-pages-articles.xml.bz2 extracted
+</code></pre></div>
+
+<p>This will put all output files into a folder <code>extracted</code>.</p>
+<h1>Concatenate and clean the&nbsp;files</h1>
+<p>The next step is then to create a real <span class="caps">XML</span> file from this. It is not too hard,
+we just have to add a root tag and clean the data a bit more, otherwise an <span class="caps">XML</span>
+parser will complain about certain characters like the &#8220;lower than&#8221; <code>&lt;</code>. I
+start with the following code to get rid of certain general problems like
+unparsable characters, add the root tags and concatenate all the&nbsp;files:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">codecs</span>
+
+<span class="n">re_apostroph</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">re_title_cleaned</span><span class="p">(</span><span class="n">matchobj</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">matchobj</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">re_apostroph</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">matchobj</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="n">matchobj</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+
+<span class="c1"># Concatenate output files</span>
+<span class="n">filenames</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;extracted&quot;</span><span class="p">,</span> <span class="s2">&quot;*.raw&quot;</span><span class="p">))</span>
+<span class="k">with</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;barwiki.xml&quot;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">outfile</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">infile</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">infile</span><span class="p">:</span>
+                <span class="n">outfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+<span class="c1"># first clean step</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;barwiki.xml&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;barwiki_cleaned.xml&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+
+<span class="n">f2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;&lt;xml&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">re_title</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;(title=</span><span class="se">\&quot;</span><span class="s2">)(.*)(</span><span class="se">\&quot;</span><span class="s2">&gt;)&quot;</span><span class="p">)</span>
+<span class="n">re_xml_tag</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;&lt;(?!/?doc)[^&gt;]*&gt;&quot;</span><span class="p">)</span>
+<span class="n">re_and</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;&amp;&quot;</span><span class="p">)</span>
+<span class="n">re_lower</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;&lt; &quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">f1</span><span class="p">):</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">re_title</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">re_title_cleaned</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+
+    <span class="n">line</span> <span class="o">=</span> <span class="n">re_xml_tag</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">re_and</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;&amp;amp;&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">re_lower</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;&amp;lt; &quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+
+    <span class="n">f2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+<span class="n">f2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;&lt;/xml&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">f1</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">f2</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+
+<p>There is one complex regular expression substition here, that cleans the <code>title</code>
+attributes of the <code>&lt;doc&gt;</code> tags. The titles sometimes contain an apostroph <code>"</code>,
+which is also the seperator for attribute values in <span class="caps">XML</span> and cannot be used in
+this location. So I just remove them. The output of this script are two files:
+the <code>barwiki.xml</code> just contains the concatenated files, the <code>barwiki_cleaned.xml</code>
+contains the cleaned <span class="caps">XML</span>.</p>
+<p>In the case of the Bavarian Wikipedia there are still
+some more quirks in the data. You can find out what kind of problems there are
+if you try to parse the file now with the Python ElementTree module, for&nbsp;example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">xml.etree.cElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">ElementTree</span><span class="p">(</span><span class="s2">&quot;barwiki_cleaned.xml&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>The parser will throw an error and tell you which line and column caused the
+problem. So I went through all the remaining problems in the Bavarian Wikipedia,
+and added several more lines to my clean script to remove or modify the lines
+that cause the&nbsp;problems:</p>
+<div class="highlight"><pre><span></span><code><span class="n">f1</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;barwiki_cleaned.xml&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;barwiki_cleaned2.xml&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+
+<span class="n">re_date</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;\-?\-? ?\d\d?:\d\d, \d\d?. .{2,8}\.? \d\d\d\d \(CES?T\)&quot;</span><span class="p">)</span>
+<span class="n">re_dashes</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;\-\-&quot;</span><span class="p">)</span>
+<span class="n">re_wrong_tags</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;&lt;/noinclude[^&gt;]&quot;</span><span class="p">)</span>
+<span class="n">re_arrows</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;(&lt;==&lt;==&lt;==&lt;|&gt;==&gt;==&gt;==&gt;)&quot;</span><span class="p">)</span>
+<span class="n">re_special1</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;Le&lt;&quot;</span><span class="p">)</span>
+<span class="n">re_special2</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;ci&lt;:&quot;</span><span class="p">)</span>
+<span class="n">re_img</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot; [^ ]*\.jpg\|&quot;</span><span class="p">)</span>
+
+<span class="n">lines_to_delete</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="sa">u</span><span class="s2">&quot;&lt;!-- BITTE bei den Biografien der entsprechenden Personen auf der Bearbeitungsseite unten bei  Kategorien die folgende Zeile EINFÜGEN:&quot;</span><span class="p">,</span>
+    <span class="sa">u</span><span class="s2">&quot;  &lt;/noinclude&lt;/includeonly»&lt;includeonly&lt;/includeonly» BITTSCHÖN ENTFERN DII KOMMENTARE &lt;/includeonly&lt;/includeonly»&quot;</span><span class="p">,</span>
+    <span class="sa">u</span><span class="s2">&quot;&lt;!-- BITTE bei den Biografien der entsprechenden Personen auf der Bearbeitungsseite unten bei Kategorien die folgende Zeile EINFÜGEN:&quot;</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f1</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="ow">in</span> <span class="n">lines_to_delete</span><span class="p">:</span>
+        <span class="n">f2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+    <span class="n">line</span> <span class="o">=</span> <span class="n">re_date</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">re_empty</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">re_dashes</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">re_arrows</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">re_wrong_tags</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+
+    <span class="n">line</span> <span class="o">=</span> <span class="n">re_special1</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;Le&amp;lt;&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">re_special2</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;ci&amp;lt;:&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+
+    <span class="n">line</span> <span class="o">=</span> <span class="n">re_img</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+
+    <span class="n">f2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+<span class="n">f1</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">f2</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+
+<p>In the end I have a clean file <code>barwiki_cleaned2.xml</code> that contains <span class="caps">XML</span> with
+all the articles of the Bavarian Wikipedia and is parsable with&nbsp;EementTree.</p>
+<p>I still add a third cleaning step to remove articles that are not real content.
+Wikipedia contains several helper and meta-data articles that contain
+explanations for authors and other stuff that we don&#8217;t need. Luckily, those have
+a title that contains a prefix that ends with a colon <code>:</code>, so we can just look
+for a certain pattern in the titles and remove those <code>&lt;doc&gt;</code> elements from the
+<span class="caps">XML</span> tree. I also remove articles that are smaller than 200
+characters (those are too short to measure semantic similarity, in one of my
+use&nbsp;cases):</p>
+<div class="highlight"><pre><span></span><code><span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">ElementTree</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s2">&quot;barwiki_cleaned2.xml&quot;</span><span class="p">)</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+
+<span class="n">re_special_title</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;\w+:\w&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">UNICODE</span><span class="p">)</span>
+
+<span class="n">remove_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">root</span><span class="p">:</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">re_special_title</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">title</span><span class="p">):</span>
+        <span class="n">remove_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">text</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="n">remove_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">remove_list</span><span class="p">:</span>
+    <span class="n">root</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+<span class="n">tree</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;barwiki_cleaned3.xml&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>After this step I finally end up with a <code>barwiki_cleaned3.xml</code> that contains
+clean data with only the content articles. This file can already be used to
+process the Wikipedia, but I wanted to also publish the files in a standardized
+format. I chose <a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326"><span class="caps">ISO</span> 24612</a>,
+as this makes it extremely easy to later combine heterogenous data sources or
+add layers of annotations in the resulting annotation&nbsp;graph.</p>
+<h1>Conversion to GrAF-<span class="caps">XML</span> with Poio <span class="caps">API</span></h1>
+<p>The last step is extremely simple, as one of Poio <span class="caps">API</span>&#8217;s core use case is the
+conversion of files. Normally, you would have to write a parser and a writer
+for each of the file formats you want to support. But for the <span class="caps">XML</span> output of
+the Wikipedia Extractor there already exists a parser in Poio <span class="caps">API</span>, and GrAF-<span class="caps">XML</span>
+is supported as the basic pivot format. Which means that any file format that
+is supported in Poio <span class="caps">API</span> can be converted to GrAF-<span class="caps">XML</span>. The conversion is
+dead simple: we initialize a <code>Converter</code> object with the Wikipedia parser
+and the GrAF writer, and then tell the converter to <code>parse()</code> and <code>write()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">parser</span> <span class="o">=</span> <span class="n">poioapi</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">wikipedia_extractor</span><span class="o">.</span><span class="n">Parser</span><span class="p">(</span><span class="s2">&quot;Wikipedia.xml&quot;</span><span class="p">)</span>
+<span class="n">writer</span> <span class="o">=</span> <span class="n">poioapi</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">graf</span><span class="o">.</span><span class="n">Writer</span><span class="p">()</span>
+
+<span class="n">converter</span> <span class="o">=</span> <span class="n">poioapi</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">graf</span><span class="o">.</span><span class="n">GrAFConverter</span><span class="p">(</span><span class="n">parser</span><span class="p">,</span> <span class="n">writer</span><span class="p">)</span>
+<span class="n">converter</span><span class="o">.</span><span class="n">parse</span><span class="p">()</span>
+<span class="n">converter</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Wikipedia.hdr&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>This will write a set of GrAF files that you can read and query with the
+<a href="http://media.cidles.eu/poio/graf-python/">graf-python</a> library or
+with any of the <a href="http://www.anc.org/software/">tools and connectors</a> that were
+developed at the American National Corpus to work with their GrAF-<span class="caps">XML</span> corpus&nbsp;files.</p>
+          <div id="comments">
+			<script src="https://utteranc.es/client.js"
+					repo="pbouda/peterbouda.eu"
+					issue-term="pathname"
+					label="Comment"
+					theme="github-light"
+					crossorigin="anonymous"
+					async>
+			</script>
+          </div>
+        </div>
+        <!-- /.entry-content -->
+
+        <div class="4u">
+          <article class="box style2">
+            <div>
+              <img
+                style="border-radius:50%; width:80%;"
+                src="theme/images/pic00.jpg"
+                alt=""
+              />
+            </div>
+            <h3>About me</h3>
+            <p>
+              My name is Peter Bouda and I am a software developer with more than 20 years of
+              professional experience in application development. I help
+              you to bring your application to market as quickly as possible.
+            </p>
+            <!-- <p>
+              Join our <a href="http://www.ng-lisbon.com/#trainings">next Angular training</a>
+              in Lisbon, October 2-4.
+            </p> -->
+            <p>
+              <a href="/#top">Read about my work</a><br />
+              or<br />
+              <a href="/#contact">Contact me</a>
+            </p>
+          </article>
+        </div>
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </article>
+</section>
+
+ <!-- Contact -->
+<div class="wrapper style4" id="contact">
+  <article class="container 75%">
+    <div class="row">
+      <div class="12u">
+        <h2>Send me a message and I will get back to you.</h2>
+        <ul class="social">
+          <li>
+            <a href="mailto:pbouda@outlook.com" class="icon fa-envelope-o"
+              ><span class="label">Mail</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/pbouda" class="icon fa-github"
+              ><span class="label">Github</span></a
+            >
+          </li>
+        </ul>
+        <br />
+        <h2>RSS Feed</h2>
+        <ul class="social">
+          <li>
+            <a href="http://www.peterbouda.eu/feeds/all.rss" class="icon fa-rss"
+              ><span class="label">RSS</span></a
+            >
+          </li>
+        </ul>
+        <hr />
+      </div>
+    </div>
+
+    <footer>
+      <ul id="copyright">
+        <li>&copy; Peter Bouda. All rights reserved.</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+      <div>
+        Rua Conselheiro Martins de Carvalho 23 1esq, 1400-069 Lisbon, Portugal,
+        +351 917403181
+      </div>
+    </footer>
+  </article>
+</div>  </body>
+</html>

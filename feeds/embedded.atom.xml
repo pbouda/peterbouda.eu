@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Peter Bouda - Embedded</title><link href="http://www.peterbouda.eu/" rel="alternate"></link><link href="http://www.peterbouda.eu/feeds/embedded.atom.xml" rel="self"></link><id>http://www.peterbouda.eu/</id><updated>2015-07-28T09:23:00+01:00</updated><subtitle>Natural Language Processing Consultant</subtitle><entry><title>Update of Embedded Qt with Buildroot project</title><link href="http://www.peterbouda.eu/update-of-embedded-qt-with-buildroot-project.html" rel="alternate"></link><published>2015-07-28T09:23:00+01:00</published><updated>2015-07-28T09:23:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2015-07-28:/update-of-embedded-qt-with-buildroot-project.html</id><summary type="html">&lt;p&gt;I while ago I published a first version of my &lt;a class="reference external" href="http://www.peterbouda.eu/embedded-qt-with-buildroot.html"&gt;Buildroot configuration for
+Embedded Qt development&lt;/a&gt;. Since then the
+project evolved and there are now a few important additions&amp;nbsp;available:&lt;/p&gt;
+&lt;p&gt;1) I added a helper script &lt;tt class="docutils literal"&gt;build.sh&lt;/tt&gt; to the project that starts the whole
+configuration and build process. No …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I while ago I published a first version of my &lt;a class="reference external" href="http://www.peterbouda.eu/embedded-qt-with-buildroot.html"&gt;Buildroot configuration for
+Embedded Qt development&lt;/a&gt;. Since then the
+project evolved and there are now a few important additions&amp;nbsp;available:&lt;/p&gt;
+&lt;p&gt;1) I added a helper script &lt;tt class="docutils literal"&gt;build.sh&lt;/tt&gt; to the project that starts the whole
+configuration and build process. No need to enter shell commands manually
+anymore! You can pass a parameter to the script, to choose a configuration.
+Currently, the main purpose is to either load the configuration for the
+Raspberry A/B(+) or the one for the Raspberry 2. Check the
+&lt;span class="caps"&gt;README&lt;/span&gt; how it&amp;nbsp;works.&lt;/p&gt;
+&lt;p&gt;2) I added a first test configuration that uses systemd as init system. I am now
+using systemd in my project &lt;a class="reference external" href="http://brummbeere.readthedocs.org/"&gt;Die Brummbeere&lt;/a&gt;
+to be able to set a dependency on network access before I start the app, and
+thought that it makes sense to make the configuration available. The
+configuration just uses the standard setup of systemd on Buildroot. You can
+use the systemd configuration via passing an option to the &lt;tt class="docutils literal"&gt;build.sh&lt;/tt&gt; script
+or manully load it in Buildroot as explained in the &lt;span class="caps"&gt;README&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;3) I added support for remote deployment via Qt Creator. I had to change from
+the Dropbear &lt;span class="caps"&gt;SSH&lt;/span&gt; server to OpenSSH for that, as for some reason Qt Creator just
+could not copy files to the Raspberry via Dropbear. Now everything works and
+I added a chapter with the setup process in Qt Creator to the &lt;span class="caps"&gt;README&lt;/span&gt;. With
+screenshots and everything, to make it easy for everyone to use remote&amp;nbsp;deployment.&lt;/p&gt;
+&lt;p&gt;And here is the&amp;nbsp;repository:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/pbouda/buildroot-qt-dev"&gt;https://github.com/pbouda/buildroot-qt-dev&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Happy embedded&amp;nbsp;development!&lt;/p&gt;
+</content><category term="Embedded"></category><category term="Qt"></category><category term="Buildroot"></category></entry><entry><title>Embedded Qt with Buildroot</title><link href="http://www.peterbouda.eu/embedded-qt-with-buildroot.html" rel="alternate"></link><published>2015-06-03T17:04:00+01:00</published><updated>2015-06-03T17:04:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2015-06-03:/embedded-qt-with-buildroot.html</id><summary type="html">&lt;p&gt;I already posted about my project &lt;a class="reference external" href="http://www.peterbouda.eu/die-brummbeere-an-embedded-owncloud-music-player.html"&gt;Die Brummbeere&lt;/a&gt;,
+an ownCloud music player built with Qt. For the development on the Raspberry,
+I am heavily dependent on &lt;a class="reference external" href="http://buildroot.net/"&gt;Buildroot&lt;/a&gt;, which is an
+awesome project to quickly build your own Linux system with customized libraries
+and applications. Qt5 is part of the packages …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I already posted about my project &lt;a class="reference external" href="http://www.peterbouda.eu/die-brummbeere-an-embedded-owncloud-music-player.html"&gt;Die Brummbeere&lt;/a&gt;,
+an ownCloud music player built with Qt. For the development on the Raspberry,
+I am heavily dependent on &lt;a class="reference external" href="http://buildroot.net/"&gt;Buildroot&lt;/a&gt;, which is an
+awesome project to quickly build your own Linux system with customized libraries
+and applications. Qt5 is part of the packages provided by Buildroot, but it
+still took me a while to figure out all the dependencies that I need to have
+OpenGL support, build a usable Qt multimedia module and get network access with
+&lt;span class="caps"&gt;SSL&lt;/span&gt;/&lt;span class="caps"&gt;TLS&lt;/span&gt; support. I thought that this setup might be intersting to others and
+extracted the basic configuration from the Die Brummbeere project and created
+a seperate Buildroot project that just compiles Qt, with support for remote
+deployment in Qt Creator via &lt;span class="caps"&gt;SSH&lt;/span&gt;. In the end it&amp;#8217;s just a Buildroot configuration
+files and a few simple scripts. Oh, and a &lt;span class="caps"&gt;README&lt;/span&gt;, of course :-) It&amp;#8217;s available
+on&amp;nbsp;GitHub:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/pbouda/buildroot-qt-dev"&gt;https://github.com/pbouda/buildroot-qt-dev&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Let me know if you think this is&amp;nbsp;useful!&lt;/p&gt;
+</content><category term="Embedded"></category><category term="Qt"></category><category term="Buildroot"></category></entry><entry><title>Building scons packages with buildroot</title><link href="http://www.peterbouda.eu/building-scons-packages-with-buildroot.html" rel="alternate"></link><published>2015-05-25T12:13:00+01:00</published><updated>2015-05-25T12:13:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2015-05-25:/building-scons-packages-with-buildroot.html</id><summary type="html">&lt;p&gt;For my hardware project &lt;a class="reference external" href="http://brummbeere.readthedocs.org/en/latest/"&gt;Die Brummbeere&lt;/a&gt; I started to work with
+buildroot a lot. For sound visualization in Die Brummbeere I wanted to use
+&lt;a class="reference external" href="https://github.com/alex-berman/sonotopy"&gt;the sonotopy library&lt;/a&gt;, and use my
+existing buildroot toolchain to compile it for the Raspberry. Unfortunately, it
+didn&amp;#8217;t work out of the box. First, it …&lt;/p&gt;</summary><content type="html">&lt;p&gt;For my hardware project &lt;a class="reference external" href="http://brummbeere.readthedocs.org/en/latest/"&gt;Die Brummbeere&lt;/a&gt; I started to work with
+buildroot a lot. For sound visualization in Die Brummbeere I wanted to use
+&lt;a class="reference external" href="https://github.com/alex-berman/sonotopy"&gt;the sonotopy library&lt;/a&gt;, and use my
+existing buildroot toolchain to compile it for the Raspberry. Unfortunately, it
+didn&amp;#8217;t work out of the box. First, it was not quite clear how to build scons
+for the host, but a quick search for scons and buildroot led me&amp;nbsp;to:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;make&lt;span class="w"&gt; &lt;/span&gt;host-scons
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After that I started to create my own package for sonotopy based on the
+information in the buildroot documentation. I added a &lt;tt class="docutils literal"&gt;Config.in&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;sonotopy.mk&lt;/tt&gt; file that I copied from another scons-based package in buildroot
+(benejson) and modified them, but without luck. My &lt;tt class="docutils literal"&gt;Config.in&lt;/tt&gt; contains:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;config BR2_PACKAGE_SONOTOPY
+             bool &amp;quot;sonotopy&amp;quot;
+             select HOST_SCONS
+             depeds on BR2_PACKAGE_FFTW
+             help
+                     Sonotopy is a C++ library for perceptually analyzing the contents of
+                     an acoustic signal in real time.
+
+                     https://github.com/alex-berman/sonotopy
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;My &lt;tt class="docutils literal"&gt;sonotopy.mk&lt;/tt&gt; is:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;################################################################################
+#
+# sonotopy
+#
+################################################################################
+
+SONOTOPY_VERSION = master
+SONOTOPY_SOURCE = master.tar.gz
+SONOTOPY_SITE = https://github.com/pbouda/sonotopy/archive/
+SONOTOPY_LICENSE = GPLv3+
+SONOTOPY_LICENSE_FILES = LICENSE
+SONOTOPY_INSTALL_STAGING = YES
+SONOTOPY_DEPENDENCIES = host-scons
+
+define SONOTOPY_BUILD_CMDS
+        (cd $(@D); \
+                $(TARGET_CONFIGURE_OPTS) CROSS=$(TARGET_CROSS) \
+                $(SCONS))
+endef
+
+define SONOTOPY_INSTALL_STATIC_LIB
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/sonotopy.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/sonotopy.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/AudioParameters.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/AudioParameters.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/BeatTracker.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/BeatTracker.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/CircleMap.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/CircleMap.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/CircleMapParameters.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/CircleMapParameters.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/CircleTopology.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/CircleTopology.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/CircularBuffer.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/CircularBuffer.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/DisjointGridMap.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/DisjointGridMap.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/DisjointGridTopology.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/DisjointGridTopology.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/EventDetector.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/EventDetector.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/GridMap.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/GridMap.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/GridMapParameters.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/GridMapParameters.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/Normalizer.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/Normalizer.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/Random.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/Random.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/RectGridTopology.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/RectGridTopology.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/Smoother.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/Smoother.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/SOM.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/SOM.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/SpectrumAnalyzer.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/SpectrumAnalyzer.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/SpectrumAnalyzerParameters.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/SpectrumAnalyzerParameters.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/SpectrumBinDivider.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/SpectrumBinDivider.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/SpectrumMap.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/SpectrumMap.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/SpectrumMapParameters.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/SpectrumMapParameters.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/Stopwatch.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/Stopwatch.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/Topology.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/Topology.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/TwoDimArray.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/TwoDimArray.hpp
+        $(INSTALL) -D -m 0644 $(@D)/build/release/src/libsonotopy.a \
+                $(1)/usr/lib/libsonotopy.a
+endef
+
+define SONOTOPY_INSTALL_STAGING_CMDS
+        $(call SONOTOPY_INSTALL_STATIC_LIB,$(STAGING_DIR))
+endef
+
+$(eval $(generic-package))
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The package compiles fine, but the architecture of resulting binary file is that
+of my host, and not of my target (the Raspberry). Luckily, I got some help on
+the buildroot &lt;span class="caps"&gt;IRC&lt;/span&gt; channel. I had to still modify sonotopy&amp;#8217;s &lt;tt class="docutils literal"&gt;SConstruct&lt;/tt&gt; file,
+so that it uses the &lt;tt class="docutils literal"&gt;&lt;span class="caps"&gt;CROSS&lt;/span&gt;&lt;/tt&gt; environment variable to set the correct compiler
+and linker&amp;nbsp;variables:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;CROSS&amp;#39;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;cross&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;CROSS&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CROSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cross&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CC&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cross&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;gcc&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CXX&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cross&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;g++&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;LD&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cross&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;ld&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now sonotopy compiled fine and I could use it in my projects on the Raspberry.
+To try it out you may just use my own fork of sonotopy on&amp;nbsp;GitHub:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/pbouda/sonotopy"&gt;https://github.com/pbouda/sonotopy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Sonotopy comes with a few examples with requirements that I didn&amp;#8217;t want to
+compile for my project. I already have Qt with audio input and output, so I
+build a little Qt project to visualize the GridMap calculations of sonotopy
+in a &lt;span class="caps"&gt;QML&lt;/span&gt; view. The project is called Sonobeere, the current tree with the
+GridMap example is on&amp;nbsp;GitHub:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/pbouda/sonobeere/tree/5a6efd0275cea9f4dd1c3920def19766663b0f8f"&gt;https://github.com/pbouda/sonobeere/tree/5a6efd0275cea9f4dd1c3920def19766663b0f8f&lt;/a&gt;&lt;/p&gt;
+</content><category term="Embedded"></category><category term="Buildroot"></category><category term="Scons"></category><category term="Qt"></category></entry></feed>

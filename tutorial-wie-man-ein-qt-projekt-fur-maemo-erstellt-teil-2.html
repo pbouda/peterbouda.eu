@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!--
+    Miniport by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Peter Bouda - Natural Language Processing Consultant</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="Natural Language Processing, Python, Software Development, Consultant"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/theme/js/jquery.min.js"></script>
+    <script src="/theme/js/jquery.scrolly.min.js"></script>
+    <script src="/theme/js/skel.min.js"></script>
+    <script src="/theme/js/init.js"></script>
+    <link
+      href="http://www.peterbouda.eu/feeds/all.atom.xml"
+      type="application/atom+xml"
+      rel="alternate"
+      title="Peter Bouda Atom Feed"
+    />
+     <link
+      href="http://www.peterbouda.eu/feeds/all.rss"
+      type="application/rss+xml"
+      rel="alternate"
+      title="Peter Bouda RSS Feed"
+    />
+
+    <link rel="stylesheet" href="/theme/css/pygment.css" />
+
+    <noscript>
+      <link rel="stylesheet" href="/theme/css/skel.css" />
+      <link rel="stylesheet" href="/theme/css/style.css" />
+      <link rel="stylesheet" href="/theme/css/style-desktop.css" />
+    </noscript>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Peter Bouda",
+        "url": "https://www.peterbouda.eu",
+        "jobTitle": "Natural Language Processing Consultant",
+        "alumniOf": "LMU Munich",
+        "gender": "male",
+        "image": "https://www.peterbouda.eu/theme/images/pic00.jpg",
+        "sameAs": ["https://dev.to/pbouda", "https://github.com/pbouda"]
+      }
+    </script>
+
+    <!--[if lte IE 8
+      ]><link rel="stylesheet" href="/theme/css/ie/v8.css"
+    /><![endif]-->
+    <!--[if lte IE 9
+      ]><link rel="stylesheet" href="/theme/css/ie/v9.css"
+    /><![endif]-->
+  </head>
+  <body>
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="/#top">Home</a></li>
+					<!--<li><a href="/#work">Work</a></li>-->
+					<li><a href="/#portfolio">Portfolio</a></li>
+					<li><a href="/#feed">Blog</a></li>
+					<li><a href="/#contact">Contact</a></li>
+				</ul>
+			</nav> <section id="content" class="body">
+  <article class="h-entry">
+    <header>
+      <h1 class="entry-title e-title">
+        <a
+          class="p-name u-url"
+          href="http://www.peterbouda.eu/tutorial-wie-man-ein-qt-projekt-fur-maemo-erstellt-teil-2.html"
+          rel="bookmark"
+          title="Permalink to Tutorial: Wie man ein Qt-Projekt für Maemo erstellt (Teil 2)"
+          >Tutorial: Wie man ein Qt-Projekt für Maemo erstellt (Teil&nbsp;2)</a
+        >
+      </h1>
+    </header>
+
+    <div class="entry-content e-content container">
+      <div class="row">
+        <div class="8u">
+ <footer class="post-info">
+    <p>
+        Published by <a href="http://www.peterbouda.eu" class="p-author">Peter Bouda</a> at <b><time class="dt-published" datetime="2010-03-05 16:05:00+00:00">Sex 05 Março 2010</time></b>
+        in <b><a class="p-category" href="/category/museum.html">Museum</a></b>.
+    </p>
+    
+
+        
+</footer><!-- /.post-info -->          <p>Hier also nun der zweite Teil des Tutorials über das erstellen eines
+Qt-Projekts für Maemo. Für alle, die neu dabei sind: <a class="reference external" href="http://www.peterbouda.eu/tutorial-wie-man-ein-qt-projekt-fur-maemo-erstellt-teil-1.html">hier geht&#8217;s zum
+ersten Teil</a>. Dort werden die ersten <strong>vier Schritte</strong>&nbsp;beschrieben.</p>
+<p><strong>Im fünften Schritt</strong> bereiten wir das Projekt für die
+Debian-Paketierung vor. Dazu könnt ihr den Qt Creator wieder schließen.
+Der Debian-Paketierer braucht etwa zwei Hände voll Dateien, die das
+Paket beschreiben. Diese Datein müssen in dem im ersten Schritt
+erstellte &#8220;debian&#8221;-Ordner liegen. Um euch die Sache zu vereinfachen habe
+ich euch diese Dateien als Beispiel in ein Archiv&nbsp;gepackt:</p>
+<p><a class="reference external" href="/tutorials/1/mobileqt_debian.zip">Debian-Dateien für das&nbsp;mobileqt-Projekt</a></p>
+<p>Die Dateien müsst ihr also aus dem Archiv in den &#8220;debian&#8221;-Ordner
+entpacken. Folgende Dateien müssen für jedes Projekt angepasst&nbsp;werden:</p>
+<ul class="simple">
+<li><strong>changelog:</strong> Hier könnt ihr zunächst einmal euren Projektnamen
+eintragen. Für spätere Versionen muss das changelog jeweils erweitert
+werden, und zwar über den Befehl &#8220;debchange&#8221;. Genaueres dazu gibt es
+<a class="reference external" href="http://debiananwenderhandbuch.de/toolspakerzeugen.html#debchange">hier</a>.</li>
+<li><strong>control:</strong> Hier muss zunächst Projektname und -beschreibung
+angepasst werden. In der Zeile &#8220;Maintainer:&#8221; sollte euer Name und
+E-Mail-Adresse stehen. Wichtig sind die Felder mit den Präfixen
+&#8220;<span class="caps">XSBC</span>-&#8221; bzw. &#8220;<span class="caps">XB</span>-&#8220;. Um euer Paket später in das maemo-Repository zu
+bekommen (zur Installation über den Programmmanager), solltet ihr
+einen &#8220;<span class="caps">XSBC</span>-Bugtracker:&#8221; angeben. Die einfachste Möglichkeit ist eine
+Anmeldung eurer Anwendung bei &#8220;bugs.maemo.org&#8221;, so wie es <a class="reference external" href="http://wiki.maemo.org/Bugs:Adding_Extra_products">hier beschrieben ist</a>.
+Anschliessend könnt ihr den Anwendungsnamen in die
+Beispiel-control-Datei in den &#8220;product=&#8221;-Parameter eintragen. Die
+Felder &#8220;<span class="caps">XB</span>-Maemo-Icon-26:&#8221; und &#8220;<span class="caps">XSBC</span>-Maemo-Display-Name:&#8221; geben ein
+Icon und einen Namen für den Programmmanager auf dem N900 an. Wenn
+ihr diese Felder leer lasst, dann wird kein Icon verwendet und es
+erscheint der Name, wie er in der &#8220;Package:&#8221; Zeile steht. Das Icon
+muss die Größe 48x48 haben. Wie ihr den Icon-Code für die
+&#8220;control&#8221;-Datei erstellt, könnt ihr <a class="reference external" href="http://wiki.maemo.org/Packaging#Displaying_an_icon_in_the_Application_Manager_next_to_your_package">hier nachlesen</a>. Wenn ihr kein
+Icon braucht dann könnt ihr das entsprechende Feld einfach aus
+&#8220;control&#8221; entfernen. Dieses Icon ist wie gesagt nur für den
+Programmmanager. Das Anwendungsicon für den Desktop haben wir im
+vierten Schritt&nbsp;abgehandelt.</li>
+<li><strong>copyright:</strong> Hier müsst hier halt euren Namen und die
+entsprechenden Copyright-Informationen&nbsp;eintragen.</li>
+<li><strong>files:</strong> In dieser Datei den Projektnamen ändern, bei späteren,
+neuen Versionen eurer Anwendung auch die&nbsp;Versionsnummer.</li>
+</ul>
+<p>Das war es dann auch schon für die Vorbereitung der Paketierung. Eine
+genauere Beschreibung der einzelnen Dateien findet ihr
+<a class="reference external" href="http://debiananwenderhandbuch.de/debianpaketeerstellen.html">beispielsweise hier</a>.</p>
+<p>Nun müsst ihr für den <strong>sechsten Schritt</strong> den gesamten Verzeichnisbaum
+in die virtuelle Maschine des SDKs kopieren. Also den VMWare Player
+anwerfen, warten bis das <span class="caps">SDK</span> gebootet wurde, dann das Projekt komplett
+in die Maschine kopieren; das sollte per Copy&amp;Paste funktionieren, wenn
+ihr die &#8220;VMWare Tools&#8221; innerhalb der virtuellen Maschine installiert
+habt. Dort am Besten in den Pfad &#8220;/scratchbox/users/maemo/home/maemo&#8221;,
+dann habt ihr aus Scratchbox gleich Zugriff&nbsp;darauf:</p>
+<p><img alt="image0" src="/static/tutorials/1/tut1_7.png" /></p>
+<p>Anschließend startet ihr in der virtuellen Maschine ein Terminal. In
+diesem Terminal startet ihr Scratchbox mit dem Befehl
+&#8220;/scratchbox/login&#8221;, in dieser Umgebung werden alle Maemo-Anwendungen
+kompiliert. Mit &#8220;sb-conf select FREMANTLE_ARMEL&#8221; wählt ihr innerhalb
+von Scratchbox das <span class="caps">ARMEL</span>-Target aus, so läuft die Anwendung dann später
+auf dem <span class="caps">ARM</span>-Prozessor des&nbsp;N900:</p>
+<pre class="literal-block">
+maemo&#64;maemo-desktop:~$ /scratchbox/login
+
+Welcome to Scratchbox, the cross-compilation toolkit!
+
+Use 'sb-menu' to change your compilation target.
+See /scratchbox/doc/ for documentation.
+
+[sbox-FREMANTLE_X86: ~] &gt; sb-conf select FREMANTLE_ARMEL
+
+Shell restarting...
+[sbox-FREMANTLE_ARMEL: ~] &gt;
+</pre>
+<p>Mit &#8220;cd mobileqt&#8221; ins Projektverzeichnis wechseln. Nun reicht ein
+einfaches &#8220;dpkg-buildpackage -rfakeroot&#8221; um das .deb-Paket zu&nbsp;erstellen:</p>
+<pre class="literal-block">
+[sbox-FREMANTLE_ARMEL: ~] &gt; cd mobileqt/
+[sbox-FREMANTLE_ARMEL: ~/mobileqt] &gt; dpkg-buildpackage -rfakeroot
+dpkg-buildpackage: source package is mobileqt
+dpkg-buildpackage: source version is 0.1-1
+dpkg-buildpackage: source changed by Peter Bouda
+dpkg-buildpackage: host architecture armel
+dpkg-buildpackage: source version without epoch 0.1-1
+: Using Scratchbox tools to satisfy builddeps
+
+... hier kommen viele Zeilen ...
+
+dpkg-deb: ignoring 3 warnings about the control file(s)
+ dpkg-genchanges
+dpkg-genchanges: warning: unknown information field `Xb-Maemo-Icon-26' in input data in package's section of control info file
+dpkg-genchanges: including full source code in upload
+dpkg-buildpackage: full upload; Debian-native package (full source is included)
+</pre>
+<p>In dem Verzeichnis &#8220;über&#8221; dem Projektverzeichnis (im Beispiel:
+&#8220;/scratchbox/users/maemo/home/maemo&#8221;) findet ihr jetzt u.a. eine Datei
+mit dem Namen &#8220;projektname_0.1-1_armel.deb&#8221;. Glückwunsch: Dieses Paket
+kann sofort auf dem N900 installiert&nbsp;werden!</p>
+<p>Im <strong>siebten Schritte</strong> installieren wir das Paket per &#8220;X Terminal&#8221; und
+dem &#8220;dpkg&#8221;-Kommandozeilentool auf das N900. Dazu muss der root-Zugang
+auf dem Gerät aktiviert sein, am einfachsten geht das per
+<a class="reference external" href="http://wiki.maemo.org/Root_access#rootsh">rootsh-Paket</a>. Dann einfach die im sechsten Schritt erstellt
+.deb-Datei auf das Gerät kopieren (per <span class="caps">USB</span>, Bluetooth, <a class="reference external" href="http://wiki.maemo.org/SSH"><span class="caps">SSH</span></a> oder auf
+eine Speicherkarte). Ich kopiere die Datei meist per <span class="caps">SSH</span> nach
+&#8220;/home/user/MyDocs&#8221;, dann findet man die Datei später auch einfach per
+Dateimanager (im Prinzip kann man das Paket auuh einfach per Klick im
+N900-Dateimanager installieren, für coole Hacker wie uns wäre das aber
+viel zu einfach). Auf dem Gerät das &#8220;X Terminal&#8221; starten und als erstes
+mit &#8220;sudo gainroot&#8221; zum Chef werden. Dann in das Verzeichnis wecheln, in
+dem die .deb-Datei liegt, und das Paket mit &#8220;dpkg -i
+projektname_0.1-1_armel.deb&#8221;&nbsp;installieren:</p>
+<pre class="literal-block">
+~ $ sudo gainroot
+Root shell enabled
+
+BusyBox v1.10.2 (Debian 3:1.10.2.legal-1osso26+0,5) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+/home/user # cd MyDocs
+/home/user/MyDocs # dpkg -i mobileqt_0.1-1_armel.deb
+(Reading database ... 25458 files and directories currently installed.)
+Unpacking mobileqt (from mobileqt_0.1-1_armel.deb) ...
+Setting up mobileqt (0.1-1) ...
+/home/user/MyDocs #
+</pre>
+<p>Fertig! Jetzt könnt ihr die Anwendung über den Anwendungsbildschirm&nbsp;starten:</p>
+<p><img alt="image1" src="/static/tutorials/1/tut1_8.png" /></p>
+<p><img alt="image2" src="/static/tutorials/1/tut1_9.png" /></p>
+<p>Wahnsinn: ein leeres Hauptfenster auf dem N900, selbst programmiert und
+installiert! Bald mehr dazu, wie ihr das Fenster nun mit Inhalten füllt.
+:-) Die Anwendung kann übrigens jederzeit per &#8220;dpkg -r projektname&#8221; im
+Terminal oder über den Programmmanager wieder vom Gerät entfernt&nbsp;werden.</p>
+<p>Soweit also zum ersten Tutorial über die Qt-Entwicklung hier auf
+<a class="reference external" href="http://mobileqt.de">mobileqt.de</a>. Ich hoffe die Schritte waren verständlich erklärt und
+ihr konntet alles bei euch zu Hause nachvollziehen. Falls nicht: als
+Alternative kommt demnächst wohl <a class="reference external" href="http://wiki.maemo.org/MADDE"><span class="caps">MADDE</span></a> in Frage, womit sich die
+Einstiegshürde deutlich senken wird. Über jede Rückmeldung zu diesem
+Tutorial würde ich mich sehr freuen! Hier noch der komplette Download
+der&nbsp;Beispielanwendung:</p>
+<p><a class="reference external" href="/static/tutorials/1/mobileqt_tutorial1.zip">Download der kompletten Beispielanwendung inklusive aller&nbsp;Dateien</a></p>
+
+          <div id="comments">
+			<script src="https://utteranc.es/client.js"
+					repo="pbouda/peterbouda.eu"
+					issue-term="pathname"
+					label="Comment"
+					theme="github-light"
+					crossorigin="anonymous"
+					async>
+			</script>
+          </div>
+        </div>
+        <!-- /.entry-content -->
+
+        <div class="4u">
+          <article class="box style2">
+            <div>
+              <img
+                style="border-radius:50%; width:80%;"
+                src="theme/images/pic00.jpg"
+                alt=""
+              />
+            </div>
+            <h3>About me</h3>
+            <p>
+              My name is Peter Bouda and I am a software developer with more than 20 years of
+              professional experience in application development. I help
+              you to bring your application to market as quickly as possible.
+            </p>
+            <!-- <p>
+              Join our <a href="http://www.ng-lisbon.com/#trainings">next Angular training</a>
+              in Lisbon, October 2-4.
+            </p> -->
+            <p>
+              <a href="/#top">Read about my work</a><br />
+              or<br />
+              <a href="/#contact">Contact me</a>
+            </p>
+          </article>
+        </div>
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </article>
+</section>
+
+ <!-- Contact -->
+<div class="wrapper style4" id="contact">
+  <article class="container 75%">
+    <div class="row">
+      <div class="12u">
+        <h2>Send me a message and I will get back to you.</h2>
+        <ul class="social">
+          <li>
+            <a href="mailto:pbouda@outlook.com" class="icon fa-envelope-o"
+              ><span class="label">Mail</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/pbouda" class="icon fa-github"
+              ><span class="label">Github</span></a
+            >
+          </li>
+        </ul>
+        <br />
+        <h2>RSS Feed</h2>
+        <ul class="social">
+          <li>
+            <a href="http://www.peterbouda.eu/feeds/all.rss" class="icon fa-rss"
+              ><span class="label">RSS</span></a
+            >
+          </li>
+        </ul>
+        <hr />
+      </div>
+    </div>
+
+    <footer>
+      <ul id="copyright">
+        <li>&copy; Peter Bouda. All rights reserved.</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+      <div>
+        Rua Conselheiro Martins de Carvalho 23 1esq, 1400-069 Lisbon, Portugal,
+        +351 917403181
+      </div>
+    </footer>
+  </article>
+</div>  </body>
+</html>

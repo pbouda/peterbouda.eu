@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--
+    Miniport by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Peter Bouda - Natural Language Processing Consultant</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="Natural Language Processing, Python, Software Development, Consultant"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/theme/js/jquery.min.js"></script>
+    <script src="/theme/js/jquery.scrolly.min.js"></script>
+    <script src="/theme/js/skel.min.js"></script>
+    <script src="/theme/js/init.js"></script>
+    <link
+      href="http://www.peterbouda.eu/feeds/all.atom.xml"
+      type="application/atom+xml"
+      rel="alternate"
+      title="Peter Bouda Atom Feed"
+    />
+     <link
+      href="http://www.peterbouda.eu/feeds/all.rss"
+      type="application/rss+xml"
+      rel="alternate"
+      title="Peter Bouda RSS Feed"
+    />
+
+    <link rel="stylesheet" href="/theme/css/pygment.css" />
+
+    <noscript>
+      <link rel="stylesheet" href="/theme/css/skel.css" />
+      <link rel="stylesheet" href="/theme/css/style.css" />
+      <link rel="stylesheet" href="/theme/css/style-desktop.css" />
+    </noscript>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Peter Bouda",
+        "url": "https://www.peterbouda.eu",
+        "jobTitle": "Natural Language Processing Consultant",
+        "alumniOf": "LMU Munich",
+        "gender": "male",
+        "image": "https://www.peterbouda.eu/theme/images/pic00.jpg",
+        "sameAs": ["https://dev.to/pbouda", "https://github.com/pbouda"]
+      }
+    </script>
+
+    <!--[if lte IE 8
+      ]><link rel="stylesheet" href="/theme/css/ie/v8.css"
+    /><![endif]-->
+    <!--[if lte IE 9
+      ]><link rel="stylesheet" href="/theme/css/ie/v9.css"
+    /><![endif]-->
+  </head>
+  <body>
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="/#top">Home</a></li>
+					<!--<li><a href="/#work">Work</a></li>-->
+					<li><a href="/#portfolio">Portfolio</a></li>
+					<li><a href="/#feed">Blog</a></li>
+					<li><a href="/#contact">Contact</a></li>
+				</ul>
+			</nav> <section id="content" class="body">
+  <article class="h-entry">
+    <header>
+      <h1 class="entry-title e-title">
+        <a
+          class="p-name u-url"
+          href="http://www.peterbouda.eu/pressagio-a-predictive-text-system-in-python.html"
+          rel="bookmark"
+          title="Permalink to pressagio: A predictive text system in Python"
+          >pressagio: A predictive text system in&nbsp;Python</a
+        >
+      </h1>
+    </header>
+
+    <div class="entry-content e-content container">
+      <div class="row">
+        <div class="8u">
+ <footer class="post-info">
+    <p>
+        Published by <a href="http://www.peterbouda.eu" class="p-author">Peter Bouda</a> at <b><time class="dt-published" datetime="2013-11-04 13:56:00+00:00">Seg 04 Novembro 2013</time></b>
+        in <b><a class="p-category" href="/category/language.html">Language</a></b>.
+    </p>
+    
+
+        
+</footer><!-- /.post-info -->          <p><a class="reference external" href="http://media.cidles.eu/poio/pressagio/">Pressagio</a> is a predictive text
+library that I am currently working on. It is written in Python and I started
+this project as a pure Python port of the amazing <a class="reference external" href="http://presage.sourceforge.net/">presage library</a>. The original idea was to implement text
+prediction on mobile phones for under-resourced languages like Bavarian or
+Sorbian, but pressagio could of course be used for any language for which some
+corpus is available. You can try out an online demo of the text prediction
+on the <a class="reference external" href="http://www.poio.eu/">Poio website</a>.</p>
+<p>Here is a short introduction how to build an n-gram model for a language
+that you want to support via pressagio. First, you have to prepare some text
+file that contains raw text, without markup or any other content. A good
+example is the output of the <a class="reference external" href="http://www.peterbouda.eu/parsing-wikipedia-dumps-and-conversion-to-iso-24612-graf-xml.html">Wikipedia to GrAF conversion that I described
+a few weeks ago</a>.
+The GrAF package contains a .txt file that we will use for the tutorial in this&nbsp;post.</p>
+<div class="section" id="build-the-n-gram-model">
+<h2>Build the n-gram&nbsp;model</h2>
+<p>We will build and store an n-gram model to allow text prediction for Bavarian.
+A sqlite database will store the model, so that you do not need any other
+database system on your computer. Python supports sqlite out-of-the-box.
+Besides sqlite, pressagio also support postgres as a store for the n-gram
+models. To create the model for a single cardinality (e.g. unigram or bigrams),
+the pressagio library contains a <a class="reference external" href="https://github.com/cidles/pressagio/blob/master/scripts/text2ngram">text2ngram</a> script
+in the <tt class="docutils literal">scripts</tt> folder of the source distribution. This script supports
+several command line options, for example to set the cardinality of the model
+and the output file. You can get a list of all options by passing <tt class="docutils literal"><span class="pre">--help</span></tt> to
+the&nbsp;script:</p>
+<div class="highlight"><pre><span></span><span class="go">h:\ProjectsWin\git-github\pressagio\scripts&gt;c:\Python33\python.exe text2ngram --help</span>
+<span class="go">Usage: text2ngram [options] file1 file2 ...</span>
+
+<span class="go">Options:</span>
+<span class="go">  --version             show program&#39;s version number and exit</span>
+<span class="go">  -h, --help            show this help message and exit</span>
+<span class="go">  -n NGRAM, --ngram=NGRAM</span>
+<span class="go">                        Specify ngram cardinality N</span>
+<span class="go">  -l LOWERCASE, --lowercase=LOWERCASE</span>
+<span class="go">                        Enable lowercase conversion mode</span>
+<span class="go">  -a APPEND, --append=APPEND</span>
+<span class="go">                        Enable append mode for database</span>
+<span class="go">  -o OUTFILE, --output=OUTFILE</span>
+<span class="go">                        Output file name O</span>
+</pre></div>
+<p>We will generate a model for unigrams, bigrams and trigrams, as this is what
+we need for the text prediction. In addition to the <tt class="docutils literal"><span class="pre">-n</span></tt> option we will also
+pass a filename for sqlite database (<tt class="docutils literal"><span class="pre">-o</span> bar.sqlite</tt>) and the path to the text
+file with the Wikipedia articles (<tt class="docutils literal"><span class="pre">barwiki-20131030.txt</span></tt>). We have to call
+<tt class="docutils literal">text2ngram</tt> three times, once for each cardinality. For the unigrams we&nbsp;use:</p>
+<div class="highlight"><pre><span></span><span class="go">h:\ProjectsWin\git-github\pressagio\scripts&gt;c:\Python33\python.exe text2ngram -n 1 -o bar.sqlite barwiki-20131030.txt</span>
+<span class="go">Parsing barwiki-20131030.txt...</span>
+<span class="go">Writing result to bar.sqlite...</span>
+</pre></div>
+<p>Then the&nbsp;bigrams:</p>
+<div class="highlight"><pre><span></span><span class="go">h:\ProjectsWin\git-github\pressagio\scripts&gt;c:\Python33\python.exe text2ngram -n 2 -o bar.sqlite barwiki-20131030.txt</span>
+<span class="go">Parsing barwiki-20131030.txt...</span>
+<span class="go">Writing result to bar.sqlite...</span>
+</pre></div>
+<p>And finally the&nbsp;trigrams:</p>
+<div class="highlight"><pre><span></span><span class="go">h:\ProjectsWin\git-github\pressagio\scripts&gt;c:\Python33\python.exe text2ngram -n 3 -o bar.sqlite barwiki-20131030.txt</span>
+<span class="go">Parsing barwiki-20131030.txt...</span>
+<span class="go">Writing result to bar.sqlite...</span>
+</pre></div>
+<p>The result of the three steps will be a sqlite database with three tables
+<tt class="docutils literal">_1_gram</tt>, <tt class="docutils literal">_2_gram</tt> and <tt class="docutils literal">_3_gram</tt>. Those will contain the counts for each
+n-gram of the Wikipedia&nbsp;corpus.</p>
+</div>
+<div class="section" id="use-pressagio-to-suggest-completions">
+<h2>Use pressagio to suggest&nbsp;completions</h2>
+<p>Based on this information pressagio can now calculate the most likely
+completions for any Bavarian string. The whole process is controlled via a
+configuration file that points to the database file and contains several option
+for smoothing, the number of suggestions etc. You can find an <a class="reference external" href="https://github.com/cidles/pressagio/blob/master/scripts/example_profile.ini">example config file</a>
+in the <tt class="docutils literal">scripts</tt> folder. The same folder also contains an <a class="reference external" href="https://github.com/cidles/pressagio/blob/master/scripts/predict">example script
+for prediction</a> that makes
+use of this config file. This example assumes that there is a file
+<tt class="docutils literal">bar.sqlite</tt> in the same folder as the prediction script and the config&nbsp;file.</p>
+<p>The script first imports the <tt class="docutils literal">configparser</tt> module. We emebed the import in
+a <tt class="docutils literal">try</tt> block in order to support both Python 2 and 3, as the name of the
+module changed between the two&nbsp;versions:</p>
+<div class="highlight"><pre><span></span>import pressagio.callback
+import pressagio
+</pre></div>
+<p>Next, we define a sub-class of <tt class="docutils literal">pressagio.callback.Callback</tt>, which is used
+to pass the input string to the predictor. In a real-world setting this callback
+is called by the text predictor and has to return the strings before and after
+the cursor. For simplicity we assume that there is no text after the&nbsp;cursor:</p>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">DemoCallback</span><span class="p">(</span><span class="n">pressagio</span><span class="o">.</span><span class="n">callback</span><span class="o">.</span><span class="n">Callback</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">buffer</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span> <span class="o">=</span> <span class="n">buffer</span>
+
+    <span class="k">def</span> <span class="nf">past_stream</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span>
+
+    <span class="k">def</span> <span class="nf">future_stream</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+<p>We can now open and parse the config&nbsp;file:</p>
+<div class="highlight"><pre><span></span><span class="n">config_file</span> <span class="o">=</span> <span class="s2">&quot;example_profile.ini&quot;</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">configparser</span><span class="o">.</span><span class="n">ConfigParser</span><span class="p">()</span>
+<span class="n">config</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span>
+</pre></div>
+<p>With the parsed configuration and the callback we can create a <tt class="docutils literal">Pressagio</tt>
+object:</p>
+<div class="highlight"><pre><span></span><span class="n">callback</span> <span class="o">=</span> <span class="n">DemoCallback</span><span class="p">(</span><span class="s2">&quot;Des is a Te&quot;</span><span class="p">)</span>
+<span class="n">prsgio</span> <span class="o">=</span> <span class="n">pressagio</span><span class="o">.</span><span class="n">Pressagio</span><span class="p">(</span><span class="n">callback</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
+</pre></div>
+<p>The object has a method <tt class="docutils literal">predict()</tt> that will return a list of the suggestions
+calculated from the n-gram&nbsp;model:</p>
+<div class="highlight"><pre><span></span><span class="n">predictions</span> <span class="o">=</span> <span class="n">prsgio</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">predictions</span><span class="p">)</span>
+</pre></div>
+<p>That&#8217;s it! Feel free to try this out with any corpus you have, and don&#8217;t forget
+to try our online demo at the Poio&nbsp;website:</p>
+<p><a class="reference external" href="http://www.poio.eu/">http://www.poio.eu/</a></p>
+<p>Poio is completely open source, the data we use is from Wikipedia and is
+completely free for download on the Poio&nbsp;website.</p>
+</div>
+
+          <div id="comments">
+			<script src="https://utteranc.es/client.js"
+					repo="pbouda/peterbouda.eu"
+					issue-term="pathname"
+					label="Comment"
+					theme="github-light"
+					crossorigin="anonymous"
+					async>
+			</script>
+          </div>
+        </div>
+        <!-- /.entry-content -->
+
+        <div class="4u">
+          <article class="box style2">
+            <div>
+              <img
+                style="border-radius:50%; width:80%;"
+                src="theme/images/pic00.jpg"
+                alt=""
+              />
+            </div>
+            <h3>About me</h3>
+            <p>
+              My name is Peter Bouda and I am a software developer with more than 20 years of
+              professional experience in application development. I help
+              you to bring your application to market as quickly as possible.
+            </p>
+            <!-- <p>
+              Join our <a href="http://www.ng-lisbon.com/#trainings">next Angular training</a>
+              in Lisbon, October 2-4.
+            </p> -->
+            <p>
+              <a href="/#top">Read about my work</a><br />
+              or<br />
+              <a href="/#contact">Contact me</a>
+            </p>
+          </article>
+        </div>
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </article>
+</section>
+
+ <!-- Contact -->
+<div class="wrapper style4" id="contact">
+  <article class="container 75%">
+    <div class="row">
+      <div class="12u">
+        <h2>Send me a message and I will get back to you.</h2>
+        <ul class="social">
+          <li>
+            <a href="mailto:pbouda@outlook.com" class="icon fa-envelope-o"
+              ><span class="label">Mail</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/pbouda" class="icon fa-github"
+              ><span class="label">Github</span></a
+            >
+          </li>
+        </ul>
+        <br />
+        <h2>RSS Feed</h2>
+        <ul class="social">
+          <li>
+            <a href="http://www.peterbouda.eu/feeds/all.rss" class="icon fa-rss"
+              ><span class="label">RSS</span></a
+            >
+          </li>
+        </ul>
+        <hr />
+      </div>
+    </div>
+
+    <footer>
+      <ul id="copyright">
+        <li>&copy; Peter Bouda. All rights reserved.</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+      <div>
+        Rua Conselheiro Martins de Carvalho 23 1esq, 1400-069 Lisbon, Portugal,
+        +351 917403181
+      </div>
+    </footer>
+  </article>
+</div>  </body>
+</html>

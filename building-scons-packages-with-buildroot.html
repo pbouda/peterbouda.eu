@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!--
+    Miniport by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Peter Bouda - Natural Language Processing Consultant</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="Natural Language Processing, Python, Software Development, Consultant"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/theme/js/jquery.min.js"></script>
+    <script src="/theme/js/jquery.scrolly.min.js"></script>
+    <script src="/theme/js/skel.min.js"></script>
+    <script src="/theme/js/init.js"></script>
+    <link
+      href="http://www.peterbouda.eu/feeds/all.atom.xml"
+      type="application/atom+xml"
+      rel="alternate"
+      title="Peter Bouda Atom Feed"
+    />
+     <link
+      href="http://www.peterbouda.eu/feeds/all.rss"
+      type="application/rss+xml"
+      rel="alternate"
+      title="Peter Bouda RSS Feed"
+    />
+
+    <link rel="stylesheet" href="/theme/css/pygment.css" />
+
+    <noscript>
+      <link rel="stylesheet" href="/theme/css/skel.css" />
+      <link rel="stylesheet" href="/theme/css/style.css" />
+      <link rel="stylesheet" href="/theme/css/style-desktop.css" />
+    </noscript>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Peter Bouda",
+        "url": "https://www.peterbouda.eu",
+        "jobTitle": "Natural Language Processing Consultant",
+        "alumniOf": "LMU Munich",
+        "gender": "male",
+        "image": "https://www.peterbouda.eu/theme/images/pic00.jpg",
+        "sameAs": ["https://dev.to/pbouda", "https://github.com/pbouda"]
+      }
+    </script>
+
+    <!--[if lte IE 8
+      ]><link rel="stylesheet" href="/theme/css/ie/v8.css"
+    /><![endif]-->
+    <!--[if lte IE 9
+      ]><link rel="stylesheet" href="/theme/css/ie/v9.css"
+    /><![endif]-->
+  </head>
+  <body>
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="/#top">Home</a></li>
+					<!--<li><a href="/#work">Work</a></li>-->
+					<li><a href="/#portfolio">Portfolio</a></li>
+					<li><a href="/#feed">Blog</a></li>
+					<li><a href="/#contact">Contact</a></li>
+				</ul>
+			</nav> <section id="content" class="body">
+  <article class="h-entry">
+    <header>
+      <h1 class="entry-title e-title">
+        <a
+          class="p-name u-url"
+          href="http://www.peterbouda.eu/building-scons-packages-with-buildroot.html"
+          rel="bookmark"
+          title="Permalink to Building scons packages with buildroot"
+          >Building scons packages with&nbsp;buildroot</a
+        >
+      </h1>
+    </header>
+
+    <div class="entry-content e-content container">
+      <div class="row">
+        <div class="8u">
+ <footer class="post-info">
+    <p>
+        Published by <a href="http://www.peterbouda.eu" class="p-author">Peter Bouda</a> at <b><time class="dt-published" datetime="2015-05-25 12:13:00+01:00">Seg 25 Maio 2015</time></b>
+        in <b><a class="p-category" href="/category/embedded.html">Embedded</a></b>.
+    </p>
+    
+
+        
+</footer><!-- /.post-info -->          <p>For my hardware project <a class="reference external" href="http://brummbeere.readthedocs.org/en/latest/">Die Brummbeere</a> I started to work with
+buildroot a lot. For sound visualization in Die Brummbeere I wanted to use
+<a class="reference external" href="https://github.com/alex-berman/sonotopy">the sonotopy library</a>, and use my
+existing buildroot toolchain to compile it for the Raspberry. Unfortunately, it
+didn&#8217;t work out of the box. First, it was not quite clear how to build scons
+for the host, but a quick search for scons and buildroot led me&nbsp;to:</p>
+<div class="highlight"><pre><span></span>$<span class="w"> </span>make<span class="w"> </span>host-scons
+</pre></div>
+<p>After that I started to create my own package for sonotopy based on the
+information in the buildroot documentation. I added a <tt class="docutils literal">Config.in</tt> and
+<tt class="docutils literal">sonotopy.mk</tt> file that I copied from another scons-based package in buildroot
+(benejson) and modified them, but without luck. My <tt class="docutils literal">Config.in</tt> contains:</p>
+<div class="highlight"><pre><span></span>config BR2_PACKAGE_SONOTOPY
+             bool &quot;sonotopy&quot;
+             select HOST_SCONS
+             depeds on BR2_PACKAGE_FFTW
+             help
+                     Sonotopy is a C++ library for perceptually analyzing the contents of
+                     an acoustic signal in real time.
+
+                     https://github.com/alex-berman/sonotopy
+</pre></div>
+<p>My <tt class="docutils literal">sonotopy.mk</tt> is:</p>
+<div class="highlight"><pre><span></span>################################################################################
+#
+# sonotopy
+#
+################################################################################
+
+SONOTOPY_VERSION = master
+SONOTOPY_SOURCE = master.tar.gz
+SONOTOPY_SITE = https://github.com/pbouda/sonotopy/archive/
+SONOTOPY_LICENSE = GPLv3+
+SONOTOPY_LICENSE_FILES = LICENSE
+SONOTOPY_INSTALL_STAGING = YES
+SONOTOPY_DEPENDENCIES = host-scons
+
+define SONOTOPY_BUILD_CMDS
+        (cd $(@D); \
+                $(TARGET_CONFIGURE_OPTS) CROSS=$(TARGET_CROSS) \
+                $(SCONS))
+endef
+
+define SONOTOPY_INSTALL_STATIC_LIB
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/sonotopy.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/sonotopy.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/AudioParameters.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/AudioParameters.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/BeatTracker.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/BeatTracker.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/CircleMap.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/CircleMap.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/CircleMapParameters.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/CircleMapParameters.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/CircleTopology.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/CircleTopology.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/CircularBuffer.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/CircularBuffer.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/DisjointGridMap.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/DisjointGridMap.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/DisjointGridTopology.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/DisjointGridTopology.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/EventDetector.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/EventDetector.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/GridMap.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/GridMap.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/GridMapParameters.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/GridMapParameters.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/Normalizer.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/Normalizer.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/Random.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/Random.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/RectGridTopology.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/RectGridTopology.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/Smoother.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/Smoother.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/SOM.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/SOM.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/SpectrumAnalyzer.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/SpectrumAnalyzer.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/SpectrumAnalyzerParameters.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/SpectrumAnalyzerParameters.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/SpectrumBinDivider.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/SpectrumBinDivider.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/SpectrumMap.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/SpectrumMap.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/SpectrumMapParameters.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/SpectrumMapParameters.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/Stopwatch.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/Stopwatch.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/Topology.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/Topology.hpp; \
+        $(INSTALL) -D -m 0644 $(@D)/include/sonotopy/TwoDimArray.hpp \
+                $(STAGING_DIR)/usr/include/sonotopy/TwoDimArray.hpp
+        $(INSTALL) -D -m 0644 $(@D)/build/release/src/libsonotopy.a \
+                $(1)/usr/lib/libsonotopy.a
+endef
+
+define SONOTOPY_INSTALL_STAGING_CMDS
+        $(call SONOTOPY_INSTALL_STATIC_LIB,$(STAGING_DIR))
+endef
+
+$(eval $(generic-package))
+</pre></div>
+<p>The package compiles fine, but the architecture of resulting binary file is that
+of my host, and not of my target (the Raspberry). Luckily, I got some help on
+the buildroot <span class="caps">IRC</span> channel. I had to still modify sonotopy&#8217;s <tt class="docutils literal">SConstruct</tt> file,
+so that it uses the <tt class="docutils literal"><span class="caps">CROSS</span></tt> environment variable to set the correct compiler
+and linker&nbsp;variables:</p>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="s1">&#39;CROSS&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+        <span class="n">cross</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;CROSS&#39;</span><span class="p">]</span>
+        <span class="n">env</span><span class="o">.</span><span class="n">Append</span><span class="p">(</span><span class="n">CROSS</span> <span class="o">=</span> <span class="n">cross</span><span class="p">)</span>
+        <span class="n">env</span><span class="o">.</span><span class="n">Replace</span><span class="p">(</span><span class="n">CC</span> <span class="o">=</span> <span class="n">cross</span> <span class="o">+</span> <span class="s1">&#39;gcc&#39;</span><span class="p">)</span>
+        <span class="n">env</span><span class="o">.</span><span class="n">Replace</span><span class="p">(</span><span class="n">CXX</span> <span class="o">=</span> <span class="n">cross</span> <span class="o">+</span> <span class="s1">&#39;g++&#39;</span><span class="p">)</span>
+        <span class="n">env</span><span class="o">.</span><span class="n">Replace</span><span class="p">(</span><span class="n">LD</span> <span class="o">=</span> <span class="n">cross</span> <span class="o">+</span> <span class="s1">&#39;ld&#39;</span><span class="p">)</span>
+</pre></div>
+<p>Now sonotopy compiled fine and I could use it in my projects on the Raspberry.
+To try it out you may just use my own fork of sonotopy on&nbsp;GitHub:</p>
+<p><a class="reference external" href="https://github.com/pbouda/sonotopy">https://github.com/pbouda/sonotopy</a></p>
+<p>Sonotopy comes with a few examples with requirements that I didn&#8217;t want to
+compile for my project. I already have Qt with audio input and output, so I
+build a little Qt project to visualize the GridMap calculations of sonotopy
+in a <span class="caps">QML</span> view. The project is called Sonobeere, the current tree with the
+GridMap example is on&nbsp;GitHub:</p>
+<p><a class="reference external" href="https://github.com/pbouda/sonobeere/tree/5a6efd0275cea9f4dd1c3920def19766663b0f8f">https://github.com/pbouda/sonobeere/tree/5a6efd0275cea9f4dd1c3920def19766663b0f8f</a></p>
+
+          <div id="comments">
+			<script src="https://utteranc.es/client.js"
+					repo="pbouda/peterbouda.eu"
+					issue-term="pathname"
+					label="Comment"
+					theme="github-light"
+					crossorigin="anonymous"
+					async>
+			</script>
+          </div>
+        </div>
+        <!-- /.entry-content -->
+
+        <div class="4u">
+          <article class="box style2">
+            <div>
+              <img
+                style="border-radius:50%; width:80%;"
+                src="theme/images/pic00.jpg"
+                alt=""
+              />
+            </div>
+            <h3>About me</h3>
+            <p>
+              My name is Peter Bouda and I am a software developer with more than 20 years of
+              professional experience in application development. I help
+              you to bring your application to market as quickly as possible.
+            </p>
+            <!-- <p>
+              Join our <a href="http://www.ng-lisbon.com/#trainings">next Angular training</a>
+              in Lisbon, October 2-4.
+            </p> -->
+            <p>
+              <a href="/#top">Read about my work</a><br />
+              or<br />
+              <a href="/#contact">Contact me</a>
+            </p>
+          </article>
+        </div>
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </article>
+</section>
+
+ <!-- Contact -->
+<div class="wrapper style4" id="contact">
+  <article class="container 75%">
+    <div class="row">
+      <div class="12u">
+        <h2>Send me a message and I will get back to you.</h2>
+        <ul class="social">
+          <li>
+            <a href="mailto:pbouda@outlook.com" class="icon fa-envelope-o"
+              ><span class="label">Mail</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/pbouda" class="icon fa-github"
+              ><span class="label">Github</span></a
+            >
+          </li>
+        </ul>
+        <br />
+        <h2>RSS Feed</h2>
+        <ul class="social">
+          <li>
+            <a href="http://www.peterbouda.eu/feeds/all.rss" class="icon fa-rss"
+              ><span class="label">RSS</span></a
+            >
+          </li>
+        </ul>
+        <hr />
+      </div>
+    </div>
+
+    <footer>
+      <ul id="copyright">
+        <li>&copy; Peter Bouda. All rights reserved.</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+      <div>
+        Rua Conselheiro Martins de Carvalho 23 1esq, 1400-069 Lisbon, Portugal,
+        +351 917403181
+      </div>
+    </footer>
+  </article>
+</div>  </body>
+</html>

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<!--
+    Miniport by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Peter Bouda - Natural Language Processing Consultant</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="Natural Language Processing, Python, Software Development, Consultant"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/theme/js/jquery.min.js"></script>
+    <script src="/theme/js/jquery.scrolly.min.js"></script>
+    <script src="/theme/js/skel.min.js"></script>
+    <script src="/theme/js/init.js"></script>
+    <link
+      href="http://www.peterbouda.eu/feeds/all.atom.xml"
+      type="application/atom+xml"
+      rel="alternate"
+      title="Peter Bouda Atom Feed"
+    />
+     <link
+      href="http://www.peterbouda.eu/feeds/all.rss"
+      type="application/rss+xml"
+      rel="alternate"
+      title="Peter Bouda RSS Feed"
+    />
+
+    <link rel="stylesheet" href="/theme/css/pygment.css" />
+
+    <noscript>
+      <link rel="stylesheet" href="/theme/css/skel.css" />
+      <link rel="stylesheet" href="/theme/css/style.css" />
+      <link rel="stylesheet" href="/theme/css/style-desktop.css" />
+    </noscript>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Peter Bouda",
+        "url": "https://www.peterbouda.eu",
+        "jobTitle": "Natural Language Processing Consultant",
+        "alumniOf": "LMU Munich",
+        "gender": "male",
+        "image": "https://www.peterbouda.eu/theme/images/pic00.jpg",
+        "sameAs": ["https://dev.to/pbouda", "https://github.com/pbouda"]
+      }
+    </script>
+
+    <!--[if lte IE 8
+      ]><link rel="stylesheet" href="/theme/css/ie/v8.css"
+    /><![endif]-->
+    <!--[if lte IE 9
+      ]><link rel="stylesheet" href="/theme/css/ie/v9.css"
+    /><![endif]-->
+  </head>
+  <body>
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="/#top">Home</a></li>
+					<!--<li><a href="/#work">Work</a></li>-->
+					<li><a href="/#portfolio">Portfolio</a></li>
+					<li><a href="/#feed">Blog</a></li>
+					<li><a href="/#contact">Contact</a></li>
+				</ul>
+			</nav> <section id="content" class="body">
+  <article class="h-entry">
+    <header>
+      <h1 class="entry-title e-title">
+        <a
+          class="p-name u-url"
+          href="http://www.peterbouda.eu/visualizing-swadesh-words-in-dictionaries.html"
+          rel="bookmark"
+          title="Permalink to Visualizing Swadesh words in dictionaries"
+          >Visualizing Swadesh words in&nbsp;dictionaries</a
+        >
+      </h1>
+    </header>
+
+    <div class="entry-content e-content container">
+      <div class="row">
+        <div class="8u">
+          <div>
+            <iframe
+              style="border: none; width: 1026px; height:800px;"
+              marginwidth="0"
+              marginheight="0"
+              scrolling="no"
+              src="http://www.peterbouda.eu/tutorials/swadeshviewer/index.html"
+            ></iframe>
+          </div>
+ <footer class="post-info">
+    <p>
+        Published by <a href="http://www.peterbouda.eu" class="p-author">Peter Bouda</a> at <b><time class="dt-published" datetime="2014-02-14 11:29:00+00:00">Sex 14 Fevereiro 2014</time></b>
+        in <b><a class="p-category" href="/category/language.html">Language</a></b>.
+    </p>
+    
+
+        
+</footer><!-- /.post-info -->          <div class="section" id="swadesh-viewer-for-dictionary-data">
+<h2>Swadesh viewer for dictionary&nbsp;data</h2>
+<p>In this tutorial we will demonstrate how to extract entries that contain
+words from a <a class="reference external" href="http://en.wikipedia.org/wiki/Swadesh_list">Swadesh
+list</a> from data in
+digitized dictionaries. The translation graph connects entries in
+dioctionaries, via annotation for &#8220;heads&#8221; and &#8220;translations&#8221; within the
+dictionary. We will demonstrate how to visualize this data with a
+plotting library and hwo to export parts of the graph to <span class="caps">JSON</span> for
+interactive visualizations in the&nbsp;web.</p>
+<p>You can download this tutorial as <a class="reference external" href="http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html">IPython
+notebook</a>&nbsp;here:</p>
+<p><a class="reference external" href="https://github.com/pbouda/notebooks/blob/master/Swadesh%20viewer%20for%20dictionary%20data.ipynb">https://github.com/pbouda/notebooks/blob/master/Swadesh%20viewer%20for%20dictionary%20data.ipynb</a></p>
+<div class="section" id="data">
+<h3>Data</h3>
+<p>For this tutorial we will use data from the project &#8220;<a class="reference external" href="http://www.quanthistling.info/">Quantitative
+Historical Linguistics</a>&#8220;. The
+website of the project provides a <span class="caps">ZIP</span> package of GrAF/<span class="caps">XML</span> files for the
+printed sources that were digitized within the&nbsp;project:</p>
+<p><a class="reference external" href="http://www.quanthistling.info/data/downloads/xml/data.zip">http://www.quanthistling.info/data/downloads/xml/data.zip</a></p>
+<p>The <span class="caps">ZIP</span> package contains several files encoded as described in the <a class="reference external" href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326"><span class="caps">ISO</span>
+standard
+24612</a>
+&#8220;Linguistic annotation framework (<span class="caps">LAF</span>)&#8221;. The QuantHistLing data contains
+dictionary and wordlist sources. Those were first tokenized into
+entries, for each entry you will find annotations for at least the head
+word(s) (&#8220;head&#8221; annotation) and translation(s) (&#8220;translation&#8221;
+annotation) in the case of dictionaries. We will only use the
+dictionaries of the &#8220;Witotoan&#8221; compoment in this tutorial. The <span class="caps">ZIP</span>
+package also contains a <span class="caps">CSV</span> file &#8220;sources.csv&#8221; with some information for
+each source, for example the languages as <span class="caps">ISO</span> codes, type of source,
+etc. Be aware that the <span class="caps">ZIP</span> package contains a filtered version of the
+sources: only entries that contain a Spanish word that is part of the
+Spanish swadesh list are included in the download&nbsp;package.</p>
+<p>For a simple example how to parse one of the source please see&nbsp;here:</p>
+<p><a class="reference external" href="http://graf-python.readthedocs.org/en/latest/Querying%20GrAF%20graphs.html">http://graf-python.readthedocs.org/en/latest/Querying%20GrAF%20graphs.html</a></p>
+</div>
+<div class="section" id="what-are-translation-graphs">
+<h3>What are translation&nbsp;graphs?</h3>
+<p>In our case, translation graphs are graphs that connect all spanish
+translation with every head word that we find for each translation in
+our sources. The idea is that spanish is some kind of interlingua in our
+case: if a string of a spanish translation in one source matches a
+string in another source this will only be <em>one</em> node in our graph. For
+the head words, this is not the case: matching strings in head words in
+different source are different nodes in the graph. This holds even if
+the different sources describe the same language, as different sources
+will use different&nbsp;orthographies.</p>
+<p>To fullfil that need, head words are internally represented as a string
+with two parts: the head word and its source. Both parts are seperated
+by a pipe symbol &#8220;|&#8221;. For example, in a <a class="reference external" href="http://en.wikipedia.org/wiki/DOT_language"><span class="caps">DOT</span>
+file</a> such a node looks
+like&nbsp;this:</p>
+<blockquote>
+&#8220;ócáji|thiesen1998&#8221; [lang=boa, source=thiesen1998_25_339];</blockquote>
+<p>The square brackets contain additional attributes here. These attributes
+are not part of the node&#8217;s name, they contain just additonal information
+that we store with the&nbsp;nodes.</p>
+<p>In comparison, a spanish translation looks like&nbsp;this:</p>
+<blockquote>
+&#8220;vaca&#8221; [lang=spa];</blockquote>
+<p>There is no attribute &#8220;source&#8221; here, as this translation might occur in
+several sources. An edge connecting the two nodes looks like&nbsp;this:</p>
+<blockquote>
+&#8220;vaca&#8221; &#8212; &#8220;ócáji|thiesen1998&#8221;;</blockquote>
+<p>To handle such graphs our scripts use the <a class="reference external" href="http://networkx.lanl.gov/">NetworkX Python
+library</a>.</p>
+</div>
+<div class="section" id="requirements">
+<h3>Requirements</h3>
+<p>The following Python libraries are required to process the GrAF/<span class="caps">XML</span>
+files and create the translation&nbsp;graphs:</p>
+<ul class="simple">
+<li>NetworkX: <a class="reference external" href="http://networkx.lanl.gov/">http://networkx.lanl.gov/</a></li>
+<li>graf-python: <a class="reference external" href="https://github.com/cidles/graf-python">https://github.com/cidles/graf-python</a></li>
+<li>requests: <a class="reference external" href="http://docs.python-requests.org/en/latest/">http://docs.python-requests.org/en/latest/</a> (only if you
+want automated download of the&nbsp;data)</li>
+</ul>
+<p>To visualize the graphs we use the <a class="reference external" href="http://d3js.org/">D3.js</a> library,
+but we will load this on-the-fly when we start with the&nbsp;visualization.</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">codecs</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+
+<span class="kn">import</span> <span class="nn">networkx</span>
+<span class="kn">import</span> <span class="nn">graf</span>
+</pre></div>
+</div>
+<div class="section" id="get-witotoan-sources">
+<h3>Get Witotoan&nbsp;sources</h3>
+<p>In the first step we download and extract the data. You may change to a
+local &#8220;tmp&#8221; directory before the download or just download the data to
+the current working directory. For this you need to install the Python
+library <tt class="docutils literal">requests</tt>. You may also download and extract the data
+manually, the data is only downloaded for you if the file
+<tt class="docutils literal">sources.csv</tt> is not&nbsp;found.</p>
+<div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;/Users/pbouda/Projects/git-github/notebooks/swadeshviewer&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;sources.csv&quot;</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">requests</span>
+    <span class="kn">import</span> <span class="nn">zipfile</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+        <span class="s2">&quot;http://www.quanthistling.info/data/downloads/xml/data.zip&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.zip&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+    <span class="n">z</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s2">&quot;data.zip&quot;</span><span class="p">)</span>
+    <span class="n">z</span><span class="o">.</span><span class="n">extractall</span><span class="p">()</span>
+</pre></div>
+<p>Now we open the file &#8220;sources.csv&#8221; and read out all the sources that are
+part of the component &#8220;Witotoan&#8221; and that are dictionaries. We will
+store a list of those source in <tt class="docutils literal">witotoan_sources</tt>:</p>
+<div class="highlight"><pre><span></span><span class="n">sources</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;sources.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;rU&quot;</span><span class="p">),</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">witotoan_sources</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">sources</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">source</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Witotoan&quot;</span> <span class="ow">and</span> <span class="n">source</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;dictionary&quot;</span><span class="p">:</span>
+        <span class="n">witotoan_sources</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">source</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="section" id="graf-to-networkx">
+<h3>GrAF to&nbsp;NetworkX</h3>
+<p>Next we define a helper function that transform a GrAF graph into a
+networkx graph. For this we traverse the graph by querying for all
+entries. For each entry we look for connected nodes that have &#8220;head&#8221; or
+&#8220;translation&#8221; annotation. All of those nodes that are Spanish are stored
+in the list <tt class="docutils literal">spa</tt>. All non-Spanish annotations are stored in
+<tt class="docutils literal">others</tt>. In the end the collected annotation are added to the new
+networkx graph, and each spanish node is connected to all the other
+nodes for each&nbsp;entry:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">graf_to_networkx</span><span class="p">(</span><span class="n">graf</span><span class="p">,</span> <span class="n">source</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">networkx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">node_id</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span> <span class="ow">in</span> <span class="n">graf</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">spa</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="n">others</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">node_id</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;..entry&quot;</span><span class="p">):</span>
+            <span class="n">_</span><span class="p">,</span> <span class="n">page</span><span class="p">,</span> <span class="n">pos_on_page</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">node_id</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">out_edges</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">e</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">get_first</span><span class="p">()</span><span class="o">.</span><span class="n">label</span> <span class="o">==</span> <span class="s2">&quot;head&quot;</span> <span class="ow">or</span> <span class="n">e</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">get_first</span><span class="p">()</span><span class="o">.</span><span class="n">label</span> <span class="o">==</span> <span class="s2">&quot;translation&quot;</span><span class="p">:</span>
+                    <span class="c1"># get lang</span>
+                    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">e</span><span class="o">.</span><span class="n">to_node</span><span class="o">.</span><span class="n">links</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">nodes</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">n</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">get_first</span><span class="p">()</span><span class="o">.</span><span class="n">label</span> <span class="o">==</span> <span class="s2">&quot;iso-639-3&quot;</span><span class="p">:</span>
+                            <span class="k">if</span> <span class="n">n</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">get_first</span><span class="p">()</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s2">&quot;substring&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;spa&quot;</span><span class="p">:</span>
+                                <span class="n">spa</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">to_node</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">get_first</span><span class="p">()</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s2">&quot;substring&quot;</span><span class="p">))</span>
+                                <span class="k">break</span>
+                            <span class="k">else</span><span class="p">:</span>
+                                <span class="n">others</span><span class="p">[</span><span class="n">e</span><span class="o">.</span><span class="n">to_node</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">get_first</span><span class="p">()</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s2">&quot;substring&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">get_first</span><span class="p">()</span><span class="o">.</span><span class="n">features</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s2">&quot;substring&quot;</span><span class="p">)</span>
+                                <span class="k">break</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">spa</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">head</span> <span class="ow">in</span> <span class="n">spa</span><span class="p">:</span>
+                    <span class="n">g</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">attr_dict</span><span class="o">=</span><span class="p">{</span> <span class="s2">&quot;lang&quot;</span><span class="p">:</span> <span class="s2">&quot;spa&quot;</span> <span class="p">})</span>
+                    <span class="k">for</span> <span class="n">translation</span> <span class="ow">in</span> <span class="n">others</span><span class="p">:</span>
+                        <span class="n">g</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="s2">|</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">translation</span><span class="p">,</span> <span class="n">source</span><span class="p">),</span> <span class="n">attr_dict</span><span class="o">=</span><span class="p">{</span>
+                            <span class="s2">&quot;lang&quot;</span><span class="p">:</span> <span class="n">others</span><span class="p">[</span><span class="n">translation</span><span class="p">],</span>
+                            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="n">source</span><span class="p">,</span>
+                            <span class="s2">&quot;page&quot;</span><span class="p">:</span> <span class="n">page</span><span class="p">,</span>
+                            <span class="s2">&quot;pos_on_page&quot;</span><span class="p">:</span> <span class="n">pos_on_page</span>
+                        <span class="p">})</span>
+                        <span class="n">g</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="sa">u</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="s2">|</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">translation</span><span class="p">,</span> <span class="n">source</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">g</span>
+</pre></div>
+</div>
+<div class="section" id="parse-graf-xml-files">
+<h3>Parse GrAF/<span class="caps">XML</span>&nbsp;files</h3>
+<p>Now we parse all the <span class="caps">XML</span> files of the extracted <span class="caps">ZIP</span> package. For this we
+traverse through all the directories that have a name in
+`witotoan_sources&#8217;. The files we are looking for are the
+&#8220;-dictinterpretation.xml&#8221; files within each directory, as those contain
+the annotations for &#8220;heads&#8221; and&nbsp;&#8220;translations&#8221;.</p>
+<p>First we create an empty list <tt class="docutils literal">graphs</tt> that will later store all the
+networkx&nbsp;graphs:</p>
+<div class="highlight"><pre><span></span><span class="n">parser</span> <span class="o">=</span> <span class="n">graf</span><span class="o">.</span><span class="n">GraphParser</span><span class="p">()</span>
+<span class="n">graphs</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+<p>Then we loop through all the Witotoan sources, parse the <span class="caps">XML</span> files and
+transform the graphs into networkx graph by calling the helper function
+that we defined above. We print a progress report within the loop, as
+parsing and transformation might take some&nbsp;time:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">witotoan_sources</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="s2">&quot;dict-*-dictinterpretation.xml&quot;</span><span class="p">)):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Parsing </span><span class="si">{0}</span><span class="s2">...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+        <span class="n">graf_graph</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="n">graf_to_networkx</span><span class="p">(</span><span class="n">graf_graph</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+        <span class="n">graphs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;OK&quot;</span><span class="p">)</span>
+</pre></div>
+<pre class="literal-block">
+Parsing thiesen1998/dict-thiesen1998-25-339-dictinterpretation.xml...
+Parsing minor1987/dict-minor1987-1-126-dictinterpretation.xml...
+Parsing minor1971/dict-minor1971-3-74-dictinterpretation.xml...
+Parsing burtch1983/dict-burtch1983-19-262-dictinterpretation.xml...
+Parsing leach1969/dict-leach1969-67-161-dictinterpretation.xml...
+Parsing walton1997/dict-walton1997-9-120-dictinterpretation.xml...
+Parsing preuss1994/dict-preuss1994-797-912-dictinterpretation.xml...
+OK
+</pre>
+</div>
+<div class="section" id="merge-all-graphs">
+<h3>Merge all&nbsp;graphs</h3>
+<p>Now we can merge all the individual graphs for each source into one big
+graph. This will collapse all Spanish nodes and so connect the nodes
+that have a common Spanish&nbsp;translation:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">copy</span>
+<span class="n">combined_graph</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">graphs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">gr</span> <span class="ow">in</span> <span class="n">graphs</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">gr</span><span class="p">:</span>
+        <span class="n">combined_graph</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">gr</span><span class="o">.</span><span class="n">node</span><span class="p">[</span><span class="n">node</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span> <span class="ow">in</span> <span class="n">gr</span><span class="o">.</span><span class="n">edges_iter</span><span class="p">():</span>
+        <span class="n">combined_graph</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">gr</span><span class="o">.</span><span class="n">edge</span><span class="p">[</span><span class="n">n1</span><span class="p">][</span><span class="n">n2</span><span class="p">])</span>
+</pre></div>
+<p>We count the nodes in the graph and the <a class="reference external" href="http://networkx.lanl.gov/reference/generated/networkx.algorithms.components.connected.number_connected_components.html#networkx.algorithms.components.connected.number_connected_components">number of connected
+components</a>
+to get an impression how the graph &#8220;looks&#8221;. The number of nodes is much
+higher then the number of connected components, so we already have a lot
+of the nodes connected in groups, either as a consequence from being
+part of one dictionary entry or through the merge we did via the Spanish&nbsp;node:</p>
+<div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">combined_graph</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span>
+</pre></div>
+<pre class="literal-block">
+23749
+</pre>
+<div class="highlight"><pre><span></span><span class="n">networkx</span><span class="o">.</span><span class="n">algorithms</span><span class="o">.</span><span class="n">components</span><span class="o">.</span><span class="n">number_connected_components</span><span class="p">(</span><span class="n">combined_graph</span><span class="p">)</span>
+</pre></div>
+<pre class="literal-block">
+4614
+</pre>
+</div>
+<div class="section" id="extract-a-subgraph-for-all-the-words-in-the-spanish-swadesh-list">
+<h3>Extract a subgraph for all the words in the Spanish Swadesh&nbsp;list</h3>
+<p>Next we will extract a subgraph from full graph. We will only search for
+nodes that have a Spanish word that is a part of the <a class="reference external" href="http://en.wikipedia.org/wiki/Swadesh_list">Swadesh
+list</a>. The <a class="reference external" href="http://www.nltk.org/">Natural
+Language Toolkit (<span class="caps">NLTK</span>)</a> contains Swadesh lists
+for several languages and we will use <span class="caps">NLTK</span>&#8217;s version of the Spanish
+list. You don&#8217;t need to install the <span class="caps">NLTK</span> library (although I recommend
+learning about it!), as we will load the data directly from the <span class="caps">NLTK</span>
+github repository. Again, we use <tt class="docutils literal">requests</tt> to download the data, but
+you may also download and extract the data&nbsp;manually.</p>
+<p>First we download and extract the Swadesh&nbsp;data:</p>
+<div class="highlight"><pre><span></span><span class="c1">#os.chdir(&quot;c:/Users/Peter/Documents/Corpora/qlc&quot;)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;swadesh&quot;</span><span class="p">,</span> <span class="s2">&quot;es&quot;</span><span class="p">)):</span>
+    <span class="kn">import</span> <span class="nn">requests</span>
+    <span class="kn">import</span> <span class="nn">zipfile</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+        <span class="s2">&quot;https://github.com/nltk/nltk_data/blob/gh-pages/packages/corpora/swadesh.zip?raw=true&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;swadesh.zip&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+    <span class="n">z</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s2">&quot;swadesh.zip&quot;</span><span class="p">)</span>
+    <span class="n">z</span><span class="o">.</span><span class="n">extractall</span><span class="p">()</span>
+</pre></div>
+<p>Next, we get all the Spanish words from the Swadesh&nbsp;file:</p>
+<div class="highlight"><pre><span></span><span class="n">swadesh_words</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;swadesh&quot;</span><span class="p">,</span> <span class="s2">&quot;es&quot;</span><span class="p">),</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">swadesh_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</pre></div>
+<p>Now we are ready to loop through the graph and find all nodes are part
+of the Swadesh list. We will store all those nodes and their connections
+in seperate graphs, one graph for each Swadesh term. This allows us to
+use different word lists later, for example to extract semantic domains
+like <em>body parts</em>, <em>food</em>,&nbsp;etc.</p>
+<div class="highlight"><pre><span></span><span class="n">swadesh_graphs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">swadesh_words</span><span class="p">):</span>
+    <span class="n">swadesh_graphs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">networkx</span><span class="o">.</span><span class="n">Graph</span><span class="p">())</span>
+
+<span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">combined_graph</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">&quot;lang&quot;</span> <span class="ow">in</span> <span class="n">combined_graph</span><span class="o">.</span><span class="n">node</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="ow">and</span> \
+            <span class="n">combined_graph</span><span class="o">.</span><span class="n">node</span><span class="p">[</span><span class="n">node</span><span class="p">][</span><span class="s2">&quot;lang&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;spa&quot;</span><span class="p">:</span>
+        <span class="c1"># get the index of the word in the Swadesh list</span>
+        <span class="n">swadesh_index</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">swadesh</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">swadesh_words</span><span class="p">):</span>
+            <span class="n">concepts</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">swadesh</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)]</span>
+            <span class="k">if</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">concepts</span><span class="p">:</span>
+                <span class="n">swadesh_index</span> <span class="o">=</span> <span class="n">i</span>
+                <span class="k">break</span>
+        <span class="k">if</span> <span class="n">swadesh_index</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">swadesh_graphs</span><span class="p">[</span><span class="n">swadesh_index</span><span class="p">]</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">combined_graph</span><span class="p">[</span><span class="n">node</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="s2">&quot;lang&quot;</span> <span class="ow">in</span> <span class="n">combined_graph</span><span class="o">.</span><span class="n">node</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="ow">and</span> \
+                    <span class="n">combined_graph</span><span class="o">.</span><span class="n">node</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="s2">&quot;lang&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;spa&quot;</span><span class="p">:</span>
+                <span class="n">word</span><span class="p">,</span> <span class="n">source</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)</span>
+                <span class="n">lang</span> <span class="o">=</span> <span class="n">combined_graph</span><span class="o">.</span><span class="n">node</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="s2">&quot;lang&quot;</span><span class="p">]</span>
+                <span class="n">page</span> <span class="o">=</span> <span class="n">combined_graph</span><span class="o">.</span><span class="n">node</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="s2">&quot;page&quot;</span><span class="p">]</span>
+                <span class="n">pos_on_page</span> <span class="o">=</span> <span class="n">combined_graph</span><span class="o">.</span><span class="n">node</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="s2">&quot;pos_on_page&quot;</span><span class="p">]</span>
+                <span class="n">swadesh_graphs</span><span class="p">[</span><span class="n">swadesh_index</span><span class="p">]</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">lang</span><span class="p">)</span>
+                <span class="n">swadesh_graphs</span><span class="p">[</span><span class="n">swadesh_index</span><span class="p">]</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">lang</span><span class="p">)</span>
+                <span class="n">swadesh_graphs</span><span class="p">[</span><span class="n">swadesh_index</span><span class="p">]</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">word</span><span class="p">,</span>
+                    <span class="n">attr_dict</span><span class="o">=</span><span class="p">{</span> <span class="s2">&quot;data_source&quot;</span><span class="p">:</span> <span class="n">source</span><span class="p">,</span>
+                                <span class="s2">&quot;page&quot;</span><span class="p">:</span> <span class="n">page</span><span class="p">,</span>
+                                <span class="s2">&quot;pos_on_page&quot;</span><span class="p">:</span> <span class="n">pos_on_page</span> <span class="p">})</span>
+                <span class="n">swadesh_graphs</span><span class="p">[</span><span class="n">swadesh_index</span><span class="p">]</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">lang</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="export-the-subgraph-as-json-data">
+<h3>Export the subgraph as <span class="caps">JSON</span>&nbsp;data</h3>
+<p>Another method to visualize the graph is the <a class="reference external" href="http://d3js.org/">D3 Javascript
+library</a>. For this we need to export the graph as
+<span class="caps">JSON</span> data that will be loaded by a <span class="caps">HTML</span> document. The networkx contains
+a <tt class="docutils literal">networkx.readwrite.json_graph</tt> module that allows us to easily
+transform the graph into a <span class="caps">JSON</span> document. The <span class="caps">JSON</span> data structure can
+then be writte to a file with the help of the Python <tt class="docutils literal">json</tt> module:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">networkx.readwrite</span> <span class="kn">import</span> <span class="n">json_graph</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">g</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">swadesh_graphs</span><span class="p">):</span>
+    <span class="n">json_data</span> <span class="o">=</span> <span class="n">json_graph</span><span class="o">.</span><span class="n">node_link_data</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">json_data</span><span class="p">,</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;swadesh_data_</span><span class="si">{0}</span><span class="s2">.json&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">swadesh_words</span><span class="p">,</span> <span class="n">codecs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;swadesh_list.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+</pre></div>
+<p>Finally we need to create a <span class="caps">HTML</span> file to display the data. You can
+download an <span class="caps">HTML</span> file form&nbsp;here:</p>
+<p><a class="reference external" href="https://github.com/pbouda/notebooks/blob/master/swadeshviewer/index.html">https://github.com/pbouda/notebooks/blob/master/swadeshviewer/index.html</a></p>
+<p>Put the file <tt class="docutils literal">index.html</tt> into the folder with the <span class="caps">JSON</span> files. Then
+open the file in any browser. You can view an online version&nbsp;here:</p>
+<p><a class="reference external" href="http://www.peterbouda.eu/tutorials/swadeshviewer/index.html">http://www.peterbouda.eu/tutorials/swadeshviewer/index.html</a></p>
+</div>
+</div>
+
+          <div id="comments">
+			<script src="https://utteranc.es/client.js"
+					repo="pbouda/peterbouda.eu"
+					issue-term="pathname"
+					label="Comment"
+					theme="github-light"
+					crossorigin="anonymous"
+					async>
+			</script>
+          </div>
+        </div>
+        <!-- /.entry-content -->
+
+        <div class="4u">
+          <article class="box style2">
+            <div>
+              <img
+                style="border-radius:50%; width:80%;"
+                src="theme/images/pic00.jpg"
+                alt=""
+              />
+            </div>
+            <h3>About me</h3>
+            <p>
+              My name is Peter Bouda and I am a software developer with more than 20 years of
+              professional experience in application development. I help
+              you to bring your application to market as quickly as possible.
+            </p>
+            <!-- <p>
+              Join our <a href="http://www.ng-lisbon.com/#trainings">next Angular training</a>
+              in Lisbon, October 2-4.
+            </p> -->
+            <p>
+              <a href="/#top">Read about my work</a><br />
+              or<br />
+              <a href="/#contact">Contact me</a>
+            </p>
+          </article>
+        </div>
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </article>
+</section>
+
+ <!-- Contact -->
+<div class="wrapper style4" id="contact">
+  <article class="container 75%">
+    <div class="row">
+      <div class="12u">
+        <h2>Send me a message and I will get back to you.</h2>
+        <ul class="social">
+          <li>
+            <a href="mailto:pbouda@outlook.com" class="icon fa-envelope-o"
+              ><span class="label">Mail</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/pbouda" class="icon fa-github"
+              ><span class="label">Github</span></a
+            >
+          </li>
+        </ul>
+        <br />
+        <h2>RSS Feed</h2>
+        <ul class="social">
+          <li>
+            <a href="http://www.peterbouda.eu/feeds/all.rss" class="icon fa-rss"
+              ><span class="label">RSS</span></a
+            >
+          </li>
+        </ul>
+        <hr />
+      </div>
+    </div>
+
+    <footer>
+      <ul id="copyright">
+        <li>&copy; Peter Bouda. All rights reserved.</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+      <div>
+        Rua Conselheiro Martins de Carvalho 23 1esq, 1400-069 Lisbon, Portugal,
+        +351 917403181
+      </div>
+    </footer>
+  </article>
+</div>  </body>
+</html>

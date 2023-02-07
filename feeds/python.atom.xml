@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Peter Bouda - Python</title><link href="http://www.peterbouda.eu/" rel="alternate"></link><link href="http://www.peterbouda.eu/feeds/python.atom.xml" rel="self"></link><id>http://www.peterbouda.eu/</id><updated>2014-07-02T10:00:00+01:00</updated><subtitle>Natural Language Processing Consultant</subtitle><entry><title>Live Coding with Kivy and IPython</title><link href="http://www.peterbouda.eu/live-coding-with-kivy-and-ipython.html" rel="alternate"></link><published>2014-07-02T10:00:00+01:00</published><updated>2014-07-02T10:00:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2014-07-02:/live-coding-with-kivy-and-ipython.html</id><summary type="html">&lt;p&gt;I recently began to implement some game prototypes with the help of &lt;a class="reference external" href="http://kivy.org/"&gt;Kivy&lt;/a&gt;, a very interesting Python library originally developed to prototype innovative user interfaces. Combined with IPython, Kivy could also be interesting for &lt;a class="reference external" href="http://www.peterbouda.eu/live-coding-glsl-shaders-with-ipython.html"&gt;live coding&lt;/a&gt;, and so I checked out how the &lt;a class="reference external" href="http://minrk.github.io/ipython-doc/dev/api/generated/IPython.lib.inputhook.html"&gt;input hooks for other event loops&lt;/a&gt; work …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I recently began to implement some game prototypes with the help of &lt;a class="reference external" href="http://kivy.org/"&gt;Kivy&lt;/a&gt;, a very interesting Python library originally developed to prototype innovative user interfaces. Combined with IPython, Kivy could also be interesting for &lt;a class="reference external" href="http://www.peterbouda.eu/live-coding-glsl-shaders-with-ipython.html"&gt;live coding&lt;/a&gt;, and so I checked out how the &lt;a class="reference external" href="http://minrk.github.io/ipython-doc/dev/api/generated/IPython.lib.inputhook.html"&gt;input hooks for other event loops&lt;/a&gt; work in IPython. Currently, there are hooks for Qt, glut, pyglet, &lt;span class="caps"&gt;GTK&lt;/span&gt;, wx and tk build in. That means that you can use any of those frameworks to develop &lt;span class="caps"&gt;GUI&lt;/span&gt; apps interactively from within an IPython&amp;nbsp;shell.&lt;/p&gt;
+&lt;p&gt;For Kivy, I copied one of the existing hooks and came up with the following&amp;nbsp;code:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/pbouda/stuff/blob/master/kivy_livecode/helpers.py"&gt;https://github.com/pbouda/stuff/blob/master/kivy_livecode/helpers.py&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The function &lt;tt class="docutils literal"&gt;enable_kivy()&lt;/tt&gt; would return an Kivy &lt;tt class="docutils literal"&gt;app&lt;/tt&gt; object that you can then use to add widget interactively. Just start an IPython shell and add a rectangle to a Kivy window, for&amp;nbsp;example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;helpers&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;helpers&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;enable_kivy&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;kivy.graphics&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;canvas&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;Color&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;0.2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;0.0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;Rectangle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pos&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;850&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;450&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Unfortunately, you have to patch the Kivy sources to run in interactive mode at the moment. Kivy has a so-called &lt;tt class="docutils literal"&gt;slave&lt;/tt&gt; mode, but it is not available when you call the default &lt;tt class="docutils literal"&gt;run()&lt;/tt&gt; method on the &lt;tt class="docutils literal"&gt;App&lt;/tt&gt; object. Here is a simple patch that just pipes the &lt;tt class="docutils literal"&gt;slave&lt;/tt&gt; parameter to the &lt;tt class="docutils literal"&gt;runcTouchApp()&lt;/tt&gt; method and will allow you to start the Kivy app in slave&amp;nbsp;mode:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/pbouda/kivy/commit/e1659dea1986f4a6006193d697c86d3694652cc1"&gt;https://github.com/pbouda/kivy/commit/e1659dea1986f4a6006193d697c86d3694652cc1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Have&amp;nbsp;fun!&lt;/p&gt;
+</content><category term="Python"></category><category term="Kivy"></category><category term="IPython"></category><category term="Live Coding"></category></entry><entry><title>Sirup, Scheiben und Kreissegmente mit SymPy</title><link href="http://www.peterbouda.eu/sirup-scheiben-und-kreissegmente-mit-sympy.html" rel="alternate"></link><published>2013-06-14T14:58:00+01:00</published><updated>2013-06-14T14:58:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2013-06-14:/sirup-scheiben-und-kreissegmente-mit-sympy.html</id><summary type="html">&lt;script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;
+&lt;/script&gt;
+
+&lt;p&gt;Ich lese gerade das durchaus empfehlenswerte Buch &lt;a href="http://www.amazon.de/
+gp/product/048669609X/ref=as_li_qf_sp_asin_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;cr
+eativeASIN=048669609X&amp;linkCode=as2&amp;tag=jsusde-21"&gt;Foundations and Fundamental
+Concepts of Mathematics&lt;/a&gt;&lt;img src="http://www.assoc-
+amazon.de/e/ir?t=jsusde-21&amp;l=as2&amp;o=3&amp;a=048669609X" width="1" height="1"
+border="0" alt="" style="border:none !important; margin:0px !important;" /&gt; von
+Howard Eves. Das erste Kapitel handelt von vor-Euklidischer Mathematik und
+schließt mit einer Reihe interessanter Aufgaben, über die sich schon die
+Babylonier und Griechen den Kopf zerbrochen haben. Eine besonders schöne
+Fragestellung geht so (Aufgabe&amp;nbsp;1 …&lt;/p&gt;</summary><content type="html">&lt;script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;
+&lt;/script&gt;
+
+&lt;p&gt;Ich lese gerade das durchaus empfehlenswerte Buch &lt;a href="http://www.amazon.de/
+gp/product/048669609X/ref=as_li_qf_sp_asin_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;cr
+eativeASIN=048669609X&amp;linkCode=as2&amp;tag=jsusde-21"&gt;Foundations and Fundamental
+Concepts of Mathematics&lt;/a&gt;&lt;img src="http://www.assoc-
+amazon.de/e/ir?t=jsusde-21&amp;l=as2&amp;o=3&amp;a=048669609X" width="1" height="1"
+border="0" alt="" style="border:none !important; margin:0px !important;" /&gt; von
+Howard Eves. Das erste Kapitel handelt von vor-Euklidischer Mathematik und
+schließt mit einer Reihe interessanter Aufgaben, über die sich schon die
+Babylonier und Griechen den Kopf zerbrochen haben. Eine besonders schöne
+Fragestellung geht so (Aufgabe&amp;nbsp;1.1.5):&lt;/p&gt;
+&lt;p&gt;Eine Scheibe mit Radius R rotiert vertikal an einer horizontalen Achse. Die
+Scheibe taucht dabei in eine Flüssigkeit ein, so dass ein Teil davon benetzt
+wird. In welcher Höhe muss man die Scheibe über der Flüssigkeit befestigen,
+damit die benetzte Fläche &lt;em&gt;über&lt;/em&gt; der Flüssigkeit maximal&amp;nbsp;wird?&lt;/p&gt;
+&lt;p&gt;Das Problem trat anscheinend bei der Sirupherstellung in der Antike auf. Ich
+habe das Ganze mal versucht zu zeichnen, die rote Fläche soll die gesuchte
+benetzte Oberfläche&amp;nbsp;anzeigen:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Scheibe rotiert über Flüssigkeit" src="/static/images/sirupscheibe.png"&gt;&lt;/p&gt;
+&lt;p&gt;Man sieht schnell, dass die benetzte Fläche durch das Eintauchen zunächst einmal
+größer wird. Je tiefer man die Scheibe eintaucht, desto mehr von dieser Fläche
+befindet sich dann aber unter der Oberfläche. Wir wollen jetzt also bestimmen,
+wie tief wir die Scheibe maximal eintauchen dürfen, damit die Fläche über der
+Flüssigkeit möglichst groß bleibt. Dabei lösen wir das Problem einmal empirisch,
+also indem wir alle möglichen Werte ausprobieren und schauen bei welchen Werten
+das Maximum auftritt. So wurde das Problem wohl damals gelöst, vor
+Kurvendiskussionen. Danach werden wir die Formel differenzen und daraus das
+Maximum&amp;nbsp;bestimmten.&lt;/p&gt;
+&lt;p&gt;Zur Lösung des Problems verwende ich hier die Bibliothek
+&lt;a href="http://sympy.org/"&gt;SymPy&lt;/a&gt;. Dieser Text wurde als &lt;a href="http://ipython.org/notebook.html"&gt;IPython
+Notebook&lt;/a&gt; verfasst, dieses gibt es zum&amp;nbsp;Download:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/pbouda/peterbouda.eu/blob/master/notebooks/sympy_
+scheibensegment.ipynb"&gt;https://github.com/pbouda/peterbouda.eu/blob/master/notebooks/sympy_scheibenseg&amp;nbsp;ment.ipynb&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Voraussetzungen&lt;/h2&gt;
+&lt;p&gt;Wir setzen voraus, dass wir die Formeln für die Flächen der einzelnen Teile der
+Scheibe berechnen können. Dazu&amp;nbsp;gehört:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;der gesamte Flächeninhalt der Scheibe: $$A_1 =&amp;nbsp;R^2\pi$$&lt;/li&gt;
+&lt;li&gt;der Ring auf der Scheibe, der insgesamt bei Rotation mit der Flüssigkeit in
+Berührung kommt(wobei &lt;code&gt;r&lt;/code&gt; dann der Höhe der Achse über der Flüssigkeit
+entspricht): $$A_2 =&amp;nbsp;r^2\pi$$&lt;/li&gt;
+&lt;li&gt;der Teil der Scheibe, der jeweils unter Wasser ist (siehe
+http://de.wikipedia.org/wiki/Kreissegment): $$A_3 = R^2\arccos{r\over R} -
+r\sqrt{R^2 -&amp;nbsp;r^2}$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Die von uns gesuchte Fläche ist dann einfach: $$A = A_1 - A_2 - A_3$$
+also eingesetzt: $$A = R^2\pi - r^2\pi - R^2\arccos{r\over R} + r\sqrt{R^2 -&amp;nbsp;r^2}$$&lt;/p&gt;
+&lt;p&gt;Diese Formel können wir gleich so in SymPy&amp;nbsp;übernehmen:&lt;/p&gt;
+&lt;p&gt;In[54]:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sympy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;load_ext&lt;/span&gt; &lt;span class="n"&gt;sympy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;interactive&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ipythonprinting&lt;/span&gt;
+
+&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;R&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;r R&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pi&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;acos&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;sqrt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;A&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;$$- R^{2} \operatorname{acos}{\left (\frac{r}{R} \right )} + \pi R^{2} - \pi r^{2} + r \sqrt{R^{2} -&amp;nbsp;r^{2}}$$&lt;/p&gt;
+&lt;h2&gt;Empirisches&amp;nbsp;Maximum&lt;/h2&gt;
+&lt;p&gt;Als Erstes wollen wir das Maximum empirisch bestimmen, also einfach gegebene
+Werte für &lt;code&gt;R&lt;/code&gt; und &lt;code&gt;r&lt;/code&gt; einsetzen und ausgeben. Dazu können wir als zunächst &lt;code&gt;R&lt;/code&gt;
+einen festen Wert zuweisen, ich nehme einfach 10 für den Radius der&amp;nbsp;Scheibe:&lt;/p&gt;
+&lt;p&gt;In[52]:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;A_10 = A.subs(R, 10)
+A_10
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;$$- \pi r^{2} + r \sqrt{- r^{2} + 100} - 100 \operatorname{acos}{\left (\frac{1}{10} r \right )} + 100&amp;nbsp;\pi$$&lt;/p&gt;
+&lt;p&gt;Für &lt;code&gt;r&lt;/code&gt; probieren wir jetzt Werte zwischen 0 und&amp;nbsp;9:&lt;/p&gt;
+&lt;p&gt;In[55]:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kr"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="n"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{0}/10 -&amp;gt; {1}&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;A_10&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;evalf&lt;/span&gt;&lt;span class="p"&gt;()))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;157.079632679490&lt;/span&gt;
+&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;173.904656513122&lt;/span&gt;
+&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;184.244972086429&lt;/span&gt;
+&lt;span class="mf"&gt;3&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;187.892740241230&lt;/span&gt;
+&lt;span class="mf"&gt;4&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;184.626440388448&lt;/span&gt;
+&lt;span class="mf"&gt;5&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;174.200964088797&lt;/span&gt;
+&lt;span class="mf"&gt;6&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;156.332408029586&lt;/span&gt;
+&lt;span class="mf"&gt;7&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;130.671341314465&lt;/span&gt;
+&lt;span class="mf"&gt;8&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;96.7472246499041&lt;/span&gt;
+&lt;span class="mf"&gt;9&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;53.8176697304459&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Die benetzte Fläche ist hier also maximal für &lt;code&gt;r = 3/10*R&lt;/code&gt; (also &lt;code&gt;r = 3&lt;/code&gt; für &lt;code&gt;R
+= 10&lt;/code&gt;). Wir können uns die Werte zwischen 2 und 4 für &lt;code&gt;r&lt;/code&gt; noch genauer&amp;nbsp;anschauen:&lt;/p&gt;
+&lt;p&gt;In[27]:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;)]:&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{0}&lt;/span&gt;&lt;span class="s2"&gt;/10 -&amp;gt; &lt;/span&gt;&lt;span class="si"&gt;{1}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;A_10&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;evalf&lt;/span&gt;&lt;span class="p"&gt;()))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;184.244972086429&lt;/span&gt;
+&lt;span class="mf"&gt;2.1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;184.914434156967&lt;/span&gt;
+&lt;span class="mf"&gt;2.2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;185.516768466727&lt;/span&gt;
+&lt;span class="mf"&gt;2.3&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;186.051760290858&lt;/span&gt;
+&lt;span class="mf"&gt;2.4&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;186.519193409771&lt;/span&gt;
+&lt;span class="mf"&gt;2.5&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;186.918850022558&lt;/span&gt;
+&lt;span class="mf"&gt;2.6&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;187.250510657582&lt;/span&gt;
+&lt;span class="mf"&gt;2.7&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;187.513954080027&lt;/span&gt;
+&lt;span class="mf"&gt;2.8&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;187.708957196178&lt;/span&gt;
+&lt;span class="mf"&gt;2.9&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;187.835294954213&lt;/span&gt;
+&lt;span class="mf"&gt;3.0&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;187.892740241230&lt;/span&gt;
+&lt;span class="mf"&gt;3.1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;187.881063776257&lt;/span&gt;
+&lt;span class="mf"&gt;3.2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;187.800033998950&lt;/span&gt;
+&lt;span class="mf"&gt;3.3&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;187.649416953652&lt;/span&gt;
+&lt;span class="mf"&gt;3.4000000000000004&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;187.428976168492&lt;/span&gt;
+&lt;span class="mf"&gt;3.5&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;187.138472529157&lt;/span&gt;
+&lt;span class="mf"&gt;3.6&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;186.777664146939&lt;/span&gt;
+&lt;span class="mf"&gt;3.7&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;186.346306220629&lt;/span&gt;
+&lt;span class="mf"&gt;3.8&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;185.844150891815&lt;/span&gt;
+&lt;span class="mf"&gt;3.9000000000000004&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;185.270947093061&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Hier ist der Wert bei &lt;code&gt;3.0&lt;/code&gt; maximal. Wir können also annehmen, dass die Höhe der
+Scheibe in etwa &lt;code&gt;3/10*R&lt;/code&gt; sein sollte. Das ist auch der Wert, der in der Antike
+berechnet und dann für die Höhe der Scheibe verwendet&amp;nbsp;wurde.&lt;/p&gt;
+&lt;h2&gt;Analytisches&amp;nbsp;Maximum&lt;/h2&gt;
+&lt;p&gt;Das analytische Maximum bestimmen wir einfach aus der Ableitung von &lt;code&gt;A&lt;/code&gt; nach
+&lt;code&gt;r&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;In[33]:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;A_diff = diff(A, r, 1)
+A_diff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;$$\frac{R}{\sqrt{1 - \frac{r^{2}}{R^{2}}}} - \frac{r^{2}}{\sqrt{R^{2} - r^{2}}} - 2 \pi r + \sqrt{R^{2} -&amp;nbsp;r^{2}}$$&lt;/p&gt;
+&lt;p&gt;Es lohnt sich übrigens als Übung diese Ableitung auch einmal manuell aus der
+Formel zu berechnen. Um die Extremwerte zu bestimmten setzen wir die Ableitung
+auf &lt;code&gt;0&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;In[43]:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;extremwerte = solve(A_diff, r)
+extremwerte
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;$$\begin{bmatrix}- \frac{\sqrt{R^{2}}}{\sqrt{1 + \pi^{2}}}, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; \frac{\sqrt{R^{2}}}{\sqrt{1 + \pi^{2}}}, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; - \frac{\pi \sqrt{R^{2}}}{\sqrt{1 + \pi^{2}}}, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; \frac{\pi \sqrt{R^{2}}}{\sqrt{1 +&amp;nbsp;\pi^{2}}}\end{bmatrix}$$&lt;/p&gt;
+&lt;p&gt;Die negativen Werte können wir in diesem Fall beseite lassen. Für &lt;code&gt;R = 10&lt;/code&gt;
+werden die anderen beiden Extremwerte&amp;nbsp;zu:&lt;/p&gt;
+&lt;p&gt;In[48]:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;maximum = extremwerte[1].subs(R, 10).evalf()
+minimum = extremwerte[3].subs(R, 10).evalf()
+maximum, minimum
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;$$\begin{pmatrix}3.03314471053353, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;&amp;nbsp;9.52890513988687\end{pmatrix}$$&lt;/p&gt;
+&lt;p&gt;Das es sich tatsächlich um ein Maximum und ein Minimum handelt sieht man zum
+Beispiel, wenn man die Werte in die Formel von &lt;code&gt;A_10&lt;/code&gt; einsetzt:&lt;/p&gt;
+&lt;p&gt;In[51]:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;(A_10.subs(r, maximum).evalf(), A_10.subs(r, minimum).evalf())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;$$\begin{pmatrix}187.896539791088, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;&amp;nbsp;26.9881893328488\end{pmatrix}$$&lt;/p&gt;
+&lt;p&gt;Alternativ kann man natürlich die zweite Ableitung bemühen. Das überlasse ich
+dem Leser hiermit als&amp;nbsp;Übung.&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>IPython and Javascript interaction</title><link href="http://www.peterbouda.eu/ipython-and-javascript-interaction.html" rel="alternate"></link><published>2013-01-24T11:56:00+00:00</published><updated>2013-01-24T11:56:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2013-01-24:/ipython-and-javascript-interaction.html</id><summary type="html">&lt;p&gt;This &lt;a class="reference external" href="http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html"&gt;IPython notebook&lt;/a&gt; demonstrates the interaction between Python and
+a popup window that is opened via Javascript. The interaction is one-way
+in this case, from the notebook to the popup. We write data to the popup
+and call functions in the popup by executing Javascript from within the
+notebook. The …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This &lt;a class="reference external" href="http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html"&gt;IPython notebook&lt;/a&gt; demonstrates the interaction between Python and
+a popup window that is opened via Javascript. The interaction is one-way
+in this case, from the notebook to the popup. We write data to the popup
+and call functions in the popup by executing Javascript from within the
+notebook. The goal is to demonstrate some simple interactions. In the
+end, I hope that techniques like these could be used for &lt;a class="reference external" href="http://toplap.org/"&gt;livecoding&lt;/a&gt;
+in Python, with a &lt;span class="caps"&gt;HTML5&lt;/span&gt; visualization&amp;nbsp;window.&lt;/p&gt;
+&lt;p&gt;First, the notebook server and the &lt;span class="caps"&gt;HTML&lt;/span&gt; that we load in the popup must
+be located on the same domain. For this, we need to copy the
+&lt;a class="reference external" href="https://raw.github.com/pbouda/stuff/master/ipynb/index.html"&gt;index.html&lt;/a&gt; to the root directory of the IPython server.
+Unfortunately, it is not easy to find out what the root directory is.
+The default is the home directory of the user, so if you didn’t mess
+with your config just copy the html file to your home directory. If you
+changed your config you probably know whether you changed the root (it’s
+the setting &lt;tt class="docutils literal"&gt;ipython_dir&lt;/tt&gt;).&lt;/p&gt;
+&lt;p&gt;The &lt;tt class="docutils literal"&gt;index.html&lt;/tt&gt; contains an empty &lt;a class="reference external" href="http://bl.ocks.org/2595950"&gt;D3 scatterplot&lt;/a&gt; that we will fill
+with data from within this notebook. The notebook is available on Github&amp;nbsp;here:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/pbouda/stuff/blob/master/ipynb/Javascript%20Interactions%20I.ipynb"&gt;https://github.com/pbouda/stuff/blob/master/ipynb/Javascript%20Interactions%20I.ipynb&lt;/a&gt;&lt;/p&gt;
+&lt;div class="section" id="open-a-browser-popup"&gt;
+&lt;h2&gt;Open a browser&amp;nbsp;popup&lt;/h2&gt;
+&lt;p&gt;IPython contains several helper methods in &lt;tt class="docutils literal"&gt;IPython.display&lt;/tt&gt; to output
+&lt;span class="caps"&gt;HTML&lt;/span&gt;, Javascript, etc. to the current cell’s output. We use those
+helpers to write Javascript that opens a popup window. We save a
+reference to the opened window in &lt;tt class="docutils literal"&gt;window.audiencePopup&lt;/tt&gt;. We can later
+access the open popup via this reference. First, we open some &lt;span class="caps"&gt;URL&lt;/span&gt; to see
+if something simple&amp;nbsp;works:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;IPython.display&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;HTML&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Javascript&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;display&lt;/span&gt;
+&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;window.audiencePopup = window.open(&amp;#39;http://www.heise.de&amp;#39;,&amp;#39;audienceWindow&amp;#39;);&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Javascript&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="change-the-location"&gt;
+&lt;h2&gt;Change the&amp;nbsp;location&lt;/h2&gt;
+&lt;p&gt;We are now able to change the &lt;span class="caps"&gt;URL&lt;/span&gt; of the popup. We set the &lt;span class="caps"&gt;URL&lt;/span&gt; to the
+local &lt;tt class="docutils literal"&gt;index.html&lt;/tt&gt; that you downloaded above. We have to prepend
+&lt;tt class="docutils literal"&gt;/files/&lt;/tt&gt; so that the IPython server knows that we are looking for a
+local, static file. The notebook server then serves this file to the
+popup&amp;nbsp;window:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;window.audiencePopup.location.href = &amp;quot;/files/index.html&amp;quot;;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Javascript&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;As said above, the &lt;tt class="docutils literal"&gt;index.html&lt;/tt&gt; has to be served from the same domain
+as your current IPython notebook for security reasons. If everything
+works than you should now see the empty scatterplot in the&amp;nbsp;popup.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="write-some-data-to-the-popup"&gt;
+&lt;h2&gt;Write some data to the&amp;nbsp;popup&lt;/h2&gt;
+&lt;p&gt;We will now write some data to the popup. If you look into
+&lt;tt class="docutils literal"&gt;index.html&lt;/tt&gt; you will see a Javascript variable &lt;tt class="docutils literal"&gt;data&lt;/tt&gt; that contains
+an empty list. The scatterplot is created from coordinates in that list.
+In the first step we will set the &lt;tt class="docutils literal"&gt;data&lt;/tt&gt; variable to a Python list of
+coordinates. For this we just have to convert the Python list to a &lt;span class="caps"&gt;JSON&lt;/span&gt;
+string and set the Javascript variabel to a parsed version of that &lt;span class="caps"&gt;JSON&lt;/span&gt;
+string. We use the Javascript function &lt;tt class="docutils literal"&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt;.parse&lt;/tt&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;json&lt;/span&gt;
+&lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;window.audiencePopup.data = JSON.parse(&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;{0}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#39;);&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dumps&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Javascript&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The scatterplot don’t change, because we have to tell it to update
+itself first. But you can already have a look the the content of the
+&lt;tt class="docutils literal"&gt;data&lt;/tt&gt; variable in the popup window. We just display the value in an
+&lt;tt class="docutils literal"&gt;alert&lt;/tt&gt; window:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;alert(window.audiencePopup.data);&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Javascript&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The &lt;tt class="docutils literal"&gt;index.html&lt;/tt&gt; also containts a function &lt;tt class="docutils literal"&gt;update()&lt;/tt&gt; that we can
+just call to repaint the scatterplot. Again, we are able to call this
+Javascript function directly from within the current&amp;nbsp;notebook:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;window.audiencePopup.update();&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;display&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Javascript&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You should now see the data points in the scatterplot. You can see a
+screencast where I execute this notebook&amp;nbsp;here:&lt;/p&gt;
+&lt;video poster="https://s3.amazonaws.com/peterbouda.eu/IPython+and+Javascript+interaction.png" style="width:100%" preload="none" controls="" tabindex="0"&gt;
+   &lt;source type="video/mp4" src="https://s3.amazonaws.com/peterbouda.eu/IPython+and+Javascript+interaction.m4v"&gt;&lt;/source&gt;
+&lt;/video&gt;&lt;/div&gt;
+</content><category term="Python"></category><category term="Python"></category><category term="Javascript"></category><category term="IPython"></category></entry><entry><title>XBox Kinect and the Python Tools for Visual Studio</title><link href="http://www.peterbouda.eu/i-played-around-with-an-xbox-kinect-and-the-python-tools-for.html" rel="alternate"></link><published>2013-01-16T11:20:00+00:00</published><updated>2013-01-16T11:20:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2013-01-16:/i-played-around-with-an-xbox-kinect-and-the-python-tools-for.html</id><content type="html">&lt;p&gt;I played around with an XBox Kinect and the &lt;a class="reference external" href="http://pytools.codeplex.com/"&gt;Python Tools for Visual
+Studio&lt;/a&gt; last week. The resulting video shows a combination of the Depth
+Image, Skeleton Tracking and certain &lt;a class="reference external" href="http://pygame.org"&gt;pygame&lt;/a&gt; effects based on &lt;a class="reference external" href="http://numpy.scipy.org/"&gt;numpy&lt;/a&gt;
+and &lt;a class="reference external" href="http://scipy.org/"&gt;scipy&lt;/a&gt;&amp;nbsp;calculations.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/pbouda/stuff/tree/master/dances/WaterDance2"&gt;https://github.com/pbouda/stuff/tree/master/dances/WaterDance2&lt;/a&gt;&lt;/p&gt;
+&lt;iframe width="420" height="315" src="http://www.youtube.com/embed/UxeFgbH10HE" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content><category term="Python"></category></entry><entry><title>Kinect, PyGame, Numpy, SciPy</title><link href="http://www.peterbouda.eu/kinect-pygame-numpy-scipy.html" rel="alternate"></link><published>2012-01-26T11:34:00+00:00</published><updated>2012-01-26T11:34:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2012-01-26:/kinect-pygame-numpy-scipy.html</id><summary type="html">&lt;p&gt;Ich habe die letzten Wochen ein bisschen mit den &lt;a class="reference external" href="http://pytools.codeplex.com/"&gt;Python Tools für
+Visual Studio&lt;/a&gt; herumgespielt, auf der Website gibt es mit PyKinect
+einen schönen Wrapper um das offizielle Kinect-&lt;span class="caps"&gt;SDK&lt;/span&gt; von Microsoft. Ich
+wollte das mit einem Wassereffekt auf Basis von PyGame und Numpy
+kombinieren, den habe ich &lt;a class="reference external" href="http://www.pygame.org/pcr/water/index.php"&gt;hier&lt;/a&gt; gefunden …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ich habe die letzten Wochen ein bisschen mit den &lt;a class="reference external" href="http://pytools.codeplex.com/"&gt;Python Tools für
+Visual Studio&lt;/a&gt; herumgespielt, auf der Website gibt es mit PyKinect
+einen schönen Wrapper um das offizielle Kinect-&lt;span class="caps"&gt;SDK&lt;/span&gt; von Microsoft. Ich
+wollte das mit einem Wassereffekt auf Basis von PyGame und Numpy
+kombinieren, den habe ich &lt;a class="reference external" href="http://www.pygame.org/pcr/water/index.php"&gt;hier&lt;/a&gt; gefunden. Heraus kam&amp;nbsp;das:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://teatrominde.tumblr.com/#15777992755"&gt;http://teatrominde.tumblr.com/#15777992755&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/pbouda/stuff/blob/master/dances/WaterDance/WaterDance/Program.py"&gt;https://github.com/pbouda/stuff/blob/master/dances/WaterDance/WaterDance/Program.py&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Das Tiefenbild habe ich noch per Gauss-Filter aus SciPy verschönert,
+damit es nicht so kantig aussieht. Alles läuft auf meinem Notebook recht
+flüssig, das ist schon beeindruckend. Python gilt als langsam, ist es
+wohl auch, aber für die meisten Zwecke reicht es dann&amp;nbsp;doch.&lt;/p&gt;
+</content><category term="Python"></category></entry><entry><title>Maschinenlernen für Fortgeschrittene</title><link href="http://www.peterbouda.eu/maschinenlernen-fur-fortgeschrittene.html" rel="alternate"></link><published>2011-10-07T13:57:00+01:00</published><updated>2011-10-07T13:57:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-10-07:/maschinenlernen-fur-fortgeschrittene.html</id><content type="html">&lt;p&gt;&lt;a class="reference external" href="http://arstechnica.com/science/news/2011/07/running-high-performance-neural-networks-on-a-gamer-gpu.ars/1"&gt;Dieser Artikel&lt;/a&gt; beschreibt recht eindrucksvoll mit welchen Methoden
+die Radiochemie heutzutage arbeitet. Und was man doch mit Python alles
+machen kann. Ich habe einen Vortrag darüber auf der EuroSciPy 2011 in
+Paris gehört, und war mehr als beeindruckt. Nicht nur wegen der&amp;nbsp;Hardware&amp;#8230;&lt;/p&gt;
+</content><category term="Python"></category></entry><entry><title>Processing in Javascript in QML in Python</title><link href="http://www.peterbouda.eu/processing-in-javascript-in-qml-in-python.html" rel="alternate"></link><published>2011-09-05T10:31:00+01:00</published><updated>2011-09-05T10:31:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-09-05:/processing-in-javascript-in-qml-in-python.html</id><summary type="html">&lt;p&gt;Es gibt gute und vernünftige Gründe, warum man Desktop-Anwendungen mit
+Python und PySide entwickeln sollte. Aber man kann damit einfach auch
+nur Spaß haben. Diesen hatte ich auch, letzte Woche. Und das ist daraus&amp;nbsp;geworden:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/pbouda/Process"&gt;https://github.com/pbouda/Process&lt;/a&gt;-&lt;/p&gt;
+&lt;p&gt;Eine &lt;a class="reference external" href="http://processing.org"&gt;Processing&lt;/a&gt;-Variante auf Javascript-Basis, die in einer
+&lt;span class="caps"&gt;QML&lt;/span&gt;-Webkit-Komponente …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Es gibt gute und vernünftige Gründe, warum man Desktop-Anwendungen mit
+Python und PySide entwickeln sollte. Aber man kann damit einfach auch
+nur Spaß haben. Diesen hatte ich auch, letzte Woche. Und das ist daraus&amp;nbsp;geworden:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/pbouda/Process"&gt;https://github.com/pbouda/Process&lt;/a&gt;-&lt;/p&gt;
+&lt;p&gt;Eine &lt;a class="reference external" href="http://processing.org"&gt;Processing&lt;/a&gt;-Variante auf Javascript-Basis, die in einer
+&lt;span class="caps"&gt;QML&lt;/span&gt;-Webkit-Komponente läuft, die wiederum von Python geladen wird. Viel
+Spaß&amp;nbsp;damit!&lt;/p&gt;
+</content><category term="Python"></category></entry><entry><title>Memory Profiling Tools für Python, Teil 2</title><link href="http://www.peterbouda.eu/memory-profiling-tools-fur-python-teil-2.html" rel="alternate"></link><published>2011-09-02T11:33:00+01:00</published><updated>2011-09-02T11:33:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-09-02:/memory-profiling-tools-fur-python-teil-2.html</id><summary type="html">&lt;p&gt;Kaum hatte ich den &lt;a class="reference external" href="http://www.peterbouda.eu/speicherlecks-in-python-skripten-finden.html"&gt;vorhergehenden Blogeintrag&lt;/a&gt; fertig, bin ich mehr
+oder weniger zufällig auf zwei weitaus interessantere Projekte gestoßen,
+die Speicherlecks in Python-Anwendungen aufspüren sollen. Hier also, der
+Vollständigkeit&amp;nbsp;halber:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://launchpad.net/meliae"&gt;Meliae&lt;/a&gt;: Für Python 2, wird aber im Gegensatz zu heapy aktiv weiter
+entwickelt. Für meine Zwecke aber derzeit unbrauchbar, bis …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Kaum hatte ich den &lt;a class="reference external" href="http://www.peterbouda.eu/speicherlecks-in-python-skripten-finden.html"&gt;vorhergehenden Blogeintrag&lt;/a&gt; fertig, bin ich mehr
+oder weniger zufällig auf zwei weitaus interessantere Projekte gestoßen,
+die Speicherlecks in Python-Anwendungen aufspüren sollen. Hier also, der
+Vollständigkeit&amp;nbsp;halber:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://launchpad.net/meliae"&gt;Meliae&lt;/a&gt;: Für Python 2, wird aber im Gegensatz zu heapy aktiv weiter
+entwickelt. Für meine Zwecke aber derzeit unbrauchbar, bis es auch
+mit Python 3&amp;nbsp;funktioniert.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://fedorahosted.org/gdb-heap/"&gt;gdb-heap&lt;/a&gt;: dies scheint aber nun wirklich der beste Ansatz zu sein:
+über die Python-Schnittstelle von gdb klinkt man sich direkt in eine
+laufende Anwendung ein und schaut sich im Speicher um. Es gibt ein
+spezielles Python-Modul zur Analyse der einzelnen Objekte, das an die
+Speicherverwaltung von Python angepasst ist. Einziger Wermutstropfen:
+das Tool scheint sehr an die gdb-Version von Fedora gebunden zu sein.
+Bei einem kurzen Versuch unter Ubuntu wollte jedenfalls das
+Python-Modul nicht starten. Definitiv aber ein Projekt, das ich
+weiter beobachten werde. Auf der Seite findet sich außerdem ein Link
+auf &lt;a class="reference external" href="http://blip.tv/file/4878749?filename=Pycon-PyCon2011DudeWheresMyRAMADeepDiveIntoHowPythonUses441.ogv"&gt;einen Vortrag auf der PyCon &lt;span class="caps"&gt;US&lt;/span&gt; 2011&lt;/a&gt;, der sehr schön die
+einzelnen Ansätze zur Speicheranalyse unter Python&amp;nbsp;erklärt.&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="Python"></category></entry><entry><title>Speicherlecks in Python-Skripten finden</title><link href="http://www.peterbouda.eu/speicherlecks-in-python-skripten-finden.html" rel="alternate"></link><published>2011-08-19T11:10:00+01:00</published><updated>2011-08-19T11:10:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-08-19:/speicherlecks-in-python-skripten-finden.html</id><summary type="html">&lt;p&gt;Da ich gerade ein kleines Speicherproblem mit einer Python-Anwendung
+hatte (und ich dachte schon, 8 &lt;span class="caps"&gt;GB&lt;/span&gt; &lt;span class="caps"&gt;RAM&lt;/span&gt; reichen erst einmal&amp;#8230;), habe ich
+mich mal nach einem Memory-Profiler für Python-Skripte umgeschaut. Und
+leider nichts Vernünftiges gefunden. Was auch daran liegt, dass ich
+komplett auf Python 3 umgestiegen bin, und die Python-2-Profiler …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Da ich gerade ein kleines Speicherproblem mit einer Python-Anwendung
+hatte (und ich dachte schon, 8 &lt;span class="caps"&gt;GB&lt;/span&gt; &lt;span class="caps"&gt;RAM&lt;/span&gt; reichen erst einmal&amp;#8230;), habe ich
+mich mal nach einem Memory-Profiler für Python-Skripte umgeschaut. Und
+leider nichts Vernünftiges gefunden. Was auch daran liegt, dass ich
+komplett auf Python 3 umgestiegen bin, und die Python-2-Profiler dann
+leider komplett den Dienst versagen. Hier mal drei Pakete, die wohl
+unter Python 2 funktionieren&amp;nbsp;sollen:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://guppy-pe.sourceforge.net/#Heapy"&gt;heapy&lt;/a&gt;: Ist angeblich das komplexeste, aber auch beste aller Tools.
+Als Ergebnis einer Master-Thesis entstanden, die es auch auf der
+Webseite zum Herunterladen gibt. Portierung auf Python 3 wohl nicht
+in Sicht. Und nach kurzer Ansicht des Quellcodes wohl auch nicht mal
+an einem Nachmittag&amp;nbsp;durchführbar.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pysizer.8325.org/"&gt;PySizer&lt;/a&gt;: Weniger mächtig als heapy, und noch älter. Portierung
+nicht in&amp;nbsp;Sichtweite.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.aminus.net/wiki/Dowser"&gt;dowser&lt;/a&gt;: Die einfachste Art und Weise für Memory-Profiling. Das
+Tool lässt sich äußerst einfach in eigene Python-Skripte einbinden
+und stellt die Information dann per cherrypy zur Verfügung. So hat
+man während der Laufzeit des Skripts in einem Webbrowser einen
+Überblick über die aktuellen Objekte und deren Speicherverbrauch. Ich
+habe es fast geschafft, das Ding unter Python 3 zum Laufen zu
+bringen; allerdings benutzt es die Python Imaging Library, für die es
+noch keine vernünftige Python-3-Version gibt. So fehlen auf der
+Ausgabe-Webseite dann die Bilder. Außerdem konnte ich die
+&lt;span class="caps"&gt;TRACE&lt;/span&gt;-Seiten nicht öffnen. Es waren wohl einfach zu viele Objekte in
+meinem&amp;nbsp;Skript.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Wieder einmal das leidige Thema: Python 3 ist bestimmt toll, aber wenn
+es halt jeder ignoriert werden wir in 10 Jahren immer noch Anwendungen
+unter Python 2.x entwickeln. Übrigens habe ich letztendlich einen
+anderen Weg für das Speicherproblem gefunden. Das Problem war ein
+Parser; mit regulären Audrücken komme ich jetzt mit weniger Speicher und
+viel schneller ans&amp;nbsp;Ziel.&lt;/p&gt;
+</content><category term="Python"></category></entry><entry><title>Automatisierung von uic und rcc</title><link href="http://www.peterbouda.eu/automatisierung-von-uic-und-rcc.html" rel="alternate"></link><published>2011-08-09T16:17:00+01:00</published><updated>2011-08-09T16:17:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-08-09:/automatisierung-von-uic-und-rcc.html</id><summary type="html">&lt;p&gt;In einem PyQt- oder PySide-Projekt verwaltet man oft ein oder mehrere Ressourcen- und &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien. Diese Dateien erstellt man in einem C++-Qt-Projekt innerhalb des Qt Creator mit dem Qt Designer, mit den Kommandozeilen-Utilities &lt;code&gt;uic&lt;/code&gt; bzw. &lt;code&gt;rcc&lt;/code&gt; werden diese Dateien dann in C++-Code umgewandelt. Der Qt Creator bzw. Projektdatei …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In einem PyQt- oder PySide-Projekt verwaltet man oft ein oder mehrere Ressourcen- und &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien. Diese Dateien erstellt man in einem C++-Qt-Projekt innerhalb des Qt Creator mit dem Qt Designer, mit den Kommandozeilen-Utilities &lt;code&gt;uic&lt;/code&gt; bzw. &lt;code&gt;rcc&lt;/code&gt; werden diese Dateien dann in C++-Code umgewandelt. Der Qt Creator bzw. Projektdatei und &lt;code&gt;qmake&lt;/code&gt; nehmen dem Entwickler dabei die meiste Arbeit ab: die Code-Dateien werden automatisch aus den entsprechenden &lt;code&gt;ui&lt;/code&gt;- und &lt;code&gt;qrc&lt;/code&gt;-Dateien generiert. Sobald man eine der Dateien im visuellen Editor bearbeitet, wird beim nächsten Build alles automatisch aktualisiert. Wie sieht es aber unter Python aus? Häufig verwendet man hier ja nicht einmal eine komplette &lt;span class="caps"&gt;IDE&lt;/span&gt;, für kleine Projekte zut es gut und gern auch ein einfacher Code-Editor. Ich stelle hier ein kleines Skript vor, das auch ohne &lt;span class="caps"&gt;IDE&lt;/span&gt; zumindest einen Teil der Arbeit übernimmt. Zwar muss man das Skript bei jeder Änderung der &lt;code&gt;ui&lt;/code&gt;- und &lt;code&gt;qrc&lt;/code&gt;-Dateien manuell starten, aber zumindest muss man nicht mehr alle Dateien per Hand&amp;nbsp;umwandeln.&lt;/p&gt;
+&lt;h1&gt;Projektgerüst&lt;/h1&gt;
+&lt;p&gt;Ich setze hier voraus, dass ihr ein bestimmtes Projektgerüst verwendet. Die Ressourcendateien, &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien sowie Python-Code-Dateien befinden sich dabei in je einem eigenen Ordner. Da Ressourcendateien auf projektweite Dateien verweisen, befinden sie sich häufig im Hauptordner des Projekts. Ein typisches PyQt- bzw. PySide-Projekt sieht bei mir folgendermaßen&amp;nbsp;aus:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Projektgerüst PyQt-Projekt" src="http://www.peterbouda.eu/tutorials/11/tut11_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;Der &lt;code&gt;bin&lt;/code&gt;-Ordner enthält das Einstiegsskript der Anwendung. Dieses lädt die Klasse des Hauptfensters aus dem Package &lt;code&gt;helloworld&lt;/code&gt;, das sich im Ordner &lt;code&gt;src&lt;/code&gt; befindet. Die Hauptfensterklasse wiederum lädt den &lt;span class="caps"&gt;UI&lt;/span&gt;-Code aus dem Unterordner &lt;code&gt;ui&lt;/code&gt;, also aus dem Package &lt;code&gt;helloworld.ui&lt;/code&gt;. Die Original-&lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien liegen unter &lt;code&gt;ui&lt;/code&gt;, die Ressourcendatei &lt;code&gt;helloworld.qrc&lt;/code&gt; liegt im Hauptordner des Projekts. Das Ziel ist es jetzt also, möglichst unkompliziert die &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien aus &lt;code&gt;ui&lt;/code&gt; sowie die Ressourcendatei in Python-Code umzuwandeln und in den enstsprechenden Dateien im Ordner &lt;code&gt;src/helloworld/ui&lt;/code&gt; abzulegen.&lt;/p&gt;
+&lt;h1&gt;Das&amp;nbsp;Skript&lt;/h1&gt;
+&lt;p&gt;Um diesen Schritt möglichst einfach und möglichst plattformunabhängig durchführen zu können, habe ich folgendes kleines Python-Skript geschrieben, dass diese Arbeit&amp;nbsp;durchführt:&lt;/p&gt;
+&lt;pre class="brush:python;"&gt;
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import sys, os
+from subprocess import call
+
+if sys.platform == "win32":
+    bindir = "c:/Python27/Lib/site-packages/PyQt4/bin"
+else:
+    bindir = "/usr/bin"
+
+uic_path = os.path.join(bindir, "pyuic4")
+#uic_path = os.path.join(bindir, "pyside-uic")
+rcc_path = os.path.join(bindir, "pyrcc4")
+#rcc_path = os.path.join(bindir, "pyside-rcc")
+
+ui_path = "ui"
+rc_path = ""
+out_path = "src/helloworld/ui"
+
+ui_files = { "helloworld.ui": "ui_helloworld.py" }
+rc_files = { "helloworld.qrc": "helloworld_rc.py" }
+
+for file in ui_files:
+    file_path = os.path.join(ui_path, file)
+    out_file_path = os.path.join(out_path, ui_files[file])
+    call([uic_path, file_path, "-o", out_file_path])
+
+for file in rc_files:
+    file_path = os.path.join(rc_path, file)
+    out_file_path = os.path.join(out_path, rc_files[file])
+    call([rcc_path, file_path, "-o", out_file_path])
+&lt;/pre&gt;
+
+&lt;p&gt;Das Skript überprüft zunächst die Plattform und setzt entsprechend den Pfad zur den &lt;code&gt;rcc&lt;/code&gt;- und &lt;code&gt;uic&lt;/code&gt;-Tools von PyQt oder PySide (für PySide müssen die Kommentare entfernt werden). Falls die Tools in einem anderen Verzeichnis liegen (z.B. unter &lt;code&gt;/usr/local/bin&lt;/code&gt; statt &lt;code&gt;/usr/bin&lt;/code&gt;) dann müsst ihr nur die Variable &lt;code&gt;bindir&lt;/code&gt; entsprechend anpassen. In den beiden Variablen &lt;code&gt;ui_files&lt;/code&gt; und &lt;code&gt;rc_files&lt;/code&gt; listet ihr dann alle eure &lt;span class="caps"&gt;UI&lt;/span&gt;- und Ressourcendateien auf, und gebt als Wert jeweils den gewünschten Ausgabedateinamen an. Bei mir landen alle Dateien ausschlueßlich in &lt;code&gt;src/helloworld/ui&lt;/code&gt;, aber das könnt ihr selbstverständlich an eure Bedingungen anpassen. Jedes Mal, wenn ihr die Dateien dann in eurem Projekt ändert oder Dateien hinzufügt, dann ruft ihr einfach das Skript&amp;nbsp;auf:&lt;/p&gt;
+&lt;pre class="brush:bash;"&gt;
+python generate_ui.py
+&lt;/pre&gt;
+
+&lt;p&gt;Und schon habt ihr die Code-Dateien wieder auf dem aktuellen&amp;nbsp;Stand.&lt;/p&gt;
+&lt;p&gt;Mehr über dieses Thema findet ihr zum Beispiel in meinem Buch &lt;a href="http://www.amazon.de/gp/product/3941841505/ref=as_li_tf_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;creativeASIN=3941841505&amp;linkCode=as2&amp;tag=jsusde-21"&gt;PyQt und PySide. &lt;span class="caps"&gt;GUI&lt;/span&gt;- und Anwendungsentwicklung mit Python und Qt&lt;/a&gt;&lt;img src="http://www.assoc-amazon.de/e/ir?t=jsusde-21&amp;l=as2&amp;o=3&amp;a=3941841505" width="1" height="1" border="0" alt="book cover" style="border:none !important; margin:0px !important;" /&gt;.&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>Python auf dem N9</title><link href="http://www.peterbouda.eu/python-auf-dem-n9.html" rel="alternate"></link><published>2011-07-22T09:40:00+01:00</published><updated>2011-07-22T09:40:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-07-22:/python-auf-dem-n9.html</id><summary type="html">&lt;p&gt;Die Nachricht ist wohl schon länger veröffentlicht, ich sehe das jedoch
+gerade erst: auf dem N9, Nokias erstem und letztem (?) MeeGo-Gerät,
+werden Python-Anwendungen und C++-Anwendungen praktisch gleichgestellt.
+D.h. das &lt;span class="caps"&gt;SDK&lt;/span&gt; unterstützt die Entwicklung von Anwendungen per Python und
+PySide, und man kann diese Anwendungen dann im Ovi Store …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Die Nachricht ist wohl schon länger veröffentlicht, ich sehe das jedoch
+gerade erst: auf dem N9, Nokias erstem und letztem (?) MeeGo-Gerät,
+werden Python-Anwendungen und C++-Anwendungen praktisch gleichgestellt.
+D.h. das &lt;span class="caps"&gt;SDK&lt;/span&gt; unterstützt die Entwicklung von Anwendungen per Python und
+PySide, und man kann diese Anwendungen dann im Ovi Store
+veröffentlichen, oder wie auch immer der Laden jetzt heißt. Hier die
+offizielle&amp;nbsp;Ankündigung:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.meegoexperts.com/2011/06/harmattan-python-meego/"&gt;http://www.meegoexperts.com/2011/06/harmattan-python-meego/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Damit ist und bleibt Maemo/MeeGo das einzige mobile Betriebssystem, für
+das sich uneingeschränkt Apps in Python entwickeln lassen. Es ergeht
+hiermit also ein Kaufbefehl für das N9 an alle&amp;nbsp;Python-Programmierer!&lt;/p&gt;
+</content><category term="Python"></category></entry><entry><title>Relative Entropie visualisieren mit Mayavi</title><link href="http://www.peterbouda.eu/relative-entropie-visualisieren-mit-mayavi.html" rel="alternate"></link><published>2011-07-07T14:05:00+01:00</published><updated>2011-07-07T14:05:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-07-07:/relative-entropie-visualisieren-mit-mayavi.html</id><summary type="html">&lt;script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;
+&lt;/script&gt;
+
+&lt;h1&gt;Das Problem und die&amp;nbsp;Idee&lt;/h1&gt;
+&lt;p&gt;Ich lese gerade das wunderbare Buch &lt;a href="http://www.amazon.de/gp/product/0596528124/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;tag=jsusde-21&amp;linkCode=as2&amp;camp=1638&amp;creative=6742&amp;creativeASIN=0471241954"&gt;Elements of Information Theory von Cover und Thomas&lt;/a&gt;, um ein bisschen mehr über die Grundlagen der Informationstheorie zu lernen. Das Buch fordert einen von Anfang an recht ordentlich, und man knabbert ein bisschen, bis man alle Beweise durchgearbeitet und …&lt;/p&gt;</summary><content type="html">&lt;script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;
+&lt;/script&gt;
+
+&lt;h1&gt;Das Problem und die&amp;nbsp;Idee&lt;/h1&gt;
+&lt;p&gt;Ich lese gerade das wunderbare Buch &lt;a href="http://www.amazon.de/gp/product/0596528124/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;tag=jsusde-21&amp;linkCode=as2&amp;camp=1638&amp;creative=6742&amp;creativeASIN=0471241954"&gt;Elements of Information Theory von Cover und Thomas&lt;/a&gt;, um ein bisschen mehr über die Grundlagen der Informationstheorie zu lernen. Das Buch fordert einen von Anfang an recht ordentlich, und man knabbert ein bisschen, bis man alle Beweise durchgearbeitet und verstanden hat. Auf Seite 32 beispielsweise wird das Theorem über die Konvexität der relativen Entropie D(p||q) bewiesen.&amp;nbsp;D.h.:&lt;/p&gt;
+&lt;p&gt;Für jedes Paar Zufallsfunktionen (p, q) ist die Funktion D(p||q) konvex, wobei D(p||q) definiert ist&amp;nbsp;als:&lt;/p&gt;
+&lt;p&gt;$$D(p\mid q)=\sum_{x\in&amp;nbsp;X}p(x)*log{\frac{p(x)}{q(x)}}$$&lt;/p&gt;
+&lt;p&gt;Das wollte ich dann doch einmal mit eigenen Augen sehen, wo da die Konvexität ist! Als Beispiel nehme ich p und q mit nur zwei Zufallswerten an, der allgemeine Fall ist p(0) = r, p(1) =r-1 sowie q(0)=s, q(1)=1-s. D.h. wir ziehen zwei Zufallswerte, wobei der Wert 0 jeweils die Wahrscheinlichkeit r bzw. s hat. Die relative Entropie gibt nun an, wie weit die beiden Wahrheitsfunktionen auseinander liegen, oder anders: wie ineffezient q ist, um p zu beschreiben. Noch informationtheoretischer: wenn man p mit einem Code der durchschnittlichen Länge H(p) (=Entropie von p in Bits) beschreiben kann, aber stattdessen den Code von q benutzt, dann braucht man dazu im Durschnitt H(p)+D(p||q) Bits. Näheres dazu wie gesagt im Buch von Cover und&amp;nbsp;Thomas.&lt;/p&gt;
+&lt;p&gt;Rechnet man nun D(p||q) für unsere beiden gegebenen Wahrheitsfunktionen aus, dann erhält&amp;nbsp;man:&lt;/p&gt;
+&lt;p&gt;$$D(p\mid&amp;nbsp;q)=(1-r)*log{\frac{1-r}{1-s}}+r*log{\frac{r}{s}}$$&lt;/p&gt;
+&lt;p&gt;Diese Funktion wollte ich nun dreidimensional darstellen, und bin nach ein bisschen Googlen auf das Python-Modul &lt;a href="http://code.enthought.com/projects/mayavi/"&gt;Mayavi&lt;/a&gt; gestoßen. Das Modul ist ein Teil der äußerst umfangreichen Enthought Tool Suite und enthält u.a. eine &lt;span class="caps"&gt;GUI&lt;/span&gt; zur Darstellung dreidimensionaler Daten und parametrischer Oberflächen. Eigentlich ein bisschen viel für unseren Fall, aber eine andere vernünftige 3D-Plotting-Umgebung konnte ich auf Anhieb partout nicht auftreiben. Wenigstens gibt es Mayavi unter Ubuntu als schönes Paket, wenn man im Paketmanager einfach nach &amp;#8220;mayavi&amp;#8221;&amp;nbsp;sucht.&lt;/p&gt;
+&lt;p&gt;Das Paket enthält dann u.a. das Modul &lt;a href="http://code.enthought.com/projects/mayavi/docs/development/html/mayavi/mlab.html"&gt;mlab&lt;/a&gt;, dass man in seinen eigenen Skripten nutzen kann. Eigentlich ist die gesamte Tool Suite als &lt;span class="caps"&gt;GUI&lt;/span&gt;-Anwendung ausgelegt, so liegt dem Ubuntu-Paket beispielsweise die Anwendung &amp;#8220;mayavi&amp;#8221; bei, über die man Datendateien oder Objekte per &lt;span class="caps"&gt;GUI&lt;/span&gt; betrachten kann. Dazu gibt es dann eine Szene, die die Objekte und zahlreiche weitere Modifikatoren wie Lichtquellen aufnimmt. Diese kann man schön mit Maus und Tastatur modifizieren, drehen, etc. Wir nehmen aber wie gesagt nur das mlab-Modul in einem eigenen Skript. Lustig ist, dass man nach erfolgter Darstellung im eigenen Skript jederzeit zur kompletten &lt;span class="caps"&gt;GUI&lt;/span&gt; umschalten kann. Die &lt;span class="caps"&gt;GUI&lt;/span&gt; wiederum enthält eine Python-Shell, so dass auch der umgekehrte Weg funktioniert. Besonders schön funktioniert das dann mit &lt;a href="http://ipython.scipy.org"&gt;IPython&lt;/a&gt;, womit ich auch das Skript für diese Tutorial entwickelt&amp;nbsp;habe.&lt;/p&gt;
+&lt;p&gt;Kurz und gut: das fertige Skript sieht folgendermaßen&amp;nbsp;aus:&lt;/p&gt;
+&lt;pre class="brush: python;"&gt;
+import numpy
+from enthought.mayavi import mlab
+
+[r,s] = numpy.mgrid[0.01:1:0.01,0.01:1:0.01]
+d = (1-r)*numpy.log2((1-r)/(1-s)) + r*numpy.log2(r/s)
+
+x = r
+y = s
+z = d
+
+surface = mlab.mesh(x, y ,z)
+mlab.axes()
+mlab.show()
+&lt;/pre&gt;
+
+&lt;p&gt;Übersichtlich, oder? Zunächst erzeugen wir in &lt;code&gt;r&lt;/code&gt; und &lt;code&gt;s&lt;/code&gt; die Eingangswerte zwischen 0 und 1 in einem numpy-Grid. Die Funktion der relativen Entropie definieren wir in &lt;code&gt;d&lt;/code&gt;. Danach erfolgt die Definition der Koordinaten &lt;code&gt;x&lt;/code&gt;, &lt;code&gt;y&lt;/code&gt; und &lt;code&gt;z&lt;/code&gt;. Hier erlaubt mayavi für jede Koordinate die Angabe einer Funktion, so entsteht dann die Oberfläche des Objekts der Klasse &lt;code&gt;ParametricSurface&lt;/code&gt;. In unserem Fall bilden wir die x- und y-Werte einfach auf die Eingangswerte ab, der z-Wert ist dann der Funktionswert. Wir plotten also einfach die Funktion ins Dreidimensional. Schließlich malen wir das Objekt als &lt;code&gt;mesh&lt;/code&gt;, fügen noch Achsen per &lt;code&gt;axes()&lt;/code&gt; hinzu und zeigen das Ganze per &lt;code&gt;show()&lt;/code&gt;, damit sich das Skript nicht gleich beendet und das Ausgabefenster geöffnet bleibt. Es öffnet sich ein Fenster mit unserer&amp;nbsp;Funktion:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Visualization of relative entropy" src="http://www.peterbouda.eu/tutorials/relative_entropy.png"&gt;&lt;/p&gt;
+&lt;p&gt;Schön konvex :-) Das Ausgabefenster lädt zum Herumspielen ein, das Objekt lässt sich drehen, Parallelprojektion einschalten und das komplette Mayavi starten, um weitere Daten und Objekte hinzu zu fügen. Oder man arbeitet mit IPython und macht mit der Shell weiter. Viel&amp;nbsp;Spaß!&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>Bluetooth mit Arduino, N900 und Python</title><link href="http://www.peterbouda.eu/bluetooth-mit-arduino-n900-und-python.html" rel="alternate"></link><published>2011-04-15T08:25:00+01:00</published><updated>2011-04-15T08:25:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-04-15:/bluetooth-mit-arduino-n900-und-python.html</id><summary type="html">&lt;p&gt;Im Prinzip handelt es sich auch um einen schon etwas älteren Beitrag in
+einem meiner alten Blogs, aber neu ist er trotzdem hier im&amp;nbsp;Wiki:&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.dasskript.com/wiki/the_arduino_and_the_n900"&gt;The Arduino and The&amp;nbsp;N900&lt;/a&gt;&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;Wie man per Bluetooth zwischen Arduino und dem N900 kommuniziert. Der
+Arduino-Teil ist in Processing geschrieben, der Code auf dem …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Im Prinzip handelt es sich auch um einen schon etwas älteren Beitrag in
+einem meiner alten Blogs, aber neu ist er trotzdem hier im&amp;nbsp;Wiki:&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.dasskript.com/wiki/the_arduino_and_the_n900"&gt;The Arduino and The&amp;nbsp;N900&lt;/a&gt;&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;Wie man per Bluetooth zwischen Arduino und dem N900 kommuniziert. Der
+Arduino-Teil ist in Processing geschrieben, der Code auf dem N900 in
+Python. Im Prinzip zeigt der Python-Code allgemein die serielle
+Bluetooth-Kommunikation per dbus und bluez. Der Beitrag ist in diesem
+Fall auf Englisch, ich werde inmer mal wieder englische Beiträge
+veröffentlichen, einfach um ein bisserl das Englisch-Schreiben zu üben.
+Und um, naja, den potentiellen Leserkreis etwas&amp;nbsp;auszuweiten.&lt;/p&gt;
+&lt;p&gt;&lt;script type="text/javascript"&gt;&lt;/p&gt;&lt;p&gt;var flattr_uid =&amp;nbsp;'12306';&lt;/p&gt;&lt;p&gt;var flattr_tle = 'Bluetooth mit Arduino, N900 und&amp;nbsp;Python';&lt;/p&gt;&lt;p&gt;var flattr_dsc = 'Im Prinzip handelt es sich auch um einen schon etwas älteren Beitrag in einem meiner alten Blogs, aber neu ist er trotzdem hier im Wiki:The Arduino and The N900Wie man per Bluetooth zwischen Arduino&amp;nbsp;u...';&lt;/p&gt;&lt;p&gt;var flattr_cat =&amp;nbsp;'text';&lt;/p&gt;&lt;p&gt;var flattr_lng =&amp;nbsp;'de_DE';&lt;/p&gt;&lt;p&gt;var flattr_tag = 'Python, Bluetooth, Arduino,&amp;nbsp;Processing';&lt;/p&gt;&lt;p&gt;var flattr_url =&amp;nbsp;'http://www.dasskript.com/blogposts/87';&lt;/p&gt;&lt;p&gt;var flattr_btn =&amp;nbsp;'compact';&lt;/p&gt;&lt;p&gt;&lt;/script&gt;&lt;/p&gt;&lt;p&gt;&lt;script src="http://api.flattr.com/button/load.js" type="text/javascript"&gt;&lt;/script&gt;&lt;/p&gt;&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>Neues Tutorial: Augmented Reality mit Python</title><link href="http://www.peterbouda.eu/neues-tutorial-augmented-reality-mit-python.html" rel="alternate"></link><published>2011-03-22T15:43:00+00:00</published><updated>2011-03-22T15:43:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-03-22:/neues-tutorial-augmented-reality-mit-python.html</id><summary type="html">&lt;p&gt;Nachdem ich nun alle meine Text über Skriptsprachen ins Wiki umgezogen
+habe, folgt heute der erste Teil einer neuen Tutorial-Reihe, die sich
+ausschließlich mit der Programmierung von Skriptsprachen beschäftigen
+wird. Es geht auch gleich spannend los: mit einem Tutorial über
+&lt;a class="reference external" href="http://www.dasskript.com/wiki/augmented_reality_mit_opencv_pyqt_und_opengl"&gt;Augmented Reality mit OpenCV, PyQt und OpenGL&lt;/a&gt;. Ich hatte die …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Nachdem ich nun alle meine Text über Skriptsprachen ins Wiki umgezogen
+habe, folgt heute der erste Teil einer neuen Tutorial-Reihe, die sich
+ausschließlich mit der Programmierung von Skriptsprachen beschäftigen
+wird. Es geht auch gleich spannend los: mit einem Tutorial über
+&lt;a class="reference external" href="http://www.dasskript.com/wiki/augmented_reality_mit_opencv_pyqt_und_opengl"&gt;Augmented Reality mit OpenCV, PyQt und OpenGL&lt;/a&gt;. Ich hatte die Idee
+dazu schon länger, dachte allerdings, dass es recht kompliziert wäre.
+Aber nichts da: nach ein bisschen Herumbasteln lief das Ganze schon
+recht schön. Und das wollte ich euch natürlich nicht&amp;nbsp;vorenthalten.&lt;/p&gt;
+</content><category term="Python"></category></entry><entry><title>Erstes Release von PySide Mobility</title><link href="http://www.peterbouda.eu/erstes-release-von-pyside-mobility.html" rel="alternate"></link><published>2010-08-23T16:00:00+01:00</published><updated>2010-08-23T16:00:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-08-23:/erstes-release-von-pyside-mobility.html</id><summary type="html">&lt;p&gt;Ist zwar schon etwas her, hier wurde es aber noch nicht vermeldet: &lt;a class="reference external" href="http://www.pyside.org/2010/08/pyside-mobility-v0-1-0-released/"&gt;Eine
+erste Version (0.1.0) der PySide-Bindings von Qt Mobility wurde
+veröffentlicht&lt;/a&gt;. Auch auf dem N900 in extras-devel verfügbar.
+Hoffentlich geht&amp;#8217;s weiter so voran mit PySide, und Nokia sollte bald
+&lt;a class="reference external" href="http://maemo.org/community/council/open_letter_of_support_for_python_on_the_maemo-meego_platform/"&gt;Python-Anwendungen für Maemo im Ovi Store …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ist zwar schon etwas her, hier wurde es aber noch nicht vermeldet: &lt;a class="reference external" href="http://www.pyside.org/2010/08/pyside-mobility-v0-1-0-released/"&gt;Eine
+erste Version (0.1.0) der PySide-Bindings von Qt Mobility wurde
+veröffentlicht&lt;/a&gt;. Auch auf dem N900 in extras-devel verfügbar.
+Hoffentlich geht&amp;#8217;s weiter so voran mit PySide, und Nokia sollte bald
+&lt;a class="reference external" href="http://maemo.org/community/council/open_letter_of_support_for_python_on_the_maemo-meego_platform/"&gt;Python-Anwendungen für Maemo im Ovi Store erlauben&lt;/a&gt;.&lt;/p&gt;
+</content><category term="Python"></category></entry><entry><title>Benchmarks für PySide</title><link href="http://www.peterbouda.eu/benchmarks-fur-pyside.html" rel="alternate"></link><published>2010-05-12T16:15:00+01:00</published><updated>2010-05-12T16:15:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-05-12:/benchmarks-fur-pyside.html</id><summary type="html">&lt;p&gt;Mit der Veröffentlichung von PySide 0.3 vor einigen Wochen wurde und
+auch ein Benchmark versprochen. Jetzt ist er online, der Vergleich von
+PySide 0.2, PySide 0.3 und natürlich auch PyQt4 jeweils auf dem Desktop
+und dem N900: an dieser Stelle &lt;a class="reference external" href="http://www.pyside.org/pyside-v0-3-benchmarks/"&gt;verweise ich einfach ohne Umschweife
+darauf&lt;/a&gt;. Die …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Mit der Veröffentlichung von PySide 0.3 vor einigen Wochen wurde und
+auch ein Benchmark versprochen. Jetzt ist er online, der Vergleich von
+PySide 0.2, PySide 0.3 und natürlich auch PyQt4 jeweils auf dem Desktop
+und dem N900: an dieser Stelle &lt;a class="reference external" href="http://www.pyside.org/pyside-v0-3-benchmarks/"&gt;verweise ich einfach ohne Umschweife
+darauf&lt;/a&gt;. Die Entwickler scheinen auf einem guten Weg zu sein, die
+Abkehr von Boost war sicherlich eine späte, aber weise Entscheidung. Vor
+allem, wenn man bedenkt, dass das Ganze ja auch auf dem N900 (und
+Nachfolgern) laufen soll. Bin gespannt, wann sie dann PyQt&amp;nbsp;einholen.&lt;/p&gt;
+&lt;p&gt;&lt;script type="text/javascript"&gt;&lt;/p&gt;&lt;p&gt;var flattr_uid =&amp;nbsp;'12306';&lt;/p&gt;&lt;p&gt;var flattr_tle = 'Benchmarks für&amp;nbsp;PySide';&lt;/p&gt;&lt;p&gt;var flattr_dsc = 'Mit der Veröffentlichung von PySide 0.3 vor einigen Wochen wurde und auch ein Benchmark versprochen. Jetzt ist er online, der Vergleich von PySide 0.2, PySide 0.3 und natürlich auch PyQt4 jeweils&amp;nbsp;auf...';&lt;/p&gt;&lt;p&gt;var flattr_cat =&amp;nbsp;'text';&lt;/p&gt;&lt;p&gt;var flattr_lng =&amp;nbsp;'de_DE';&lt;/p&gt;&lt;p&gt;var flattr_tag = 'Python, PySide, PyQt,&amp;nbsp;N900';&lt;/p&gt;&lt;p&gt;var flattr_url =&amp;nbsp;'http://www.dasskript.com/blogposts/45';&lt;/p&gt;&lt;p&gt;var flattr_btn =&amp;nbsp;'compact';&lt;/p&gt;&lt;p&gt;&lt;/script&gt;&lt;/p&gt;&lt;p&gt;&lt;script src="http://api.flattr.com/button/load.js" type="text/javascript"&gt;&lt;/script&gt;&lt;/p&gt;&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>Technische Vorschau auf PySide-Shiboken</title><link href="http://www.peterbouda.eu/technische-vorschau-auf-pyside-shiboken-dasskriptcom.html" rel="alternate"></link><published>2010-03-24T18:17:00+00:00</published><updated>2010-03-24T18:17:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-24:/technische-vorschau-auf-pyside-shiboken-dasskriptcom.html</id><summary type="html">&lt;p&gt;Heute &lt;a class="reference external" href="http://www.pyside.org/2010/03/pyside-shiboken-technical-preview-release/"&gt;wurde eine technische Vorschau auf Shiboken-PySide
+veröffentlicht&lt;/a&gt;. Shiboken ist eine von den PySide-Entwicklern ins Leben
+gerufene Umgebung zur Erstellung von Python-Bindings für
+C++-Bibliotheken. Zunächst wurden die PySide-Bindings per Boost.Python
+erstellt, das offizielle Release von PySide nutzt immer noch diese. Da
+Boost.Python die Bibliotheken jedoch unnötig aufbläht …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Heute &lt;a class="reference external" href="http://www.pyside.org/2010/03/pyside-shiboken-technical-preview-release/"&gt;wurde eine technische Vorschau auf Shiboken-PySide
+veröffentlicht&lt;/a&gt;. Shiboken ist eine von den PySide-Entwicklern ins Leben
+gerufene Umgebung zur Erstellung von Python-Bindings für
+C++-Bibliotheken. Zunächst wurden die PySide-Bindings per Boost.Python
+erstellt, das offizielle Release von PySide nutzt immer noch diese. Da
+Boost.Python die Bibliotheken jedoch unnötig aufbläht, begannen die
+PySide-Entwickler mit der Entwicklung von Shiboken. Einer der Entwickler
+hat darüber eine &lt;a class="reference external" href="http://setanta.wordpress.com/2009/08/31/shiboken/"&gt;interessanten Blogeintrag&lt;/a&gt; geschrieben. Es gibt immer
+noch einige Diskussionen über die Vorteile von PyQt4 gegenüber PySide,
+letzteres holt aber kräftig auf und wenn ich wetten dürfte: wird
+irgendwann PyQt4 obsolet&amp;nbsp;machen.&lt;/p&gt;
+</content><category term="Python"></category></entry></feed>

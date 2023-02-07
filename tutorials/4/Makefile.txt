@@ -1,0 +1,99 @@
+#
+# WebKitProcessing - PySide WebKit Processing Environment
+# Copyright (c) 2010 Peter Bouda
+#
+# WordByWord is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# WordByWord is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+##########################################################################
+
+BINFILE=bin/webkitprocessing
+
+CHANGELOG=CHANGES
+CHANGELOG_TMP=.CHANGES.tmp
+CHANGELOG_EDT=.CHANGES.edit
+CHANGELOG_BKP=.CHANGES.backup
+EMAIL ?= $$USER@`hostname -f`
+
+DESTDIR ?= /
+PREFIX ?= /usr
+
+# default editor of user has not set "EDITOR" env variable
+EDITOR ?= nano
+
+##########################################################################
+
+all: help
+
+help:
+	@echo 'make test            run webkitprocessing in local directory'
+	@echo 'make mtest           run webkitprocessing (for maemo scratchbox)'
+	@echo 'make release         create source tarball in "dist/"'
+	@echo 'make install         install webkitprocessing into "$(PREFIX)"'
+	@echo 'make uninstall       uninstall webkitprocessing from "$(PREFIX)"'
+	@echo 'make clean           remove generated+temp+*.py{c,o} files'
+	@echo 'make distclean       do a "make clean" + remove "dist/"'
+	@echo ''
+	@echo '(1) Please set environment variable "EMAIL" to your e-mail address'
+
+##########################################################################
+
+test:
+	@# set xterm title to know what this window does ;)
+	@echo -ne '\033]0;webkitprocessing console (make test)\007'
+	$(BINFILE) --verbose
+
+mtest:
+	@# in maemo scratchbox, we need this for osso/hildon
+	run-standalone.sh python2.5 $(BINFILE) --maemo --verbose
+
+deb:
+	debuild
+
+release: distclean
+	python setup.py sdist
+
+install:
+	python setup.py install --root=$(DESTDIR) --prefix=$(PREFIX)
+
+uninstall:
+	@echo "##########################################################################"
+	@echo "#  MAKE UNINSTALL STILL NOT READY FOR PRIME TIME, WILL DO MY BEST TO     #"
+	@echo "#  REMOVE FILES INSTALLED BY WEBKITPROC. WATCH INSTALL PROCESS AND REMOVE#"
+	@echo "#  THE REST OF THE PACKAGES MANUALLY TO COMPLETELY REMOVE WEBKITPROC.    #"
+	@echo "##########################################################################"
+	rm -rf $(PREFIX)/share/webkitprocessing $(PREFIX)/share/applications/webkitprocessing.desktop $(PREFIX)/bin/webkitprocessing $(PREFIX)/lib/python?.?/site-packages/webkitprocessing/ $(PREFIX)/share/locale/webkitprocessing.*
+
+##########################################################################
+
+##########################################################################
+
+clean:
+	python setup.py clean
+	rm -f src/webkitprocessing/*.pyc
+	rm -rf build
+
+debclean:
+	fakeroot debian/rules clean
+
+distclean: clean
+	rm -rf dist
+ 
+##########################################################################
+
+.PHONY: all test release install clean distclean help
+
+##########################################################################
+
+

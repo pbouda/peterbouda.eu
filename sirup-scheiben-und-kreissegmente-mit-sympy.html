@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<!--
+    Miniport by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Peter Bouda - Natural Language Processing Consultant</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="Natural Language Processing, Python, Software Development, Consultant"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/theme/js/jquery.min.js"></script>
+    <script src="/theme/js/jquery.scrolly.min.js"></script>
+    <script src="/theme/js/skel.min.js"></script>
+    <script src="/theme/js/init.js"></script>
+    <link
+      href="http://www.peterbouda.eu/feeds/all.atom.xml"
+      type="application/atom+xml"
+      rel="alternate"
+      title="Peter Bouda Atom Feed"
+    />
+     <link
+      href="http://www.peterbouda.eu/feeds/all.rss"
+      type="application/rss+xml"
+      rel="alternate"
+      title="Peter Bouda RSS Feed"
+    />
+
+    <link rel="stylesheet" href="/theme/css/pygment.css" />
+
+    <noscript>
+      <link rel="stylesheet" href="/theme/css/skel.css" />
+      <link rel="stylesheet" href="/theme/css/style.css" />
+      <link rel="stylesheet" href="/theme/css/style-desktop.css" />
+    </noscript>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Peter Bouda",
+        "url": "https://www.peterbouda.eu",
+        "jobTitle": "Natural Language Processing Consultant",
+        "alumniOf": "LMU Munich",
+        "gender": "male",
+        "image": "https://www.peterbouda.eu/theme/images/pic00.jpg",
+        "sameAs": ["https://dev.to/pbouda", "https://github.com/pbouda"]
+      }
+    </script>
+
+    <!--[if lte IE 8
+      ]><link rel="stylesheet" href="/theme/css/ie/v8.css"
+    /><![endif]-->
+    <!--[if lte IE 9
+      ]><link rel="stylesheet" href="/theme/css/ie/v9.css"
+    /><![endif]-->
+  </head>
+  <body>
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="/#top">Home</a></li>
+					<!--<li><a href="/#work">Work</a></li>-->
+					<li><a href="/#portfolio">Portfolio</a></li>
+					<li><a href="/#feed">Blog</a></li>
+					<li><a href="/#contact">Contact</a></li>
+				</ul>
+			</nav> <section id="content" class="body">
+  <article class="h-entry">
+    <header>
+      <h1 class="entry-title e-title">
+        <a
+          class="p-name u-url"
+          href="http://www.peterbouda.eu/sirup-scheiben-und-kreissegmente-mit-sympy.html"
+          rel="bookmark"
+          title="Permalink to Sirup, Scheiben und Kreissegmente mit SymPy"
+          >Sirup, Scheiben und Kreissegmente mit&nbsp;SymPy</a
+        >
+      </h1>
+    </header>
+
+    <div class="entry-content e-content container">
+      <div class="row">
+        <div class="8u">
+ <footer class="post-info">
+    <p>
+        Published by <a href="http://www.peterbouda.eu" class="p-author">Peter Bouda</a> at <b><time class="dt-published" datetime="2013-06-14 14:58:00+01:00">Sex 14 Junho 2013</time></b>
+        in <b><a class="p-category" href="/category/python.html">Python</a></b>.
+    </p>
+    
+
+        
+</footer><!-- /.post-info -->          <script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<p>Ich lese gerade das durchaus empfehlenswerte Buch <a href="http://www.amazon.de/
+gp/product/048669609X/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1638&creative=6742&cr
+eativeASIN=048669609X&linkCode=as2&tag=jsusde-21">Foundations and Fundamental
+Concepts of Mathematics</a><img src="http://www.assoc-
+amazon.de/e/ir?t=jsusde-21&l=as2&o=3&a=048669609X" width="1" height="1"
+border="0" alt="" style="border:none !important; margin:0px !important;" /> von
+Howard Eves. Das erste Kapitel handelt von vor-Euklidischer Mathematik und
+schließt mit einer Reihe interessanter Aufgaben, über die sich schon die
+Babylonier und Griechen den Kopf zerbrochen haben. Eine besonders schöne
+Fragestellung geht so (Aufgabe&nbsp;1.1.5):</p>
+<p>Eine Scheibe mit Radius R rotiert vertikal an einer horizontalen Achse. Die
+Scheibe taucht dabei in eine Flüssigkeit ein, so dass ein Teil davon benetzt
+wird. In welcher Höhe muss man die Scheibe über der Flüssigkeit befestigen,
+damit die benetzte Fläche <em>über</em> der Flüssigkeit maximal&nbsp;wird?</p>
+<p>Das Problem trat anscheinend bei der Sirupherstellung in der Antike auf. Ich
+habe das Ganze mal versucht zu zeichnen, die rote Fläche soll die gesuchte
+benetzte Oberfläche&nbsp;anzeigen:</p>
+<p><img alt="Scheibe rotiert über Flüssigkeit" src="/static/images/sirupscheibe.png"></p>
+<p>Man sieht schnell, dass die benetzte Fläche durch das Eintauchen zunächst einmal
+größer wird. Je tiefer man die Scheibe eintaucht, desto mehr von dieser Fläche
+befindet sich dann aber unter der Oberfläche. Wir wollen jetzt also bestimmen,
+wie tief wir die Scheibe maximal eintauchen dürfen, damit die Fläche über der
+Flüssigkeit möglichst groß bleibt. Dabei lösen wir das Problem einmal empirisch,
+also indem wir alle möglichen Werte ausprobieren und schauen bei welchen Werten
+das Maximum auftritt. So wurde das Problem wohl damals gelöst, vor
+Kurvendiskussionen. Danach werden wir die Formel differenzen und daraus das
+Maximum&nbsp;bestimmten.</p>
+<p>Zur Lösung des Problems verwende ich hier die Bibliothek
+<a href="http://sympy.org/">SymPy</a>. Dieser Text wurde als <a href="http://ipython.org/notebook.html">IPython
+Notebook</a> verfasst, dieses gibt es zum&nbsp;Download:</p>
+<p><a href="https://github.com/pbouda/peterbouda.eu/blob/master/notebooks/sympy_
+scheibensegment.ipynb">https://github.com/pbouda/peterbouda.eu/blob/master/notebooks/sympy_scheibenseg&nbsp;ment.ipynb</a></p>
+<h2>Voraussetzungen</h2>
+<p>Wir setzen voraus, dass wir die Formeln für die Flächen der einzelnen Teile der
+Scheibe berechnen können. Dazu&nbsp;gehört:</p>
+<ul>
+<li>der gesamte Flächeninhalt der Scheibe: $$A_1 =&nbsp;R^2\pi$$</li>
+<li>der Ring auf der Scheibe, der insgesamt bei Rotation mit der Flüssigkeit in
+Berührung kommt(wobei <code>r</code> dann der Höhe der Achse über der Flüssigkeit
+entspricht): $$A_2 =&nbsp;r^2\pi$$</li>
+<li>der Teil der Scheibe, der jeweils unter Wasser ist (siehe
+http://de.wikipedia.org/wiki/Kreissegment): $$A_3 = R^2\arccos{r\over R} -
+r\sqrt{R^2 -&nbsp;r^2}$$</li>
+</ul>
+<p>Die von uns gesuchte Fläche ist dann einfach: $$A = A_1 - A_2 - A_3$$
+also eingesetzt: $$A = R^2\pi - r^2\pi - R^2\arccos{r\over R} + r\sqrt{R^2 -&nbsp;r^2}$$</p>
+<p>Diese Formel können wir gleich so in SymPy&nbsp;übernehmen:</p>
+<p>In[54]:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="o">%</span><span class="n">load_ext</span> <span class="n">sympy</span><span class="o">.</span><span class="n">interactive</span><span class="o">.</span><span class="n">ipythonprinting</span>
+
+<span class="n">r</span><span class="p">,</span> <span class="n">R</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;r R&quot;</span><span class="p">)</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">R</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span> <span class="o">-</span> <span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span> <span class="o">-</span> <span class="n">R</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">acos</span><span class="p">(</span><span class="n">r</span><span class="o">/</span><span class="n">R</span><span class="p">)</span> <span class="o">+</span> <span class="n">r</span><span class="o">*</span><span class="n">sqrt</span><span class="p">(</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">A</span>
+</code></pre></div>
+
+<p>$$- R^{2} \operatorname{acos}{\left (\frac{r}{R} \right )} + \pi R^{2} - \pi r^{2} + r \sqrt{R^{2} -&nbsp;r^{2}}$$</p>
+<h2>Empirisches&nbsp;Maximum</h2>
+<p>Als Erstes wollen wir das Maximum empirisch bestimmen, also einfach gegebene
+Werte für <code>R</code> und <code>r</code> einsetzen und ausgeben. Dazu können wir als zunächst <code>R</code>
+einen festen Wert zuweisen, ich nehme einfach 10 für den Radius der&nbsp;Scheibe:</p>
+<p>In[52]:</p>
+<div class="highlight"><pre><span></span><code>A_10 = A.subs(R, 10)
+A_10
+</code></pre></div>
+
+<p>$$- \pi r^{2} + r \sqrt{- r^{2} + 100} - 100 \operatorname{acos}{\left (\frac{1}{10} r \right )} + 100&nbsp;\pi$$</p>
+<p>Für <code>r</code> probieren wir jetzt Werte zwischen 0 und&nbsp;9:</p>
+<p>In[55]:</p>
+<div class="highlight"><pre><span></span><code><span class="n">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nf">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">:</span>
+<span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;{0}/10 -&gt; {1}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">A_10</span><span class="p">.</span><span class="n">subs</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">).</span><span class="n">evalf</span><span class="p">()))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">0</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">157.079632679490</span>
+<span class="mf">1</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">173.904656513122</span>
+<span class="mf">2</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">184.244972086429</span>
+<span class="mf">3</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">187.892740241230</span>
+<span class="mf">4</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">184.626440388448</span>
+<span class="mf">5</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">174.200964088797</span>
+<span class="mf">6</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">156.332408029586</span>
+<span class="mf">7</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">130.671341314465</span>
+<span class="mf">8</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">96.7472246499041</span>
+<span class="mf">9</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">53.8176697304459</span>
+</code></pre></div>
+
+<p>Die benetzte Fläche ist hier also maximal für <code>r = 3/10*R</code> (also <code>r = 3</code> für <code>R
+= 10</code>). Wir können uns die Werte zwischen 2 und 4 für <code>r</code> noch genauer&nbsp;anschauen:</p>
+<p>In[27]:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">2.0</span><span class="o">+</span><span class="n">k</span><span class="o">*</span><span class="mf">0.1</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="s2">/10 -&gt; </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">A_10</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">evalf</span><span class="p">()))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">2.0</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">184.244972086429</span>
+<span class="mf">2.1</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">184.914434156967</span>
+<span class="mf">2.2</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">185.516768466727</span>
+<span class="mf">2.3</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">186.051760290858</span>
+<span class="mf">2.4</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">186.519193409771</span>
+<span class="mf">2.5</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">186.918850022558</span>
+<span class="mf">2.6</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">187.250510657582</span>
+<span class="mf">2.7</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">187.513954080027</span>
+<span class="mf">2.8</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">187.708957196178</span>
+<span class="mf">2.9</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">187.835294954213</span>
+<span class="mf">3.0</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">187.892740241230</span>
+<span class="mf">3.1</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">187.881063776257</span>
+<span class="mf">3.2</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">187.800033998950</span>
+<span class="mf">3.3</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">187.649416953652</span>
+<span class="mf">3.4000000000000004</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">187.428976168492</span>
+<span class="mf">3.5</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">187.138472529157</span>
+<span class="mf">3.6</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">186.777664146939</span>
+<span class="mf">3.7</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">186.346306220629</span>
+<span class="mf">3.8</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">185.844150891815</span>
+<span class="mf">3.9000000000000004</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">185.270947093061</span>
+</code></pre></div>
+
+<p>Hier ist der Wert bei <code>3.0</code> maximal. Wir können also annehmen, dass die Höhe der
+Scheibe in etwa <code>3/10*R</code> sein sollte. Das ist auch der Wert, der in der Antike
+berechnet und dann für die Höhe der Scheibe verwendet&nbsp;wurde.</p>
+<h2>Analytisches&nbsp;Maximum</h2>
+<p>Das analytische Maximum bestimmen wir einfach aus der Ableitung von <code>A</code> nach
+<code>r</code>:</p>
+<p>In[33]:</p>
+<div class="highlight"><pre><span></span><code>A_diff = diff(A, r, 1)
+A_diff
+</code></pre></div>
+
+<p>$$\frac{R}{\sqrt{1 - \frac{r^{2}}{R^{2}}}} - \frac{r^{2}}{\sqrt{R^{2} - r^{2}}} - 2 \pi r + \sqrt{R^{2} -&nbsp;r^{2}}$$</p>
+<p>Es lohnt sich übrigens als Übung diese Ableitung auch einmal manuell aus der
+Formel zu berechnen. Um die Extremwerte zu bestimmten setzen wir die Ableitung
+auf <code>0</code>:</p>
+<p>In[43]:</p>
+<div class="highlight"><pre><span></span><code>extremwerte = solve(A_diff, r)
+extremwerte
+</code></pre></div>
+
+<p>$$\begin{bmatrix}- \frac{\sqrt{R^{2}}}{\sqrt{1 + \pi^{2}}}, <span class="amp">&amp;</span> \frac{\sqrt{R^{2}}}{\sqrt{1 + \pi^{2}}}, <span class="amp">&amp;</span> - \frac{\pi \sqrt{R^{2}}}{\sqrt{1 + \pi^{2}}}, <span class="amp">&amp;</span> \frac{\pi \sqrt{R^{2}}}{\sqrt{1 +&nbsp;\pi^{2}}}\end{bmatrix}$$</p>
+<p>Die negativen Werte können wir in diesem Fall beseite lassen. Für <code>R = 10</code>
+werden die anderen beiden Extremwerte&nbsp;zu:</p>
+<p>In[48]:</p>
+<div class="highlight"><pre><span></span><code>maximum = extremwerte[1].subs(R, 10).evalf()
+minimum = extremwerte[3].subs(R, 10).evalf()
+maximum, minimum
+</code></pre></div>
+
+<p>$$\begin{pmatrix}3.03314471053353, <span class="amp">&amp;</span>&nbsp;9.52890513988687\end{pmatrix}$$</p>
+<p>Das es sich tatsächlich um ein Maximum und ein Minimum handelt sieht man zum
+Beispiel, wenn man die Werte in die Formel von <code>A_10</code> einsetzt:</p>
+<p>In[51]:</p>
+<div class="highlight"><pre><span></span><code>(A_10.subs(r, maximum).evalf(), A_10.subs(r, minimum).evalf())
+</code></pre></div>
+
+<p>$$\begin{pmatrix}187.896539791088, <span class="amp">&amp;</span>&nbsp;26.9881893328488\end{pmatrix}$$</p>
+<p>Alternativ kann man natürlich die zweite Ableitung bemühen. Das überlasse ich
+dem Leser hiermit als&nbsp;Übung.</p>
+          <div id="comments">
+			<script src="https://utteranc.es/client.js"
+					repo="pbouda/peterbouda.eu"
+					issue-term="pathname"
+					label="Comment"
+					theme="github-light"
+					crossorigin="anonymous"
+					async>
+			</script>
+          </div>
+        </div>
+        <!-- /.entry-content -->
+
+        <div class="4u">
+          <article class="box style2">
+            <div>
+              <img
+                style="border-radius:50%; width:80%;"
+                src="theme/images/pic00.jpg"
+                alt=""
+              />
+            </div>
+            <h3>About me</h3>
+            <p>
+              My name is Peter Bouda and I am a software developer with more than 20 years of
+              professional experience in application development. I help
+              you to bring your application to market as quickly as possible.
+            </p>
+            <!-- <p>
+              Join our <a href="http://www.ng-lisbon.com/#trainings">next Angular training</a>
+              in Lisbon, October 2-4.
+            </p> -->
+            <p>
+              <a href="/#top">Read about my work</a><br />
+              or<br />
+              <a href="/#contact">Contact me</a>
+            </p>
+          </article>
+        </div>
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </article>
+</section>
+
+ <!-- Contact -->
+<div class="wrapper style4" id="contact">
+  <article class="container 75%">
+    <div class="row">
+      <div class="12u">
+        <h2>Send me a message and I will get back to you.</h2>
+        <ul class="social">
+          <li>
+            <a href="mailto:pbouda@outlook.com" class="icon fa-envelope-o"
+              ><span class="label">Mail</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/pbouda" class="icon fa-github"
+              ><span class="label">Github</span></a
+            >
+          </li>
+        </ul>
+        <br />
+        <h2>RSS Feed</h2>
+        <ul class="social">
+          <li>
+            <a href="http://www.peterbouda.eu/feeds/all.rss" class="icon fa-rss"
+              ><span class="label">RSS</span></a
+            >
+          </li>
+        </ul>
+        <hr />
+      </div>
+    </div>
+
+    <footer>
+      <ul id="copyright">
+        <li>&copy; Peter Bouda. All rights reserved.</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+      <div>
+        Rua Conselheiro Martins de Carvalho 23 1esq, 1400-069 Lisbon, Portugal,
+        +351 917403181
+      </div>
+    </footer>
+  </article>
+</div>  </body>
+</html>

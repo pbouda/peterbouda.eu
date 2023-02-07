@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!--
+    Miniport by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Peter Bouda - Natural Language Processing Consultant</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="Natural Language Processing, Python, Software Development, Consultant"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/theme/js/jquery.min.js"></script>
+    <script src="/theme/js/jquery.scrolly.min.js"></script>
+    <script src="/theme/js/skel.min.js"></script>
+    <script src="/theme/js/init.js"></script>
+    <link
+      href="http://www.peterbouda.eu/feeds/all.atom.xml"
+      type="application/atom+xml"
+      rel="alternate"
+      title="Peter Bouda Atom Feed"
+    />
+     <link
+      href="http://www.peterbouda.eu/feeds/all.rss"
+      type="application/rss+xml"
+      rel="alternate"
+      title="Peter Bouda RSS Feed"
+    />
+
+    <link rel="stylesheet" href="/theme/css/pygment.css" />
+
+    <noscript>
+      <link rel="stylesheet" href="/theme/css/skel.css" />
+      <link rel="stylesheet" href="/theme/css/style.css" />
+      <link rel="stylesheet" href="/theme/css/style-desktop.css" />
+    </noscript>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Peter Bouda",
+        "url": "https://www.peterbouda.eu",
+        "jobTitle": "Natural Language Processing Consultant",
+        "alumniOf": "LMU Munich",
+        "gender": "male",
+        "image": "https://www.peterbouda.eu/theme/images/pic00.jpg",
+        "sameAs": ["https://dev.to/pbouda", "https://github.com/pbouda"]
+      }
+    </script>
+
+    <!--[if lte IE 8
+      ]><link rel="stylesheet" href="/theme/css/ie/v8.css"
+    /><![endif]-->
+    <!--[if lte IE 9
+      ]><link rel="stylesheet" href="/theme/css/ie/v9.css"
+    /><![endif]-->
+  </head>
+  <body>
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="/#top">Home</a></li>
+					<!--<li><a href="/#work">Work</a></li>-->
+					<li><a href="/#portfolio">Portfolio</a></li>
+					<li><a href="/#feed">Blog</a></li>
+					<li><a href="/#contact">Contact</a></li>
+				</ul>
+			</nav> <section id="content" class="body">
+  <article class="h-entry">
+    <header>
+      <h1 class="entry-title e-title">
+        <a
+          class="p-name u-url"
+          href="http://www.peterbouda.eu/tutorial-wie-man-ein-qt-projekt-fur-maemo-erstellt-teil-1.html"
+          rel="bookmark"
+          title="Permalink to Tutorial: Wie man ein Qt-Projekt für Maemo erstellt (Teil 1)"
+          >Tutorial: Wie man ein Qt-Projekt für Maemo erstellt (Teil&nbsp;1)</a
+        >
+      </h1>
+    </header>
+
+    <div class="entry-content e-content container">
+      <div class="row">
+        <div class="8u">
+ <footer class="post-info">
+    <p>
+        Published by <a href="http://www.peterbouda.eu" class="p-author">Peter Bouda</a> at <b><time class="dt-published" datetime="2010-03-04 14:53:00+00:00">Qui 04 Março 2010</time></b>
+        in <b><a class="p-category" href="/category/museum.html">Museum</a></b>.
+    </p>
+    
+
+        
+</footer><!-- /.post-info -->          <p>Hier mal kurz und knapp, wie ihr möglichst schnell zu einem Qt-Projekt
+kommt, das ihr als Debian-Paket auf dem N900 installieren könnt:
+definitiv das kompakteste Tutorial, das es zu diesem Thema gibt. Als
+Voraussetzung müsst ihr zunächst einmal den <a class="reference external" href="http://qt.nokia.com/downloads">Qt Creator</a> installieren,
+außerdem sollte ihr das offizielle <a class="reference external" href="http://maemovmware.garage.maemo.org/2nd_edition/">Maemo-<span class="caps">SDK</span> als virtuelles Image</a>
+installiert und startklar haben (ihr braucht die Desktop-Version des
+SDKs, also die Datei
+&#8220;Maemo_Ubuntu_Intrepid_Desktop_SDK_Virtual_Image_Final.7z&#8221;). Das
+<span class="caps">SDK</span> ist ein virtuelles Image, ihr startet das Entwicklungsbetriebssystem
+am Besten mit dem <a class="reference external" href="http://www.vmware.com/de/products/player/">VMWare Player</a>. Der Qt Creator-Download beinhaltet
+im Übrigen alle nötigen Bibliotheken, das Qt-<span class="caps">SDK</span> müsst ihr also nicht
+separat&nbsp;installieren.</p>
+<p>Ich werde das Tutorial in zwei Teilen veröffentlichen, der erste Teil
+beschäftigt sich mit der Erstellung des Qt-Projekts, der zweite dann mit
+der Paketerstellung für das&nbsp;N900.</p>
+<p><strong>Als erstes</strong> erstellt ihr in eurem Projektordner drei Unterordner:
+&#8220;src&#8221; (für den ganzen Quellcode), &#8220;debian&#8221; (für die Debian-Daten) und
+&#8220;data&#8221; (für Icons&nbsp;usw.):</p>
+<p><img alt="image0" src="/static/tutorials/1/tut1_1.png" /></p>
+<p><strong>Als zweites</strong> legt ihr das Projekt mit dem Qt Creator an. Dieser wird
+also gestartet und dann über &#8220;Datei-&gt;Neu&#8221; ein neues Projekt angelegt. Im
+ersten Dialog wählt ihr als Projekttyp&nbsp;&#8220;Qt4-Gui-Anwendung&#8221;:</p>
+<p><img alt="image1" src="/static/tutorials/1/tut1_2.png" /></p>
+<p>Im zweiten Dialog gebt ihr den Projektnamen ein und wählt das oben
+erstellte &#8220;src&#8221;-Verzeichnis als &#8220;Erzeugen&nbsp;in:&#8221;-Pfad:</p>
+<p><img alt="image2" src="/static/tutorials/1/tut1_3.png" /></p>
+<p>Die folgenden beiden Dialoge für die zu integrierenden Module und den
+Klassennamen für das Hauptfenster könnt ihr bei den vorgegebenen
+Einstellungen belassen. Am Schlusss auf &#8220;Abschließen&#8221; klicken, und Qt
+Creator erstellt euch alle nötigen Projektdateien. Blöderweise macht er
+das aber in einem &#8220;Projektname&#8221;-Unterordner in &#8220;src&#8221;. Alle Dateien
+sollen aber direkt im Verzeichnis &#8220;src&#8221; liegen. Also schließt ihr den Qt
+Creator erst einmal wieder, und kopiert alle Dateien aus dem
+&#8220;Projektname&#8221;-Unterordner direkt nach &#8220;src&#8221;. Der
+&#8220;Projektname&#8221;-Unterordner kann dann gelöscht werden. Bei dieser
+Gelegenheit nennt ihr die &#8220;Projektname.pro&#8221;-Datei um nach &#8220;src.pro&#8221;.
+Nach diesem Schritt sollte euer Projektbaum so&nbsp;ausschauen:</p>
+<p><img alt="image3" src="/static/tutorials/1/tut1_4.png" /></p>
+<p><strong>Als dritten Schritt</strong> erstellt ihr in eurem Haupt-Projektordner (im
+Beispiel der Ordner &#8220;mobileqt&#8221;) eine Datei mit dem Namen
+&#8220;projektname.pro&#8221; (klein geschrieben; im Beispiel &#8220;mobileqt.pro&#8221;). Diese
+Datei füllt ihr mit folgendem Inhalt, am Besten mit einem einfache
+Texteditor wie &#8220;gedit&#8221;&nbsp;o.ä.:</p>
+<pre class="literal-block">
+QMAKEVERSION = $$[QMAKE_VERSION]
+ISQT4 = $$find(QMAKEVERSION, ^[2-9])
+isEmpty( ISQT4 ) {
+error(&quot;Use the qmake include with Qt4.4 or greater, on Debian that is qmake-qt4&quot;);
+}
+
+TEMPLATE = subdirs
+SUBDIRS  = src
+</pre>
+<p>Diese Datei könnt ihr jetzt wieder mit dem Qt Creator öffnen, ein
+Doppelklick auf &#8220;projektname.pro&#8221; sollte das&nbsp;bewerkstelligen.</p>
+<p><strong>Im vierten Schritt</strong> sollte euer Qt Creator zunächst folgendermaßen&nbsp;ausschauen:</p>
+<p><img alt="image4" src="/static/tutorials/1/tut1_5.png" /></p>
+<p>Mit dem Play-Button unten links könnt ihr das Projekt starten, es sollte
+ein leeres Hauptfenster erscheinen. Für den Anfang reicht uns das, wir
+werden das Fenster in anderen Tutorials mit Inhalt und Menü versehen. Um
+das Programm später auf dem N900 installieren zu können muss jetzt die
+&#8220;src.pro&#8221; angepasst werden. Mit einem beherzten Doppelklick auf den
+entsprechenden Eintrag unter &#8220;projektname-&gt;src-&gt;scr.pro&#8221; im Qt Creator
+öffnet ihr die Datei zum Editieren und fügt folgenden Code&nbsp;hinzu:</p>
+<pre class="literal-block">
+unix {
+    #VARIABLES
+    isEmpty(PREFIX) {
+        PREFIX = /usr/local
+    }
+
+    BINDIR = $$PREFIX/bin
+    DATADIR =$$PREFIX/share
+
+    DEFINES += DATADIR=\&quot;$$DATADIR\&quot; PKGDATADIR=\&quot;$$PKGDATADIR\&quot;
+
+    #MAKE INSTALL
+
+    INSTALLS += target desktop scalable
+
+    target.path =$$BINDIR
+
+    desktop.path = $$DATADIR/applications/hildon
+    desktop.files += ../data/$${TARGET}.desktop
+
+    scalable.path = $$DATADIR/icons/hicolor/scalable/hildon
+    scalable.files += ../data/scalable/$${TARGET}.png
+
+}
+</pre>
+<p>Diese Anweisungen werden später, nach Erstellung des Debian-Pakets, das
+kompilierte Programm, eine Desktop-Datei und ein Icon auf das Gerät
+installieren. Dazu müsst ihr noch im &#8220;data&#8221;-Verzeichnis eine Datei
+&#8220;projektname.desktop&#8221; erstellen, die in etwa folgenden Inhalt haben&nbsp;sollte:</p>
+<pre class="literal-block">
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.1
+Type=Application
+Name=mobileqt
+Exec=mobileqt
+Icon=mobileqt
+X-HildonDesk-ShowInToolbar=true
+X-Osso-Type=application/x-executable
+</pre>
+<p>Unter &#8220;data/scalable&#8221; legt ihr das Icon für die Anwendung als .png- oder
+.jpg-Datei ab, die Größe sollte 64x64 Pixel betragen. Am Ende dieses
+ersten Teils des Tutorials solltet ihr dann folgende Projektstruktur vor
+euch&nbsp;haben:</p>
+<p><img alt="image5" src="/static/tutorials/1/tut1_6.png" /></p>
+<p>Dieses war der erste Teil des Tutorials. Im zweiten Teil werden wir die
+Anwendung für die Debian-Paketierung vorbereiten, das Ganze dann in
+Scratchbox (auf dem virtuellen Image) kompilieren und packen und
+anschließend auf das N900&nbsp;installieren.</p>
+<p><a class="reference external" href="http://www.peterbouda.eu/tutorial-wie-man-ein-qt-projekt-fur-maemo-erstellt-teil-2.html">Hier geht&#8217;s direkt zum zweiten Teil des&nbsp;Tutorials</a></p>
+
+          <div id="comments">
+			<script src="https://utteranc.es/client.js"
+					repo="pbouda/peterbouda.eu"
+					issue-term="pathname"
+					label="Comment"
+					theme="github-light"
+					crossorigin="anonymous"
+					async>
+			</script>
+          </div>
+        </div>
+        <!-- /.entry-content -->
+
+        <div class="4u">
+          <article class="box style2">
+            <div>
+              <img
+                style="border-radius:50%; width:80%;"
+                src="theme/images/pic00.jpg"
+                alt=""
+              />
+            </div>
+            <h3>About me</h3>
+            <p>
+              My name is Peter Bouda and I am a software developer with more than 20 years of
+              professional experience in application development. I help
+              you to bring your application to market as quickly as possible.
+            </p>
+            <!-- <p>
+              Join our <a href="http://www.ng-lisbon.com/#trainings">next Angular training</a>
+              in Lisbon, October 2-4.
+            </p> -->
+            <p>
+              <a href="/#top">Read about my work</a><br />
+              or<br />
+              <a href="/#contact">Contact me</a>
+            </p>
+          </article>
+        </div>
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </article>
+</section>
+
+ <!-- Contact -->
+<div class="wrapper style4" id="contact">
+  <article class="container 75%">
+    <div class="row">
+      <div class="12u">
+        <h2>Send me a message and I will get back to you.</h2>
+        <ul class="social">
+          <li>
+            <a href="mailto:pbouda@outlook.com" class="icon fa-envelope-o"
+              ><span class="label">Mail</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/pbouda" class="icon fa-github"
+              ><span class="label">Github</span></a
+            >
+          </li>
+        </ul>
+        <br />
+        <h2>RSS Feed</h2>
+        <ul class="social">
+          <li>
+            <a href="http://www.peterbouda.eu/feeds/all.rss" class="icon fa-rss"
+              ><span class="label">RSS</span></a
+            >
+          </li>
+        </ul>
+        <hr />
+      </div>
+    </div>
+
+    <footer>
+      <ul id="copyright">
+        <li>&copy; Peter Bouda. All rights reserved.</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+      <div>
+        Rua Conselheiro Martins de Carvalho 23 1esq, 1400-069 Lisbon, Portugal,
+        +351 917403181
+      </div>
+    </footer>
+  </article>
+</div>  </body>
+</html>

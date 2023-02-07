@@ -1,0 +1,1644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Peter Bouda - Museum</title><link href="http://www.peterbouda.eu/" rel="alternate"></link><link href="http://www.peterbouda.eu/feeds/museum.atom.xml" rel="self"></link><id>http://www.peterbouda.eu/</id><updated>2011-12-29T15:47:00+00:00</updated><subtitle>Natural Language Processing Consultant</subtitle><entry><title>Zwischendrin</title><link href="http://www.peterbouda.eu/zwischendrin-dasskriptcom.html" rel="alternate"></link><published>2011-12-29T15:47:00+00:00</published><updated>2011-12-29T15:47:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-12-29:/zwischendrin-dasskriptcom.html</id><summary type="html">&lt;p&gt;In letzter Zeit war es hier leider recht ruhig, Arbeit und andere
+Aktivitäten hielten mich weitgehend vom Posten ab. Das soll sich ab
+jetzt aber wieder ändern. Hier erst einmal ein kleiner Zwischenbericht,
+was in letzter Zeit so passiert&amp;nbsp;ist:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Ich war bei der &lt;a class="reference external" href="https://codebits.eu/"&gt;Codebits&lt;/a&gt; in Lissabon. Eine sehr feine …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;In letzter Zeit war es hier leider recht ruhig, Arbeit und andere
+Aktivitäten hielten mich weitgehend vom Posten ab. Das soll sich ab
+jetzt aber wieder ändern. Hier erst einmal ein kleiner Zwischenbericht,
+was in letzter Zeit so passiert&amp;nbsp;ist:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Ich war bei der &lt;a class="reference external" href="https://codebits.eu/"&gt;Codebits&lt;/a&gt; in Lissabon. Eine sehr feine
+Veranstaltung rund um einen 48-Stunden-Programmierwettbewerb. Wobei
+es eher um die Kreativität geht als um Code-Qualität oder Ähnliches.
+Und dieses Jahr &lt;a class="reference external" href="http://www.publico.pt/Tecnologia/programacao-com-lego-vence-quinta-edicao-do-codebits-1520682"&gt;haben wir den ersten Preis gewonnen&lt;/a&gt;! Hingefahren
+bin ich mit einer groben Idee, zurück kam ich dann mit einem Haufen
+Technik. Ich hatte aber auch großartige Unterstützung von Pedro und
+Rosana, die ich erst bei der Veranstaltung kennengelernt habe und die
+zusammen mit mir das Lego-Coding-Team gebildet haben. Danke an alle!
+Und vielleicht gibt&amp;#8217;s hier bald mehr über das Projekt zu&amp;nbsp;berichten&amp;#8230;&lt;/li&gt;
+&lt;li&gt;Mein erstes Buch ist fertig! &lt;a class="reference external" href="http://www.amazon.de/gp/product/3941841505/ref=as_li_qf_sp_asin_tl?ie=UTF8&amp;amp;tag=jsusde-21&amp;amp;linkCode=as2&amp;amp;camp=1638&amp;amp;creative=6742&amp;amp;creativeASIN=3941841505"&gt;PyQt und PySide. &lt;span class="caps"&gt;GUI&lt;/span&gt;- und
+Anwendungsentwicklung mit Python und Qt&lt;/a&gt;&lt;img alt="image0" src="http://www.assoc-amazon.de/e/ir?t=jsusde-21&amp;amp;l=as2&amp;amp;o=3&amp;amp;a=3941841505" /&gt;. Gibt es ab
+Januar in jedem gut sortiertem Buchladen. Mit
+zahlreichen Highlights über die &lt;span class="caps"&gt;GUI&lt;/span&gt;-Entwicklung mit Python, PyQt und
+PySide wie eine komplette Einführung in &lt;span class="caps"&gt;QML&lt;/span&gt; und die
+Anwendungspaketerstellung für Linux und Windows. Wer schon immer
+einmal wissen wollte, wie man Anwendungen samt Installer
+plattformunabhängig entwickelt, der sollte sich das Werk unbedingt&amp;nbsp;zulegen.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Soweit erst einmal für heute. Ich wünsche allen Lesern einen guten
+Rutsch ins Neue Jahr&amp;nbsp;2012!&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Buchempfehlung: Mastering Regular Expressions von Jeffrey E.F. Friedl</title><link href="http://www.peterbouda.eu/buchempfehlung-mastering-regular-expressions-von-jeffrey-ef-friedl-dasskriptcom.html" rel="alternate"></link><published>2011-05-13T10:28:00+01:00</published><updated>2011-05-13T10:28:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-05-13:/buchempfehlung-mastering-regular-expressions-von-jeffrey-ef-friedl-dasskriptcom.html</id><summary type="html">&lt;p&gt;Und da dachte ich, ich weiß schon so Einiges über reguläre Ausdrücke.
+Aber nichts da: spätestens im dritten Kapitel von &lt;em&gt;Mastering Regular
+Expressions&lt;/em&gt; von Jeffrey &lt;span class="caps"&gt;E.F.&lt;/span&gt; Friedl schwand der Glaube an meine
+Fähigkeiten. Die Einsatzmöglichkeiten von &lt;em&gt;Atomic Groupings&lt;/em&gt; und
+&lt;em&gt;Possessive Quantifiers&lt;/em&gt; waren mir gar vollkommen fremd. Nach Lektüre
+des …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Und da dachte ich, ich weiß schon so Einiges über reguläre Ausdrücke.
+Aber nichts da: spätestens im dritten Kapitel von &lt;em&gt;Mastering Regular
+Expressions&lt;/em&gt; von Jeffrey &lt;span class="caps"&gt;E.F.&lt;/span&gt; Friedl schwand der Glaube an meine
+Fähigkeiten. Die Einsatzmöglichkeiten von &lt;em&gt;Atomic Groupings&lt;/em&gt; und
+&lt;em&gt;Possessive Quantifiers&lt;/em&gt; waren mir gar vollkommen fremd. Nach Lektüre
+des Buches war der Glaube aber wieder&amp;nbsp;da.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;Das Buch beginnt mit drei sehr praxisorientierten Kapiteln über reguläre
+Ausdrücke, die sich zu Beginn auch dem Anfänger erschließen. Die
+Beispiele sind schön ausgewählt, werden im Laufe der Kapitel immer
+komplexer, und zeigen den Einsatz der Basisfunktionen in regulären
+Ausdrücken. Gleich in der Einleitung empfiehlt Herr Friedl auch dem
+fortgeschrittenen Leser, das Buch von vorn bis hinten zu lesen, und dem
+kann ich unbedingt zustimmen: selbst wenn man die Basis schon drauf hat,
+lernt man gleich zu Beginn Vieles über die Geschwindigkeitsvorteile und
+-nachteile bestimmter Alternativen bei Ausdrücken in unterschiedlichen&amp;nbsp;Einsatzgebieten.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;Ab dem vierten Kapitel geht es dann ans Eingemachte. Die interne
+Verabeitung der verschiedene Implementierungen werden besprochen,
+zunächst grob nach der Einteilung in deterministische bzw.
+nicht-deterministische Automaten, in beiden Fällen aber auch immer
+wieder mit Hinweisen auf einzelne Implementierung der verschiedenen
+Programmiersprachen. Wer hätte es gedacht: Tcl hat die schnellste
+Maschine für reguläre Ausdrücke, Perl dafür den umfangreichsten
+Wortschatz an Ausdrücken. Das &lt;em&gt;Backtracking&lt;/em&gt; als zentrale Idee des
+Parsens regulärer Ausdrücke wird ausführlich und verständlich erläutert,
+fast denkt der Leser daran, rasch selber eine solchen Parser zu bauen.
+Gerade in diesem Kapitel merkt man die langjährige Erfahrung des Autors,
+der durch den Einsatz unterschiedlicher Engines und Fehlersuche in
+zahlreichen Projekten einen großen Einfluss auf die ein oder andere
+Implementierung&amp;nbsp;hatte.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;Nach den Interna der Verarbeitung folgen dann zwei Kapitel, nach deren
+Lektüre man sich durchaus als Experte einordnen darf. Zunächst geht es
+um den allgemeinen Aufbau eines regulären Ausdrucks, wiederum an
+Praxisbeispielen, und dieses Mal mit dem gesamten, im vorhergegangenen
+Kapitel erarbeiteten Inventar. Das darauf folgende Kapitel geht noch
+ausführlich auf die Performanz von regulären Ausdrücken ein, so dass man
+sich als Leser schließlich für alle Anwendungsfälle gerüstet fühlt. Als
+wäre das alles noch nicht genug, folgen schließlich noch vier Kapitel
+über die regulären Ausdrücke und ihren praktischen Einsatz in vier
+Programmiersprachen bzw. Frameworks (Perl, Java, .&lt;span class="caps"&gt;NET&lt;/span&gt;, &lt;span class="caps"&gt;PHP&lt;/span&gt;). Schade,
+dass hier Python keine größere Rolle spielt, aber die derzeitige
+Implemtierung scheint auch einfach noch nicht besonders ausgereift zu
+sein. Mit dem &lt;a class="reference external" href="http://pypi.python.org/pypi/regex"&gt;neuen Python regex-Modul&lt;/a&gt; steht aber wohl schon der
+Ersatz in den&amp;nbsp;Startlöchern.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;Am Ende bleibt tatsächlich keine Frage offen. Im der täglichen
+Entwicklungsarbeit blättert man schnell immer wieder an die
+entsprechenden Stellen des Buches, und reift so langsam zum Experten
+auch in der Praxis. Atomic Groupings, Possessive Quantifiers,
+Backtracking, Laziness vs. Greediness? Alles kein&amp;nbsp;Problem&amp;#8230;&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;Zu kaufen bei&amp;nbsp;Amazon:&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.amazon.de/gp/product/0596528124/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;amp;tag=jsusde-21&amp;amp;linkCode=as2&amp;amp;camp=1638&amp;amp;creative=6742&amp;amp;creativeASIN=0596528124"&gt;Mastering Regular Expressions von Jeffrey &lt;span class="caps"&gt;E.F.&lt;/span&gt;&amp;nbsp;Friedl&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;script type="text/javascript"&gt;&lt;/p&gt;&lt;p&gt;var flattr_uid =&amp;nbsp;'12306';&lt;/p&gt;&lt;p&gt;var flattr_tle = 'Buchempfehlung: Mastering Regular Expressions von Jeffrey &lt;span class="caps"&gt;E.F.&lt;/span&gt;&amp;nbsp;Friedl';&lt;/p&gt;&lt;p&gt;var flattr_dsc = 'Und da dachte ich, ich weiß schon so Einiges über reguläre Ausdrücke. Aber nichts da: spätestens im dritten Kapitel von Mastering Regular Expressions von Jeffrey &lt;span class="caps"&gt;E.F.&lt;/span&gt; Friedl schwand der Glaube an&amp;nbsp;...';&lt;/p&gt;&lt;p&gt;var flattr_cat =&amp;nbsp;'text';&lt;/p&gt;&lt;p&gt;var flattr_lng =&amp;nbsp;'de_DE';&lt;/p&gt;&lt;p&gt;var flattr_tag = 'Buchempfehlung, Reguläre&amp;nbsp;Ausdrücke';&lt;/p&gt;&lt;p&gt;var flattr_url =&amp;nbsp;'http://www.dasskript.com/blogposts/89';&lt;/p&gt;&lt;p&gt;var flattr_btn =&amp;nbsp;'compact';&lt;/p&gt;&lt;p&gt;&lt;/script&gt;&lt;/p&gt;&lt;p&gt;&lt;script src="http://api.flattr.com/button/load.js" type="text/javascript"&gt;&lt;/script&gt;&lt;/p&gt;&lt;/p&gt;</content><category term="Museum"></category></entry><entry><title>Ich bin jetzt Qt Ambassador</title><link href="http://www.peterbouda.eu/ich-bin-jetzt-qt-ambassador.html" rel="alternate"></link><published>2011-05-13T09:37:00+01:00</published><updated>2011-05-13T09:37:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-05-13:/ich-bin-jetzt-qt-ambassador.html</id><summary type="html">&lt;p&gt;Vor ein paar Wochen bekam ich von Nokia die freundliche Enladung, mich
+mit meiner Anwendung &lt;a class="reference external" href="http://www.dasskript.com/apps/qtranslate"&gt;qTranslate&lt;/a&gt; beim &lt;a class="reference external" href="http://qt.nokia.com/qt-in-use/ambassadors/qtambassador/"&gt;Qt-Ambassador-Programm&lt;/a&gt; zu
+bewerben. Und siehe da: die Software wurde akzeptiert, also bin ich
+jetzt Botschafter. Nicht schlecht, auch wenn ich in letzter Zeit etwas
+weniger in C++ entwickle, stattdessen lieber Python verwende. Gefreut …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Vor ein paar Wochen bekam ich von Nokia die freundliche Enladung, mich
+mit meiner Anwendung &lt;a class="reference external" href="http://www.dasskript.com/apps/qtranslate"&gt;qTranslate&lt;/a&gt; beim &lt;a class="reference external" href="http://qt.nokia.com/qt-in-use/ambassadors/qtambassador/"&gt;Qt-Ambassador-Programm&lt;/a&gt; zu
+bewerben. Und siehe da: die Software wurde akzeptiert, also bin ich
+jetzt Botschafter. Nicht schlecht, auch wenn ich in letzter Zeit etwas
+weniger in C++ entwickle, stattdessen lieber Python verwende. Gefreut
+hat&amp;#8217;s mich trotzdem, und unten rechts prangt jetzt das schöne Logo. Es
+wird bald auch mal wieder Zeit für ein Update, Google scheint dem
+Übersetzer ein paar neue Sprachen verpasst zu&amp;nbsp;haben.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Die “ersten” Wiki-Einträge</title><link href="http://www.peterbouda.eu/die-ersten-wiki-eintrage.html" rel="alternate"></link><published>2011-03-04T09:39:00+00:00</published><updated>2011-03-04T09:39:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-03-04:/die-ersten-wiki-eintrage.html</id><content type="html">&lt;p&gt;Werft ruhig mal einen kurzen Blick ins &lt;a class="reference external" href="http://www.dasskript.com/wiki"&gt;Wiki&lt;/a&gt;: die ersten (kleineren)
+Einträge sind erschienen, über Perl, Python und Ruby (on Rails). Da
+werden in den nächsten Tagen noch einige dazu gekommen, was sich halt so
+bei mir angesammelt hat. Viel Spaß&amp;nbsp;damit!&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>mobileqt.de wird Das Skript; und rund!</title><link href="http://www.peterbouda.eu/mobileqtde-wird-das-skript-und-rund.html" rel="alternate"></link><published>2011-03-03T09:55:00+00:00</published><updated>2011-03-03T09:55:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-03-03:/mobileqtde-wird-das-skript-und-rund.html</id><summary type="html">&lt;p&gt;Wie hier schon erwähnt, plane ich, diese Seite in Zukunft der
+Programmierung mit Skriptsprachen zu widmen. Der erste Teil dazu ist
+jetzt abgeschlossen: die Domain mobileqt.de wird bald geschlossen, ab
+sofort heißt dieser wundervolle Webauftritt &amp;#8220;Das Skript&amp;#8221; und ist unter
+&lt;a class="reference external" href="http://www.dasskript.com"&gt;dasskript.com&lt;/a&gt; erreichbar. Ein Schwenk, den Nokia auch nicht …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Wie hier schon erwähnt, plane ich, diese Seite in Zukunft der
+Programmierung mit Skriptsprachen zu widmen. Der erste Teil dazu ist
+jetzt abgeschlossen: die Domain mobileqt.de wird bald geschlossen, ab
+sofort heißt dieser wundervolle Webauftritt &amp;#8220;Das Skript&amp;#8221; und ist unter
+&lt;a class="reference external" href="http://www.dasskript.com"&gt;dasskript.com&lt;/a&gt; erreichbar. Ein Schwenk, den Nokia auch nicht schneller
+hinbekommen&amp;nbsp;hätte!&lt;/p&gt;
+&lt;p&gt;Thematisch werden in Zukunft allgemein Skriptsprachen, im Besonderen
+Python, Ruby, Perl und JavaScript Inhalt sein. Zunächst mit einem
+Schwerpunkt auf PyQt und PySide, weil wir ja hier schon beim Thema
+waren. Die alten Seiten bleiben alle so erhalten, wie sie jetzt sind.
+Das Forum und das Wiki werde ich in den nächsten Tagen nach und nach
+umgestalten, aber auch hier wird nichts gelöscht, nur archiviert, wie
+man das halt heut so macht. Und damit alles eine runde Sache wird, habe
+ich das Design etwas überarbeitet. Rund ist en vogue, wenn man sich so
+umsieht, und da dachte ich mir: da springe ich doch mal wieder auf einen
+fahrenden Zug&amp;nbsp;auf.&lt;/p&gt;
+&lt;p&gt;Ich würde mich freuen, viele der Leser meines Blogs auch auf meinen
+neuen Seiten begrüßen zu dürfen. Ich verspreche, es gibt spannende
+Projekte zu&amp;nbsp;sehen!&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Servus. Servus!</title><link href="http://www.peterbouda.eu/servus-servus.html" rel="alternate"></link><published>2011-02-15T09:27:00+00:00</published><updated>2011-02-15T09:27:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-02-15:/servus-servus.html</id><summary type="html">&lt;p&gt;Wie man so schön sagt in Bayern. Die &lt;a class="reference external" href="http://www.heise.de/newsticker/meldung/Nokia-tut-sich-mit-Microsoft-zusammen-1187890.html"&gt;Würfel sind also gefallen&lt;/a&gt;, und
+meiner Meinung nach ist es die richtige Entscheidung. Es wird nun wieder
+mal von allerlei Ökosystemen fabuliert, aber am Ende werden sich alle
+mobilen Betriebssystem doch weiter angleichen als im Moment sowieso
+schon, und wessen Name da …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Wie man so schön sagt in Bayern. Die &lt;a class="reference external" href="http://www.heise.de/newsticker/meldung/Nokia-tut-sich-mit-Microsoft-zusammen-1187890.html"&gt;Würfel sind also gefallen&lt;/a&gt;, und
+meiner Meinung nach ist es die richtige Entscheidung. Es wird nun wieder
+mal von allerlei Ökosystemen fabuliert, aber am Ende werden sich alle
+mobilen Betriebssystem doch weiter angleichen als im Moment sowieso
+schon, und wessen Name da dann drauf steht ist zumindest mir ziemlich
+egal. Hauptsache der E-Mail-Client funktioniert und der Browser ist
+schnell. Und das ein oder andere Spiel wäre&amp;nbsp;fein.&lt;/p&gt;
+&lt;p&gt;Wo wir auch schon beim Thema wären: meiner Meinung nach wird das Thema
+&amp;#8220;Spiele&amp;#8221; die Marktaufteilung der nächsten Jahre bestimmen. Und wenn XBox
+Live auf Windows Phone mindestens halb so gut wird, wie uns Microsoft
+das immer verspricht, dann werden die Karten in nächster Zeit aber mal
+gewaltig neu verteilt. Dann kommt vielleicht &lt;a class="reference external" href="http://www.heise.de/mobil/meldung/Playstation-Smartphone-kommt-im-Maerz-1188656.html"&gt;Sony Ericsson mit seinem
+Playstation-Telefon&lt;/a&gt; als Star der Android-Szene wieder zu Ruhm und
+Ehre. Und ich als XBox-Besitzer und Windows-Home-Server-Schaulustiger
+werde dann auch nicht lange zögern, und zu einem (billigen) Nokia-Handy
+greifen, wenn die Akku-Laufzeit mal stimmt. Das ganze Gerede über Apps
+verkommt mehr und mehr zu einer großen Werbekampagne, Geld macht derweil
+der&amp;nbsp;Spieleentwickler.&lt;/p&gt;
+&lt;p&gt;Symbian und dem ganzen Ovi-Kram muss man dann auch keinerlei Träne
+hinterher weinen. Ein bisserl Schade ist es dagegen um MeeGo, aber ganz
+ehrlich: von Technik und Bedienung erinnert mich MeeGo immer noch sehr
+an mein erstes Redhat-Linux, dass ich noch im letzten Jahrtausend auf
+meinem Rechner installierte. Dual-Boot mit Windows? Dist-Upgrade?
+Fehlanzeige. Die ganze Fummelei, bis es auch nur halbwegs so
+funktioniert, wie man sich das vorstellt: Nein, danke. Mittlerweile gibt
+es Ubuntu und eine Reihe anderer schicker Distributionen, da kann MeeGo
+nicht einmal annähernd mithalten. Auch wenn Intel jetzt in Aktionismus
+verfällt (14 Blogeinträge an einem Tag im AppUp-Developer-Program-Blog;
+so viele Informationen über die Vorteile von MeeGo hätten wir uns doch
+früher schon gewünscht, nicht, Intel?), das Projekt wird definitiv
+sterben. Sei&amp;#8217;s&amp;nbsp;drum.&lt;/p&gt;
+&lt;p&gt;Im Moment findet ihr mich aber dann erst einmal auf WebOS. Seit
+Weihnachten bin ich stolzer Besitzer eines Palm Pixi Plus, und ich muss
+sagen: das beste Telefon, das ich seit langer Zeit in der Hand hielt.
+Das Bedienkonzept ist innovativ und nach kurzer Einarbeitungszeit
+erlernt, trotz schwacher Hardware fühlt es sich nicht halb so lahm an
+wie mein Nokia X6, und der E-Mail-Client ist der Beste, den ich je auf
+einem Handgerät vorgefunden habe. Wenn ich jetzt mit meinem iPod Touch
+E-Mails abrufe, ärgere ich mich manchmal sogar ein bisschen über die
+schlechte Bedienbarkeit&amp;#8230; Dazu sieht das Handy schick aus, ist klein
+und leicht, dazu sehr günstig, und naja, die Akkulaufzeit ist so
+einigermaßen akzeptabel. Wenn man das &lt;span class="caps"&gt;WLAN&lt;/span&gt; nicht nutzt. Und Samba läuft
+bei mir auch schon drauf, dank &lt;a class="reference external" href="http://preware.org/"&gt;gut gepflegten Open-Source-Repository&lt;/a&gt;.
+Allen Maemo- und MeeGo-Fans sei deswegen der Umstieg auf WebOS wärmstens
+ans Herz gelegt, im Moment die wohl offenste, mobile Plattform mit
+&lt;a class="reference external" href="http://www.heise.de/mobil/meldung/10-Zoll-Tablet-und-neue-Smartphones-mit-WebOS-1185225.html"&gt;guten Zukunfts-Aussichten&lt;/a&gt;. Und &lt;a class="reference external" href="http://www.griffin.net/2010/02/qt-on-the-palm-pre.html"&gt;Qt gibt&amp;#8217;s dafür auch schon&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Was machen wir aber nun hier, mit dieser Seite? &amp;#8220;Mobiles Qt&amp;#8221; hat sich
+wohl erst einmal erledigt. Ich dachte daran, &lt;a class="reference external" href="http://dasskript.blogspot.com/"&gt;meinen alten Blog über
+Skriptsprachen&lt;/a&gt; hier weiter zu führen, und somit auch das Forum und das
+Wiki umzuwidmen. Um etwas Kontinuität zu wahren, wird ein Schwerpunkt
+erst einmal &lt;a class="reference external" href="http://www.riverbankcomputing.co.uk/software/pyqt/intro"&gt;PyQt&lt;/a&gt; (und evtl. &lt;a class="reference external" href="http://www.pyside.org/"&gt;PySide&lt;/a&gt;?) sein. Aber auch Python im
+Allgemeinen, sowie Perl und Ruby sollen gebührende Aufmerksamkeit
+erhalten. Wenn ich schon keine Qt-App mehr verkaufen kann, dann wechsle
+ich wenigsten von C++ wieder in die heimischen Gefilde der Skripterei.
+Stay&amp;nbsp;tuned!&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Des Kaisers neue Kleider</title><link href="http://www.peterbouda.eu/des-kaisers-neue-kleider.html" rel="alternate"></link><published>2011-02-10T16:00:00+00:00</published><updated>2011-02-10T16:00:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-02-10:/des-kaisers-neue-kleider.html</id><summary type="html">&lt;p&gt;Also nun wird es morgen tatsächlich spannend, wenn der Herr Elop uns die
+neue Strategie von Nokia erklärt. Soviel Aufmerksamkeit hatte in letzter
+Zeit nicht einmal der Herr Jobs und seine Apfelfirma, und dann kommt
+&amp;#8220;zufällig&amp;#8221; noch &lt;a class="reference external" href="http://www.heise.de/newsticker/meldung/Nokia-Chef-Unsere-Plattform-brennt-1186007.html"&gt;ein Schreiben an die Nokia-Mitarbeiter&lt;/a&gt; mit allerlei
+Herumgedruckse ums Konkrete ans&amp;nbsp;Tageslicht&amp;#8230;?&lt;/p&gt;
+&lt;p&gt;Wenn …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Also nun wird es morgen tatsächlich spannend, wenn der Herr Elop uns die
+neue Strategie von Nokia erklärt. Soviel Aufmerksamkeit hatte in letzter
+Zeit nicht einmal der Herr Jobs und seine Apfelfirma, und dann kommt
+&amp;#8220;zufällig&amp;#8221; noch &lt;a class="reference external" href="http://www.heise.de/newsticker/meldung/Nokia-Chef-Unsere-Plattform-brennt-1186007.html"&gt;ein Schreiben an die Nokia-Mitarbeiter&lt;/a&gt; mit allerlei
+Herumgedruckse ums Konkrete ans&amp;nbsp;Tageslicht&amp;#8230;?&lt;/p&gt;
+&lt;p&gt;Wenn das alles von langer Hand geplant ist, dann müsste Herr Elop morgen
+eigentlich ein fertiges Gerät aus der Tasche ziehen. &amp;#8220;We will ship on
+Monday&amp;#8221;, das wär was. Ob&amp;#8217;s dann MeeGo, Windows oder Gummistiefel sind,
+das ist mir in dann eigentlich&amp;nbsp;Wurscht&amp;#8230;&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Stand der Dinge</title><link href="http://www.peterbouda.eu/stand-der-dinge.html" rel="alternate"></link><published>2011-02-01T12:42:00+00:00</published><updated>2011-02-01T12:42:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-02-01:/stand-der-dinge.html</id><summary type="html">&lt;p&gt;Da ich im Moment beruflich etwas eingespannt bin hier nur kurz eine
+Zusammenfassung, was sich an der Qt- und Nokia-Front so tut. Mit dem
+üblichen Geläster,&amp;nbsp;natürlich:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Vorletzte Woche schon gab es das erste &lt;a class="reference external" href="http://labs.qt.nokia.com/2011/01/20/qt-sdk-1-1-technology-preview-released/"&gt;Technical Preview des
+nächsten Qt &lt;span class="caps"&gt;SDK&lt;/span&gt; 1.1&lt;/a&gt;. Naja, bei einem &lt;span class="caps"&gt;TP&lt;/span&gt; bin ich immer erst …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Da ich im Moment beruflich etwas eingespannt bin hier nur kurz eine
+Zusammenfassung, was sich an der Qt- und Nokia-Front so tut. Mit dem
+üblichen Geläster,&amp;nbsp;natürlich:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Vorletzte Woche schon gab es das erste &lt;a class="reference external" href="http://labs.qt.nokia.com/2011/01/20/qt-sdk-1-1-technology-preview-released/"&gt;Technical Preview des
+nächsten Qt &lt;span class="caps"&gt;SDK&lt;/span&gt; 1.1&lt;/a&gt;. Naja, bei einem &lt;span class="caps"&gt;TP&lt;/span&gt; bin ich immer erst einmal
+skeptisch, aber nach ersten Versuchen scheint es schon auf dem
+richtigen Weg zu sein. Vor allem die Integration zum Kompilieren und
+Paketbauen schreitet voran, und das will man doch definitiv sehen.
+Weiter&amp;nbsp;so!&lt;/li&gt;
+&lt;li&gt;Die Weiterentwicklung der hier in letzer Zeit oft erwähnten &lt;a class="reference external" href="http://labs.qt.nokia.com/2011/01/31/well-be-right-back/"&gt;Qt
+Components findet ab sofort hinter geschlossenen Türen statt&lt;/a&gt;. Weil
+jetzt wird halt das nächste Super-Duper-&lt;span class="caps"&gt;UI&lt;/span&gt; entwickelt, und nicht,
+dass da vorher schon was bekannt wird. Soweit also zur &amp;#8220;Offenheit&amp;#8221;
+des Entwicklungsprozesses. Ich meine: das Nokia ne Firma ist, die ihr
+Zeug gerne schützt, geht klar; aber dann sollte man auch das Umfeld
+professionell behandeln und diese Professionalität auch nach außen
+deutlich machen. Die sogenannte Community ist halt immer nur dann
+gut, wenn sie die Arbeit für einen erledigt, gell,&amp;nbsp;Nokia?&lt;/li&gt;
+&lt;li&gt;Und dann darf natürlich auch noch die Gerüchteküche nicht fehlen:
+kommt das &lt;a class="reference external" href="http://www.heise.de/mobil/meldung/Nokias-N9-Handy-vermutlich-mit-Intels-Atom-Prozessor-1175073.html"&gt;N9 nun mit Intel-Prozessor&lt;/a&gt;, oder gibt &lt;a class="reference external" href="http://www.heise.de/mobil/meldung/Nokias-neuer-Chef-muss-handeln-1179054.html"&gt;Nokia&amp;#8217;s Herr Elop
+nächste Woche doch den Strategiewechsel bekannt&lt;/a&gt;? Meiner Ansicht
+nach deuten zumindest bei Letzterem alle Zeichen auf &amp;#8220;weiter so&amp;#8221;.
+Nokia heuert weiter fleißig Entwickler für MeeGo an und die Qt
+Components sind wie gesagt erst einmal unter Verschluss. Aber man
+weiß ja nie&amp;#8230; Das Gerücht über ein Atom-Innenleben macht da schon
+mehr Sinn, schließlich arbeiten Intel und Nokia mittlerweile auf
+diversen Feldern zusammen. Für Intel wärs ein Glücksgriff, für Nokia
+bleibt&amp;#8217;s abzuwarten. Hoffentlich wird es kein Klotz mit 4 Stunden
+Akkulaufzeit. Auch auf der Softwareseite bin ich eher skeptisch:
+während sowohl Intel als auch Nokia sich in den letzten Jahren ja als
+recht potente Hardwarebauer hervortaten, kann man dies auf der
+Softwareseite wohl kaum behaupten. Nun, vielleicht kann man dann auf
+das Gerät wenigstens einfach ein anderes Betriebssystem installieren,&amp;nbsp;hehe.&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="Museum"></category></entry><entry><title>Ovi-Chaos-Tage, Update</title><link href="http://www.peterbouda.eu/ovi-chaos-tage-update.html" rel="alternate"></link><published>2011-01-20T09:13:00+00:00</published><updated>2011-01-20T09:13:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-01-20:/ovi-chaos-tage-update.html</id><summary type="html">&lt;p&gt;Jetzt wird&amp;#8217;s langsam witzig: nach &lt;a class="reference external" href="http://www.peterbouda.eu/winterchaos-nicht-nur-auf-schienen.html"&gt;dem ganzen Hin und Her die letzten
+Tage&lt;/a&gt; bekomme ich heute folgende E-Mail (und die muss ich hier komplett
+zitieren, sonst glaubt&amp;#8217;s mir ja&amp;nbsp;keiner&amp;#8230;):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Dear publisher,
+
+We have considered the case where end user might bought this content
+when it was in …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;Jetzt wird&amp;#8217;s langsam witzig: nach &lt;a class="reference external" href="http://www.peterbouda.eu/winterchaos-nicht-nur-auf-schienen.html"&gt;dem ganzen Hin und Her die letzten
+Tage&lt;/a&gt; bekomme ich heute folgende E-Mail (und die muss ich hier komplett
+zitieren, sonst glaubt&amp;#8217;s mir ja&amp;nbsp;keiner&amp;#8230;):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Dear publisher,
+
+We have considered the case where end user might bought this content
+when it was in maemo content type and will be unable to re-download the
+same content for free after migration of content, we decide to not go
+ahead with the migration of Maemo to Qt. Therefore, this content will be
+left in edit mode. Please do not modify or change this Qt content.
+
+Regards,
+
+Ovi publisher support
+&lt;/pre&gt;
+&lt;p&gt;Kommando (halb) zurück, also. Das Chaos in meinem Account räumt mir aber
+wohl keiner&amp;nbsp;auf.&lt;/p&gt;
+&lt;p&gt;Hier, Nokia, mein Vorschlag für die nächste Mail, zwecks eurem&amp;nbsp;Handy-Ausschuss:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Dear customer,
+
+We have considered the case where end user might bought this device and
+will be unable to use it and be dissatisfied, we decided not to ahead
+with the production of mobile phones. Therefore, we will only build
+tires, rubber boots and raincoats again, from now.
+
+Regards,
+
+Ovi Tyres Support
+&lt;/pre&gt;
+&lt;p&gt;Lustig,&amp;nbsp;oder?&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Winterchaos nicht nur auf Schienen</title><link href="http://www.peterbouda.eu/winterchaos-nicht-nur-auf-schienen.html" rel="alternate"></link><published>2011-01-17T13:01:00+00:00</published><updated>2011-01-17T13:01:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-01-17:/winterchaos-nicht-nur-auf-schienen.html</id><summary type="html">&lt;p&gt;Im Ovi-Store herrscht weiter Chaos: anscheinend hat Nokia alle (alten)
+Qt-Anwendungen jetzt automatisch in eine eigene Kategorie geschoben.
+Natürlich unangekündigt. Ich habe für alle Anwendungen zuerst folgende
+E-Mail&amp;nbsp;bekommen:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Thank you for submitting qbible.
+
+This item is now going through our quality assurance (QA) process.
+&lt;/pre&gt;
+&lt;p&gt;Wohlgemerkt: für Anwendungen, die schon …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Im Ovi-Store herrscht weiter Chaos: anscheinend hat Nokia alle (alten)
+Qt-Anwendungen jetzt automatisch in eine eigene Kategorie geschoben.
+Natürlich unangekündigt. Ich habe für alle Anwendungen zuerst folgende
+E-Mail&amp;nbsp;bekommen:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Thank you for submitting qbible.
+
+This item is now going through our quality assurance (QA) process.
+&lt;/pre&gt;
+&lt;p&gt;Wohlgemerkt: für Anwendungen, die schon seit Monaten im Store sind. Da
+freut man sich doch, dass die Anwendungen wieder in die &lt;span class="caps"&gt;QA&lt;/span&gt; kommen. Erst
+hinterher (!) klärt Nokia dann, in einer weiteren Mail ein paar Tage
+später,&amp;nbsp;auf:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+We have migrated the Maemo content below to Qt content and we will
+unpublish the Maemo content shortly.
+&lt;/pre&gt;
+&lt;p&gt;Langsam ist&amp;#8217;s wohl der Mühe nicht mehr wert aber: das ist doch keine Art
+und Weise, mit seinen Entwicklern umzugehen! Da ist einfach keine
+Besserung in Sicht. Im Zuge der Umstellung wurden außerdem meine
+Softwarepakete munter zwischen verschiedenen Anwendungen hin und her
+geschoben, so dass ich mir jetzt erst einmal wieder Überblick über meine
+(!) Anwendungen verschaffen muss. Von Kommunikation und Aufklärung hält
+Nokia einfach gar nichts. Den Support werde ich erst gar nicht
+anschreiben, da die Antwort sowieso wieder Tage auf sich warten lassen
+wird und dann ein Textblock sein&amp;nbsp;wird.&lt;/p&gt;
+&lt;p&gt;Schließlich kriege ich jetzt bei fast jeder Anwendung einen Hinweis über
+&amp;#8220;invalid metadata&amp;#8221;, wobei ich nach intensivem Studium noch nicht
+Herausfinden konnte, um welche Metadaten es eigentlich geht. Dafür hat
+Nokia vorsichtshalber mal gleich das Paket aus dem Store genommen. Geil!
+Dann kann ich mit der Veröffentlichung meiner (!) Software mal wieder
+von vorn anfangen&amp;#8230; Ich lass es jetzt aber bleiben und warte erst
+einmal ab, ob Nokia irgendwann einen brauchbaren Stand erreichen wird.
+Daran glaube ich aber nicht mehr. Ich könnte hier noch eine Reihe
+weiterer Probleme im und mit dem Ovi Store in den letzten Wochen
+auflisten, aber dann reg ich mich nur wieder auf, und das soll ja
+schlecht für die Gesundheit&amp;nbsp;sein.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nokia, du hast mittlerweile mehr als ein ernsthaftes Problem, vom
+Zustand bei der Hard- und Softwareentwicklung deiner Mobiltelefone sogar
+mal ganz&amp;nbsp;abgesehen.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Fall jemand Bock drauf hat: ich wette hiermit, dass ich mit mindestens
+noch einem Entwickler-Mitstreiter innerhalb eines halben Jahres einen
+funktionieren Alternativ-Store für Qt-Anwendungen auf die Beine stellen
+kann. Mit freien und kommerziellen Apps, internationalem und
+funktionierendem Bezahlsystem, funktionierender &lt;span class="caps"&gt;GUI&lt;/span&gt;, gutem Support und
+Ankündigungen bei Änderungen. Einen Anti-Ovi-Store. Bei Interesse
+einfach hier&amp;nbsp;melden.&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;PS&lt;/span&gt;: Ich musste es gerade noch einmal mit eigenen Augen überprüfen: mein
+C7 ist jetzt tatsächlich seit 27.11.2010 bei Nokia Care. Weißt du was,
+Nokia: wenn dir das Handy so gut gefällt, dann behalt es doch einfach.
+So begeistert hat&amp;#8217;s mich nämlich nicht. Natürlich hätt ich gern die fast
+400 Euro zurück, aber bevor ich mich immer weiter&amp;nbsp;aufrege&amp;#8230;&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Qt-Quick-/QML-Tutorial</title><link href="http://www.peterbouda.eu/qt-quick-qml-tutorial.html" rel="alternate"></link><published>2011-01-11T13:01:00+00:00</published><updated>2011-01-11T13:01:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-01-11:/qt-quick-qml-tutorial.html</id><summary type="html">&lt;p&gt;Nach dem ganzen (natürlich berechtigtem) Genöhle in Richtung Nokia hier
+in letzter Zeit soll natürlich die Hauptsache dieses Blogs nicht aus den
+Augen verloren werden: Qt-Programmierung! Spaß macht&amp;#8217;s ja trotzdem, und
+vielleicht kann man es ja doch mal wieder brauchen, hehe. Deswegen habe
+ich mich mal an Qt Quick …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Nach dem ganzen (natürlich berechtigtem) Genöhle in Richtung Nokia hier
+in letzter Zeit soll natürlich die Hauptsache dieses Blogs nicht aus den
+Augen verloren werden: Qt-Programmierung! Spaß macht&amp;#8217;s ja trotzdem, und
+vielleicht kann man es ja doch mal wieder brauchen, hehe. Deswegen habe
+ich mich mal an Qt Quick und &lt;span class="caps"&gt;QML&lt;/span&gt;-Programmierung gewagt, und für euch
+gleich ein kleines Tutorial dazu&amp;nbsp;erstellt:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.mobileqt.de/wiki/einfuehrung_in_qt_quick_und_qml_hallo_rss"&gt;Einführung in Qt Quick und &lt;span class="caps"&gt;QML&lt;/span&gt;: Hallo &lt;span class="caps"&gt;RSS&lt;/span&gt;!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Meine erstes Fazit: &lt;span class="caps"&gt;QML&lt;/span&gt; macht auf Anhieb erst einmal Spaß. Man hat viele
+Freiheiten und kann Anwendungen endlich mal ohne Einschränkung so
+gestalten, wie man sich das vorstellt. Bald stellt sich aber auch Frust
+ein: um das tatsächlich genau so hinzubekommen, ist schon viel Fummelei
+nötig, und die vorhandene Dokumenation hilft einem nur begrenzt weiter,
+vor allem wenn es ans Eingemachte geht. Ich habe im Tutorial auch auf
+das &lt;a class="reference external" href="http://qt.gitorious.org/qt-components"&gt;Qt-Components-Projekt&lt;/a&gt; hingewiesen, das vielleicht Abhilfe
+schafft. Wenn man sich die Komponenten aber genau anschaut, dann sieht
+das alles noch nicht besonders schick aus, und irgendwas Spannendes und
+Neues ist da auch nicht in Sichtweite. Mal wieder:&amp;nbsp;Abwarten&amp;#8230;&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>MeeGo 2011</title><link href="http://www.peterbouda.eu/meego-2011.html" rel="alternate"></link><published>2011-01-06T09:52:00+00:00</published><updated>2011-01-06T09:52:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-01-06:/meego-2011.html</id><summary type="html">&lt;p&gt;Erst einmal an dieser Stelle ein &lt;strong&gt;frohes Neues Jahr&lt;/strong&gt; an all die
+unerschrockenen Leser von mobileqt.de! Die &lt;span class="caps"&gt;CES&lt;/span&gt; läuft mittlerweile und
+alle (zumindest: ich) warten gespannt auf MeeGo-Ankündigungen&amp;#8230; besser
+gesagt: -Geräte. Wenn ich raten dürfte, für welches System es im Jahr
+2010 die meisten Ankündigungen gegeben hat, ohne dass …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Erst einmal an dieser Stelle ein &lt;strong&gt;frohes Neues Jahr&lt;/strong&gt; an all die
+unerschrockenen Leser von mobileqt.de! Die &lt;span class="caps"&gt;CES&lt;/span&gt; läuft mittlerweile und
+alle (zumindest: ich) warten gespannt auf MeeGo-Ankündigungen&amp;#8230; besser
+gesagt: -Geräte. Wenn ich raten dürfte, für welches System es im Jahr
+2010 die meisten Ankündigungen gegeben hat, ohne dass man dann je wieder
+davon gehört hätte, dann würde ich ohne zu zögern laut &amp;#8220;MeeGo!&amp;#8221;
+schreien. Davon haben wir eigentlich erst einmal genug, also bitte:
+keine weiteren Ankündigungen mehr, her mit der Hard- und&amp;nbsp;Software.&lt;/p&gt;
+&lt;p&gt;Dazu passend gleich Nachdenkliches zum Jahresanfang, auf das nach
+schwindenden Hoffnungen in 2011 doch noch positive Überraschungen auf
+uns&amp;nbsp;warten:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.linux-mag.com/id/7929"&gt;MeeGo’s Community Woes: Improvement in&amp;nbsp;2011?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.techeye.net/software/nokias-meego-is-doomed"&gt;Nokia&amp;#8217;s MeeGo is&amp;nbsp;doomed&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Beiden Artikeln kann ich mich größtenteils anschließen, wobei ich das
+Ganze aus der Perspektive eines Anwendungsentwicklers sehe. &lt;span class="caps"&gt;OSS&lt;/span&gt; schön
+und gut, aber Geld zu verdienen mit Software macht auch Spaß. Und der
+Zustand des AppUp- bzw. Ovi-Stores wurde in den Artikeln ja noch gar
+nicht mal erwähnt. Ein&amp;nbsp;Trauerspiel.&lt;/p&gt;
+&lt;p&gt;Soll ich daraus nun ein &lt;em&gt;ceterum censeo&lt;/em&gt; machen? Wenn&amp;#8217;s denn sein muss:
+&amp;#8220;Im Übrigen bin ich der Meinung, dass &lt;a class="reference external" href="http://www.heise.de/newsticker/meldung/Naechste-Windows-Version-Ueber-den-x86-Tellerrand-1164192.html"&gt;Microsoft derzeit alles richtig
+macht&lt;/a&gt; und bald der wichtigste Konkurrent für Apple und Google sein
+wird.&amp;#8221; Sogar Webdienste können die einigermaßen,&amp;nbsp;gell?&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>König Microsoft</title><link href="http://www.peterbouda.eu/konig-microsoft.html" rel="alternate"></link><published>2010-12-21T09:18:00+00:00</published><updated>2010-12-21T09:18:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-12-21:/konig-microsoft.html</id><summary type="html">&lt;p&gt;Unter den Blinden ist der Einäugige König, sagt man so schön. Und im
+Moment ist, dank Windows Phone 7, Microsoft wohl zum König bei den
+nicht-so-sehr-im-Vordergrund-stehenden Anbietern mobiler Betriebssysteme
+für Smartphones avanciert. Gestern wurden wieder mal &lt;a class="reference external" href="http://www.teltarif.de/nokia-windows-phone-7-smartphone/news/41048.html"&gt;Gerüchte laut&lt;/a&gt;,
+dass demnächst auch Nokia Geräte mit dem &lt;span class="caps"&gt;MS&lt;/span&gt;-System bauen könnte. Das …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Unter den Blinden ist der Einäugige König, sagt man so schön. Und im
+Moment ist, dank Windows Phone 7, Microsoft wohl zum König bei den
+nicht-so-sehr-im-Vordergrund-stehenden Anbietern mobiler Betriebssysteme
+für Smartphones avanciert. Gestern wurden wieder mal &lt;a class="reference external" href="http://www.teltarif.de/nokia-windows-phone-7-smartphone/news/41048.html"&gt;Gerüchte laut&lt;/a&gt;,
+dass demnächst auch Nokia Geräte mit dem &lt;span class="caps"&gt;MS&lt;/span&gt;-System bauen könnte. Das
+wäre natürlich ein ganz schöner Hammer, und würde die bisherige
+Strategie von Nokia komplett über den Haufen schmeißen. Aber was tut man
+nicht alles, wenn man verzweifelt ist&amp;#8230; wobei ich Windows Phone samt
+Programmierung mit Silverlight für ein äußerst spannendes Stück Technik
+halte, wie ja schon auf der einen oder anderen Seite hier aufblitzte.
+Idealerweise stelle ich mir das so vor, dass Qt- und
+Silverlight-Programme sowohl auf Windows Phone als auch auf Symbian
+laufen; MeeGo wäre fein, aber Silverlight für Linux, naja, da würde wohl
+der Teufel Schlittschuhfahren, demnächst. Aber das ist ja schließlich in
+Finnland ganz großer&amp;nbsp;Sport&amp;#8230;&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Linguadict-Wörterbuch im Ovi Store</title><link href="http://www.peterbouda.eu/linguadict-worterbuch-im-ovi-store.html" rel="alternate"></link><published>2010-12-20T09:45:00+00:00</published><updated>2010-12-20T09:45:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-12-20:/linguadict-worterbuch-im-ovi-store.html</id><summary type="html">&lt;p&gt;Jetzt hat es also doch geklappt: die Anwendung &lt;a class="reference external" href="http://store.ovi.com/content/59538"&gt;Linguadict ist im Ovi
+Store verfügbar&lt;/a&gt;! Es ist ein feines, und auch gar nicht kleines
+Wörterbuch, mit über 500.000 Einträgen. Außerdem gibt es zu jedem
+Eintrag eine Sprachausgabe, wobei die Audiodateien von einem Server
+geladen werden. Dafür braucht man also eine …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Jetzt hat es also doch geklappt: die Anwendung &lt;a class="reference external" href="http://store.ovi.com/content/59538"&gt;Linguadict ist im Ovi
+Store verfügbar&lt;/a&gt;! Es ist ein feines, und auch gar nicht kleines
+Wörterbuch, mit über 500.000 Einträgen. Außerdem gibt es zu jedem
+Eintrag eine Sprachausgabe, wobei die Audiodateien von einem Server
+geladen werden. Dafür braucht man also eine Internetverbindung, das
+Wörterbuch selbst ist komplett offline verfügbar. Bisher ist die
+Anwendung nur für das N900&amp;nbsp;erhältlich.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Ovi-Krämerladen</title><link href="http://www.peterbouda.eu/ovi-kramerladen-dasskriptcom.html" rel="alternate"></link><published>2010-12-01T10:51:00+00:00</published><updated>2010-12-01T10:51:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-12-01:/ovi-kramerladen-dasskriptcom.html</id><summary type="html">&lt;p&gt;Ich bin ja von Nokia mittlerweile so einiges gewohnt, durch zahlreichen
+Workarounds für alle möglichen Bugs in Qt und Qt Mobility für Maemo und
+Symbian gestählt, aber was im Moment im Ovi Store passiert übertrifft
+alles Andere bei Weitem. Entgegen meiner Gewohnheit muss ich deswegen in
+diesem Blog meinem Ärger …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ich bin ja von Nokia mittlerweile so einiges gewohnt, durch zahlreichen
+Workarounds für alle möglichen Bugs in Qt und Qt Mobility für Maemo und
+Symbian gestählt, aber was im Moment im Ovi Store passiert übertrifft
+alles Andere bei Weitem. Entgegen meiner Gewohnheit muss ich deswegen in
+diesem Blog meinem Ärger mal Luft machen. Ich hätte mich bisher
+tatsächlich als Nokia-Fan bezeichnet. Mein erstes Handy war von Nokia,
+mein Jetziges sowieso, dazwischen hab ich immer mal wieder andere
+Hersteller ausprobiert, und bin dann reumütig zurückgekehrt. Nokia war
+halt das Beste. Seit einiger Zeit entwickle ich nun auch Software für
+Nokia-Handys, zuerst Java-Anwendungen, dann Qt; denn großer Qt-Fan war
+ich sowieso schon immer. Und so kommt man eben irgendwann auf die Idee,
+dass man ja auch mal eine Anwendung verkaufen möchte, und der Ovi Store
+soll sowas ja unterstützen. Und man hat ja auch schon Anwendungen
+drinnen, die sind nicht so toll, aber hey: die Entwicklung hat Spaß
+gemacht, und ein paar Leut&amp;#8217; laden sie auch runter. Also programmiert man
+fleißig, testet alles konsequent, baut um Bugs herum, und nach
+wochenlanger Arbeit stellt man das Ganze in die &lt;span class="caps"&gt;QA&lt;/span&gt;-Queue bei Ovi
+Publish. Dann heißts warten: 5 Wochen hat&amp;#8217;s gedauert, bis Nokia endlich
+mal soweit war, für eine Anwendung mit exakt einem (in Zahlen: 1)
+Fenster, eine kleine Ewigkeit, während rundherum die tollsten
+Anwendungen für Android und iPhone erscheinen, sogar Microsoft bringt in
+der Zwischenzeit ein mehr als konkurrenzfähiges Betriebssystem auf den
+Markt, der Qt-Entwickler schielt darauf mit neidischen Blicken; trotzdem
+große Freude zuerst, aber dann: irgendein Nokia-Mitarbeiter setzt das
+Veröffentlichungsdatum noch einmal vier Wochen in die Zukunft.
+Kommentarlos. Also eine Mail an den Ovi Publish Support, die Antwort
+dauert nur 3 Tage, erfolgt aber in Form einer Standardmail. Thema
+verfehlt. Also noch eine Mail hinterher, und dieses Mal antwortet
+tatsächlich jemand und&amp;nbsp;sagt:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+After investigating further we found the QA team had indeed change the
+start date to December 1, 2010 as OVI Store Maemo firmware PR1.3 mode
+for N900 is unavailable so instead of failing your app QA team instead
+changed the date till the new firmware PR1.3 is ready. Since QA team
+found your application only works with PR1.3, it cannot be published
+until the store is set to PR1.3 therefore QA team will update the start
+date again on your behalf.
+&lt;/pre&gt;
+&lt;p&gt;Aber Nokia: was genau funktioniert denn nicht? Ich habe alles für &lt;span class="caps"&gt;PR&lt;/span&gt; 1.2
+programmiert, warum sollte es dann nur mit &lt;span class="caps"&gt;PR&lt;/span&gt; 1.3 funktionieren?
+Außerdem ist &lt;span class="caps"&gt;PR&lt;/span&gt; 1.3 doch offiziell erschienen, mittlerweile&amp;#8230;? Diese
+Fragen bleiben offen, nähere Informationen bekommt man nicht. Aber was
+sind schon 4 Wochen für Nokia? Also heißt es noch einmal warten,
+geduldig, bis 1.12., der Tag an dem die Anwendung laut Nokia erscheinen
+soll. Aber was passiert am 30.11.? Das Startdatum wird wieder geändert,
+kommentarlos, auf den 31.12., wieder keine weiteren Informationen für
+den kooperationswilligen Entwickler; verdammt, Nokia: dann sagt mir
+wenigstens, was ich bei der Anwendung korrigieren soll, damit ihr sie in
+den Store aufnehmt! Bei anderen Anwendungen habe ich nichts anderes
+hineinprogrammiert, und die habt ihr ohne Probleme angenommen. Und
+jetzt? Soll ich noch einmal 4 Wochen warten? Und dann noch einmal? Gibt
+es Nokia dann überhaupt&amp;nbsp;noch?&lt;/p&gt;
+&lt;p&gt;Was im Moment bei Nokia los ist, weiß der Teufel. Für mich als
+Entwickler ist es aber mehr als frustrierend, wenn man nicht einmal ein
+vernünftiges Feedback bekommen, um eine einfache Anwendung vernünftig
+für den Ovi Store vorbereiten zu können. Ich habe nichts gegen eine
+strenge &lt;span class="caps"&gt;QA&lt;/span&gt;, gegen ein bisschen Qualität im Laden. Aber sagt doch
+wenigstens, was man tun muss, um in die geheiligten Hallen vorgelassen
+zu werden. Und bestimmt nicht einfach hinter meinem Rücken über meine
+Anwendung. Erst nach dem Login bei Ovi Publish und Blick in die
+Anwendungsdaten habe ich vom geänderten Startdatum erfahren. Das ist
+einfach keine Art und Weise mit Entwicklern für das eigene System
+umzugehen, finde ich. Schließlich nehmt ihr dafür auch noch 30 Prozent,
+da darf man wohl ein bisschen Entgegenkommen&amp;nbsp;erwarten.&lt;/p&gt;
+&lt;p&gt;Der Frust hat sich jetzt schon länger bei mir aufgebaut: die
+&lt;span class="caps"&gt;QA&lt;/span&gt;-Wartezeiten bei Nokia sind katastrophal, mein zu Entwicklungszwecken
+erstandenes C7 funktioniert immer noch nicht, und kein Mensch weiß, wie
+man denn in einem Jahr Software für Nokia-Handys entwicklen wird. Qt
+wird&amp;#8217;s wohl sein, aber die bisherigen Widgets und Layout passen einfach
+nicht zu einem mobilen Betriebssystem, es gibt immer noch keine
+vernünftige Lösung für Portrait-Landscape-Darstellung; &lt;span class="caps"&gt;QML&lt;/span&gt; ist gut, aber
+sollen wir in Zukunft alle Widgets selber malen? Da muss ich noch einmal
+auf Microsoft verweisen, die ein sowohl für Anwender als auch Entwickler
+mehr als innovatives System auf die Beine gestellt hat, dass sich meiner
+Ansicht nach gerade durch eine klare Definition von &lt;span class="caps"&gt;GUI&lt;/span&gt;-Vorgaben mit
+äußerst benutzerfreundlichen und bisher nicht gesehenen Oberflächen und
+technischen Schnittstellen auszeichnet und für das man schon mehr als
+ein halbes Jahr vor Veröffentlichung ein (fast) definitives &lt;span class="caps"&gt;SDK&lt;/span&gt; bekommen
+hat, um seine Anwendungen zu schreiben. So einfach wie Qt, dank
+Silverlight mehr oder weniger plattformunabhängig, technisch dank
+Zugriff auf zahlreichen Web-APIs und Datenmodelle weit voraus und
+trotzdem leicht zu programmieren. Und die restliche Konkurrenz schläft
+ja auch nicht. Nokia, ich habe bisher treu zu dir gehalten, und nichts
+auf dich kommen lassen, aber mal ganz ehrlich: der Glaube, dass du in
+zwei Jahren noch bzw. wieder konkurrenzfähige Mobiltelefone produzieren
+wirst schwindet bedenklich, und das nicht erst mit Blick auf die&amp;nbsp;Konkurrenz.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Neues über Neues</title><link href="http://www.peterbouda.eu/neues-uber-neues.html" rel="alternate"></link><published>2010-11-12T08:52:00+00:00</published><updated>2010-11-12T08:52:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-11-12:/neues-uber-neues.html</id><summary type="html">&lt;p&gt;Diese Woche war aber mal in der Tat eine Woche der Veröffentlichungen.
+Zuerst gabe es eine Reihe von Qt-spezifischen&amp;nbsp;Updates:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://labs.qt.nokia.com/2010/11/09/qt-creator-2-1-beta-2/"&gt;Qt Creator Beta&amp;nbsp;2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://labs.qt.nokia.com/2010/11/09/qt-4-7-1-released/"&gt;Qt&amp;nbsp;4.7.1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://labs.qt.nokia.com/2010/11/09/qt-mobility-1-1-0-released/"&gt;Qt Mobility&amp;nbsp;1.1.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Auf Qt Mobility 1.1 war ich schon gespannt, vor allem die &lt;span class="caps"&gt;API&lt;/span&gt; für Karten
+und Navigation …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Diese Woche war aber mal in der Tat eine Woche der Veröffentlichungen.
+Zuerst gabe es eine Reihe von Qt-spezifischen&amp;nbsp;Updates:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://labs.qt.nokia.com/2010/11/09/qt-creator-2-1-beta-2/"&gt;Qt Creator Beta&amp;nbsp;2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://labs.qt.nokia.com/2010/11/09/qt-4-7-1-released/"&gt;Qt&amp;nbsp;4.7.1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://labs.qt.nokia.com/2010/11/09/qt-mobility-1-1-0-released/"&gt;Qt Mobility&amp;nbsp;1.1.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Auf Qt Mobility 1.1 war ich schon gespannt, vor allem die &lt;span class="caps"&gt;API&lt;/span&gt; für Karten
+und Navigation probier ich bald mal aus. Und: Es gibt jetzt auch
+&lt;span class="caps"&gt;QML&lt;/span&gt;-Bindings für die mobilen Schnittstellen. Die Zukunft bei Qt ist
+definitiv &lt;span class="caps"&gt;QML&lt;/span&gt;, das kann man gar nicht oft genug&amp;nbsp;wiederholen.&lt;/p&gt;
+&lt;p&gt;Außerdem, lange erwartet, jetzt ist es da: &lt;a class="reference external" href="http://meego.com/community/blogs/veli/2010/meego-1.1-sdk-beta-release"&gt;eine Beta des MeeGo-&lt;span class="caps"&gt;SDK&lt;/span&gt;&lt;/a&gt;!
+Es unterstützt die Entwicklung für die MeeGos auf Netbooks, N900 und
+Aava. Es gibt viel Herunterzuladen, also auf ans&amp;nbsp;Werk!&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>N900, Bluetooth und Arduino</title><link href="http://www.peterbouda.eu/n900-bluetooth-und-arduino.html" rel="alternate"></link><published>2010-11-09T09:01:00+00:00</published><updated>2010-11-09T09:01:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-11-09:/n900-bluetooth-und-arduino.html</id><content type="html">&lt;p&gt;Das hat mit Qt direkt zwar nix zu tun, aber ich hab mal ein bisschen mit
+einem Arduino-Board herumgespielt, um Daten per Bluetooth mit dem N900
+austauschen; und &lt;a class="reference external" href="http://peterbouda.blogspot.com/2010/11/arduino-and-n900.html"&gt;das ist dabei herausgekommen&lt;/a&gt;. Ein ordentliches Linux
+auf dem Mobiltelefon zu haben kann schon Vorteile&amp;nbsp;haben.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Ein herbstliches Hallo, MeeGo 1.1</title><link href="http://www.peterbouda.eu/ein-herbstliches-hallo-meego-11.html" rel="alternate"></link><published>2010-10-30T13:53:00+01:00</published><updated>2010-10-30T13:53:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-10-30:/ein-herbstliches-hallo-meego-11.html</id><summary type="html">&lt;p&gt;Letzte Woche wurde, wie geplant, &lt;a class="reference external" href="http://meego.com/community/blogs/valhalla/2010/meego-1.1-release"&gt;MeeGo in Version 1.1 zum Download
+bereit gestellt&lt;/a&gt;. Nun gibt es also drei offizielle Varianten:
+In-Vehicle Infotainment (&lt;span class="caps"&gt;IVI&lt;/span&gt;), Handset und Netbook, jeweils als &amp;#8220;User
+Experience&amp;#8221; (&lt;span class="caps"&gt;UX&lt;/span&gt;). Die Handset &lt;span class="caps"&gt;UX&lt;/span&gt; lässt sich mit der &lt;a class="reference external" href="http://www.mobileqt.de/blogposts/70"&gt;neuen Firmware &lt;span class="caps"&gt;PR&lt;/span&gt;
+1.3&lt;/a&gt; als Dual-Boot auf dem N900 installieren …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Letzte Woche wurde, wie geplant, &lt;a class="reference external" href="http://meego.com/community/blogs/valhalla/2010/meego-1.1-release"&gt;MeeGo in Version 1.1 zum Download
+bereit gestellt&lt;/a&gt;. Nun gibt es also drei offizielle Varianten:
+In-Vehicle Infotainment (&lt;span class="caps"&gt;IVI&lt;/span&gt;), Handset und Netbook, jeweils als &amp;#8220;User
+Experience&amp;#8221; (&lt;span class="caps"&gt;UX&lt;/span&gt;). Die Handset &lt;span class="caps"&gt;UX&lt;/span&gt; lässt sich mit der &lt;a class="reference external" href="http://www.mobileqt.de/blogposts/70"&gt;neuen Firmware &lt;span class="caps"&gt;PR&lt;/span&gt;
+1.3&lt;/a&gt; als Dual-Boot auf dem N900 installieren; eine Aufgabe für den
+nächsten freien Tag&amp;#8230; Laut &lt;a class="reference external" href="http://www.heise.de/newsticker/meldung/MeeGo-1-1-fuer-Netbooks-IVIs-und-Handset-freigegeben-1127238.html"&gt;heise.de&lt;/a&gt; soll wohl eine Beta des &lt;span class="caps"&gt;SDK&lt;/span&gt; im
+Netbook-Image sein, mit der sich Qt-Programme für MeeGo entwickeln
+lassen, die finale Version wird für die MeeGo-Konferenz im November
+erwartet. Außerdem, rein spekulativ: für MeeGo 1.2 könnte eine
+Tablet-&lt;span class="caps"&gt;UX&lt;/span&gt;-Variante kommen. Da sollte doch das Wetab eine geeignete
+Hardware-Basis sein,&amp;nbsp;oder?&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>PR 1.3 ist da!</title><link href="http://www.peterbouda.eu/pr-13-ist-da.html" rel="alternate"></link><published>2010-10-25T12:16:00+01:00</published><updated>2010-10-25T12:16:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-10-25:/pr-13-ist-da.html</id><summary type="html">&lt;p&gt;Die erste Meldung über die Veröffentlichung der neuen Firmware &lt;span class="caps"&gt;PR&lt;/span&gt; 1.3
+fürs N900 kommt gerade rein: &lt;a class="reference external" href="http://thehandheldblog.com/2010/10/25/nokia-n900-pr-1-3-firmware-now-available/"&gt;in Großbritannien scheint sie schon
+Over-The-Air verteilt zu werden&lt;/a&gt;. Weitere Länder folgen, heißt: den
+Programmmanager starten und ab sofort in regelmäßigen Abständen auf
+&amp;#8220;Aktualisieren&amp;#8221; klicken. Qt 4.7 ist dann wohl auf jedem …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Die erste Meldung über die Veröffentlichung der neuen Firmware &lt;span class="caps"&gt;PR&lt;/span&gt; 1.3
+fürs N900 kommt gerade rein: &lt;a class="reference external" href="http://thehandheldblog.com/2010/10/25/nokia-n900-pr-1-3-firmware-now-available/"&gt;in Großbritannien scheint sie schon
+Over-The-Air verteilt zu werden&lt;/a&gt;. Weitere Länder folgen, heißt: den
+Programmmanager starten und ab sofort in regelmäßigen Abständen auf
+&amp;#8220;Aktualisieren&amp;#8221; klicken. Qt 4.7 ist dann wohl auf jedem aktualisierten
+N900 drauf, samt Qt-Quick- und &lt;span class="caps"&gt;QML&lt;/span&gt;-Unterstützung.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Hier nun auch der Beitrag im Qt-Blog, über Qt 4.7 auf dem&amp;nbsp;N900:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://blog.qt.nokia.com/2010/10/25/qt-4-7-now-being-deployed-to-nokia-n900s/"&gt;Qt 4.7 now being deployed to Nokia&amp;nbsp;N900s&lt;/a&gt;&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Auf (Nimmer?)Wiedersehen, Symbian</title><link href="http://www.peterbouda.eu/auf-nimmerwiedersehen-symbian.html" rel="alternate"></link><published>2010-10-25T11:13:00+01:00</published><updated>2010-10-25T11:13:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-10-25:/auf-nimmerwiedersehen-symbian.html</id><summary type="html">&lt;p&gt;Mittlerweile &lt;a class="reference external" href="http://www.heise.de/newsticker/meldung/Nokia-will-nur-noch-Qt-und-HTML5-Anwendungen-1124446.html"&gt;pfeifen es die Spatzen von den Dächern&lt;/a&gt;: die Zukunft von
+Symbian scheint ungewisser den je. Nachdem sich Samsung schon seit
+längerem &lt;a class="reference external" href="http://www.heise.de/mobil/meldung/Kein-Symbian-mehr-bei-Samsung-1099923.html"&gt;von Symbian verabschiedet hat&lt;/a&gt;, Sony Ericsson noch letzten
+Monat &lt;a class="reference external" href="http://www.heise.de/mobil/meldung/Bericht-Sony-Ericsson-gibt-Symbian-auf-1097300.html"&gt;angekündigt hat&lt;/a&gt; keine Symbian-Handys mehr zu bauen, scheint nun
+auch Nokia die Plattform langsam aufzugeben und komplett auf MeeGo …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Mittlerweile &lt;a class="reference external" href="http://www.heise.de/newsticker/meldung/Nokia-will-nur-noch-Qt-und-HTML5-Anwendungen-1124446.html"&gt;pfeifen es die Spatzen von den Dächern&lt;/a&gt;: die Zukunft von
+Symbian scheint ungewisser den je. Nachdem sich Samsung schon seit
+längerem &lt;a class="reference external" href="http://www.heise.de/mobil/meldung/Kein-Symbian-mehr-bei-Samsung-1099923.html"&gt;von Symbian verabschiedet hat&lt;/a&gt;, Sony Ericsson noch letzten
+Monat &lt;a class="reference external" href="http://www.heise.de/mobil/meldung/Bericht-Sony-Ericsson-gibt-Symbian-auf-1097300.html"&gt;angekündigt hat&lt;/a&gt; keine Symbian-Handys mehr zu bauen, scheint nun
+auch Nokia die Plattform langsam aufzugeben und komplett auf MeeGo
+umzuschwenken. Bisher hat Nokia ja eigentlich drei Geräteklassen
+vorgesehen, wobei Symbian sozusagen die Mittelklasse darstellt. Davon
+scheint man nun abzukommen, was zunächst durchaus Sinn macht.
+Schließlich entwickelt man sowieso alles in Qt, und dieses auf zwei
+Plattformen zu pflegen macht halt einfach doppelte Arbeit. Bei einer
+Sache muss Nokia aber nun nachlegen: ich benutze immer noch Symbian,
+einfach weil ich keine Lust habe mein Handy jeden Tag aufzuladen (bzw.
+besser gesagt: jeden Tag daran denken zu müssen&amp;#8230;). Wer viel
+telefoniert wird mit dem N900 kaum durch den ganzen Tag kommen, ohne
+zwischendrin aufzutanken. Das iPhone und auch einige Android-Geräte
+hängen bei der Akkulaufzeit die Latte mittlerweile recht hoch, die Nokia
+bisher nur mit Symbian-Geräten locker überspringt. Insofern bin ich nun
+umso mehr auf das N9 gespannt, wann immer es denn auch kommt. Die Frage
+ist: Schafft es Nokia, ein auch für den Otto-Normal-Verbraucher
+konkurrenzfähiges Smartphone auf den Markt zu bringen? Für
+(Open-Source-)Entwickler und Linux-Fans ist Maemo sowieso ungeschlagen,
+aber MeeGo muss definitiv für die Masse attraktiver&amp;nbsp;werden.&lt;/p&gt;
+&lt;p&gt;&lt;script type="text/javascript"&gt;&lt;/p&gt;&lt;p&gt;var flattr_uid =&amp;nbsp;'12306';&lt;/p&gt;&lt;p&gt;var flattr_tle = 'Auf (Nimmer?)Wiedersehen,&amp;nbsp;Symbian';&lt;/p&gt;&lt;p&gt;var flattr_dsc = 'Mittlerweile pfeifen es die Spatzen von den Dächern: die Zukunft von Symbian scheint ungewisser den je. Nachdem sich Samsung schon seit längerem von Symbian verabschiedet hat, Sony Ericsson noch&amp;nbsp;letz...';&lt;/p&gt;&lt;p&gt;var flattr_cat =&amp;nbsp;'text';&lt;/p&gt;&lt;p&gt;var flattr_lng =&amp;nbsp;'de_DE';&lt;/p&gt;&lt;p&gt;var flattr_tag = 'Symbian, MeeGo,&amp;nbsp;Roadmap';&lt;/p&gt;&lt;p&gt;var flattr_url =&amp;nbsp;'http://www.dasskript.com/blogposts/69';&lt;/p&gt;&lt;p&gt;var flattr_btn =&amp;nbsp;'compact';&lt;/p&gt;&lt;p&gt;&lt;/script&gt;&lt;/p&gt;&lt;p&gt;&lt;script src="http://api.flattr.com/button/load.js" type="text/javascript"&gt;&lt;/script&gt;&lt;/p&gt;&lt;/p&gt;</content><category term="Museum"></category></entry><entry><title>MeeGo auf dem N900</title><link href="http://www.peterbouda.eu/meego-auf-dem-n900.html" rel="alternate"></link><published>2010-10-14T07:50:00+01:00</published><updated>2010-10-14T07:50:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-10-14:/meego-auf-dem-n900.html</id><summary type="html">&lt;p&gt;Jetzt wirds langsam ernst: diesen Monat soll ja noch MeeGo in Version
+1.1 erscheinen, und dann auch gleich in einer ersten offiziellen
+Handset-&lt;span class="caps"&gt;UX&lt;/span&gt;-Version. Die wird erst einmal nur auf dem N900 laufen, und da
+berichtet &lt;a class="reference external" href="http://meego.com/community/blogs/harrihakulinen/2010/meego-calling-n900"&gt;Harri Hakulinen von großen Fortschritten&lt;/a&gt;. Interessant: es
+steht wohl doch die &lt;span class="caps"&gt;PR …&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Jetzt wirds langsam ernst: diesen Monat soll ja noch MeeGo in Version
+1.1 erscheinen, und dann auch gleich in einer ersten offiziellen
+Handset-&lt;span class="caps"&gt;UX&lt;/span&gt;-Version. Die wird erst einmal nur auf dem N900 laufen, und da
+berichtet &lt;a class="reference external" href="http://meego.com/community/blogs/harrihakulinen/2010/meego-calling-n900"&gt;Harri Hakulinen von großen Fortschritten&lt;/a&gt;. Interessant: es
+steht wohl doch die &lt;span class="caps"&gt;PR&lt;/span&gt; 1.3 Firmware für das N900 vor der Tür, die dann
+Dual-Boot zwischen Maemo und MeeGo bringen soll. Damit kann man dann
+seine Qt-Anwendungen unter beiden Betriebssystemen ausprobieren. Ich bin&amp;nbsp;gespannt!&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Qt-Software auf dem WeTab</title><link href="http://www.peterbouda.eu/qt-software-auf-dem-wetab.html" rel="alternate"></link><published>2010-10-09T17:00:00+01:00</published><updated>2010-10-09T17:00:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-10-09:/qt-software-auf-dem-wetab.html</id><summary type="html">&lt;p&gt;Widerstand war zwecklos: der Media Markt händigte mir letzte Woche mein
+wohlverdientes &lt;a class="reference external" href="http://www.amazon.de/gp/product/B003JFKUSK?ie=UTF8&amp;amp;tag=jsusde-21&amp;amp;linkCode=as2&amp;amp;camp=1638&amp;amp;creative=6742&amp;amp;creativeASIN=B003JFKUSK"&gt;WeTab&lt;/a&gt;&lt;img alt="image0" src="http://www.assoc-amazon.de/e/ir?t=jsusde-21&amp;amp;l=as2&amp;amp;o=3&amp;amp;a=B003JFKUSK" /&gt;-Exemplar aus. Trotz geringer
+Akkulaufzeit und Genöhle im Twitter-Universum kam ich nicht darum herum,
+schließlich &lt;a class="reference external" href="http://www.mobileqt.de/blogposts/59"&gt;läuft da MeeGo drauf&lt;/a&gt; und die Aussicht auf ein Tablet mit
+freiem Betriebssystem lässt einen Entwickler mit Interesse an neuen
+Technik-Konzepten dann …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Widerstand war zwecklos: der Media Markt händigte mir letzte Woche mein
+wohlverdientes &lt;a class="reference external" href="http://www.amazon.de/gp/product/B003JFKUSK?ie=UTF8&amp;amp;tag=jsusde-21&amp;amp;linkCode=as2&amp;amp;camp=1638&amp;amp;creative=6742&amp;amp;creativeASIN=B003JFKUSK"&gt;WeTab&lt;/a&gt;&lt;img alt="image0" src="http://www.assoc-amazon.de/e/ir?t=jsusde-21&amp;amp;l=as2&amp;amp;o=3&amp;amp;a=B003JFKUSK" /&gt;-Exemplar aus. Trotz geringer
+Akkulaufzeit und Genöhle im Twitter-Universum kam ich nicht darum herum,
+schließlich &lt;a class="reference external" href="http://www.mobileqt.de/blogposts/59"&gt;läuft da MeeGo drauf&lt;/a&gt; und die Aussicht auf ein Tablet mit
+freiem Betriebssystem lässt einen Entwickler mit Interesse an neuen
+Technik-Konzepten dann doch zugreifen. Und bereut habe ich es mit
+Sicherheit nicht, dazu macht das Gerät auch im unfertigen Zustand
+einfach zu viel Spaß. Endlich wieder die Süddeutsche und die Zeit am
+Frühstückstisch! :-) Aber dazu ein anderes Mal mehr, vielleicht haben
+sich dann die meisten Ignoranten wieder beruhigt. Für mich ist das WeTab
+das bessere, weil freie&amp;nbsp;Tablet.&lt;/p&gt;
+&lt;p&gt;Ich wollte hiermit nun eigentlich auch nur kundtun, dass sich
+Qt-Software relativ problemlos auf dem WeTab kompilieren und starten
+lässt. Ich habe dazu gleich einen &lt;a class="reference external" href="http://www.mobileqt.de/wiki/wie_man_eine_qt_anwendung_auf_dem_wetab_kompiliert"&gt;Wiki-Artikel online gestellt&lt;/a&gt;, indem
+ihr das Prozedere nachlesen könnt. Hm&amp;#8230; Wie startet man nochmal den
+C++-Compiler auf dem&amp;nbsp;iPad?&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Beta Qt Mobility 1.1.0</title><link href="http://www.peterbouda.eu/beta-qt-mobility-110.html" rel="alternate"></link><published>2010-10-05T12:29:00+01:00</published><updated>2010-10-05T12:29:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-10-05:/beta-qt-mobility-110.html</id><summary type="html">&lt;p&gt;Letzte Woche schon wurde die erste &lt;a class="reference external" href="http://labs.qt.nokia.com/2010/09/30/qt-mobility-1-1-0-beta-package/"&gt;erste Beta für Qt Mobility 1.1.0
+veröffentlicht&lt;/a&gt;. Mittlerweile sind wohl auch &lt;a class="reference external" href="http://labs.qt.nokia.com/2010/10/04/important-update-on-qt-mobility-1-1-0-beta-package/"&gt;Probleme mit den Paketen
+behoben&lt;/a&gt;, so dass interessierte Entwickler die erweiterten alten und
+neuen APIs ausprobieren können. So gibt es nun u.a. spezielle
+Organizer-Schnittstellen sowie Kartenunterstützung in der Location-&lt;span class="caps"&gt;API …&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Letzte Woche schon wurde die erste &lt;a class="reference external" href="http://labs.qt.nokia.com/2010/09/30/qt-mobility-1-1-0-beta-package/"&gt;erste Beta für Qt Mobility 1.1.0
+veröffentlicht&lt;/a&gt;. Mittlerweile sind wohl auch &lt;a class="reference external" href="http://labs.qt.nokia.com/2010/10/04/important-update-on-qt-mobility-1-1-0-beta-package/"&gt;Probleme mit den Paketen
+behoben&lt;/a&gt;, so dass interessierte Entwickler die erweiterten alten und
+neuen APIs ausprobieren können. So gibt es nun u.a. spezielle
+Organizer-Schnittstellen sowie Kartenunterstützung in der Location-&lt;span class="caps"&gt;API&lt;/span&gt;.
+Außerdem kann man nun auch aus &lt;span class="caps"&gt;QML&lt;/span&gt; auf die Schnittstellen zugreifen.
+Wird bald mal Zeit für die ersten &lt;span class="caps"&gt;QML&lt;/span&gt;-Versuche, meine&amp;nbsp;Herrschaften&amp;#8230;&lt;/p&gt;
+&lt;p&gt;&lt;script type="text/javascript"&gt;&lt;/p&gt;&lt;p&gt;var flattr_uid =&amp;nbsp;'12306';&lt;/p&gt;&lt;p&gt;var flattr_tle = 'Beta Qt Mobility&amp;nbsp;1.1.0';&lt;/p&gt;&lt;p&gt;var flattr_dsc = 'Letzte Woche schon wurde die erste erste Beta für Qt Mobility 1.1.0 veröffentlicht. Mittlerweile sind wohl auch Probleme mit den Paketen behoben, so dass interessierte Entwickler die erweiterten&amp;nbsp;alte...';&lt;/p&gt;&lt;p&gt;var flattr_cat =&amp;nbsp;'text';&lt;/p&gt;&lt;p&gt;var flattr_lng =&amp;nbsp;'de_DE';&lt;/p&gt;&lt;p&gt;var flattr_tag = 'Qt Mobility, &lt;span class="caps"&gt;QML&lt;/span&gt;';&lt;/p&gt;&lt;p&gt;var flattr_url =&amp;nbsp;'http://www.dasskript.com/blogposts/66';&lt;/p&gt;&lt;p&gt;var flattr_btn =&amp;nbsp;'compact';&lt;/p&gt;&lt;p&gt;&lt;/script&gt;&lt;/p&gt;&lt;p&gt;&lt;script src="http://api.flattr.com/button/load.js" type="text/javascript"&gt;&lt;/script&gt;&lt;/p&gt;&lt;/p&gt;</content><category term="Museum"></category></entry><entry><title>Tutorial zur App-Entwicklung mit dem Nokia Qt SDK - Teil 2</title><link href="http://www.peterbouda.eu/tutorial-zur-app-entwicklung-mit-dem-nokia-qt-sdk-teil-2.html" rel="alternate"></link><published>2010-09-30T15:05:00+01:00</published><updated>2010-09-30T15:05:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-09-30:/tutorial-zur-app-entwicklung-mit-dem-nokia-qt-sdk-teil-2.html</id><summary type="html">&lt;p&gt;Soeben ist er online gegangen, der zweite Teil des Tutorials zur
+App-Entwicklung mit Qt. Und wie das letzte Mal auch parallel &lt;a class="reference external" href="http://meego.de/news/1069-tutorial-zur-app-entwicklung-mit-dem-nokia-qt-sdk-fuer-maemo-und-symbian-teil-2.html"&gt;auf
+meego.de&lt;/a&gt; sowie hier &lt;a class="reference external" href="http://mobileqt.de/wiki/tutorial_zur_app_entwicklung_mit_dem_nokia_qt_sdk_fuer_maemo_und_symbian"&gt;im Wiki&lt;/a&gt;. Dieses Mal wird das mit &lt;span class="caps"&gt;MADDE&lt;/span&gt;
+erstellte Grundgerüst erweitert, so dass man eine allgemeine Grundlage
+für Maemo- und Symbian-Anwendungen erhält. Viel Spaß …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Soeben ist er online gegangen, der zweite Teil des Tutorials zur
+App-Entwicklung mit Qt. Und wie das letzte Mal auch parallel &lt;a class="reference external" href="http://meego.de/news/1069-tutorial-zur-app-entwicklung-mit-dem-nokia-qt-sdk-fuer-maemo-und-symbian-teil-2.html"&gt;auf
+meego.de&lt;/a&gt; sowie hier &lt;a class="reference external" href="http://mobileqt.de/wiki/tutorial_zur_app_entwicklung_mit_dem_nokia_qt_sdk_fuer_maemo_und_symbian"&gt;im Wiki&lt;/a&gt;. Dieses Mal wird das mit &lt;span class="caps"&gt;MADDE&lt;/span&gt;
+erstellte Grundgerüst erweitert, so dass man eine allgemeine Grundlage
+für Maemo- und Symbian-Anwendungen erhält. Viel Spaß&amp;nbsp;damit!&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Qt 4.7 ist da!</title><link href="http://www.peterbouda.eu/qt-47-ist-da.html" rel="alternate"></link><published>2010-09-21T16:01:00+01:00</published><updated>2010-09-21T16:01:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-09-21:/qt-47-ist-da.html</id><summary type="html">&lt;p&gt;Ohne große Worte: &lt;a class="reference external" href="http://labs.qt.nokia.com/2010/09/21/qt-4-7-0-now-available/"&gt;die finale Version von Qt 4.7.0 wurde heute
+veröffentlicht&lt;/a&gt;. Wir warten gespannt auf das Update für das N900. Die
+größte Neuerung ist natürlich Qt Quick, mit dem sich in zukunft elegante
+Oberflächen auch und vor allem für mobile Geräte erstellen lassen
+sollen. Glückwunsch an alle …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ohne große Worte: &lt;a class="reference external" href="http://labs.qt.nokia.com/2010/09/21/qt-4-7-0-now-available/"&gt;die finale Version von Qt 4.7.0 wurde heute
+veröffentlicht&lt;/a&gt;. Wir warten gespannt auf das Update für das N900. Die
+größte Neuerung ist natürlich Qt Quick, mit dem sich in zukunft elegante
+Oberflächen auch und vor allem für mobile Geräte erstellen lassen
+sollen. Glückwunsch an alle Trolle und natürlich: weiter&amp;nbsp;so!&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>TechTalk in der Open Source School</title><link href="http://www.peterbouda.eu/techtalk-in-der-open-source-school.html" rel="alternate"></link><published>2010-09-16T11:12:00+01:00</published><updated>2010-09-16T11:12:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-09-16:/techtalk-in-der-open-source-school.html</id><summary type="html">&lt;p&gt;Die Open Source School in München veranstaltet regelmäßig sogenannte
+TechTalks. Am 12. Oktober ist der Nächste, zu dem ich &lt;a class="reference external" href="http://www.opensourceschool.de/techtalks/gratis/schulung/techtalk-mobile-anwendungen-mit-qt-eintritt-frei/"&gt;eine kleine
+Einführung in die Entwicklung mobiler Qt-Anwendung&lt;/a&gt; mache. Der Eintritt
+ist kostenlos, ihr seid alle herzlich&amp;nbsp;eingeladen.&lt;/p&gt;
+&lt;p&gt;In diesem Zusammenhang wollte ich auch noch einmal daran erinnern, dass
+vom 18 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Die Open Source School in München veranstaltet regelmäßig sogenannte
+TechTalks. Am 12. Oktober ist der Nächste, zu dem ich &lt;a class="reference external" href="http://www.opensourceschool.de/techtalks/gratis/schulung/techtalk-mobile-anwendungen-mit-qt-eintritt-frei/"&gt;eine kleine
+Einführung in die Entwicklung mobiler Qt-Anwendung&lt;/a&gt; mache. Der Eintritt
+ist kostenlos, ihr seid alle herzlich&amp;nbsp;eingeladen.&lt;/p&gt;
+&lt;p&gt;In diesem Zusammenhang wollte ich auch noch einmal daran erinnern, dass
+vom 18.-20. Oktober mein &lt;a class="reference external" href="http://www.opensourceschool.de/kurse/muenchen/schulung/mobile-anwendungen-mit-qt-4/"&gt;Kurs über die Entwicklung mobiler
+Qt-Anwendungen&lt;/a&gt; stattfindet. Ebenfalls in München und an der Open
+Source&amp;nbsp;School.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Ovi-Store Neuigkeiten</title><link href="http://www.peterbouda.eu/ovi-store-neuigkeiten.html" rel="alternate"></link><published>2010-09-15T10:53:00+01:00</published><updated>2010-09-15T10:53:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-09-15:/ovi-store-neuigkeiten.html</id><summary type="html">&lt;p&gt;Zur Zeit findet ja nicht nur das Intel Developer Forum statt, auch noch
+die Nokia World gibt&amp;#8217;s in London. Deswegen werde ich gerade mit News
+zugeschüttet, die ich gar nicht so schnell verarbeiten kann. Ein paar
+interessante Neuerungen am Rande gibt es aber &lt;a class="reference external" href="http://blogs.forum.nokia.com/blog/ovi-publisher-alert/2010/09/15/ovi-store-announcements-nokia-world"&gt;für den Ovi Store&lt;/a&gt;: ab
+sofort …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Zur Zeit findet ja nicht nur das Intel Developer Forum statt, auch noch
+die Nokia World gibt&amp;#8217;s in London. Deswegen werde ich gerade mit News
+zugeschüttet, die ich gar nicht so schnell verarbeiten kann. Ein paar
+interessante Neuerungen am Rande gibt es aber &lt;a class="reference external" href="http://blogs.forum.nokia.com/blog/ovi-publisher-alert/2010/09/15/ovi-store-announcements-nokia-world"&gt;für den Ovi Store&lt;/a&gt;: ab
+sofort startet Nokia zwei Beta-Programme für In-App-Purchase und
+In-App-Ads (letzteres nur für Qt- und Web-Runtime-Anwendungen). Klar,
+für Apple Apps gibt&amp;#8217;s das schon eine Weile, erfreulich aber, dass Nokia
+dieses Mal zügig nachzieht. Hab mich gleich mal für das Werbeprogramm
+gemeldet, vielleicht eine gute Möglichkeit, auch mit freien Apps ein
+bisschen Geld zu&amp;nbsp;verdienen.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Tutorial zur App-Entwicklung mit dem Nokia Qt SDK</title><link href="http://www.peterbouda.eu/tutorial-zur-app-entwicklung-mit-dem-nokia-qt-sdk.html" rel="alternate"></link><published>2010-09-14T14:01:00+01:00</published><updated>2010-09-14T14:01:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-09-14:/tutorial-zur-app-entwicklung-mit-dem-nokia-qt-sdk.html</id><summary type="html">&lt;p&gt;Ich habe heute einen &lt;a class="reference external" href="http://mobileqt.de/wiki/tutorial_zur_app_entwicklung_mit_dem_nokia_qt_sdk_fuer_maemo_und_symbian"&gt;neuen Wiki-Artikel&lt;/a&gt; online gestellt, der sich mit
+der App-Entwicklung mit dem Nokia Qt &lt;span class="caps"&gt;SDK&lt;/span&gt; beschäftigt. Das Tutorial ist
+in diesem Fall eine Art Fortsetzungsgeschichte, die auch auf &lt;a class="reference external" href="http://meego.de"&gt;meego.de&lt;/a&gt;
+veröffentlicht wird. Das Tutorial wird anhand einer Beispielanwendung
+zeigen, wie man eine Qt-App für Maemo und Symbian …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ich habe heute einen &lt;a class="reference external" href="http://mobileqt.de/wiki/tutorial_zur_app_entwicklung_mit_dem_nokia_qt_sdk_fuer_maemo_und_symbian"&gt;neuen Wiki-Artikel&lt;/a&gt; online gestellt, der sich mit
+der App-Entwicklung mit dem Nokia Qt &lt;span class="caps"&gt;SDK&lt;/span&gt; beschäftigt. Das Tutorial ist
+in diesem Fall eine Art Fortsetzungsgeschichte, die auch auf &lt;a class="reference external" href="http://meego.de"&gt;meego.de&lt;/a&gt;
+veröffentlicht wird. Das Tutorial wird anhand einer Beispielanwendung
+zeigen, wie man eine Qt-App für Maemo und Symbian erstellt, die sich
+ohne großen Aufwand unter beiden Betriebssystemen nutzen lässt.
+Vielleicht kommt sogar noch &lt;a class="reference external" href="http://mobileqt.de/blogposts/59"&gt;MeeGo als Betriebssystem&lt;/a&gt; hinzu, mal
+sehen&amp;#8230; Für Fragen und Anregungen stehe gern hier im Forum oder auch im
+&lt;a class="reference external" href="http://meego.de/forum/schulungen/10911-qt-schulung-von-peter-bouda.html"&gt;meego.de-Forum&lt;/a&gt; zur&amp;nbsp;Verfügung.&lt;/p&gt;
+&lt;p&gt;Ich habe außerdem &lt;a class="reference external" href="http://mobileqt.de/wiki/fuer_beginner_scratchbox_madde_sdk_wtf"&gt;hier&lt;/a&gt; mal versucht kurz zusammenzufassen, wie man
+denn nun als Einsteiger in die mobile Qt-Programmierung am Besten
+vorgeht. Das Wiki war bisher ja etwas durcheinander, dieser Artikel
+bietet hoffentlich einen guten Ansatzpunkt für&amp;nbsp;Anfänger.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Apps auf mobileqt.de</title><link href="http://www.peterbouda.eu/apps-auf-mobileqtde.html" rel="alternate"></link><published>2010-09-03T11:59:00+01:00</published><updated>2010-09-03T11:59:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-09-03:/apps-auf-mobileqtde.html</id><content type="html">&lt;p&gt;Ab sofort gibt es auf mobileqt.de einen neuen &lt;a class="reference external" href="http://mobileqt.de/apps"&gt;Apps-Bereich&lt;/a&gt;. Da
+veröffentliche ich die von mir entwickelten Qt-Anwendungen, es gibt
+jeweils eine kurze Bechreibung, Screenshots und Download-Links. Außerdem
+findet ihr dort Links auf die Code-Repositories, falls vorhanden. Viel
+Spaß&amp;nbsp;damit!&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Das WeTab läuft mit MeeGo</title><link href="http://www.peterbouda.eu/das-wetab-lauft-mit-meego.html" rel="alternate"></link><published>2010-09-03T11:50:00+01:00</published><updated>2010-09-03T11:50:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-09-03:/das-wetab-lauft-mit-meego.html</id><summary type="html">&lt;p&gt;Feine Sache: das seit Monaten angekündigte &lt;a class="reference external" href="http://www.heise.de/newsticker/meldung/Das-WeTab-basiert-auf-MeeGo-1071855.html"&gt;WeTab wird MeeGo als
+Betriebssystem erhalten&lt;/a&gt;. Da hat Intel wohl den ersten zugkräftigen
+Partner gefunden. Von Qt lese ich in den Ankündigungen leider nichts,
+inwieweit man die Unterstützung nachinstallieren kann muss man mal
+sehen. Leider läuft das Ding nur 6 Stunden mit einer Akkuladung …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Feine Sache: das seit Monaten angekündigte &lt;a class="reference external" href="http://www.heise.de/newsticker/meldung/Das-WeTab-basiert-auf-MeeGo-1071855.html"&gt;WeTab wird MeeGo als
+Betriebssystem erhalten&lt;/a&gt;. Da hat Intel wohl den ersten zugkräftigen
+Partner gefunden. Von Qt lese ich in den Ankündigungen leider nichts,
+inwieweit man die Unterstützung nachinstallieren kann muss man mal
+sehen. Leider läuft das Ding nur 6 Stunden mit einer Akkuladung, sonst
+wäre das WeTab schon so gut wie&amp;nbsp;gekauft.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Release Candidate von Qt 4.7</title><link href="http://www.peterbouda.eu/release-candidate-von-qt-47.html" rel="alternate"></link><published>2010-08-30T14:20:00+01:00</published><updated>2010-08-30T14:20:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-08-30:/release-candidate-von-qt-47.html</id><summary type="html">&lt;p&gt;Letzte Woche schon wurde der erste &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/08/26/qt-470-release-candidate-available/"&gt;Release Candidate von Qt 4.7
+veröffentlicht&lt;/a&gt;, und mit dabei sind die sehnlichst erwarteten
+&lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/08/26/qt-47-release-candidate-and-qt-quick/"&gt;Qt-Quick-Bibliotheken&lt;/a&gt;. Diese sollen mit dem Qt Creator 2.1 dann auch
+Unterstützung an der &lt;span class="caps"&gt;IDE&lt;/span&gt;-Front erhalten, zunächst einmal gibt es davon
+aber &amp;#8220;nur&amp;#8221; einen &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/08/25/qt-creator-201/"&gt;neuen Bugfix-Release 2.0.1 …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Letzte Woche schon wurde der erste &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/08/26/qt-470-release-candidate-available/"&gt;Release Candidate von Qt 4.7
+veröffentlicht&lt;/a&gt;, und mit dabei sind die sehnlichst erwarteten
+&lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/08/26/qt-47-release-candidate-and-qt-quick/"&gt;Qt-Quick-Bibliotheken&lt;/a&gt;. Diese sollen mit dem Qt Creator 2.1 dann auch
+Unterstützung an der &lt;span class="caps"&gt;IDE&lt;/span&gt;-Front erhalten, zunächst einmal gibt es davon
+aber &amp;#8220;nur&amp;#8221; einen &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/08/25/qt-creator-201/"&gt;neuen Bugfix-Release 2.0.1&lt;/a&gt;.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>MeeGo für Autos</title><link href="http://www.peterbouda.eu/meego-fur-autos.html" rel="alternate"></link><published>2010-08-04T10:40:00+01:00</published><updated>2010-08-04T10:40:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-08-04:/meego-fur-autos.html</id><summary type="html">&lt;p&gt;Auch von MeeGo gibt was Neues, nämlich eine &lt;a class="reference external" href="http://meego.com/community/blogs/margie/2010/meego-ivi-v1.0-announcement"&gt;erste Version für
+automobile Unterhaltungssysteme&lt;/a&gt;. Das Ganze &lt;a class="reference external" href="http://meego.com/community/blogs/margie/2010/meego-ivi-v1.0-announcement"&gt;entsteht unter dem Dach
+der Genivi-Allianz&lt;/a&gt;, einem Zusammenschluss diverser Fahrzeug- und
+Elektronikhersteller. Ich freu mich jetzt schon drauf, meine ersten
+Qt-Anwendungen auf dem Bordcomputer irgendwelcher Luxuslimousinen laufen
+zu sehen. :-) Obwohl ich ja eigentlich kein Autofahrer …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Auch von MeeGo gibt was Neues, nämlich eine &lt;a class="reference external" href="http://meego.com/community/blogs/margie/2010/meego-ivi-v1.0-announcement"&gt;erste Version für
+automobile Unterhaltungssysteme&lt;/a&gt;. Das Ganze &lt;a class="reference external" href="http://meego.com/community/blogs/margie/2010/meego-ivi-v1.0-announcement"&gt;entsteht unter dem Dach
+der Genivi-Allianz&lt;/a&gt;, einem Zusammenschluss diverser Fahrzeug- und
+Elektronikhersteller. Ich freu mich jetzt schon drauf, meine ersten
+Qt-Anwendungen auf dem Bordcomputer irgendwelcher Luxuslimousinen laufen
+zu sehen. :-) Obwohl ich ja eigentlich kein Autofahrer bin. Aber
+irgendwann werd ich mir mal nen vernünftigen Bordcomputer fürs Fahrrad
+basteln, mit einem MeeGo- oder Qt-Symbian-Handy und &lt;a class="reference external" href="http://www.nokia.de/produkte/zubehoer/zubehoer-uebersicht/akkus-und-ladegeraete/ladegeraete/nokia-fahrrad-ladekit"&gt;dem hier&lt;/a&gt;.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Qt-News-Rundumschlag</title><link href="http://www.peterbouda.eu/qt-news-rundumschlag.html" rel="alternate"></link><published>2010-08-04T10:33:00+01:00</published><updated>2010-08-04T10:33:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-08-04:/qt-news-rundumschlag.html</id><summary type="html">&lt;p&gt;Trotz Urlaubszeit in Finnland gab es in der letzten Woche zwei
+Neuigkeiten von der Qt-Front, für die ich erst jetzt die Zeit finde
+einen Blogeintrag zu verfassen. Deswegen alles gesammelt an dieser&amp;nbsp;Stelle.&lt;/p&gt;
+&lt;p&gt;Von Qt Mobility gibt es nun die &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/07/27/qt-mobility-102-released/"&gt;Version 1.0.2&lt;/a&gt;, mit einem (zumindest
+von mir) lange …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Trotz Urlaubszeit in Finnland gab es in der letzten Woche zwei
+Neuigkeiten von der Qt-Front, für die ich erst jetzt die Zeit finde
+einen Blogeintrag zu verfassen. Deswegen alles gesammelt an dieser&amp;nbsp;Stelle.&lt;/p&gt;
+&lt;p&gt;Von Qt Mobility gibt es nun die &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/07/27/qt-mobility-102-released/"&gt;Version 1.0.2&lt;/a&gt;, mit einem (zumindest
+von mir) lange erwarteten Patch für die Sensoren unter Maemo. Auf die
+hatte man bisher nur als Superuser Zugriff, so dass man entsprechende
+Anwendungen immer als root starten musste. Offen bleibt, wann es ein
+Update für das N900 geben wird. Und ob überhaupt. Sonst bringts
+natürlich nicht viel. Gleichzeitig wurde eine technische Vorschau auf
+&lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/07/27/qt-mobility-110-technology-preview/"&gt;Qt Mobility 1.1.0 veröffentlicht&lt;/a&gt;, mit einer ganzen Reihe von neuen
+APIs und erweiterten&amp;nbsp;alten.&lt;/p&gt;
+&lt;p&gt;Nachdem man nun ja Qt-Programme in den Ovi Store stellen darf, hat Nokia
+dazu ein informatives &lt;a class="reference external" href="http://blogs.forum.nokia.com/blog/ovi-publisher-alert/2010/08/02/qt-content-qa"&gt;Dokument mit Informationen für Entwickler
+veröffentlicht&lt;/a&gt;. Eine schöne Zusammenfassung, wie ich&amp;nbsp;finde.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Neuigkeiten aus den Qt-Laboren</title><link href="http://www.peterbouda.eu/neuigkeiten-aus-den-qt-laboren.html" rel="alternate"></link><published>2010-07-12T11:02:00+01:00</published><updated>2010-07-12T11:02:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-07-12:/neuigkeiten-aus-den-qt-laboren.html</id><summary type="html">&lt;p&gt;Letzte Woche gab es zwei interessante Nachrichten aus den Qt-Laboren.
+Zunächst wurde die &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/07/08/qt-47-beta2-and-qt-creator-21-snapshots-available/"&gt;zweite Beta von Qt 4.7&lt;/a&gt; heraus gebracht, passend
+dazu gab es einen aktuellen Schnappschuss des Qt Creator 2.1. Hier bin
+ich vor allem auf den Update-Pfad gespannt. Maemo und die bisher
+unterstützten Symbian-Geräte verwenden ja …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Letzte Woche gab es zwei interessante Nachrichten aus den Qt-Laboren.
+Zunächst wurde die &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/07/08/qt-47-beta2-and-qt-creator-21-snapshots-available/"&gt;zweite Beta von Qt 4.7&lt;/a&gt; heraus gebracht, passend
+dazu gab es einen aktuellen Schnappschuss des Qt Creator 2.1. Hier bin
+ich vor allem auf den Update-Pfad gespannt. Maemo und die bisher
+unterstützten Symbian-Geräte verwenden ja Qt 4.6, dafür möchte man wohl
+weiter Software entwickeln. Wenn der Qt Creator in Zukunft nur mit 4.7
+ausgeliefert wird, wie erstellt man dann Pakete für die älteren Geräte?
+Mal sehen, wie sich Nokia das vorstellt. Zweitens, und aus meiner Sicht
+spannender: das Qt-Entwickler-Netzwerk &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/07/08/the-qt-developer-network-opens-the-gates/"&gt;hat endlich seine Türen
+geöffnet&lt;/a&gt;. Alle Qt-Entwickler sollten sich da natürlich sofort
+anmelden. Es gibt viel Dokus und kompetente Leute in Foren an einem Ort&amp;nbsp;versammelt.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>MeeGo Handgeräteoberfläche Tag eins</title><link href="http://www.peterbouda.eu/meego-handgerateoberflache-tag-eins.html" rel="alternate"></link><published>2010-07-02T09:09:00+01:00</published><updated>2010-07-02T09:09:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-07-02:/meego-handgerateoberflache-tag-eins.html</id><summary type="html">&lt;p&gt;Das MeeGo-Projekt hat, wie geplant, am ersten Juli eine erste Version
+der sogenannten &lt;a class="reference external" href="http://meego.com/community/blogs/valhalla/2010/meego-handset-project-day-1-here"&gt;&amp;#8220;Handset &lt;span class="caps"&gt;UI&lt;/span&gt;&amp;#8221; veröffentlicht&lt;/a&gt;. Screenshots findet ihr
+hinter dem Link, das Ganze kann man auf Intel-Geräten und dem N900
+ausprobieren. Für Oktober ist die erste &amp;#8220;richtige&amp;#8221; Ausgabe geplant,
+bisher stellt es mehr oder weniger eine Demo dar. Qt …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Das MeeGo-Projekt hat, wie geplant, am ersten Juli eine erste Version
+der sogenannten &lt;a class="reference external" href="http://meego.com/community/blogs/valhalla/2010/meego-handset-project-day-1-here"&gt;&amp;#8220;Handset &lt;span class="caps"&gt;UI&lt;/span&gt;&amp;#8221; veröffentlicht&lt;/a&gt;. Screenshots findet ihr
+hinter dem Link, das Ganze kann man auf Intel-Geräten und dem N900
+ausprobieren. Für Oktober ist die erste &amp;#8220;richtige&amp;#8221; Ausgabe geplant,
+bisher stellt es mehr oder weniger eine Demo dar. Qt für die
+Anwendungsentwicklung ist natürlich schon&amp;nbsp;dabei.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Unterstützt mobileqt.de per Flattr</title><link href="http://www.peterbouda.eu/unterstutzt-mobileqtde-per-flattr.html" rel="alternate"></link><published>2010-06-25T09:01:00+01:00</published><updated>2010-06-25T09:01:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-06-25:/unterstutzt-mobileqtde-per-flattr.html</id><summary type="html">&lt;p&gt;Fahrende Züge soll man ja nicht aufhalten, da soll man lieber
+aufspringen. Deswegen gibt es jetzt hier rechts einen &lt;a class="reference external" href="https://flattr.com"&gt;Flattr&lt;/a&gt;-Button,
+per Klick könnt ihr mobileqt.de mit dem ein oder anderen Cent
+unterstützen. Die Idee von Flattr ist so simpel wie bestechend: Man legt
+einen monatlichen Betrag fest, den …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Fahrende Züge soll man ja nicht aufhalten, da soll man lieber
+aufspringen. Deswegen gibt es jetzt hier rechts einen &lt;a class="reference external" href="https://flattr.com"&gt;Flattr&lt;/a&gt;-Button,
+per Klick könnt ihr mobileqt.de mit dem ein oder anderen Cent
+unterstützen. Die Idee von Flattr ist so simpel wie bestechend: Man legt
+einen monatlichen Betrag fest, den man auf sein Flattr-Konto legt. Mit
+jedem Klick auf einen Flattr-Button verteilt ihr den monatlichen Betrag
+auf Inhalte im Netz, die euch gefallen. Wenn ihr also 2 Euro im Monat
+geben wollt, und dann 10 mal irgendwo den Button klickt, bekommt jede
+Seite etwa 20 Cent. Nicht ganz, den 10 Prozent von allem bleiben bei den
+Betreibern von Flattr. Gute Sache, und mittlerweile auf vielen Seiten zu
+finden: hier jetzt eben&amp;nbsp;auch.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Nokia veröffentlicht fertiges Qt-SDK</title><link href="http://www.peterbouda.eu/nokia-veroffentlicht-fertiges-qt-sdk.html" rel="alternate"></link><published>2010-06-23T08:22:00+01:00</published><updated>2010-06-23T08:22:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-06-23:/nokia-veroffentlicht-fertiges-qt-sdk.html</id><summary type="html">&lt;p&gt;Knapp zwei Wochen nach der Veröffentlichung des Release Canditate hat
+Nokia heute offiziell die fertige Version des Nokia Qt &lt;span class="caps"&gt;SDK&lt;/span&gt; &lt;a class="reference external" href="http://www.forum.nokia.com/Develop/Qt/"&gt;zum Download
+bereit gestellt&lt;/a&gt;. Man kann nun per &amp;#8220;Remote Compiler&amp;#8221; auch Symbian Apps
+mit Linux und Mac kompilieren. Nicht schlecht, schon&amp;nbsp;einmal.&lt;/p&gt;
+&lt;p&gt;Zwei weitere Ankündigungen haben mir sogar noch besser …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Knapp zwei Wochen nach der Veröffentlichung des Release Canditate hat
+Nokia heute offiziell die fertige Version des Nokia Qt &lt;span class="caps"&gt;SDK&lt;/span&gt; &lt;a class="reference external" href="http://www.forum.nokia.com/Develop/Qt/"&gt;zum Download
+bereit gestellt&lt;/a&gt;. Man kann nun per &amp;#8220;Remote Compiler&amp;#8221; auch Symbian Apps
+mit Linux und Mac kompilieren. Nicht schlecht, schon&amp;nbsp;einmal.&lt;/p&gt;
+&lt;p&gt;Zwei weitere Ankündigungen haben mir sogar noch besser gefallen: es gibt
+ein öffentliches Beta-Programm für ein kostenfreies (!) und relativ
+unkompliziertes (nur zwei Wochen Wartezeit!!!) Singnieren von
+Symbian-Anwendungen. Außerdem nimmt der Ovi Store ab sofort
+Qt-Anwendungen entgegen, und zwar für das N900, das N97 mini und das X6.
+Per &amp;#8220;Smart Installer&amp;#8221; werden dabei je nach Bedarf noch die
+Qt-Bibliotheken auf das Gerät installiert. Weitere Geräte sollen bald&amp;nbsp;folgen.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>MicroB machts in 3D</title><link href="http://www.peterbouda.eu/microb-machts-in-3d.html" rel="alternate"></link><published>2010-06-20T09:17:00+01:00</published><updated>2010-06-20T09:17:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-06-20:/microb-machts-in-3d.html</id><summary type="html">&lt;p&gt;Ich muss sagen, dass mich Nokia nach langer Zeit mal wieder beeindruckt
+hat, und dass ausgerechnet auf der technischen Seite. Bisher dachte ich,
+dass die neue Firmware für das N900 vor allem kleine Verbesserungen,
+Bugfixes und natürlich Qt 4.6 bringt. Aber weit gefehlt: ich wollte mich
+mal ein bisschen …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ich muss sagen, dass mich Nokia nach langer Zeit mal wieder beeindruckt
+hat, und dass ausgerechnet auf der technischen Seite. Bisher dachte ich,
+dass die neue Firmware für das N900 vor allem kleine Verbesserungen,
+Bugfixes und natürlich Qt 4.6 bringt. Aber weit gefehlt: ich wollte mich
+mal ein bisschen mit &lt;a class="reference external" href="http://en.wikipedia.org/wiki/WebGL"&gt;WebGL&lt;/a&gt; auseinandersetzen, und der einzige
+Browser, der das von Hause aus unterstützt ist tatsächlich: MicroB auf
+dem N900, der Standardbrowser des Geräts. &lt;a class="reference external" href="http://learningwebgl.com/blog/?p=2303"&gt;Gil Thomas&lt;/a&gt; hat eine Reihe
+von Demos gelistet, die ihr euch auf dem N900 anschauen könnt. Auf der
+Seite wird auch erwähnt (und das war die nächste Überraschung), dass
+MicroB das MozOrientation-Event untersützt, für den
+Beschleunigungssensor. Ich konnte es nicht lassen, und habe &lt;a class="reference external" href="http://learningwebgl.com/webgl-cube/index-n900-hack.html"&gt;eines der
+Demos&lt;/a&gt; von Gil abgewandelt, um die WebGL-Szene per Sensor zu steuern.
+Ein Video habe ich für euch davon gemacht, damit ihr auch beeindruckt
+sein&amp;nbsp;könnt:&lt;/p&gt;
+&lt;iframe width="420" height="315" src="http://www.youtube.com/embed/CYwGY_A3Ck4" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;p&gt;Und wer das Ganze live samt Code sehen&amp;nbsp;will:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.peterbouda.de/webgl"&gt;http://www.peterbouda.de/webgl&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Mittlerweile würde ich es sogar unterschreiben, dass MicroB der
+beste mobile Browser ist. Nicht der Schnellste, aber dank Flash und
+WebGL definitiv der technisch&amp;nbsp;Fortgeschrittenste.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Qt SDK 1.0 Release Candidate ist draußen</title><link href="http://www.peterbouda.eu/qt-sdk-10-release-candidate-ist-draussen.html" rel="alternate"></link><published>2010-06-11T10:04:00+01:00</published><updated>2010-06-11T10:04:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-06-11:/qt-sdk-10-release-candidate-ist-draussen.html</id><summary type="html">&lt;p&gt;Vorgestern wurde nun der erste und letzte (?) &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/06/09/nokia-qt-sdk-10rc-released/"&gt;Release Candidate des Qt
+&lt;span class="caps"&gt;SDK&lt;/span&gt; 1.0 veröffentlicht&lt;/a&gt;, ein großer Schritt hin zum fertigen
+Entwicklungskit. Das &lt;span class="caps"&gt;SDK&lt;/span&gt; wird die Qt-Version 4.6.3 enthalten, und damit
+kein Qt Quick und den ganzen dekarativen Kram, der erst mit Qt 4.7
+kommen soll. Dazu …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Vorgestern wurde nun der erste und letzte (?) &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/06/09/nokia-qt-sdk-10rc-released/"&gt;Release Candidate des Qt
+&lt;span class="caps"&gt;SDK&lt;/span&gt; 1.0 veröffentlicht&lt;/a&gt;, ein großer Schritt hin zum fertigen
+Entwicklungskit. Das &lt;span class="caps"&gt;SDK&lt;/span&gt; wird die Qt-Version 4.6.3 enthalten, und damit
+kein Qt Quick und den ganzen dekarativen Kram, der erst mit Qt 4.7
+kommen soll. Dazu gab es, auch vorgestern, ein &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/06/09/updated-release-schedule-for-qt-47-qt-creator-20-and-qt-creator-21/"&gt;Update der Roadmap&lt;/a&gt; zur
+Veröffentlichung des Qt Creators 2.0 und 2.1 sowie Qt 4.7. Das &lt;span class="caps"&gt;SDK&lt;/span&gt; 1.0
+wird demnach außerdem den Qt Creator 2.0 enthalten, der &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/06/09/qt-creator-20-its-a-release-candidate/"&gt;ab sofort auch
+als Release Candidate&lt;/a&gt; verfügbar ist. Soweit ich das überblicke, ist,
+außer Bugfixes und Verbesserungen der Oberfläche, die Hauptneuigkeit,
+dass man mit dem Qt Creator 2.0 auf dem Nokia N8 debuggen kann. Bzw.
+debuggen können wird, sobald das Gerät verfügbar&amp;nbsp;ist.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Vorteil Kommandozeile</title><link href="http://www.peterbouda.eu/vorteil-kommandozeile.html" rel="alternate"></link><published>2010-06-04T10:19:00+01:00</published><updated>2010-06-04T10:19:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-06-04:/vorteil-kommandozeile.html</id><summary type="html">&lt;p&gt;Das N900 wird ja allgemein (noch?) nicht so sehr als &lt;strong&gt;der&lt;/strong&gt; iPhone-
+oder Android-Konkurrent wahrgenommen. Als halbwegs interessierter
+Linux-Anwender oder gar -Entwickler ist aber schnell festzustellen, wo
+ein offenes Betriebssystem einen Vorteil hat: es gibt die Kommandozeile,
+also eine Shell :-). Zwei schöne Beispiel wurden dazu in den letzten
+Wochen veröffentlicht …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Das N900 wird ja allgemein (noch?) nicht so sehr als &lt;strong&gt;der&lt;/strong&gt; iPhone-
+oder Android-Konkurrent wahrgenommen. Als halbwegs interessierter
+Linux-Anwender oder gar -Entwickler ist aber schnell festzustellen, wo
+ein offenes Betriebssystem einen Vorteil hat: es gibt die Kommandozeile,
+also eine Shell :-). Zwei schöne Beispiel wurden dazu in den letzten
+Wochen veröffentlicht, also zeigt die folgenden Sachen mal euren Kumpels
+mit den Apfel-Handys. Sie werden zwar nicht kapieren worum es geht, aber
+Hauptsache ihr selbst wisst den Vorteil auf eurer&amp;nbsp;Seite.&lt;/p&gt;
+&lt;p&gt;Beim ersten Beispiel handelt es sich &lt;a class="reference external" href="http://blog.adl.pl/saving-n900-battery-power-with-simple-shell-script/495"&gt;um eine kleines Shell-Skript zum
+Energiesparen&lt;/a&gt;. Dazu schaltet es einfach die Internetverbindung aus,
+setzt das Netz auf 2G und schaltet den automatischen E-Mail-Abruf aus.
+Genauso schnell lässts sich alles auch wieder aktiveren, drei bzw. vier
+Zeilen Code reichen aus. Und weil es so elegant ist, hier das ganze&amp;nbsp;Skript:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+#!/bin/sh
+
+# Simple shell script created in order to preserve battery power in your N900
+
+# Actions taken:
+# 1. Sets internet connection mode 'Always ask' /(available under Settings -&amp;gt; Internet connections -&amp;gt; Connect automatically).
+# 2. Disconnects current internet connection.
+# 3. Switches cellular radio into 2G-only mode.
+# 4. Disables automatic email send&amp;amp;receive in Modest email client.
+
+# Created by Dawid Lorenz aka evad, http://adl.pl
+
+if [ &amp;quot;$1&amp;quot; == &amp;quot;off&amp;quot; ]
+ then
+  echo &amp;quot;Restoring power suckers...&amp;quot;
+  gconftool-2 --set --type list --list-type string /system/osso/connectivity/network_type/auto_connect [*]
+  gconftool-2 --set --type bool /apps/modest/auto_update true
+  run-standalone.sh dbus-send --system --type=method_call --dest=com.nokia.phone.net /com/nokia/phone/net Phone.Net.set_selected_radio_access_technology byte:0
+ else
+  echo &amp;quot;Going into power saving mode...&amp;quot;
+  gconftool-2 --set --type list --list-type string /system/osso/connectivity/network_type/auto_connect []
+  gconftool-2 --set --type bool /apps/modest/auto_update false
+  run-standalone.sh dbus-send --system --dest=com.nokia.icd /com/nokia/icd_ui com.nokia.icd_ui.disconnect boolean:true
+  run-standalone.sh dbus-send --system --type=method_call --dest=com.nokia.phone.net /com/nokia/phone/net Phone.Net.set_selected_radio_access_technology byte:1
+fi
+&lt;/pre&gt;
+&lt;p&gt;Einfach als &amp;#8220;power-saver.sh&amp;#8221; auf dem N900 ablegen, und dann per
+&amp;#8220;power-saver.sh&amp;#8221; den Energiesparmodus aktivieren bzw. per
+&amp;#8220;power-saver.sh off&amp;#8221; wieder&amp;nbsp;deaktivieren.&lt;/p&gt;
+&lt;p&gt;Das zweite Beispiel ist wohl etwas allgemeinverständlicher: &lt;a class="reference external" href="http://thpmaemo.blogspot.com/2010/06/streaming-video-to-big-screen.html"&gt;Videos per
+&lt;span class="caps"&gt;HTTP&lt;/span&gt; oder &lt;span class="caps"&gt;SSH&lt;/span&gt; vom N900 auf den Desktop streamen&lt;/a&gt;. Benutzt werden nur
+auf dem Gerät vorinstallierte Programme. Dekodiert wird dabei alles auf
+dem Desktop, so dass bei ausreichend potenter Netzverbindung sogar
+&lt;span class="caps"&gt;HD&lt;/span&gt;-Videos gestreamt werden können. Da lacht das Linux-Anwender-Herz und
+der Apfelfan schaut in die Röhre, wenigstens&amp;nbsp;kurzzeitig.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>MeeGo, v1.0</title><link href="http://www.peterbouda.eu/meego-v10.html" rel="alternate"></link><published>2010-05-26T18:11:00+01:00</published><updated>2010-05-26T18:11:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-05-26:/meego-v10.html</id><summary type="html">&lt;p&gt;Und wieder mal gehts Schlag auf Schlag: nachdem gestern endlich die neue
+N900-Firmware veröffentlicht wurde, gibt es heute &lt;a class="reference external" href="http://meego.com/community/blogs/imad/2010/meego-v1.0-core-software-platform-netbook-user-experience-project-release"&gt;Version 1.0 von
+MeeGo&lt;/a&gt;, dem Nachfolger von Maemo bzw. dem mobilen Linux von Nokia und
+Intel. Veröffentlicht wurde die sogenannte &amp;#8220;Core Software&amp;#8221; sowie ein &lt;span class="caps"&gt;UI&lt;/span&gt;
+für Netbooks. Der &amp;#8220;Core&amp;#8221; ist dabei …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Und wieder mal gehts Schlag auf Schlag: nachdem gestern endlich die neue
+N900-Firmware veröffentlicht wurde, gibt es heute &lt;a class="reference external" href="http://meego.com/community/blogs/imad/2010/meego-v1.0-core-software-platform-netbook-user-experience-project-release"&gt;Version 1.0 von
+MeeGo&lt;/a&gt;, dem Nachfolger von Maemo bzw. dem mobilen Linux von Nokia und
+Intel. Veröffentlicht wurde die sogenannte &amp;#8220;Core Software&amp;#8221; sowie ein &lt;span class="caps"&gt;UI&lt;/span&gt;
+für Netbooks. Der &amp;#8220;Core&amp;#8221; ist dabei das grundlegende Linux-System, für
+verschiedene Geräteklassen wird es dann angepasste Benutzeroberflächen
+geben, und zwar auf Basis von Qt. Aktuell ist wohl Qt 4.6 dabei, die &lt;span class="caps"&gt;UI&lt;/span&gt;
+ist aber noch mehr oder weniger die alte von Intels Moblin. Nächsten
+Monat soll dann schon eine Version für &amp;#8220;Handsets&amp;#8221; folgen, also wohl eine
+erste &lt;span class="caps"&gt;UI&lt;/span&gt; für das N900. Bisher kann man auf das N900 nur das Basissystem,
+die &amp;#8220;Core Software&amp;#8221;, installieren. Ich hab zwar derzeit kein Netbook,
+aber mal sehen ob ich das Ganze auch auf meinem Notebook zum Laufen&amp;nbsp;kriege.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Der Berg kreißte…</title><link href="http://www.peterbouda.eu/der-berg-kreisste.html" rel="alternate"></link><published>2010-05-25T14:15:00+01:00</published><updated>2010-05-25T14:15:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-05-25:/der-berg-kreisste.html</id><content type="html">&lt;p&gt;Und &lt;a class="reference external" href="http://maemocentral.com/2010/05/24/the-n900-finally-gets-the-pr-1-2-firmware/?utm_source=feedburner&amp;amp;utm_medium=feed&amp;amp;utm_campaign=Feed:+MaemoCentral+(Maemo+Central)"&gt;heraus kam &lt;span class="caps"&gt;PR&lt;/span&gt; 1.2&lt;/a&gt;. Endlich. Und mit Qt&amp;nbsp;4.6.2.Yeah!&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Und noch ne Beta von Nokia: Qt Developer Network</title><link href="http://www.peterbouda.eu/und-noch-ne-beta-von-nokia-qt-developer-network.html" rel="alternate"></link><published>2010-05-09T15:00:00+01:00</published><updated>2010-05-09T15:00:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-05-09:/und-noch-ne-beta-von-nokia-qt-developer-network.html</id><content type="html">&lt;p&gt;Nokia &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/05/06/the-qt-developer-network-is-finally-live/"&gt;gründet also ein eigenes Qt-Entwickler-Netzwerk&lt;/a&gt;, das sich im
+Moment in einer geschlossenen Beta-Phase befindet. Gute Idee,
+hoffentlich dürfen wir bald&amp;nbsp;rein.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Qt 4.7 Beta ist erschienen</title><link href="http://www.peterbouda.eu/qt-47-beta-ist-erschienen.html" rel="alternate"></link><published>2010-05-09T11:36:00+01:00</published><updated>2010-05-09T11:36:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-05-09:/qt-47-beta-ist-erschienen.html</id><summary type="html">&lt;p&gt;Ist zwar nun schon ein paar Tage her, aber ich komm erst jetzt dazu, das
+hier zu vermelden: Nokia hat die &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/05/06/qt-470-beta1/"&gt;Beta der nächsten Qt-Version 4.7
+veröffentlicht&lt;/a&gt;. Auch für Maemo gibt es schon Pakete, auf dem Gerät
+sollten sie aber nur mit der kommenden Firmware &lt;span class="caps"&gt;PR&lt;/span&gt; 1.2 verwendet …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ist zwar nun schon ein paar Tage her, aber ich komm erst jetzt dazu, das
+hier zu vermelden: Nokia hat die &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/05/06/qt-470-beta1/"&gt;Beta der nächsten Qt-Version 4.7
+veröffentlicht&lt;/a&gt;. Auch für Maemo gibt es schon Pakete, auf dem Gerät
+sollten sie aber nur mit der kommenden Firmware &lt;span class="caps"&gt;PR&lt;/span&gt; 1.2 verwendet werden.
+Sie ersetzen dann die bisherigen &amp;#8220;-maemo5-&amp;#8220;-Pakete aus dem
+extras-devel-Repository. Zur Zeit folgt ja eine Beta nach der anderen
+bei Nokia, wird Zeit, dass sich auch bei fertigen Releases mal was tut.
+Sei es Symbian 3 oder einfach nur endlich mal die &lt;a class="reference external" href="http://maemocentral.com/2010/05/06/here-is-why-the-pr-1-2-firmware-for-the-n900-is-late/?utm_source=feedburner&amp;amp;utm_medium=feed&amp;amp;utm_campaign=Feed:+MaemoCentral+(Maemo+Central)"&gt;nächste Firmware fürs
+N900&lt;/a&gt;. Bei &lt;a class="reference external" href="http://www.heise.de/developer/meldung/Touch-Unterstuetzung-in-Qt-4-7-995619.html"&gt;heise&lt;/a&gt; gibt es auch noch einen Überblick über die
+wichtigsten Neuerungen in Qt&amp;nbsp;4.7.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Beta des Nokia Qt SDK veröffentlicht, mit Qt Mobility</title><link href="http://www.peterbouda.eu/beta-des-nokia-qt-sdk-veroffentlicht-mit-qt-mobility.html" rel="alternate"></link><published>2010-04-28T11:22:00+01:00</published><updated>2010-04-28T11:22:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-04-28:/beta-des-nokia-qt-sdk-veroffentlicht-mit-qt-mobility.html</id><summary type="html">&lt;p&gt;Neben der &lt;a class="reference external" href="http://www.heise.de/newsticker/meldung/Nokia-N8-Erstes-Smartphone-mit-Symbian-3-988083.html"&gt;Ankündigung des ersten Symbian-3-Mobiltelefons N8&lt;/a&gt; wurde
+gestern auch eine erste Beta des Qt SDKs veröffentlicht. Außer den
+bisherigen Enticklungstools wie dem Qt Creator (Beta der Version 2.0)
+und &lt;span class="caps"&gt;MADDE&lt;/span&gt; enthält das &lt;span class="caps"&gt;SDK&lt;/span&gt; nun auch Emulatoren für Symbian Handys. Gerade
+für Symbian wird sich da in nächster Zeit …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Neben der &lt;a class="reference external" href="http://www.heise.de/newsticker/meldung/Nokia-N8-Erstes-Smartphone-mit-Symbian-3-988083.html"&gt;Ankündigung des ersten Symbian-3-Mobiltelefons N8&lt;/a&gt; wurde
+gestern auch eine erste Beta des Qt SDKs veröffentlicht. Außer den
+bisherigen Enticklungstools wie dem Qt Creator (Beta der Version 2.0)
+und &lt;span class="caps"&gt;MADDE&lt;/span&gt; enthält das &lt;span class="caps"&gt;SDK&lt;/span&gt; nun auch Emulatoren für Symbian Handys. Gerade
+für Symbian wird sich da in nächster Zeit vermutlich viel tun, da werde
+ich demnächst mal ein paar Portierungen meiner Qt-Anwendungen
+ausprobieren. Das &lt;span class="caps"&gt;SDK&lt;/span&gt; enthält außerdem endlich die fertige
+&lt;span class="caps"&gt;QT&lt;/span&gt;-Mobility-Schnittstelle, die &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/04/27/qt-mobility-100-package/"&gt;seit gestern das Beta-Stadium&lt;/a&gt;
+verlassen hat. Es bleibt spannend bei&amp;nbsp;Nokia.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;Hier einfach mal ein paar Links zur Veröffentlichung des &lt;span class="caps"&gt;SDK&lt;/span&gt;:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.forum.nokia.com/info/sw.nokia.com/id/e920da1a-5b18-42df-82c3-907413e525fb/Nokia_Qt_SDK.html"&gt;Offizieller&amp;nbsp;Download&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.forum.nokia.com/info/sw.nokia.com/id/a075d8cc-dc4e-4926-8faa-9d926c20a3d7/Getting_Started_with_Nokia_Qt_SDK.html"&gt;Einführung in das &lt;span class="caps"&gt;SDK&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/04/27/nokia-qt-sdk-what-is-in-and-what-is-not-and%E2%80%A6-what-is-it/"&gt;Qt-Labs-Artikel über das &lt;span class="caps"&gt;SDK&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;&lt;p&gt;&lt;script type="text/javascript"&gt;&lt;/p&gt;&lt;p&gt;var flattr_uid =&amp;nbsp;'12306';&lt;/p&gt;&lt;p&gt;var flattr_tle = 'Beta des Nokia Qt &lt;span class="caps"&gt;SDK&lt;/span&gt; veröffentlicht, mit Qt&amp;nbsp;Mobility';&lt;/p&gt;&lt;p&gt;var flattr_dsc = 'Neben der Ankündigung des ersten Symbian-3-Mobiltelefons N8 wurde gestern auch eine erste Beta des Qt SDKs veröffentlicht. Außer den bisherigen Enticklungstools wie dem Qt Creator (Beta der Version&amp;nbsp;...';&lt;/p&gt;&lt;p&gt;var flattr_cat =&amp;nbsp;'text';&lt;/p&gt;&lt;p&gt;var flattr_lng =&amp;nbsp;'de_DE';&lt;/p&gt;&lt;p&gt;var flattr_tag = 'Qt &lt;span class="caps"&gt;SDK&lt;/span&gt;, Symbian, Qt&amp;nbsp;Mobility';&lt;/p&gt;&lt;p&gt;var flattr_url =&amp;nbsp;'http://www.dasskript.com/blogposts/42';&lt;/p&gt;&lt;p&gt;var flattr_btn =&amp;nbsp;'compact';&lt;/p&gt;&lt;p&gt;&lt;/script&gt;&lt;/p&gt;&lt;p&gt;&lt;script src="http://api.flattr.com/button/load.js" type="text/javascript"&gt;&lt;/script&gt;&lt;/p&gt;&lt;/p&gt;</content><category term="Museum"></category></entry><entry><title>Rapid Development für MeeGo mit Qt Quick</title><link href="http://www.peterbouda.eu/rapid-development-fur-meego-mit-qt-quick.html" rel="alternate"></link><published>2010-04-28T11:11:00+01:00</published><updated>2010-04-28T11:11:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-04-28:/rapid-development-fur-meego-mit-qt-quick.html</id><summary type="html">&lt;p&gt;Auf dem Linux Foundation Collaboration Summit ging es dieses Jahr
+natürlich auch um MeeGo. Jetzt wurde einige Vorträge des Gipfels
+veröffentlicht, ein besonders interessanter beschäftigt sich mit &lt;a class="reference external" href="http://meego.com/community/events/presentations/rapid-development-meego-using-qt-quick"&gt;der
+Entwicklung für MeeGo mit Qt Quick&lt;/a&gt;. Man kriegt einen recht guten
+Einblick, wie es denn in der Theorie in Zukunft laufen soll …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Auf dem Linux Foundation Collaboration Summit ging es dieses Jahr
+natürlich auch um MeeGo. Jetzt wurde einige Vorträge des Gipfels
+veröffentlicht, ein besonders interessanter beschäftigt sich mit &lt;a class="reference external" href="http://meego.com/community/events/presentations/rapid-development-meego-using-qt-quick"&gt;der
+Entwicklung für MeeGo mit Qt Quick&lt;/a&gt;. Man kriegt einen recht guten
+Einblick, wie es denn in der Theorie in Zukunft laufen soll. Mal sehen,
+wie&amp;#8217;s dann in der Praxis&amp;nbsp;aussieht.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Symbian-Entwicklung unter Linux</title><link href="http://www.peterbouda.eu/symbian-entwicklung-unter-linux.html" rel="alternate"></link><published>2010-04-22T10:12:00+01:00</published><updated>2010-04-22T10:12:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-04-22:/symbian-entwicklung-unter-linux.html</id><summary type="html">&lt;p&gt;Bisher gab es ja leider keine Möglichkeit, Symbian-Anwendungen unter
+Linux zu entwickeln. Das soll sich mit Qt 4.7 ändern, zumindest eine
+experimentelle Unterstützung soll diese Version mitbringen. Für
+Hartgesottene und diejenigen, die es nicht mehr erwarten können, gibt es
+nun vom Qt Team eine &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/04/21/symbian-development-using-linux/"&gt;Anleitung zum selber Zusammenbauen&lt;/a&gt; der …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bisher gab es ja leider keine Möglichkeit, Symbian-Anwendungen unter
+Linux zu entwickeln. Das soll sich mit Qt 4.7 ändern, zumindest eine
+experimentelle Unterstützung soll diese Version mitbringen. Für
+Hartgesottene und diejenigen, die es nicht mehr erwarten können, gibt es
+nun vom Qt Team eine &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/04/21/symbian-development-using-linux/"&gt;Anleitung zum selber Zusammenbauen&lt;/a&gt; der nötigen
+Komponenten. Bin schon sehr gespannt, meine ersten Qt-Anwendungen auch
+auf einem Standard-Symbian ohne zusätzliche Bibliotheken zu&amp;nbsp;sehen.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Neues Tutorial: Qt auf dem Dingoo A320</title><link href="http://www.peterbouda.eu/neues-tutorial-qt-auf-dem-dingoo-a320.html" rel="alternate"></link><published>2010-04-20T10:08:00+01:00</published><updated>2010-04-20T10:08:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-04-20:/neues-tutorial-qt-auf-dem-dingoo-a320.html</id><summary type="html">&lt;p&gt;Ich &lt;a class="reference external" href="http://www.peterbouda.eu/qt-embedded-auf-dingoo.html"&gt;hatte hier ja schon erwähnt&lt;/a&gt;, dass ich die Anschaffung eines
+Dingoo A320 in Betracht ziehe; nun ist es mir sogar gelungen Qt und das
+Asteroids-Demo des Qt-Pakets für das Gerät zu kompilieren. Für den
+Dingoo hat der Hersteller eine &lt;span class="caps"&gt;GCC&lt;/span&gt; Toolchain veröffentlicht, und mit
+dieser wurde schnell ein Linux-Kernel …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ich &lt;a class="reference external" href="http://www.peterbouda.eu/qt-embedded-auf-dingoo.html"&gt;hatte hier ja schon erwähnt&lt;/a&gt;, dass ich die Anschaffung eines
+Dingoo A320 in Betracht ziehe; nun ist es mir sogar gelungen Qt und das
+Asteroids-Demo des Qt-Pakets für das Gerät zu kompilieren. Für den
+Dingoo hat der Hersteller eine &lt;span class="caps"&gt;GCC&lt;/span&gt; Toolchain veröffentlicht, und mit
+dieser wurde schnell ein Linux-Kernel für das Gerät erstellt. Und darauf
+wiederum können nun Qt-Anwendungen laufen. Das ganze basiert auf Qt
+Embedded, der Qt-Variante für X-Server-lose Unix- und
+Linux-basierte-Betriebssysteme. Und hier geht&amp;#8217;s auch schon zum&amp;nbsp;Tutorial:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.mobileqt.de/wiki/qt_und_asteroids_demo_fuer_dingux_auf_dem_dingoo_a320"&gt;Qt und Asteroids-Demo für Dingux auf dem Dingoo&amp;nbsp;A320&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ein kleines Video habe ich auch noch gemacht, genießt hier also
+Asteroids auf dem Dingoo, gespielt in der einhändigen Variante&amp;nbsp;;-):&lt;/p&gt;
+&lt;iframe width="420" height="315" src="http://www.youtube.com/embed/0U0dR72PpcQ" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content><category term="Museum"></category></entry><entry><title>Screenshots der MeeGo-UI</title><link href="http://www.peterbouda.eu/screenshots-der-meego-ui.html" rel="alternate"></link><published>2010-04-14T15:54:00+01:00</published><updated>2010-04-14T15:54:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-04-14:/screenshots-der-meego-ui.html</id><summary type="html">&lt;p&gt;Auf dem &lt;span class="caps"&gt;IDF&lt;/span&gt; in Peking sind erste Screenshots der MeeGo-&lt;span class="caps"&gt;UI&lt;/span&gt; gezeigt
+worden, ein paar davon gibt&amp;#8217;s hier zu&amp;nbsp;sehen:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://carrypad.com/2010/04/13/meego-at-idf-netbook-and-handheld-eye-candy-chrome-fennec-and-lots-of-developer-details/"&gt;http://carrypad.com/2010/04/13/meego-at-idf-netbook-and-handheld-eye-candy-chrome-fennec-and-lots-of-developer-details/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Es geht also voran. Und ganz nett sieht&amp;#8217;s auch schon aus. Die Netbook-&lt;span class="caps"&gt;UI&lt;/span&gt;
+stammt hauptsächlich aus Moblin, die Telefonoberfläche eher …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Auf dem &lt;span class="caps"&gt;IDF&lt;/span&gt; in Peking sind erste Screenshots der MeeGo-&lt;span class="caps"&gt;UI&lt;/span&gt; gezeigt
+worden, ein paar davon gibt&amp;#8217;s hier zu&amp;nbsp;sehen:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://carrypad.com/2010/04/13/meego-at-idf-netbook-and-handheld-eye-candy-chrome-fennec-and-lots-of-developer-details/"&gt;http://carrypad.com/2010/04/13/meego-at-idf-netbook-and-handheld-eye-candy-chrome-fennec-and-lots-of-developer-details/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Es geht also voran. Und ganz nett sieht&amp;#8217;s auch schon aus. Die Netbook-&lt;span class="caps"&gt;UI&lt;/span&gt;
+stammt hauptsächlich aus Moblin, die Telefonoberfläche eher von Maemo.
+Noch sieht man dem Kleinen also die Eltern deutlich&amp;nbsp;an.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Neues Tutorial: Daten des Accelerometer-Sensors mit einem OpenGL-Objekt verknüpfen</title><link href="http://www.peterbouda.eu/neues-tutorial-daten-des-accelerometer-sensors-mit-einem-opengl-objekt-verknupfen.html" rel="alternate"></link><published>2010-04-05T18:24:00+01:00</published><updated>2010-04-05T18:24:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-04-05:/neues-tutorial-daten-des-accelerometer-sensors-mit-einem-opengl-objekt-verknupfen.html</id><summary type="html">&lt;p&gt;Soeben ist ein neues Tutorial online gegangen, dieses mal geht es ans
+Eingemachte: &lt;a class="reference external" href="http://www.mobileqt.de/wiki/daten_des_accelerometer_sensors_mit_einem_opengl_objekt_verknuepfen"&gt;Wie man Daten des Accelerometer-Sensors mit einem
+OpenGL-Objekt verknüpft&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Das Ganze zeige ich anhand einer kleinen Beispielanwendung, die ein
+Qt-Logo rotieren lässt, wenn man das N900 in verschiedene Richtungen
+neigt. Schöner Effekt, hier ein&amp;nbsp;Video:&lt;/p&gt;
+&lt;iframe width="420" height="315" src="http://www.youtube.com/embed/uJpw0yeHJl8" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;p&gt;Den Code …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Soeben ist ein neues Tutorial online gegangen, dieses mal geht es ans
+Eingemachte: &lt;a class="reference external" href="http://www.mobileqt.de/wiki/daten_des_accelerometer_sensors_mit_einem_opengl_objekt_verknuepfen"&gt;Wie man Daten des Accelerometer-Sensors mit einem
+OpenGL-Objekt verknüpft&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Das Ganze zeige ich anhand einer kleinen Beispielanwendung, die ein
+Qt-Logo rotieren lässt, wenn man das N900 in verschiedene Richtungen
+neigt. Schöner Effekt, hier ein&amp;nbsp;Video:&lt;/p&gt;
+&lt;iframe width="420" height="315" src="http://www.youtube.com/embed/uJpw0yeHJl8" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;p&gt;Den Code der kompletten Anwendung gibt&amp;#8217;s natürlich im Tutorial. Viel
+Spaß&amp;nbsp;damit!&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Mono auf MeeGo</title><link href="http://www.peterbouda.eu/mono-auf-meego.html" rel="alternate"></link><published>2010-04-05T08:35:00+01:00</published><updated>2010-04-05T08:35:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-04-05:/mono-auf-meego.html</id><summary type="html">&lt;p&gt;Die Nachricht ist zwar schon etwas älter, allerdings hab ichs jetzt erst
+gesehen: &lt;a class="reference external" href="http://www.golem.de/1002/73335.html"&gt;Mono soll bald MeeGo unterstützen&lt;/a&gt;. Nach Monotouch (iPhone)
+und Monodroid (Android) ist MeeGo die dritte mobile Plattform für die
+freie .Net-Implementierung. Wäre fein, wenn wir auf dem N900 dann auch
+&lt;a class="reference external" href="http://www.mono-project.com/Moonlight"&gt;Moonlight&lt;/a&gt; bekommen würden. Da scheint im Moment …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Die Nachricht ist zwar schon etwas älter, allerdings hab ichs jetzt erst
+gesehen: &lt;a class="reference external" href="http://www.golem.de/1002/73335.html"&gt;Mono soll bald MeeGo unterstützen&lt;/a&gt;. Nach Monotouch (iPhone)
+und Monodroid (Android) ist MeeGo die dritte mobile Plattform für die
+freie .Net-Implementierung. Wäre fein, wenn wir auf dem N900 dann auch
+&lt;a class="reference external" href="http://www.mono-project.com/Moonlight"&gt;Moonlight&lt;/a&gt; bekommen würden. Da scheint im Moment aber noch der
+Ressourcenbedarf vor zu&amp;nbsp;sein.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Das N900 übertakten</title><link href="http://www.peterbouda.eu/das-n900-ubertakten.html" rel="alternate"></link><published>2010-04-05T08:25:00+01:00</published><updated>2010-04-05T08:25:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-04-05:/das-n900-ubertakten.html</id><summary type="html">&lt;p&gt;Bei &lt;a class="reference external" href="http://www.heise.de/newsticker/meldung/Palm-Pre-uebertaktet-Update-965124.html"&gt;anderen mobilen Linux-Plattformen&lt;/a&gt; geht das ja schon seit einiger
+Zeit, jetzt ist auch das N900 dran: es gibt einen modifizierten Kernel
+zum Übertakten des N900-Prozessors. Normalerweise läuft der Prozessor
+mit 600 MHz, bis zu 1000 sollen drin sein. Dazu muss eine neue Firmware
+auf das Gerät, es muss also …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bei &lt;a class="reference external" href="http://www.heise.de/newsticker/meldung/Palm-Pre-uebertaktet-Update-965124.html"&gt;anderen mobilen Linux-Plattformen&lt;/a&gt; geht das ja schon seit einiger
+Zeit, jetzt ist auch das N900 dran: es gibt einen modifizierten Kernel
+zum Übertakten des N900-Prozessors. Normalerweise läuft der Prozessor
+mit 600 MHz, bis zu 1000 sollen drin sein. Dazu muss eine neue Firmware
+auf das Gerät, es muss also &amp;#8220;geflasht&amp;#8221; werden. Sowieso alles auf eigene
+Gefahr: &lt;a class="reference external" href="http://maemocentral.com/2010/04/04/how-to-overclock-the-nokia-n900/"&gt;hier ist die Anleitung&lt;/a&gt;.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Buchempfehlung: Qt4 - Einführung in die Applikationsentwicklung</title><link href="http://www.peterbouda.eu/buchempfehlung-qt4-einfuhrung-in-die-applikationsentwicklung.html" rel="alternate"></link><published>2010-04-02T14:03:00+01:00</published><updated>2010-04-02T14:03:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-04-02:/buchempfehlung-qt4-einfuhrung-in-die-applikationsentwicklung.html</id><summary type="html">&lt;p&gt;Ein relevantes Buch über Qt zu schreiben ist keine ganz leichte Aufgabe:
+dazu ist die Online-Dokumentation des Qt-Projekts zu gut und
+umfangreich. Der glückliche Qt-Entwickler fühlt eigentlich selten den
+Bedarf nach einem umfassenden Referenzwerk zum in die Hand nehmen.
+Trotzdem ist Daniel Molkentin mit &amp;#8220;Qt4 - Einführung in die
+Applikationsentwicklung&amp;#8221; (erschienen …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ein relevantes Buch über Qt zu schreiben ist keine ganz leichte Aufgabe:
+dazu ist die Online-Dokumentation des Qt-Projekts zu gut und
+umfangreich. Der glückliche Qt-Entwickler fühlt eigentlich selten den
+Bedarf nach einem umfassenden Referenzwerk zum in die Hand nehmen.
+Trotzdem ist Daniel Molkentin mit &amp;#8220;Qt4 - Einführung in die
+Applikationsentwicklung&amp;#8221; (erschienen bei Open Source Press) ein durchaus
+nützliches und umfassendes Referenzwerk zur Desktop-Qt-Entwicklung&amp;nbsp;gelungen.&lt;/p&gt;
+&lt;p&gt;Das Buch gibt zunächst einen Überblick über die wichtigsten Grundlagen
+von Qt wie Layouts, Signale/Slots, Objekthierarchien und
+Speicherverwaltung in der Qt-Bibliothek und in eigenen Anwendungen. So
+werden dem Einsteiger schnell die Vorzüge von Qt klar (s. auch &amp;#8220;Ich
+würde C++ hassen, wenn es Qt nicht gäbe&amp;#8221; [1]), und dank der gut
+gewählten Beispiele steigt man schnell in die Praxis ein. Nach den
+Grundlagen folgt ein Überblick über den Qt-Designer. Das reicht dem
+Autor auch schon, um einen kleinen Texteditor vorzustellen, der
+ausschließlich aus den bisherigen Qt-Basiskenntnissen entwickelt wird.
+Erst dann geht es ans Eingemachte: ab Kapitel 5 werden alle wichtigen
+Qt-Klassen und die relevanten Teile des Frameworks ausführlich
+beschrieben und an Beispielen erläutert. Der Fokus liegt dabei auf der
+Entwicklung von Geschäftsanwendungen: Datenvisualisierung und
+&lt;span class="caps"&gt;SQL&lt;/span&gt;-Anbindung wird ausführlich erklärt, Mutlimediales und
+Echtzeit-Grafisches (bis auf ein vorzügliches Kapitel zur
+Arthur-Grafikbibliothek) mehr oder weniger&amp;nbsp;ausgeklammert.&lt;/p&gt;
+&lt;p&gt;Ich ziehe das Buch immer wieder gerne bei bestimmten Detailfragen heran.
+Der Index ist hervorragend zum schnellen Nachschlagen geeignet und
+tatsächlich bemüht man schließlich nicht mehr für jede Frage die
+Online-Dokumentation. Wenn man nicht gerade Gebiete wie Grafik- und
+Multimediaprogrammierung mit Qt beackert, dann stellt dieses Buch eine
+hervorragende Referenz für jeden Qt-Programmierer dar. Das Buch ist 2008
+erschienen, seitdem ist ja nun bei Qt viel passiert. Trotzdem sind die
+meisten Themen immer noch aktuell, nur bei der Netzwerkprogrammierung
+hat mit dem &amp;#8220;QNetworkAccessManager&amp;#8221; mittlerweile eine völlig neue
+Technologie Einzug gehalten. Manchmal hätte ich mir etwas mehr
+Detailinformationen zu bestimmten Gebieten gewünscht, wie sie z.B. im
+schon genannten Kapitel über &amp;#8220;Arthur&amp;#8221; immer wieder aufblitzen. Aber
+Platz auf Papier ist halt begrenzt, und wenn man umfangreich informieren
+will dann fällt eben leider die ein oder andere tiefer gehende
+Beschreibung unter den Tisch. Das Buch bleibt aber so sowohl für
+Einsteiger als auch für Fortgeschrittene interessant und sollte in
+keinem Qt-Entwickler-Bücherschrank&amp;nbsp;fehlen.&lt;/p&gt;
+&lt;p&gt;Zu kaufen z.B. bei Amazon: &lt;a class="reference external" href="http://www.amazon.de/gp/product/3937514120?ie=UTF8&amp;amp;tag=jsusde-21&amp;amp;linkCode=as2&amp;amp;camp=1638&amp;amp;creative=6742&amp;amp;creativeASIN=3937514120"&gt;Qt 4: Einführung in die
+Applikationsentwicklung&lt;/a&gt;&lt;img alt="image0" src="http://www.assoc-amazon.de/e/ir?t=jsusde-21&amp;amp;l=as2&amp;amp;o=3&amp;amp;a=3937514120" /&gt;&lt;/p&gt;
+&lt;div class="section" id="referenzen"&gt;
+&lt;h2&gt;Referenzen&lt;/h2&gt;
+&lt;p&gt;[1] Mutz, Mark: Gelernt aus Fehlern - C/C++ und Konsorten, ein
+Stimmungsbild. In: &lt;em&gt;iX Special: Programmieren heute&lt;/em&gt;. Hannover: Heise
+Zeitschriften Verlag GmbH &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Co. &lt;span class="caps"&gt;KG&lt;/span&gt;. 2010. (&lt;a class="reference external" href="https://www.heise.de/kiosk/special/ix/09/03/"&gt;zum Heft&lt;/a&gt;)&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="Museum"></category></entry><entry><title>Neues Tutorial: Ein Icon für den Programmmanager</title><link href="http://www.peterbouda.eu/neues-tutorial-ein-icon-fur-den-programmmanager.html" rel="alternate"></link><published>2010-04-02T09:37:00+01:00</published><updated>2010-04-02T09:37:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-04-02:/neues-tutorial-ein-icon-fur-den-programmmanager.html</id><content type="html">&lt;p&gt;Soeben ist ein neues Tutorial online, das euch zeigt, wie ihr eurem
+debian-Paket ein Icon für den Programmmanager hinzufügt. Diese Icons
+werden neben eurer Anwendung auf dem N900 angezeigt, wenn ihr die
+Anwendung in eines der offiziellen Repositories gestellt habt. Die
+komplette Vorgehensweise ist &lt;a class="reference external" href="http://www.mobileqt.de/wiki/ein_icon_fuer_den_programmmanager"&gt;hier nachzulesen&lt;/a&gt;.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>MeeGo ist da</title><link href="http://www.peterbouda.eu/meego-ist-da.html" rel="alternate"></link><published>2010-03-31T19:23:00+01:00</published><updated>2010-03-31T19:23:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-31:/meego-ist-da.html</id><content type="html">&lt;p&gt;Tag eins, wie man so schön sagt: &lt;a class="reference external" href="http://meego.com/community/blogs/imad/2010/day-1-here-opening-meego-development"&gt;es gibt erste Images von MeeGo&lt;/a&gt; für
+N900, Atom- und Moorestown-Plattformen. Download&amp;nbsp;läuft.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Gluon zur Spieleentwicklung mit Qt</title><link href="http://www.peterbouda.eu/gluon-zur-spieleentwicklung-mit-qt.html" rel="alternate"></link><published>2010-03-28T16:06:00+01:00</published><updated>2010-03-28T16:06:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-28:/gluon-zur-spieleentwicklung-mit-qt.html</id><summary type="html">&lt;p&gt;Spiele mit Qt zu entwickeln ist im Moment noch kein großer Spaß, auch
+wenn mit QGraphicsView und den &lt;span class="caps"&gt;QGL&lt;/span&gt;*-Klassen Grafikprogrammierung
+unterstützt wird. Um die gesamte sonstige Intelligenz für Spiele
+(Sprites, Kollisionen, Level, etc.) muss sich der Entwickler aber selbst
+kümmern. In diese Bresche springt nun &lt;a class="reference external" href="http://gluon.tuxfamily.org/"&gt;Gluon&lt;/a&gt;, dass auf Qt …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Spiele mit Qt zu entwickeln ist im Moment noch kein großer Spaß, auch
+wenn mit QGraphicsView und den &lt;span class="caps"&gt;QGL&lt;/span&gt;*-Klassen Grafikprogrammierung
+unterstützt wird. Um die gesamte sonstige Intelligenz für Spiele
+(Sprites, Kollisionen, Level, etc.) muss sich der Entwickler aber selbst
+kümmern. In diese Bresche springt nun &lt;a class="reference external" href="http://gluon.tuxfamily.org/"&gt;Gluon&lt;/a&gt;, dass auf Qt basiert und
+sich vor allem in &lt;span class="caps"&gt;KDE&lt;/span&gt;-Umgebungen einfügen soll. Ein Hauptantrieb für die
+Gluon-Entwickler war wohl insgesamt der Mangel an vernünftigen
+2D-Spiele-Bibliotheken, Gluon soll nach Auskunft im Projektwiki nichts
+Geringeres als das &amp;#8220;Unity3D&amp;#8221; für Spiele in zwei Dimensionen werden.
+Damit hängt der Anspruch hoch. Von Anfang an werden wie bei Unity3D auch
+Vertriebswege für die späteren Spiele in die Bibliotheksentwicklung
+eingeplant, und natürlich spielt da auch Maemo bzw. MeeGo eine zentrale
+Rolle. Ein &lt;a class="reference external" href="http://leinir.dk/gluon/gluon-game-client.pdf"&gt;&lt;span class="caps"&gt;PDF&lt;/span&gt; im Gluon-Wiki&lt;/a&gt; beschreibt recht anschaulich, wie sich
+die Entwickler einen solchen Gluon-Player für Maemo/MeeGo vorstellen.
+Die Idee eines eigenen Gluon Creators soll außerdem die Einstiegshürde
+niedrig halten. Interessante Sache, die man auf jeden Fall im Auge
+behalten&amp;nbsp;sollte.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Neues Tutorial: Wie man ein Python- oder PySide-Projekt für Maemo erstellt</title><link href="http://www.peterbouda.eu/neues-tutorial-wie-man-ein-python-oder-pyside-projekt-fur-maemo-erstellt.html" rel="alternate"></link><published>2010-03-23T18:39:00+00:00</published><updated>2010-03-23T18:39:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-23:/neues-tutorial-wie-man-ein-python-oder-pyside-projekt-fur-maemo-erstellt.html</id><summary type="html">&lt;p&gt;Ab sofort ist das erste Python-Tutorial zur Anwendungsentwickung für
+Maemo und das N900 auf mobileqt.de&amp;nbsp;online:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.mobileqt.de/wiki/wie_man_ein_python_oder_pyside_projekt_fuer_maemo_erstellt"&gt;Wie man ein Python- oder PySide-Projekt für Maemo&amp;nbsp;erstellt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Am Beispiel einer kleinen PySide-Anwendung wird gezeigt, wie ihr eure
+Python-Anwendungen aufbauen und verpacken müsst, damit sie auf dem N900
+installiert werden können. Für …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ab sofort ist das erste Python-Tutorial zur Anwendungsentwickung für
+Maemo und das N900 auf mobileqt.de&amp;nbsp;online:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.mobileqt.de/wiki/wie_man_ein_python_oder_pyside_projekt_fuer_maemo_erstellt"&gt;Wie man ein Python- oder PySide-Projekt für Maemo&amp;nbsp;erstellt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Am Beispiel einer kleinen PySide-Anwendung wird gezeigt, wie ihr eure
+Python-Anwendungen aufbauen und verpacken müsst, damit sie auf dem N900
+installiert werden können. Für alle, die nicht in die Untiefen der
+Qt/C++-Programmierung einsteigen wollen ist Python eine leichte und
+schnelle Alternative. Die Hautpdatei der Beispielanwendung habe ich
+übrigens komplett mit dem &lt;a class="reference external" href="http://maemo.org/downloads/product/Maemo5/pygtkeditor/"&gt;PyGTKEditor&lt;/a&gt; auf dem N900&amp;nbsp;entwickelt.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Vorschau der anderen Art: Bilder aus dem N900 PR1.2 SDK</title><link href="http://www.peterbouda.eu/vorschau-der-anderen-art-bilder-aus-dem-n900-pr12-sdk.html" rel="alternate"></link><published>2010-03-23T08:09:00+00:00</published><updated>2010-03-23T08:09:00+00:00</updated><author><name>pbouda</name></author><id>tag:www.peterbouda.eu,2010-03-23:/vorschau-der-anderen-art-bilder-aus-dem-n900-pr12-sdk.html</id><content type="html">&lt;p&gt;Auf talk.maemo.org hat jemand erste Bilder aus dem &lt;span class="caps"&gt;SDK&lt;/span&gt; für die
+Firmware-Version &lt;span class="caps"&gt;PR1&lt;/span&gt;.2 veröffentlicht, die einen Einblick in die
+kommenden Features ermöglichen. Schaut&amp;#8217;s euch an&amp;nbsp;unter:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://talk.maemo.org/showthread.php?t=48020"&gt;http://talk.maemo.org/showthread.php?t=48020&lt;/a&gt;&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Processing auf dem N900</title><link href="http://www.peterbouda.eu/processing-auf-dem-n900.html" rel="alternate"></link><published>2010-03-20T11:28:00+00:00</published><updated>2010-03-20T11:28:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-20:/processing-auf-dem-n900.html</id><summary type="html">&lt;p&gt;Processing ist eine Java-basierte Programmiersprache, die bisher vor
+allem im Computerkunstbereich eingesetzt wird und sich dort wegen ihrer
+einfachen Erlernbarkeit und einer hervorragenden Grafikbibliothek großer
+Beliebtheit erfreut. Aber auch im Embedded-Bereich wird Processing z.B.
+Schaltungen mit &lt;a class="reference external" href="http://www.heise.de/ct/projekte/machmit/processing/wiki/"&gt;dem Mikrokontroller Arduino&lt;/a&gt; verwendet. Und es &lt;a class="reference external" href="http://peterbouda.blogspot.com/search/label/Arduino"&gt;macht
+Spaß&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Vor kurzem hat nun Jayesh …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Processing ist eine Java-basierte Programmiersprache, die bisher vor
+allem im Computerkunstbereich eingesetzt wird und sich dort wegen ihrer
+einfachen Erlernbarkeit und einer hervorragenden Grafikbibliothek großer
+Beliebtheit erfreut. Aber auch im Embedded-Bereich wird Processing z.B.
+Schaltungen mit &lt;a class="reference external" href="http://www.heise.de/ct/projekte/machmit/processing/wiki/"&gt;dem Mikrokontroller Arduino&lt;/a&gt; verwendet. Und es &lt;a class="reference external" href="http://peterbouda.blogspot.com/search/label/Arduino"&gt;macht
+Spaß&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Vor kurzem hat nun Jayesh Salvi eine &lt;a class="reference external" href="http://jyro.blogspot.com/2010/03/portable-apps-for-iphone-android-pre.html"&gt;Website mit einer
+Javascript-Processing-Umgebung&lt;/a&gt; veröffentlicht. Die Beispiele auf der
+Website funktionieren alle recht gut auch auf dem N900, ich hatte aber
+Probleme mit den Mouse-Events. In den von mir getesteten Browsern
+(MicroB, Midori, Firefox) konnte ich keine vernünftigen Toucheingaben
+machen, weil meist der Browser diese Eingaben abfängt um z.B. den
+Bildschirm zu scrollen. Am Besten funktionierte es mit Midori, der eine
+WebKit-Engine verwendet. Also habe ich ein kleines PySide-Skript
+geschrieben, dass mir nur die die Processing-Umgebung unter
+&amp;#8220;&lt;a class="reference external" href="http://p.altcanvas.com/"&gt;http://p.altcanvas.com/&lt;/a&gt;&amp;#8221; öffnet und den MicroB-UserAgent-String&amp;nbsp;schickt:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# This code is public domain
+import sys
+from PySide import QtGui, QtWebKit, QtCore
+
+def main():
+    app = QtGui.QApplication(sys.argv)
+    QtGui.QApplication.setApplicationName(&amp;quot;Processing&amp;quot;)
+    MainWindow = QtWebKit.QWebView()
+    page = MyWebPage()
+    MainWindow.setPage(page)
+    MainWindow.show()
+    MainWindow.load(QtCore.QUrl(&amp;quot;http://p.altcanvas.com/&amp;quot;))
+    sys.exit(app.exec_())
+
+class MyWebPage(QtWebKit.QWebPage):
+
+    def __init__(self):
+        QtWebKit.QWebPage.__init__(self)
+
+    def userAgentForUrl(self, url):
+        return &amp;quot;Mozilla/5.0 (X11; U; Linux armv7l; de-DE; rv:1.9.2a1pre) Gecko/20091127 Firefox/3.5 Maemo Browser 1.5.6 RX-51 N900&amp;quot;
+
+main()
+&lt;/pre&gt;
+&lt;p&gt;Und siehe da: MouseClicked- und MouseDragged-Events funktionieren auf
+dem N900 einwandfrei! Ich habe auf der Website ein Projekt namens
+&amp;#8220;touch&amp;#8221; freigegeben, dieses könnt ihr in der &amp;#8220;Gallery&amp;#8221; ausprobieren.
+Damit das Python-Skript auf dem N900 läuft müsst ihr das Paket
+&amp;#8220;pyside-qt4-webkit&amp;#8221; aus &amp;#8220;extras-devel&amp;#8221; installieren. Ihr könnt das
+Skript auch auf dem Desktop starten und seht so, wie sich das
+Processing-Programm auf dem N900 verhalten wird. Entwickeln könnt ihr
+ganz einfach auf der Website im&amp;nbsp;Desktop-Browser.&lt;/p&gt;
+&lt;p&gt;Das Python-Skript könnt ihr auch &lt;a class="reference external" href="http://peterbouda.de/downloads/processing.py.txt"&gt;hier herunterladen&lt;/a&gt;.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Endlich: N900-Roboter</title><link href="http://www.peterbouda.eu/endlich-n900-roboter.html" rel="alternate"></link><published>2010-03-20T09:44:00+00:00</published><updated>2010-03-20T09:44:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-20:/endlich-n900-roboter.html</id><content type="html">&lt;p&gt;Es wurde auch Zeit: der erste Roboter mit dem N900 als Gehirn. Und
+twittern kann er auch schon, der&amp;nbsp;Kleine:&lt;/p&gt;
+&lt;iframe width="420" height="315" src="http://www.youtube.com/embed/N201N6u6ils" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content><category term="Museum"></category></entry><entry><title>Qt 4.7 auf dem N900</title><link href="http://www.peterbouda.eu/qt-47-auf-dem-n900.html" rel="alternate"></link><published>2010-03-17T19:04:00+00:00</published><updated>2010-03-17T19:04:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-17:/qt-47-auf-dem-n900.html</id><content type="html">&lt;p&gt;Eine Woche nach der &lt;a class="reference external" href="http://www.mobileqt.de/blogposts/21"&gt;Vorschau auf Qt 4.7&lt;/a&gt; beglücken uns die Qt Labs nun
+mit einer Version für das N900. Installationsanleitung findet ihr
+&lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/03/17/experimental-qt-47-packages-for-the-n900/"&gt;hier&lt;/a&gt;. Interessant: die Qt 4.7 Bibliotheken ersetzen die Version 4.6
+in extras-devel, sobald die Firmware &lt;span class="caps"&gt;PR&lt;/span&gt; 1.2 raus ist. Wir warten&amp;nbsp;ungeduldig.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Windows Phone Demo</title><link href="http://www.peterbouda.eu/windows-phone-demo.html" rel="alternate"></link><published>2010-03-16T16:58:00+00:00</published><updated>2010-03-16T16:58:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-16:/windows-phone-demo.html</id><summary type="html">&lt;p&gt;Microsoft hat auf der &lt;span class="caps"&gt;MIX&lt;/span&gt; &lt;a class="reference external" href="http://www.heise.de/newsticker/meldung/Mix-Microsoft-zeigt-erste-Windows-Phone-Anwendungen-955528.html"&gt;erste Demos von Anwendungen auf dem Windows
+Phone&lt;/a&gt; gezeigt. Besonders beindruckend finde ich das Video von &amp;#8220;The
+Harvest&amp;#8221;, dass die Möglichkeiten von Spielen auf dem neuen mobilen
+Betriebssystem zeigen&amp;nbsp;soll.&lt;/p&gt;
+&lt;p&gt;Spiele sollen dann sowohl auf dem Telefon als auch auf der XBox gespielt
+werden können …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Microsoft hat auf der &lt;span class="caps"&gt;MIX&lt;/span&gt; &lt;a class="reference external" href="http://www.heise.de/newsticker/meldung/Mix-Microsoft-zeigt-erste-Windows-Phone-Anwendungen-955528.html"&gt;erste Demos von Anwendungen auf dem Windows
+Phone&lt;/a&gt; gezeigt. Besonders beindruckend finde ich das Video von &amp;#8220;The
+Harvest&amp;#8221;, dass die Möglichkeiten von Spielen auf dem neuen mobilen
+Betriebssystem zeigen&amp;nbsp;soll.&lt;/p&gt;
+&lt;p&gt;Spiele sollen dann sowohl auf dem Telefon als auch auf der XBox gespielt
+werden können. Es ist außerdem ein Schritt in die richtige Richtung
+endlich die Entwicklungsumgebung für die Anwendungsentwicklung frei zu
+verteilen, bisher braucht das Windows Mobile-&lt;span class="caps"&gt;SDK&lt;/span&gt; mindestens ein
+Developer Studio Professional als Voraussetzung. Und wenn dann Qt auch
+noch auf Windows Phone 7 portiert wird, dann werde ich mir mal wieder
+ein Windows-Handy zulegen. Mal sehen, was Microsoft da noch so aus dem
+Hut&amp;nbsp;zaubert.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Kurs: Mobile Anwendungen mit Qt 4</title><link href="http://www.peterbouda.eu/kurs-mobile-anwendungen-mit-qt-4.html" rel="alternate"></link><published>2010-03-15T10:07:00+00:00</published><updated>2010-03-15T10:07:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-15:/kurs-mobile-anwendungen-mit-qt-4.html</id><summary type="html">&lt;p&gt;Für alle Entwickler mit Fortbildungsambitionen und/oder
+fortbildungsfreundlichem Chef: ich gebe im April, Juni und Oktober einen
+&lt;a class="reference external" href="http://www.opensourceschool.de/kurse/muenchen/schulung/mobile-anwendungen-mit-qt-4/"&gt;dreitägigen Kurs über die Entwicklung mobiler Anwendungen mit Qt 4&lt;/a&gt;,
+und zwar an der Open Source School in München. Alle Interessenten
+sollten sich bald anmelden, da die Zahl der Plätze begrenzt ist. Im …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Für alle Entwickler mit Fortbildungsambitionen und/oder
+fortbildungsfreundlichem Chef: ich gebe im April, Juni und Oktober einen
+&lt;a class="reference external" href="http://www.opensourceschool.de/kurse/muenchen/schulung/mobile-anwendungen-mit-qt-4/"&gt;dreitägigen Kurs über die Entwicklung mobiler Anwendungen mit Qt 4&lt;/a&gt;,
+und zwar an der Open Source School in München. Alle Interessenten
+sollten sich bald anmelden, da die Zahl der Plätze begrenzt ist. Im
+kleinen Kreis lernt und lehrt sichs halt am Besten. Ich würde mich sehr
+freuen einige von euch dort und dann begrüßen zu&amp;nbsp;dürfen.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Neues Tutorial: Wie man mit MADDE ein Qt-Projekt für Maemo erstellt</title><link href="http://www.peterbouda.eu/neues-tutorial-wie-man-mit-madde-ein-qt-projekt-fur-maemo-erstellt.html" rel="alternate"></link><published>2010-03-15T10:02:00+00:00</published><updated>2010-03-15T10:02:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-15:/neues-tutorial-wie-man-mit-madde-ein-qt-projekt-fur-maemo-erstellt.html</id><summary type="html">&lt;p&gt;Nachdem das Tutorial zur Qt-Entwicklung ja nun schon eine Weile online
+ist folgt nun die &lt;a class="reference external" href="http://www.mobileqt.de/wiki/wie_man_mit_madde_ein_qt_projekt_fuer_maemo_erstellt"&gt;&lt;span class="caps"&gt;MADDE&lt;/span&gt;-Variante zur mobilen Qt-Entwicklung&lt;/a&gt;. Das
+Tutorial zeigt euch schrittweise, wie ihr mit &lt;span class="caps"&gt;MADDE&lt;/span&gt; euer Projekt anlegt,
+durch eine Integration mit dem Qt Creator die Anwendung
+entwicklerfreundlich weiter entwickelt und abschließend ein Debian-Paket
+für die …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Nachdem das Tutorial zur Qt-Entwicklung ja nun schon eine Weile online
+ist folgt nun die &lt;a class="reference external" href="http://www.mobileqt.de/wiki/wie_man_mit_madde_ein_qt_projekt_fuer_maemo_erstellt"&gt;&lt;span class="caps"&gt;MADDE&lt;/span&gt;-Variante zur mobilen Qt-Entwicklung&lt;/a&gt;. Das
+Tutorial zeigt euch schrittweise, wie ihr mit &lt;span class="caps"&gt;MADDE&lt;/span&gt; euer Projekt anlegt,
+durch eine Integration mit dem Qt Creator die Anwendung
+entwicklerfreundlich weiter entwickelt und abschließend ein Debian-Paket
+für die Installation erstellt. Qt-Anwendungen fürs N900 waren noch nie
+so einfach.&amp;nbsp;:-)&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Technische Vorschau auf Qt 4.7 und Alpha von Qt Creator</title><link href="http://www.peterbouda.eu/technische-vorschau-auf-qt-47-und-alpha-von-qt-creator.html" rel="alternate"></link><published>2010-03-11T20:17:00+00:00</published><updated>2010-03-11T20:17:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-11:/technische-vorschau-auf-qt-47-und-alpha-von-qt-creator.html</id><summary type="html">&lt;p&gt;Heute wurden sowohl ein &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/03/11/qt-470-tech-preview-released/"&gt;Vorschau auf Qt 4.7&lt;/a&gt; als auch eine
+&lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/03/11/qt-creator-20-alpha/"&gt;Alpha-Version des Qt Creator 2.0&lt;/a&gt; veröffentlicht. Besonders gespannt
+bin ich auf die Integration von Qt Quick in den Creator, mal sehen, was
+sich damit alles anstellen lässt. Nach allem was ich bisher gesehen habe
+wird das für …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Heute wurden sowohl ein &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/03/11/qt-470-tech-preview-released/"&gt;Vorschau auf Qt 4.7&lt;/a&gt; als auch eine
+&lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/03/11/qt-creator-20-alpha/"&gt;Alpha-Version des Qt Creator 2.0&lt;/a&gt; veröffentlicht. Besonders gespannt
+bin ich auf die Integration von Qt Quick in den Creator, mal sehen, was
+sich damit alles anstellen lässt. Nach allem was ich bisher gesehen habe
+wird das für die Qt-Entwicklung einen gewaltigen Schritt nach vorne
+bedeuten. Außerdem ist wohl eine Entwicklungsmöglichkeit für Maemo und
+Symbian direkt in die &lt;span class="caps"&gt;UI&lt;/span&gt; integriert. Der Download läuft.&amp;nbsp;:-)&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Neues Tutorial: MADDE und Qt Creator</title><link href="http://www.peterbouda.eu/neues-tutorial-madde-und-qt-creator.html" rel="alternate"></link><published>2010-03-10T15:14:00+00:00</published><updated>2010-03-10T15:14:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-10:/neues-tutorial-madde-und-qt-creator.html</id><summary type="html">&lt;p&gt;Ich habe eben ein neues Tutorial online gestellt: &lt;a class="reference external" href="http://mobileqt.de/wiki/wie_man_unter_linux_madde_mit_dem_qt_creator_integriert"&gt;Wie man unter Linux
+&lt;span class="caps"&gt;MADDE&lt;/span&gt; mit dem Qt Creator integriert&lt;/a&gt;. Bisher gibt es ja nur vorläufige
+Versionen von &lt;span class="caps"&gt;MADDE&lt;/span&gt;, früher oder später wird &lt;span class="caps"&gt;MADDE&lt;/span&gt; aber Scratchbox als
+offizielle Methode zur Anwendungsentwicklung ablösen. Bei meinen
+Versuchen ist mir aufgefallen, dass die Qt Mobility- …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ich habe eben ein neues Tutorial online gestellt: &lt;a class="reference external" href="http://mobileqt.de/wiki/wie_man_unter_linux_madde_mit_dem_qt_creator_integriert"&gt;Wie man unter Linux
+&lt;span class="caps"&gt;MADDE&lt;/span&gt; mit dem Qt Creator integriert&lt;/a&gt;. Bisher gibt es ja nur vorläufige
+Versionen von &lt;span class="caps"&gt;MADDE&lt;/span&gt;, früher oder später wird &lt;span class="caps"&gt;MADDE&lt;/span&gt; aber Scratchbox als
+offizielle Methode zur Anwendungsentwicklung ablösen. Bei meinen
+Versuchen ist mir aufgefallen, dass die Qt Mobility-&lt;span class="caps"&gt;API&lt;/span&gt; noch nicht in
+&lt;span class="caps"&gt;MADDE&lt;/span&gt; vorhanden ist; da bin ich mal gespannt, wann das kommt. Im Moment
+spiele ich viel mit diesen Schnittstellen herum, da wäre eine
+&lt;span class="caps"&gt;MADDE&lt;/span&gt;-Variante&amp;nbsp;fein.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>OCR auf dem N900</title><link href="http://www.peterbouda.eu/ocr-auf-dem-n900.html" rel="alternate"></link><published>2010-03-08T11:14:00+00:00</published><updated>2010-03-08T11:14:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-08:/ocr-auf-dem-n900.html</id><summary type="html">&lt;p&gt;Ich bin der Meinung, dass sich die Open Source-Strategie von Nokia
+langfristig auszahlen wird, Maemo (ab bald MeeGo) wird mindestens eines
+der großen Betriebssysten für mobile Plattformen werden. Die Vorteile
+werden immer dann offensichtlich, wenn man sich den schier
+unerschöpflichen Vorrat an Open Source-Bibliotheken und -Anwendungen vor
+Augen führt. Aus …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ich bin der Meinung, dass sich die Open Source-Strategie von Nokia
+langfristig auszahlen wird, Maemo (ab bald MeeGo) wird mindestens eines
+der großen Betriebssysten für mobile Plattformen werden. Die Vorteile
+werden immer dann offensichtlich, wenn man sich den schier
+unerschöpflichen Vorrat an Open Source-Bibliotheken und -Anwendungen vor
+Augen führt. Aus diesem Fundus werden jetzt sicher immer mehr auf das
+N900 portiert werden. Ein schönes Technologiedemo für &lt;span class="caps"&gt;OCR&lt;/span&gt; auf dem N900
+hat &lt;a class="reference external" href="http://danielwould.wordpress.com/2010/03/07/optical-character-recognition-on-the-n900/"&gt;Daniel Would veröffentlicht&lt;/a&gt;, basierend auf der freien &lt;span class="caps"&gt;OCR&lt;/span&gt;-Engine
+&lt;a class="reference external" href="http://code.google.com/p/tesseract-ocr/"&gt;tesseract&lt;/a&gt;. Tesseract werde ich mir bei Gelegenheit mal näher
+anschauen: vielleicht lässt sich ja etwas Ähnliches wie
+&lt;a class="reference external" href="http://www.linguatec.net/products/mtr/shoot/trans"&gt;Shoot&amp;amp;Translate&lt;/a&gt; bauen, daran hatte ich damals in meiner
+Angestelltenzeit fleißig&amp;nbsp;mitgebastelt.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Qt Embedded auf Dingoo?</title><link href="http://www.peterbouda.eu/qt-embedded-auf-dingoo.html" rel="alternate"></link><published>2010-03-07T17:59:00+00:00</published><updated>2010-03-07T17:59:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-07:/qt-embedded-auf-dingoo.html</id><summary type="html">&lt;p&gt;Linux-Spielekonsolen sind was Spannendes, finde ich; die &lt;a class="reference external" href="http://www.open-pandora.org/"&gt;Open Pandora&lt;/a&gt;
+scheint ja mittlerweile verfügbar zu sein (zumindest hatte ein Verkauf
+mal stattgefunden ;-)), ist aber recht teuer geworden. Als Alternative
+gibt&amp;#8217;s für derzeit 80 Euro die &lt;a class="reference external" href="http://www.gp2x.de/shop/index.php/cPath/41"&gt;Dingoo A320&lt;/a&gt;, mit alternativem, freien
+&lt;a class="reference external" href="http://code.google.com/p/dingoo-linux/"&gt;Linux-Betriebssystem&lt;/a&gt;. Und wie es ausschaut, hat es tatsächlich jemand
+geschafft …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Linux-Spielekonsolen sind was Spannendes, finde ich; die &lt;a class="reference external" href="http://www.open-pandora.org/"&gt;Open Pandora&lt;/a&gt;
+scheint ja mittlerweile verfügbar zu sein (zumindest hatte ein Verkauf
+mal stattgefunden ;-)), ist aber recht teuer geworden. Als Alternative
+gibt&amp;#8217;s für derzeit 80 Euro die &lt;a class="reference external" href="http://www.gp2x.de/shop/index.php/cPath/41"&gt;Dingoo A320&lt;/a&gt;, mit alternativem, freien
+&lt;a class="reference external" href="http://code.google.com/p/dingoo-linux/"&gt;Linux-Betriebssystem&lt;/a&gt;. Und wie es ausschaut, hat es tatsächlich jemand
+geschafft &lt;a class="reference external" href="http://www.harteex.com/hosted/a320.freeforums.org/qt-embedded-on-dingoo-linux-t615.html"&gt;Qt Embedded&lt;/a&gt; dafür zu portieren. Grund genug für mich, mir
+das Teil zuzulegen. Ich halte euch über alles Weitere dazu auf dem&amp;nbsp;Laufenden.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Jetzt neu: Entwickler-Wiki bei mobileqt.de</title><link href="http://www.peterbouda.eu/jetzt-neu-entwickler-wiki-bei-mobileqtde.html" rel="alternate"></link><published>2010-03-07T17:57:00+00:00</published><updated>2010-03-07T17:57:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-07:/jetzt-neu-entwickler-wiki-bei-mobileqtde.html</id><summary type="html">&lt;p&gt;Das Qt-Entwickler-Wiki für die Entwicklung mobiler Qt-Anwendungen wurde
+soeben &lt;a class="reference external" href="http://mobileqt.de/wiki"&gt;eröffnet&lt;/a&gt;. Das Wiki kann von jedem angemeldeten Benutzer
+bearbeitet werden, ich habe schon einmal das erste Tutorial aus dem Blog
+ins Wiki übertragen. Demnächst werde ich sicher weitere Artikel dort
+hinein schreiben, und natürlich ist jeder von euch herzlich eingeladen,
+euren …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Das Qt-Entwickler-Wiki für die Entwicklung mobiler Qt-Anwendungen wurde
+soeben &lt;a class="reference external" href="http://mobileqt.de/wiki"&gt;eröffnet&lt;/a&gt;. Das Wiki kann von jedem angemeldeten Benutzer
+bearbeitet werden, ich habe schon einmal das erste Tutorial aus dem Blog
+ins Wiki übertragen. Demnächst werde ich sicher weitere Artikel dort
+hinein schreiben, und natürlich ist jeder von euch herzlich eingeladen,
+euren Senf dazu zu geben oder meinen zu korrigieren. Happy Qt&amp;nbsp;programming!&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Microsoft Arc Keyboard am N810</title><link href="http://www.peterbouda.eu/microsoft-arc-keyboard-am-n810.html" rel="alternate"></link><published>2010-03-06T11:08:00+00:00</published><updated>2010-03-06T11:08:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-06:/microsoft-arc-keyboard-am-n810.html</id><summary type="html">&lt;p&gt;Ich habe gerade mal spaßeshalber meine neue, kabellose &lt;a class="reference external" href="http://www.amazon.de/gp/product/B00332Y2DS?ie=UTF8&amp;amp;tag=jsusde-21&amp;amp;linkCode=as2&amp;amp;camp=1638&amp;amp;creative=6742&amp;amp;creativeASIN=B00332Y2DS"&gt;Microsoft &lt;span class="caps"&gt;ARC&lt;/span&gt;
+Tastatur&lt;/a&gt;&lt;img alt="image0" src="http://www.assoc-amazon.de/e/ir?t=jsusde-21&amp;amp;l=as2&amp;amp;o=3&amp;amp;a=B00332Y2DS" /&gt; mit meinem &lt;a class="reference external" href="http://www.amazon.de/gp/product/B000ZNRCJE?ie=UTF8&amp;amp;tag=jsusde-21&amp;amp;linkCode=as2&amp;amp;camp=1638&amp;amp;creative=6742&amp;amp;creativeASIN=B000ZNRCJE"&gt;Nokia N810&lt;/a&gt;&lt;img alt="image1" src="http://www.assoc-amazon.de/e/ir?t=jsusde-21&amp;amp;l=as2&amp;amp;o=3&amp;amp;a=B000ZNRCJE" /&gt;&lt;/p&gt;
+&lt;p&gt;verbunden, und siehe da: ich kann die Tastatur einwandfrei verwenden,
+sogar Tasten wie &amp;#8220;Alt&amp;#8221; und &amp;#8220;Strg&amp;#8221; funktionieren. Voraussetzung dafür
+ist, das der &lt;a class="reference external" href="http://wiki.maemo.org/USB_host_mode"&gt;&lt;span class="caps"&gt;USB&lt;/span&gt; host mode&lt;/a&gt; auf dem Gerät aktiviert ist. Leider wird&amp;#8217;s
+diesen auf …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ich habe gerade mal spaßeshalber meine neue, kabellose &lt;a class="reference external" href="http://www.amazon.de/gp/product/B00332Y2DS?ie=UTF8&amp;amp;tag=jsusde-21&amp;amp;linkCode=as2&amp;amp;camp=1638&amp;amp;creative=6742&amp;amp;creativeASIN=B00332Y2DS"&gt;Microsoft &lt;span class="caps"&gt;ARC&lt;/span&gt;
+Tastatur&lt;/a&gt;&lt;img alt="image0" src="http://www.assoc-amazon.de/e/ir?t=jsusde-21&amp;amp;l=as2&amp;amp;o=3&amp;amp;a=B00332Y2DS" /&gt; mit meinem &lt;a class="reference external" href="http://www.amazon.de/gp/product/B000ZNRCJE?ie=UTF8&amp;amp;tag=jsusde-21&amp;amp;linkCode=as2&amp;amp;camp=1638&amp;amp;creative=6742&amp;amp;creativeASIN=B000ZNRCJE"&gt;Nokia N810&lt;/a&gt;&lt;img alt="image1" src="http://www.assoc-amazon.de/e/ir?t=jsusde-21&amp;amp;l=as2&amp;amp;o=3&amp;amp;a=B000ZNRCJE" /&gt;&lt;/p&gt;
+&lt;p&gt;verbunden, und siehe da: ich kann die Tastatur einwandfrei verwenden,
+sogar Tasten wie &amp;#8220;Alt&amp;#8221; und &amp;#8220;Strg&amp;#8221; funktionieren. Voraussetzung dafür
+ist, das der &lt;a class="reference external" href="http://wiki.maemo.org/USB_host_mode"&gt;&lt;span class="caps"&gt;USB&lt;/span&gt; host mode&lt;/a&gt; auf dem Gerät aktiviert ist. Leider wird&amp;#8217;s
+diesen auf dem N900 nie geben, weil der host mode wegen der verwendeten
+Hardware wohl prinzipiell technisch nicht möglich ist (&lt;span class="caps"&gt;UPDATE&lt;/span&gt;: evtl.
+&lt;a class="reference external" href="http://wiki.maemo.org/N900_Hardware_isp1707"&gt;doch&lt;/a&gt;). Schade. Die Arc Tastatur selbst kann ich hier nur loben: sie
+ist klein, zum Tippen aber hervorragend und zum Lieferumfang gehört eine
+kleine Schutztasche zum Transport. Der Empfänger kann einfach per Magnet
+an die Tastatur geklebt werden, und schon hat man mit dem N810 zusammen
+eine Art Notebook&amp;nbsp;:-).&lt;/p&gt;
+&lt;p&gt;Hier aber das dazugehörige Video und&amp;nbsp;Bild:&lt;/p&gt;
+&lt;iframe width="560" height="315" src="http://www.youtube.com/embed/6uu39aDI56w" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;div class="figure align-center"&gt;
+&lt;img alt="Photo of N810 with Arc keyboard" src="/static/images/n810_arc.jpg" /&gt;
+&lt;/div&gt;
+</content><category term="Museum"></category></entry><entry><title>Tutorial: Wie man ein Qt-Projekt für Maemo erstellt (Teil 2)</title><link href="http://www.peterbouda.eu/tutorial-wie-man-ein-qt-projekt-fur-maemo-erstellt-teil-2.html" rel="alternate"></link><published>2010-03-05T16:05:00+00:00</published><updated>2010-03-05T16:05:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-05:/tutorial-wie-man-ein-qt-projekt-fur-maemo-erstellt-teil-2.html</id><summary type="html">&lt;p&gt;Hier also nun der zweite Teil des Tutorials über das erstellen eines
+Qt-Projekts für Maemo. Für alle, die neu dabei sind: &lt;a class="reference external" href="http://www.peterbouda.eu/tutorial-wie-man-ein-qt-projekt-fur-maemo-erstellt-teil-1.html"&gt;hier geht&amp;#8217;s zum
+ersten Teil&lt;/a&gt;. Dort werden die ersten &lt;strong&gt;vier Schritte&lt;/strong&gt;&amp;nbsp;beschrieben.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Im fünften Schritt&lt;/strong&gt; bereiten wir das Projekt für die
+Debian-Paketierung vor. Dazu könnt ihr den Qt …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hier also nun der zweite Teil des Tutorials über das erstellen eines
+Qt-Projekts für Maemo. Für alle, die neu dabei sind: &lt;a class="reference external" href="http://www.peterbouda.eu/tutorial-wie-man-ein-qt-projekt-fur-maemo-erstellt-teil-1.html"&gt;hier geht&amp;#8217;s zum
+ersten Teil&lt;/a&gt;. Dort werden die ersten &lt;strong&gt;vier Schritte&lt;/strong&gt;&amp;nbsp;beschrieben.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Im fünften Schritt&lt;/strong&gt; bereiten wir das Projekt für die
+Debian-Paketierung vor. Dazu könnt ihr den Qt Creator wieder schließen.
+Der Debian-Paketierer braucht etwa zwei Hände voll Dateien, die das
+Paket beschreiben. Diese Datein müssen in dem im ersten Schritt
+erstellte &amp;#8220;debian&amp;#8221;-Ordner liegen. Um euch die Sache zu vereinfachen habe
+ich euch diese Dateien als Beispiel in ein Archiv&amp;nbsp;gepackt:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="/tutorials/1/mobileqt_debian.zip"&gt;Debian-Dateien für das&amp;nbsp;mobileqt-Projekt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Die Dateien müsst ihr also aus dem Archiv in den &amp;#8220;debian&amp;#8221;-Ordner
+entpacken. Folgende Dateien müssen für jedes Projekt angepasst&amp;nbsp;werden:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;changelog:&lt;/strong&gt; Hier könnt ihr zunächst einmal euren Projektnamen
+eintragen. Für spätere Versionen muss das changelog jeweils erweitert
+werden, und zwar über den Befehl &amp;#8220;debchange&amp;#8221;. Genaueres dazu gibt es
+&lt;a class="reference external" href="http://debiananwenderhandbuch.de/toolspakerzeugen.html#debchange"&gt;hier&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;control:&lt;/strong&gt; Hier muss zunächst Projektname und -beschreibung
+angepasst werden. In der Zeile &amp;#8220;Maintainer:&amp;#8221; sollte euer Name und
+E-Mail-Adresse stehen. Wichtig sind die Felder mit den Präfixen
+&amp;#8220;&lt;span class="caps"&gt;XSBC&lt;/span&gt;-&amp;#8221; bzw. &amp;#8220;&lt;span class="caps"&gt;XB&lt;/span&gt;-&amp;#8220;. Um euer Paket später in das maemo-Repository zu
+bekommen (zur Installation über den Programmmanager), solltet ihr
+einen &amp;#8220;&lt;span class="caps"&gt;XSBC&lt;/span&gt;-Bugtracker:&amp;#8221; angeben. Die einfachste Möglichkeit ist eine
+Anmeldung eurer Anwendung bei &amp;#8220;bugs.maemo.org&amp;#8221;, so wie es &lt;a class="reference external" href="http://wiki.maemo.org/Bugs:Adding_Extra_products"&gt;hier beschrieben ist&lt;/a&gt;.
+Anschliessend könnt ihr den Anwendungsnamen in die
+Beispiel-control-Datei in den &amp;#8220;product=&amp;#8221;-Parameter eintragen. Die
+Felder &amp;#8220;&lt;span class="caps"&gt;XB&lt;/span&gt;-Maemo-Icon-26:&amp;#8221; und &amp;#8220;&lt;span class="caps"&gt;XSBC&lt;/span&gt;-Maemo-Display-Name:&amp;#8221; geben ein
+Icon und einen Namen für den Programmmanager auf dem N900 an. Wenn
+ihr diese Felder leer lasst, dann wird kein Icon verwendet und es
+erscheint der Name, wie er in der &amp;#8220;Package:&amp;#8221; Zeile steht. Das Icon
+muss die Größe 48x48 haben. Wie ihr den Icon-Code für die
+&amp;#8220;control&amp;#8221;-Datei erstellt, könnt ihr &lt;a class="reference external" href="http://wiki.maemo.org/Packaging#Displaying_an_icon_in_the_Application_Manager_next_to_your_package"&gt;hier nachlesen&lt;/a&gt;. Wenn ihr kein
+Icon braucht dann könnt ihr das entsprechende Feld einfach aus
+&amp;#8220;control&amp;#8221; entfernen. Dieses Icon ist wie gesagt nur für den
+Programmmanager. Das Anwendungsicon für den Desktop haben wir im
+vierten Schritt&amp;nbsp;abgehandelt.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;copyright:&lt;/strong&gt; Hier müsst hier halt euren Namen und die
+entsprechenden Copyright-Informationen&amp;nbsp;eintragen.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;files:&lt;/strong&gt; In dieser Datei den Projektnamen ändern, bei späteren,
+neuen Versionen eurer Anwendung auch die&amp;nbsp;Versionsnummer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Das war es dann auch schon für die Vorbereitung der Paketierung. Eine
+genauere Beschreibung der einzelnen Dateien findet ihr
+&lt;a class="reference external" href="http://debiananwenderhandbuch.de/debianpaketeerstellen.html"&gt;beispielsweise hier&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Nun müsst ihr für den &lt;strong&gt;sechsten Schritt&lt;/strong&gt; den gesamten Verzeichnisbaum
+in die virtuelle Maschine des SDKs kopieren. Also den VMWare Player
+anwerfen, warten bis das &lt;span class="caps"&gt;SDK&lt;/span&gt; gebootet wurde, dann das Projekt komplett
+in die Maschine kopieren; das sollte per Copy&amp;amp;Paste funktionieren, wenn
+ihr die &amp;#8220;VMWare Tools&amp;#8221; innerhalb der virtuellen Maschine installiert
+habt. Dort am Besten in den Pfad &amp;#8220;/scratchbox/users/maemo/home/maemo&amp;#8221;,
+dann habt ihr aus Scratchbox gleich Zugriff&amp;nbsp;darauf:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" src="/static/tutorials/1/tut1_7.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Anschließend startet ihr in der virtuellen Maschine ein Terminal. In
+diesem Terminal startet ihr Scratchbox mit dem Befehl
+&amp;#8220;/scratchbox/login&amp;#8221;, in dieser Umgebung werden alle Maemo-Anwendungen
+kompiliert. Mit &amp;#8220;sb-conf select FREMANTLE_ARMEL&amp;#8221; wählt ihr innerhalb
+von Scratchbox das &lt;span class="caps"&gt;ARMEL&lt;/span&gt;-Target aus, so läuft die Anwendung dann später
+auf dem &lt;span class="caps"&gt;ARM&lt;/span&gt;-Prozessor des&amp;nbsp;N900:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+maemo&amp;#64;maemo-desktop:~$ /scratchbox/login
+
+Welcome to Scratchbox, the cross-compilation toolkit!
+
+Use 'sb-menu' to change your compilation target.
+See /scratchbox/doc/ for documentation.
+
+[sbox-FREMANTLE_X86: ~] &amp;gt; sb-conf select FREMANTLE_ARMEL
+
+Shell restarting...
+[sbox-FREMANTLE_ARMEL: ~] &amp;gt;
+&lt;/pre&gt;
+&lt;p&gt;Mit &amp;#8220;cd mobileqt&amp;#8221; ins Projektverzeichnis wechseln. Nun reicht ein
+einfaches &amp;#8220;dpkg-buildpackage -rfakeroot&amp;#8221; um das .deb-Paket zu&amp;nbsp;erstellen:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+[sbox-FREMANTLE_ARMEL: ~] &amp;gt; cd mobileqt/
+[sbox-FREMANTLE_ARMEL: ~/mobileqt] &amp;gt; dpkg-buildpackage -rfakeroot
+dpkg-buildpackage: source package is mobileqt
+dpkg-buildpackage: source version is 0.1-1
+dpkg-buildpackage: source changed by Peter Bouda
+dpkg-buildpackage: host architecture armel
+dpkg-buildpackage: source version without epoch 0.1-1
+: Using Scratchbox tools to satisfy builddeps
+
+... hier kommen viele Zeilen ...
+
+dpkg-deb: ignoring 3 warnings about the control file(s)
+ dpkg-genchanges
+dpkg-genchanges: warning: unknown information field `Xb-Maemo-Icon-26' in input data in package's section of control info file
+dpkg-genchanges: including full source code in upload
+dpkg-buildpackage: full upload; Debian-native package (full source is included)
+&lt;/pre&gt;
+&lt;p&gt;In dem Verzeichnis &amp;#8220;über&amp;#8221; dem Projektverzeichnis (im Beispiel:
+&amp;#8220;/scratchbox/users/maemo/home/maemo&amp;#8221;) findet ihr jetzt u.a. eine Datei
+mit dem Namen &amp;#8220;projektname_0.1-1_armel.deb&amp;#8221;. Glückwunsch: Dieses Paket
+kann sofort auf dem N900 installiert&amp;nbsp;werden!&lt;/p&gt;
+&lt;p&gt;Im &lt;strong&gt;siebten Schritte&lt;/strong&gt; installieren wir das Paket per &amp;#8220;X Terminal&amp;#8221; und
+dem &amp;#8220;dpkg&amp;#8221;-Kommandozeilentool auf das N900. Dazu muss der root-Zugang
+auf dem Gerät aktiviert sein, am einfachsten geht das per
+&lt;a class="reference external" href="http://wiki.maemo.org/Root_access#rootsh"&gt;rootsh-Paket&lt;/a&gt;. Dann einfach die im sechsten Schritt erstellt
+.deb-Datei auf das Gerät kopieren (per &lt;span class="caps"&gt;USB&lt;/span&gt;, Bluetooth, &lt;a class="reference external" href="http://wiki.maemo.org/SSH"&gt;&lt;span class="caps"&gt;SSH&lt;/span&gt;&lt;/a&gt; oder auf
+eine Speicherkarte). Ich kopiere die Datei meist per &lt;span class="caps"&gt;SSH&lt;/span&gt; nach
+&amp;#8220;/home/user/MyDocs&amp;#8221;, dann findet man die Datei später auch einfach per
+Dateimanager (im Prinzip kann man das Paket auuh einfach per Klick im
+N900-Dateimanager installieren, für coole Hacker wie uns wäre das aber
+viel zu einfach). Auf dem Gerät das &amp;#8220;X Terminal&amp;#8221; starten und als erstes
+mit &amp;#8220;sudo gainroot&amp;#8221; zum Chef werden. Dann in das Verzeichnis wecheln, in
+dem die .deb-Datei liegt, und das Paket mit &amp;#8220;dpkg -i
+projektname_0.1-1_armel.deb&amp;#8221;&amp;nbsp;installieren:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+~ $ sudo gainroot
+Root shell enabled
+
+BusyBox v1.10.2 (Debian 3:1.10.2.legal-1osso26+0,5) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+/home/user # cd MyDocs
+/home/user/MyDocs # dpkg -i mobileqt_0.1-1_armel.deb
+(Reading database ... 25458 files and directories currently installed.)
+Unpacking mobileqt (from mobileqt_0.1-1_armel.deb) ...
+Setting up mobileqt (0.1-1) ...
+/home/user/MyDocs #
+&lt;/pre&gt;
+&lt;p&gt;Fertig! Jetzt könnt ihr die Anwendung über den Anwendungsbildschirm&amp;nbsp;starten:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" src="/static/tutorials/1/tut1_8.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" src="/static/tutorials/1/tut1_9.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Wahnsinn: ein leeres Hauptfenster auf dem N900, selbst programmiert und
+installiert! Bald mehr dazu, wie ihr das Fenster nun mit Inhalten füllt.
+:-) Die Anwendung kann übrigens jederzeit per &amp;#8220;dpkg -r projektname&amp;#8221; im
+Terminal oder über den Programmmanager wieder vom Gerät entfernt&amp;nbsp;werden.&lt;/p&gt;
+&lt;p&gt;Soweit also zum ersten Tutorial über die Qt-Entwicklung hier auf
+&lt;a class="reference external" href="http://mobileqt.de"&gt;mobileqt.de&lt;/a&gt;. Ich hoffe die Schritte waren verständlich erklärt und
+ihr konntet alles bei euch zu Hause nachvollziehen. Falls nicht: als
+Alternative kommt demnächst wohl &lt;a class="reference external" href="http://wiki.maemo.org/MADDE"&gt;&lt;span class="caps"&gt;MADDE&lt;/span&gt;&lt;/a&gt; in Frage, womit sich die
+Einstiegshürde deutlich senken wird. Über jede Rückmeldung zu diesem
+Tutorial würde ich mich sehr freuen! Hier noch der komplette Download
+der&amp;nbsp;Beispielanwendung:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="/static/tutorials/1/mobileqt_tutorial1.zip"&gt;Download der kompletten Beispielanwendung inklusive aller&amp;nbsp;Dateien&lt;/a&gt;&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>MeeGo fürs N900?</title><link href="http://www.peterbouda.eu/meego-furs-n900.html" rel="alternate"></link><published>2010-03-05T09:18:00+00:00</published><updated>2010-03-05T09:18:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-05:/meego-furs-n900.html</id><content type="html">&lt;p&gt;Die &lt;a class="reference external" href="http://maemo-freak.com/index.php/rumours/1383-nokia-n900-to-get-first-meego-build-later-this-month"&gt;Spatzen&lt;/a&gt; &lt;a class="reference external" href="http://www.engadget.com/2010/03/04/meego-repository-going-public-later-this-month-coming-to-nokia/"&gt;scheinen&lt;/a&gt; es mittlerweile von den Dächern zu pfeifen:
+es wird wohl bald eine erste MeeGo-Version für Atom-Prozessoren und das
+N900 geben. Wir bleiben&amp;nbsp;gespannt!&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Tutorial: Wie man ein Qt-Projekt für Maemo erstellt (Teil 1)</title><link href="http://www.peterbouda.eu/tutorial-wie-man-ein-qt-projekt-fur-maemo-erstellt-teil-1.html" rel="alternate"></link><published>2010-03-04T14:53:00+00:00</published><updated>2010-03-04T14:53:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-04:/tutorial-wie-man-ein-qt-projekt-fur-maemo-erstellt-teil-1.html</id><summary type="html">&lt;p&gt;Hier mal kurz und knapp, wie ihr möglichst schnell zu einem Qt-Projekt
+kommt, das ihr als Debian-Paket auf dem N900 installieren könnt:
+definitiv das kompakteste Tutorial, das es zu diesem Thema gibt. Als
+Voraussetzung müsst ihr zunächst einmal den &lt;a class="reference external" href="http://qt.nokia.com/downloads"&gt;Qt Creator&lt;/a&gt; installieren,
+außerdem sollte ihr das offizielle &lt;a class="reference external" href="http://maemovmware.garage.maemo.org/2nd_edition/"&gt;Maemo-&lt;span class="caps"&gt;SDK&lt;/span&gt; als …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Hier mal kurz und knapp, wie ihr möglichst schnell zu einem Qt-Projekt
+kommt, das ihr als Debian-Paket auf dem N900 installieren könnt:
+definitiv das kompakteste Tutorial, das es zu diesem Thema gibt. Als
+Voraussetzung müsst ihr zunächst einmal den &lt;a class="reference external" href="http://qt.nokia.com/downloads"&gt;Qt Creator&lt;/a&gt; installieren,
+außerdem sollte ihr das offizielle &lt;a class="reference external" href="http://maemovmware.garage.maemo.org/2nd_edition/"&gt;Maemo-&lt;span class="caps"&gt;SDK&lt;/span&gt; als virtuelles Image&lt;/a&gt;
+installiert und startklar haben (ihr braucht die Desktop-Version des
+SDKs, also die Datei
+&amp;#8220;Maemo_Ubuntu_Intrepid_Desktop_SDK_Virtual_Image_Final.7z&amp;#8221;). Das
+&lt;span class="caps"&gt;SDK&lt;/span&gt; ist ein virtuelles Image, ihr startet das Entwicklungsbetriebssystem
+am Besten mit dem &lt;a class="reference external" href="http://www.vmware.com/de/products/player/"&gt;VMWare Player&lt;/a&gt;. Der Qt Creator-Download beinhaltet
+im Übrigen alle nötigen Bibliotheken, das Qt-&lt;span class="caps"&gt;SDK&lt;/span&gt; müsst ihr also nicht
+separat&amp;nbsp;installieren.&lt;/p&gt;
+&lt;p&gt;Ich werde das Tutorial in zwei Teilen veröffentlichen, der erste Teil
+beschäftigt sich mit der Erstellung des Qt-Projekts, der zweite dann mit
+der Paketerstellung für das&amp;nbsp;N900.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Als erstes&lt;/strong&gt; erstellt ihr in eurem Projektordner drei Unterordner:
+&amp;#8220;src&amp;#8221; (für den ganzen Quellcode), &amp;#8220;debian&amp;#8221; (für die Debian-Daten) und
+&amp;#8220;data&amp;#8221; (für Icons&amp;nbsp;usw.):&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" src="/static/tutorials/1/tut1_1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Als zweites&lt;/strong&gt; legt ihr das Projekt mit dem Qt Creator an. Dieser wird
+also gestartet und dann über &amp;#8220;Datei-&amp;gt;Neu&amp;#8221; ein neues Projekt angelegt. Im
+ersten Dialog wählt ihr als Projekttyp&amp;nbsp;&amp;#8220;Qt4-Gui-Anwendung&amp;#8221;:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image1" src="/static/tutorials/1/tut1_2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Im zweiten Dialog gebt ihr den Projektnamen ein und wählt das oben
+erstellte &amp;#8220;src&amp;#8221;-Verzeichnis als &amp;#8220;Erzeugen&amp;nbsp;in:&amp;#8221;-Pfad:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image2" src="/static/tutorials/1/tut1_3.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Die folgenden beiden Dialoge für die zu integrierenden Module und den
+Klassennamen für das Hauptfenster könnt ihr bei den vorgegebenen
+Einstellungen belassen. Am Schlusss auf &amp;#8220;Abschließen&amp;#8221; klicken, und Qt
+Creator erstellt euch alle nötigen Projektdateien. Blöderweise macht er
+das aber in einem &amp;#8220;Projektname&amp;#8221;-Unterordner in &amp;#8220;src&amp;#8221;. Alle Dateien
+sollen aber direkt im Verzeichnis &amp;#8220;src&amp;#8221; liegen. Also schließt ihr den Qt
+Creator erst einmal wieder, und kopiert alle Dateien aus dem
+&amp;#8220;Projektname&amp;#8221;-Unterordner direkt nach &amp;#8220;src&amp;#8221;. Der
+&amp;#8220;Projektname&amp;#8221;-Unterordner kann dann gelöscht werden. Bei dieser
+Gelegenheit nennt ihr die &amp;#8220;Projektname.pro&amp;#8221;-Datei um nach &amp;#8220;src.pro&amp;#8221;.
+Nach diesem Schritt sollte euer Projektbaum so&amp;nbsp;ausschauen:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image3" src="/static/tutorials/1/tut1_4.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Als dritten Schritt&lt;/strong&gt; erstellt ihr in eurem Haupt-Projektordner (im
+Beispiel der Ordner &amp;#8220;mobileqt&amp;#8221;) eine Datei mit dem Namen
+&amp;#8220;projektname.pro&amp;#8221; (klein geschrieben; im Beispiel &amp;#8220;mobileqt.pro&amp;#8221;). Diese
+Datei füllt ihr mit folgendem Inhalt, am Besten mit einem einfache
+Texteditor wie &amp;#8220;gedit&amp;#8221;&amp;nbsp;o.ä.:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+QMAKEVERSION = $$[QMAKE_VERSION]
+ISQT4 = $$find(QMAKEVERSION, ^[2-9])
+isEmpty( ISQT4 ) {
+error(&amp;quot;Use the qmake include with Qt4.4 or greater, on Debian that is qmake-qt4&amp;quot;);
+}
+
+TEMPLATE = subdirs
+SUBDIRS  = src
+&lt;/pre&gt;
+&lt;p&gt;Diese Datei könnt ihr jetzt wieder mit dem Qt Creator öffnen, ein
+Doppelklick auf &amp;#8220;projektname.pro&amp;#8221; sollte das&amp;nbsp;bewerkstelligen.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Im vierten Schritt&lt;/strong&gt; sollte euer Qt Creator zunächst folgendermaßen&amp;nbsp;ausschauen:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image4" src="/static/tutorials/1/tut1_5.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Mit dem Play-Button unten links könnt ihr das Projekt starten, es sollte
+ein leeres Hauptfenster erscheinen. Für den Anfang reicht uns das, wir
+werden das Fenster in anderen Tutorials mit Inhalt und Menü versehen. Um
+das Programm später auf dem N900 installieren zu können muss jetzt die
+&amp;#8220;src.pro&amp;#8221; angepasst werden. Mit einem beherzten Doppelklick auf den
+entsprechenden Eintrag unter &amp;#8220;projektname-&amp;gt;src-&amp;gt;scr.pro&amp;#8221; im Qt Creator
+öffnet ihr die Datei zum Editieren und fügt folgenden Code&amp;nbsp;hinzu:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+unix {
+    #VARIABLES
+    isEmpty(PREFIX) {
+        PREFIX = /usr/local
+    }
+
+    BINDIR = $$PREFIX/bin
+    DATADIR =$$PREFIX/share
+
+    DEFINES += DATADIR=\&amp;quot;$$DATADIR\&amp;quot; PKGDATADIR=\&amp;quot;$$PKGDATADIR\&amp;quot;
+
+    #MAKE INSTALL
+
+    INSTALLS += target desktop scalable
+
+    target.path =$$BINDIR
+
+    desktop.path = $$DATADIR/applications/hildon
+    desktop.files += ../data/$${TARGET}.desktop
+
+    scalable.path = $$DATADIR/icons/hicolor/scalable/hildon
+    scalable.files += ../data/scalable/$${TARGET}.png
+
+}
+&lt;/pre&gt;
+&lt;p&gt;Diese Anweisungen werden später, nach Erstellung des Debian-Pakets, das
+kompilierte Programm, eine Desktop-Datei und ein Icon auf das Gerät
+installieren. Dazu müsst ihr noch im &amp;#8220;data&amp;#8221;-Verzeichnis eine Datei
+&amp;#8220;projektname.desktop&amp;#8221; erstellen, die in etwa folgenden Inhalt haben&amp;nbsp;sollte:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.1
+Type=Application
+Name=mobileqt
+Exec=mobileqt
+Icon=mobileqt
+X-HildonDesk-ShowInToolbar=true
+X-Osso-Type=application/x-executable
+&lt;/pre&gt;
+&lt;p&gt;Unter &amp;#8220;data/scalable&amp;#8221; legt ihr das Icon für die Anwendung als .png- oder
+.jpg-Datei ab, die Größe sollte 64x64 Pixel betragen. Am Ende dieses
+ersten Teils des Tutorials solltet ihr dann folgende Projektstruktur vor
+euch&amp;nbsp;haben:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image5" src="/static/tutorials/1/tut1_6.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Dieses war der erste Teil des Tutorials. Im zweiten Teil werden wir die
+Anwendung für die Debian-Paketierung vorbereiten, das Ganze dann in
+Scratchbox (auf dem virtuellen Image) kompilieren und packen und
+anschließend auf das N900&amp;nbsp;installieren.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.peterbouda.eu/tutorial-wie-man-ein-qt-projekt-fur-maemo-erstellt-teil-2.html"&gt;Hier geht&amp;#8217;s direkt zum zweiten Teil des&amp;nbsp;Tutorials&lt;/a&gt;&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Verbesserte Texteingabe auf dem N900</title><link href="http://www.peterbouda.eu/verbesserte-texteingabe-auf-dem-n900.html" rel="alternate"></link><published>2010-03-04T11:28:00+00:00</published><updated>2010-03-04T11:28:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-04:/verbesserte-texteingabe-auf-dem-n900.html</id><summary type="html">&lt;p&gt;Da hat sich jemand die Mühe gemacht, und eine &lt;a class="reference external" href="http://www.joaquimrocha.com/2010/03/03/text-prediction-on-gnome/"&gt;verbesserte Texteingabe&lt;/a&gt;
+für &lt;span class="caps"&gt;GTK&lt;/span&gt;+ auf mobilen Geräten entwickelt. Nach meiner Erfahrung ist die
+Textvorhersage auf dem N900 tatsächlich unbrauchbar, vor allem weil
+automatisch alle neuen Wörter gespeichert werden und irgendwann
+haufenweise Tippfehler vorgeschlagen werden. Auf dem kleinen Keyboard
+mache ich recht …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Da hat sich jemand die Mühe gemacht, und eine &lt;a class="reference external" href="http://www.joaquimrocha.com/2010/03/03/text-prediction-on-gnome/"&gt;verbesserte Texteingabe&lt;/a&gt;
+für &lt;span class="caps"&gt;GTK&lt;/span&gt;+ auf mobilen Geräten entwickelt. Nach meiner Erfahrung ist die
+Textvorhersage auf dem N900 tatsächlich unbrauchbar, vor allem weil
+automatisch alle neuen Wörter gespeichert werden und irgendwann
+haufenweise Tippfehler vorgeschlagen werden. Auf dem kleinen Keyboard
+mache ich recht häufig Fehler, gerade wenn ich schnell schreiben will.
+Jedenfalls ein interessanter Ansatz, vielleicht eine Idee auch für&amp;nbsp;Qt-Widgets.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Gesichtserkennung auf dem N900</title><link href="http://www.peterbouda.eu/gesichtserkennung-auf-dem-n900.html" rel="alternate"></link><published>2010-03-04T11:19:00+00:00</published><updated>2010-03-04T11:19:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-04:/gesichtserkennung-auf-dem-n900.html</id><content type="html">&lt;p&gt;&lt;a class="reference external" href="http://johanneskuhlmann.de/blog/2010/02/25/face-detection-and-tracking-on-the-nokia-n900/"&gt;BurgerFace&lt;/a&gt; ist ein kleines Technologiedemo zur Gesichtserkennung auf
+dem N900. Nett gemacht und die Gesichtserkennung funktioniert recht
+ordentlich. Schwierig ist die Steuerung damit trotzdem, zumindest für
+mich. Hier ist das Video&amp;nbsp;dazu:&lt;/p&gt;
+&lt;iframe width="420" height="315" src="http://www.youtube.com/embed/A-Wh4NuRfeU" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content><category term="Museum"></category></entry><entry><title>QWebKit als separates Packet</title><link href="http://www.peterbouda.eu/qwebkit-als-separates-packet.html" rel="alternate"></link><published>2010-03-03T12:00:00+00:00</published><updated>2010-03-03T12:00:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-03:/qwebkit-als-separates-packet.html</id><summary type="html">&lt;p&gt;Ich hatte in meinem &lt;a class="reference external" href="http://mobileqt.de/blogposts/9"&gt;letzten Post&lt;/a&gt; ja schon beschrieben, dass QWebKit
+ein zentraler Baustein in Qt ist und noch wichtiger werden wird, wenn
+ich Nokias Marschrichtung richtig deute. Passend dazu wird &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/03/03/qtwebkit-releases/"&gt;QWebKit ab
+sofort auch separat veröffentlicht&lt;/a&gt;. Macht Sinn, da so neue Versionen
+schneller unabhängig von Qt auf den Markt …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ich hatte in meinem &lt;a class="reference external" href="http://mobileqt.de/blogposts/9"&gt;letzten Post&lt;/a&gt; ja schon beschrieben, dass QWebKit
+ein zentraler Baustein in Qt ist und noch wichtiger werden wird, wenn
+ich Nokias Marschrichtung richtig deute. Passend dazu wird &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/03/03/qtwebkit-releases/"&gt;QWebKit ab
+sofort auch separat veröffentlicht&lt;/a&gt;. Macht Sinn, da so neue Versionen
+schneller unabhängig von Qt auf den Markt gebracht werden&amp;nbsp;können.&lt;/p&gt;
+</content><category term="Museum"></category></entry><entry><title>Vorläufiges zu MeeGo</title><link href="http://www.peterbouda.eu/vorlaufiges-zu-meego.html" rel="alternate"></link><published>2010-03-03T11:54:00+00:00</published><updated>2010-03-03T11:54:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-03-03:/vorlaufiges-zu-meego.html</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://meego.com/"&gt;MeeGo&lt;/a&gt; wird also nun das neue mobile Betriebssystem von Nokia und
+Intel heißen; nach dem &lt;a class="reference external" href="http://ofono.org/"&gt;oFono-Projekt&lt;/a&gt; jetzt also die zweite große
+Zusammenarbeit zwischen den beiden Firmen. Bei MeeGo handelt es sich um
+einen Zusammenschluss zwischen Maemo (dem Linux von Nokia) und Moblin
+(dem Intel-Linux) und, was für mich das Entscheidenste …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a class="reference external" href="http://meego.com/"&gt;MeeGo&lt;/a&gt; wird also nun das neue mobile Betriebssystem von Nokia und
+Intel heißen; nach dem &lt;a class="reference external" href="http://ofono.org/"&gt;oFono-Projekt&lt;/a&gt; jetzt also die zweite große
+Zusammenarbeit zwischen den beiden Firmen. Bei MeeGo handelt es sich um
+einen Zusammenschluss zwischen Maemo (dem Linux von Nokia) und Moblin
+(dem Intel-Linux) und, was für mich das Entscheidenste an der Sache ist,
+wird ein komplett Qt-basiertes &lt;span class="caps"&gt;UI&lt;/span&gt; haben, wie es ja auch schon für
+&lt;a class="reference external" href="http://qt.gitorious.org/maemo-6-ui-framework"&gt;geplant war. Der größte Diskussionspukt unter Entwicklern war übrigens
+das zu verwendende Paketformat für MeeGo: hier gab es die
+(Intel-)&lt;span class="caps"&gt;RPM&lt;/span&gt;-Fraktion, die es mit einer skeptischen (Nokia-)-&lt;span class="caps"&gt;DEB&lt;/span&gt;-Gruppe
+zu tun hatte. Offensichtlich wird es aber wohl bei der offiziellen
+Vorgabe &lt;span class="caps"&gt;RPM&lt;/span&gt; bleiben. Genaueres zu MeeGo lassen sich in Nokia
+offizieller&lt;/a&gt;&lt;a class="reference external" href="http://www.nokia.com/NOKIA_COM_1/Technology/pdf/Nokia_software_strategy_white_paper.pdf"&gt;Software-Strategie&lt;/a&gt; sowie in einem hervorragenden
+&lt;a class="reference external" href="http://zchydem.enume.net/2010/02/26/meego-thoughts/"&gt;Artikel von Zchydem&lt;/a&gt;&amp;nbsp;nachlesen.&lt;/p&gt;
+&lt;p&gt;Für Qt-Entwickler gibt es ein interessantes Bild, das in den meisten
+Beiträgen&amp;nbsp;auftauchte:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="image0" src="http://meego.com/sites/all/files/users/u6/MeeGo-Arch.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Qt wird also die zentrale Entwicklungsumgebung für MeeGo. Für die breite
+Masse der Entwickler sieht Nokia die &amp;#8220;Web RunTime&amp;#8221; (&lt;span class="caps"&gt;WRT&lt;/span&gt;) vor, die auf
+der Qt-Webkit-Implementierung basiert. Schon jetzt können ja Qt-Widgets
+in QWebKit per &lt;span class="caps"&gt;HTML&lt;/span&gt; dargestellt werden, hier bieten sich in der &lt;span class="caps"&gt;WRT&lt;/span&gt; in
+Zukunft interessante Anwendungsmöglichkeiten (Notiz an selbst: Zeit also
+für einen baldigen Artikel zu QWebKit&amp;#8230;). Rechen- und Hardwareintensive
+wie Spiele, Fotoapplikationen etc. sollen nativ in Qt bzw. &amp;#8220;hybrid&amp;#8221;
+entwickelt&amp;nbsp;werden.&lt;/p&gt;
+&lt;p&gt;Was bedeutet das nun für den Technologiebegeisterten Qt-Entwickler? Nun,
+aus meiner Sicht würde ich mir ein paar der zukünftige Kerntechnologien
+näher&amp;nbsp;anschauen:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://blog.qt.nokia.com/2010/02/15/meet-qt-quick/"&gt;&lt;span class="caps"&gt;QML&lt;/span&gt;&lt;/a&gt; gehört mit Sicherheit dazu, evtl. sogar als Haupt-&lt;span class="caps"&gt;UI&lt;/span&gt;-Sprache
+für die &lt;span class="caps"&gt;WRT&lt;/span&gt; und&amp;nbsp;Qt&lt;/li&gt;
+&lt;li&gt;aufbauend darauf kommt mit &lt;a class="reference external" href="http://blog.qt.nokia.com/2010/02/15/meet-qt-quick/"&gt;Qt Quick&lt;/a&gt; eine Komplettlösung für Qt 4.7
+und den Qt&amp;nbsp;Creator&lt;/li&gt;
+&lt;li&gt;QWebKit wird in Zukunft noch einer wichtigere Rolle&amp;nbsp;spielen&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://labs.trolltech.com/page/Projects/QtMobility"&gt;Qt Mobility&lt;/a&gt; und die Ovi Services werden vermutlich integriert&amp;nbsp;werden&lt;/li&gt;
+&lt;li&gt;Dabei wiederum werden &lt;span class="caps"&gt;GPS&lt;/span&gt;-Daten und Karten die Hauptrolle für
+zukünftige Dienste und UIs sein, wenn ich &lt;a class="reference external" href="http://www.allaboutmaemo.com/news/item/11200_Video_Anssi_Vanjoki_on_the_fut.php"&gt;dieses Interview&lt;/a&gt; richtig
+deute; vielleicht wars aber nur eine Ausrede für den ja so sehr
+kritisierten Kauf von&amp;nbsp;Navteq&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Jedenfalls würde ich das mal als spannende Aussichten für jeden
+Qt-Entwickler&amp;nbsp;bezeichnen!&lt;/p&gt;
+</content><category term="Museum"></category></entry></feed>

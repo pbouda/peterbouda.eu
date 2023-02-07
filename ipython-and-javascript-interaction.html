@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!--
+    Miniport by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Peter Bouda - Natural Language Processing Consultant</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="Natural Language Processing, Python, Software Development, Consultant"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/theme/js/jquery.min.js"></script>
+    <script src="/theme/js/jquery.scrolly.min.js"></script>
+    <script src="/theme/js/skel.min.js"></script>
+    <script src="/theme/js/init.js"></script>
+    <link
+      href="http://www.peterbouda.eu/feeds/all.atom.xml"
+      type="application/atom+xml"
+      rel="alternate"
+      title="Peter Bouda Atom Feed"
+    />
+     <link
+      href="http://www.peterbouda.eu/feeds/all.rss"
+      type="application/rss+xml"
+      rel="alternate"
+      title="Peter Bouda RSS Feed"
+    />
+
+    <link rel="stylesheet" href="/theme/css/pygment.css" />
+
+    <noscript>
+      <link rel="stylesheet" href="/theme/css/skel.css" />
+      <link rel="stylesheet" href="/theme/css/style.css" />
+      <link rel="stylesheet" href="/theme/css/style-desktop.css" />
+    </noscript>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Peter Bouda",
+        "url": "https://www.peterbouda.eu",
+        "jobTitle": "Natural Language Processing Consultant",
+        "alumniOf": "LMU Munich",
+        "gender": "male",
+        "image": "https://www.peterbouda.eu/theme/images/pic00.jpg",
+        "sameAs": ["https://dev.to/pbouda", "https://github.com/pbouda"]
+      }
+    </script>
+
+    <!--[if lte IE 8
+      ]><link rel="stylesheet" href="/theme/css/ie/v8.css"
+    /><![endif]-->
+    <!--[if lte IE 9
+      ]><link rel="stylesheet" href="/theme/css/ie/v9.css"
+    /><![endif]-->
+  </head>
+  <body>
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="/#top">Home</a></li>
+					<!--<li><a href="/#work">Work</a></li>-->
+					<li><a href="/#portfolio">Portfolio</a></li>
+					<li><a href="/#feed">Blog</a></li>
+					<li><a href="/#contact">Contact</a></li>
+				</ul>
+			</nav> <section id="content" class="body">
+  <article class="h-entry">
+    <header>
+      <h1 class="entry-title e-title">
+        <a
+          class="p-name u-url"
+          href="http://www.peterbouda.eu/ipython-and-javascript-interaction.html"
+          rel="bookmark"
+          title="Permalink to IPython and Javascript interaction"
+          >IPython and Javascript&nbsp;interaction</a
+        >
+      </h1>
+    </header>
+
+    <div class="entry-content e-content container">
+      <div class="row">
+        <div class="8u">
+ <footer class="post-info">
+    <p>
+        Published by <a href="http://www.peterbouda.eu" class="p-author">Peter Bouda</a> at <b><time class="dt-published" datetime="2013-01-24 11:56:00+00:00">Qui 24 Janeiro 2013</time></b>
+        in <b><a class="p-category" href="/category/python.html">Python</a></b>.
+    </p>
+    
+
+        
+</footer><!-- /.post-info -->          <p>This <a class="reference external" href="http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html">IPython notebook</a> demonstrates the interaction between Python and
+a popup window that is opened via Javascript. The interaction is one-way
+in this case, from the notebook to the popup. We write data to the popup
+and call functions in the popup by executing Javascript from within the
+notebook. The goal is to demonstrate some simple interactions. In the
+end, I hope that techniques like these could be used for <a class="reference external" href="http://toplap.org/">livecoding</a>
+in Python, with a <span class="caps">HTML5</span> visualization&nbsp;window.</p>
+<p>First, the notebook server and the <span class="caps">HTML</span> that we load in the popup must
+be located on the same domain. For this, we need to copy the
+<a class="reference external" href="https://raw.github.com/pbouda/stuff/master/ipynb/index.html">index.html</a> to the root directory of the IPython server.
+Unfortunately, it is not easy to find out what the root directory is.
+The default is the home directory of the user, so if you didn’t mess
+with your config just copy the html file to your home directory. If you
+changed your config you probably know whether you changed the root (it’s
+the setting <tt class="docutils literal">ipython_dir</tt>).</p>
+<p>The <tt class="docutils literal">index.html</tt> contains an empty <a class="reference external" href="http://bl.ocks.org/2595950">D3 scatterplot</a> that we will fill
+with data from within this notebook. The notebook is available on Github&nbsp;here:</p>
+<p><a class="reference external" href="https://github.com/pbouda/stuff/blob/master/ipynb/Javascript%20Interactions%20I.ipynb">https://github.com/pbouda/stuff/blob/master/ipynb/Javascript%20Interactions%20I.ipynb</a></p>
+<div class="section" id="open-a-browser-popup">
+<h2>Open a browser&nbsp;popup</h2>
+<p>IPython contains several helper methods in <tt class="docutils literal">IPython.display</tt> to output
+<span class="caps">HTML</span>, Javascript, etc. to the current cell’s output. We use those
+helpers to write Javascript that opens a popup window. We save a
+reference to the opened window in <tt class="docutils literal">window.audiencePopup</tt>. We can later
+access the open popup via this reference. First, we open some <span class="caps">URL</span> to see
+if something simple&nbsp;works:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Javascript</span><span class="p">,</span> <span class="n">display</span>
+<span class="n">js</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;window.audiencePopup = window.open(&#39;http://www.heise.de&#39;,&#39;audienceWindow&#39;);&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Javascript</span><span class="p">(</span><span class="n">js</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="section" id="change-the-location">
+<h2>Change the&nbsp;location</h2>
+<p>We are now able to change the <span class="caps">URL</span> of the popup. We set the <span class="caps">URL</span> to the
+local <tt class="docutils literal">index.html</tt> that you downloaded above. We have to prepend
+<tt class="docutils literal">/files/</tt> so that the IPython server knows that we are looking for a
+local, static file. The notebook server then serves this file to the
+popup&nbsp;window:</p>
+<div class="highlight"><pre><span></span><span class="n">js</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;window.audiencePopup.location.href = &quot;/files/index.html&quot;;&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Javascript</span><span class="p">(</span><span class="n">js</span><span class="p">))</span>
+</pre></div>
+<p>As said above, the <tt class="docutils literal">index.html</tt> has to be served from the same domain
+as your current IPython notebook for security reasons. If everything
+works than you should now see the empty scatterplot in the&nbsp;popup.</p>
+</div>
+<div class="section" id="write-some-data-to-the-popup">
+<h2>Write some data to the&nbsp;popup</h2>
+<p>We will now write some data to the popup. If you look into
+<tt class="docutils literal">index.html</tt> you will see a Javascript variable <tt class="docutils literal">data</tt> that contains
+an empty list. The scatterplot is created from coordinates in that list.
+In the first step we will set the <tt class="docutils literal">data</tt> variable to a Python list of
+coordinates. For this we just have to convert the Python list to a <span class="caps">JSON</span>
+string and set the Javascript variabel to a parsed version of that <span class="caps">JSON</span>
+string. We use the Javascript function <tt class="docutils literal"><span class="caps">JSON</span>.parse</tt>:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">js</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;window.audiencePopup.data = JSON.parse(&#39;</span><span class="si">{0}</span><span class="s2">&#39;);&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Javascript</span><span class="p">(</span><span class="n">js</span><span class="p">))</span>
+</pre></div>
+<p>The scatterplot don’t change, because we have to tell it to update
+itself first. But you can already have a look the the content of the
+<tt class="docutils literal">data</tt> variable in the popup window. We just display the value in an
+<tt class="docutils literal">alert</tt> window:</p>
+<div class="highlight"><pre><span></span><span class="n">js</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;alert(window.audiencePopup.data);&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Javascript</span><span class="p">(</span><span class="n">js</span><span class="p">))</span>
+</pre></div>
+<p>The <tt class="docutils literal">index.html</tt> also containts a function <tt class="docutils literal">update()</tt> that we can
+just call to repaint the scatterplot. Again, we are able to call this
+Javascript function directly from within the current&nbsp;notebook:</p>
+<div class="highlight"><pre><span></span><span class="n">js</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;window.audiencePopup.update();&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Javascript</span><span class="p">(</span><span class="n">js</span><span class="p">))</span>
+</pre></div>
+<p>You should now see the data points in the scatterplot. You can see a
+screencast where I execute this notebook&nbsp;here:</p>
+<video poster="https://s3.amazonaws.com/peterbouda.eu/IPython+and+Javascript+interaction.png" style="width:100%" preload="none" controls="" tabindex="0">
+   <source type="video/mp4" src="https://s3.amazonaws.com/peterbouda.eu/IPython+and+Javascript+interaction.m4v"></source>
+</video></div>
+
+          <div id="comments">
+			<script src="https://utteranc.es/client.js"
+					repo="pbouda/peterbouda.eu"
+					issue-term="pathname"
+					label="Comment"
+					theme="github-light"
+					crossorigin="anonymous"
+					async>
+			</script>
+          </div>
+        </div>
+        <!-- /.entry-content -->
+
+        <div class="4u">
+          <article class="box style2">
+            <div>
+              <img
+                style="border-radius:50%; width:80%;"
+                src="theme/images/pic00.jpg"
+                alt=""
+              />
+            </div>
+            <h3>About me</h3>
+            <p>
+              My name is Peter Bouda and I am a software developer with more than 20 years of
+              professional experience in application development. I help
+              you to bring your application to market as quickly as possible.
+            </p>
+            <!-- <p>
+              Join our <a href="http://www.ng-lisbon.com/#trainings">next Angular training</a>
+              in Lisbon, October 2-4.
+            </p> -->
+            <p>
+              <a href="/#top">Read about my work</a><br />
+              or<br />
+              <a href="/#contact">Contact me</a>
+            </p>
+          </article>
+        </div>
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </article>
+</section>
+
+ <!-- Contact -->
+<div class="wrapper style4" id="contact">
+  <article class="container 75%">
+    <div class="row">
+      <div class="12u">
+        <h2>Send me a message and I will get back to you.</h2>
+        <ul class="social">
+          <li>
+            <a href="mailto:pbouda@outlook.com" class="icon fa-envelope-o"
+              ><span class="label">Mail</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/pbouda" class="icon fa-github"
+              ><span class="label">Github</span></a
+            >
+          </li>
+        </ul>
+        <br />
+        <h2>RSS Feed</h2>
+        <ul class="social">
+          <li>
+            <a href="http://www.peterbouda.eu/feeds/all.rss" class="icon fa-rss"
+              ><span class="label">RSS</span></a
+            >
+          </li>
+        </ul>
+        <hr />
+      </div>
+    </div>
+
+    <footer>
+      <ul id="copyright">
+        <li>&copy; Peter Bouda. All rights reserved.</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+      <div>
+        Rua Conselheiro Martins de Carvalho 23 1esq, 1400-069 Lisbon, Portugal,
+        +351 917403181
+      </div>
+    </footer>
+  </article>
+</div>  </body>
+</html>

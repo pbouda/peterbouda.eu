@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Peter Bouda - Angular</title><link href="http://www.peterbouda.eu/" rel="alternate"></link><link href="http://www.peterbouda.eu/feeds/angular.atom.xml" rel="self"></link><id>http://www.peterbouda.eu/</id><updated>2017-05-04T15:44:00+01:00</updated><subtitle>Natural Language Processing Consultant</subtitle><entry><title>Angular Seed Project with LoopBack</title><link href="http://www.peterbouda.eu/angular-seed-project-with-loopback.html" rel="alternate"></link><published>2017-05-04T15:44:00+01:00</published><updated>2017-05-04T15:44:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2017-05-04:/angular-seed-project-with-loopback.html</id><summary type="html">&lt;p&gt;Around a month ago I published a post about
+&lt;a href="http://www.peterbouda.eu/angular-seed-project-with-firebase.html"&gt;my Angular Seed Project with Firebase&lt;/a&gt;.
+Since then I tried to promote this seed to a couple of friends in Germany, who
+were not really happy to host their data on Firebase. So I started to refactor
+the back-end to &lt;a href="http://loopback.io/"&gt;LoopBack …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Around a month ago I published a post about
+&lt;a href="http://www.peterbouda.eu/angular-seed-project-with-firebase.html"&gt;my Angular Seed Project with Firebase&lt;/a&gt;.
+Since then I tried to promote this seed to a couple of friends in Germany, who
+were not really happy to host their data on Firebase. So I started to refactor
+the back-end to &lt;a href="http://loopback.io/"&gt;LoopBack&lt;/a&gt;, which is an awesome JavaScript
+framework for rapid back-end development based on
+&lt;a href="http://expressjs.com"&gt;Express&lt;/a&gt;. I used LoopBack for my latest major consulting
+project and think that the development experience is awesome. There is a great
+&lt;a href="http://loopback.io/doc/en/lb3/AngularJS-JavaScript-SDK.html"&gt;client &lt;span class="caps"&gt;SDK&lt;/span&gt; for Angular&lt;/a&gt;,
+which makes connecting an Angular front-end super easy. Both AngularJS and
+Angular are supported, so I could just attach my Angular front-end and replace
+the Firebase &lt;code&gt;AuthService&lt;/code&gt; with a LoopBack version. It even supports
+Firebase-like real-time communication via the
+&lt;a href="http://fireloop.io/"&gt;FireLoop platform&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Meanwhile I also decided to replace MongoDB with a PostgreSQL database. I know
+that document data stores are nowadays quite popular, but the explicit schemas
+of relational databases have advantages in the long run, in my opinion. They
+make sure that you have to think about migrations whenever you change the data
+and forces some kind of versioning of data and &lt;span class="caps"&gt;API&lt;/span&gt;, which reduces the risks of
+complex errors when your app grows.
+&lt;a href="https://blog.scottnonnenberg.com/hard-won-lessons-five-years-with-node-js/#data-apis-and-versions"&gt;This great blog post&lt;/a&gt;
+of Scott Nonnenberg was quite inspiring and it gives a good overview of best
+practices for future-proof JavaScript&amp;nbsp;back-ends.&lt;/p&gt;
+&lt;p&gt;Finally, I am now running on a stack of PostgreSQL + LoopBack + Angular +
+Node.js, which I call the &amp;#8220;&lt;span class="caps"&gt;PLAN&lt;/span&gt; stack&amp;#8221; 😃.
+&lt;a href="https://radialspark.github.io/PLAN-App-Accelerator/architecture.html"&gt;Though I am not the first one&lt;/a&gt;
+who came up with the idea. I still think the new seed project for my &lt;span class="caps"&gt;PLAN&lt;/span&gt; stack
+is a good starting point for modern web&amp;nbsp;applications:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/ng-lisbon/angular-loopback-seed"&gt;https://github.com/ng-lisbon/angular-loopback-seed&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Check out &lt;a href="http://www.ng-lisbon.com"&gt;our trainings at ng-lisbon&lt;/a&gt; if
+you want to learn more about Angular and the &lt;span class="caps"&gt;PLAN&lt;/span&gt;&amp;nbsp;stack!&lt;/p&gt;
+&lt;p&gt;I am happy to get any feedback, let me know what you think about the seed. Is
+it useful, and what could be&amp;nbsp;improved?&lt;/p&gt;</content><category term="Angular"></category><category term="Angular"></category><category term="JavaScript"></category><category term="LoopBack"></category></entry><entry><title>Angular Seed Project with Firebase</title><link href="http://www.peterbouda.eu/angular-seed-project-with-firebase.html" rel="alternate"></link><published>2017-03-28T16:44:00+01:00</published><updated>2017-03-28T16:44:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2017-03-28:/angular-seed-project-with-firebase.html</id><summary type="html">&lt;p&gt;To learn more about &lt;a href="https://github.com/angular/angularfire2"&gt;Firebase&lt;/a&gt;, and
+specifically how to connect an Angular application to it, I started to
+implement a
+&lt;a href="https://github.com/pbouda/angular-firebase-seed"&gt;little seed project&lt;/a&gt; that
+provides basic functionality to register users via e-mail/password combination
+and let them login to a profile page. Registered and confirmed users can
+currently change their …&lt;/p&gt;</summary><content type="html">&lt;p&gt;To learn more about &lt;a href="https://github.com/angular/angularfire2"&gt;Firebase&lt;/a&gt;, and
+specifically how to connect an Angular application to it, I started to
+implement a
+&lt;a href="https://github.com/pbouda/angular-firebase-seed"&gt;little seed project&lt;/a&gt; that
+provides basic functionality to register users via e-mail/password combination
+and let them login to a profile page. Registered and confirmed users can
+currently change their mail address in their password in the profile. I used
+the &lt;a href="https://ng-bootstrap.github.io"&gt;ng-bootstrap module&lt;/a&gt; for the &lt;span class="caps"&gt;UI&lt;/span&gt;, which was
+a great opportunity to learn some basics about Bootrap 4&amp;nbsp;also.&lt;/p&gt;
+&lt;p&gt;The usage of the angularfire2 module was a bit tricky, some functionality is
+not (yet) available in the module and one has to use the JavaScript firebase
+&lt;span class="caps"&gt;SDK&lt;/span&gt;, which is fortunately part of the angularfire2 module. Have a look at the
+&lt;a href="https://github.com/pbouda/angular-firebase-seed/blob/master/src/app/shared/auth.service.ts"&gt;AuthService&lt;/a&gt;
+class to sees some&amp;nbsp;details.&lt;/p&gt;
+&lt;p&gt;I hope that this project serves well as the basis of my next web projects, I
+also plan to update it regularly whenever I learn something or when new
+versions of Angular and the &lt;span class="caps"&gt;CLI&lt;/span&gt; are published. Currently it uses Angular 4.0.0
+and version 1.0.0 of the &lt;span class="caps"&gt;CLI&lt;/span&gt;, so everything is shiny new :) The project is
+available on&amp;nbsp;Github:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/ng-lisbon/angular-firebase-seed"&gt;https://github.com/ng-lisbon/angular-firebase-seed&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I am happy to get any feedback, let me know what you think about the seed. Is
+it useful, and what could be&amp;nbsp;improved?&lt;/p&gt;</content><category term="Angular"></category><category term="Angular"></category><category term="JavaScript"></category><category term="Firebase"></category></entry><entry><title>Migration einer App von Angular 1 nach Angular 2</title><link href="http://www.peterbouda.eu/migration-einer-app-von-angular-1-nach-angular-2.html" rel="alternate"></link><published>2016-06-07T14:05:00+01:00</published><updated>2016-06-07T14:05:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2016-06-07:/migration-einer-app-von-angular-1-nach-angular-2.html</id><summary type="html">&lt;p&gt;Vor zwei Wochen habe ich in Lissabon einen Vortrag über &lt;a href="http://www.meetup.com/AngularJS-Portugal/events/230723687/"&gt;die Migration von Angular 1 nach Angular 2&lt;/a&gt; gehalten. Dazu habe ich eine kleine App portiert, die ich vor einiger Zeit schon als Fingerübung als Grundgerüst einer Angular-App in purer &lt;span class="caps"&gt;ES6&lt;/span&gt;-Syntax entwickelt habe. Das Hauptziel war eben jener Minimalismus …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Vor zwei Wochen habe ich in Lissabon einen Vortrag über &lt;a href="http://www.meetup.com/AngularJS-Portugal/events/230723687/"&gt;die Migration von Angular 1 nach Angular 2&lt;/a&gt; gehalten. Dazu habe ich eine kleine App portiert, die ich vor einiger Zeit schon als Fingerübung als Grundgerüst einer Angular-App in purer &lt;span class="caps"&gt;ES6&lt;/span&gt;-Syntax entwickelt habe. Das Hauptziel war eben jener Minimalismus, also ein möglichst kleiner gulp-Prozess und möglichst wenige Laufzeitabhängigkeiten. Diese App findet ihr&amp;nbsp;hier:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/pbouda/angular-es6-boilerplate"&gt;https://github.com/pbouda/angular-es6-boilerplate&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Die App ist ein kleiner &lt;span class="caps"&gt;RSS&lt;/span&gt;-Feedreader, der aber letztendlich gar kein &lt;span class="caps"&gt;RSS&lt;/span&gt; lädt sondern schon eine geparste &lt;span class="caps"&gt;JSON&lt;/span&gt;-Version&amp;#8230; Also ein &lt;span class="caps"&gt;JSON&lt;/span&gt;-Feedreader&amp;nbsp;:-)&lt;/p&gt;
+&lt;p&gt;Der Angular-2-Port war dann die nächste Herausforderung, weil ich weiterhin bei &lt;span class="caps"&gt;ES6&lt;/span&gt; bleiben und nicht noch TypeScript zum Projekt hinzufügen wollte. Letztendlich blieb es dann auch bei kleineren Änderungen für die ersten Schritte hin zu Angular 2, wobei die Nachforschung teilweise doch zeitintensiv war, weil viele der Online-Tutorials eben auf TyeScript&amp;nbsp;setzen.&lt;/p&gt;
+&lt;p&gt;Die ersten Schritte bei der Portierung werden am Besten im Vergleich der Branches des git-Repositories sichtbar. Hier nur ein schneller Überblick, mehr Details werde ich dann in kommenden Posts&amp;nbsp;veröffentlichen.&lt;/p&gt;
+&lt;p&gt;Als Erstes habe ich einfach alle Angular-2-Abhängigkeiten zum Projekt hinzugefügt, und die App per &lt;code&gt;UpgradeAdapter&lt;/code&gt; initialisiert:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/pbouda/angular-es6-boilerplate/compare/master...step1/addangular2"&gt;https://github.com/pbouda/angular-es6-boilerplate/compare/master&amp;#8230;step1/addangular2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Im Zweiten Schritt habe ich dann die Komponente &lt;code&gt;RssFeedListComponent&lt;/code&gt; nach Angular 2 portiert und das entsprechende Template angepasst. Da Angular 2 bestimmte Syntax-Features kommender JavaScript- bzw. eben derzeitiger TypeScript-Versionen benutzt (wie &lt;a href="https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841#.v0nqw1gyr"&gt;Dekatoren&lt;/a&gt;), musste ich außerdem das preset &lt;code&gt;anguar2&lt;/code&gt; zu meinen babelify-Setup&amp;nbsp;hinzufügen:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/pbouda/angular-es6-boilerplate/compare/step1/addangular2...step2/upgradecomponent"&gt;https://github.com/pbouda/angular-es6-boilerplate/compare/step1/addangular2&amp;#8230;step2/upgradecomponent&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Dabei habe ich auch jshint erst einmal entfernt, um die Sache nicht zu verkomplizieren. Alternativ hätte ich auch die Dekoratoren u.a. für jshint ausklammern können. Ich plane aber dann in Zukunft &lt;a href="http://eslint.org/"&gt;eslint&lt;/a&gt; zu benutzen, da es sich besser an den eigenen Stil anpassen&amp;nbsp;lässt.&lt;/p&gt;
+&lt;p&gt;Als besondere Stolperstelle erwies sich die &amp;#8220;Rückportierung&amp;#8221; der Komponente von &lt;code&gt;component&lt;/code&gt; nach &lt;code&gt;directive&lt;/code&gt;. Der ansonsten sehr nützliche &lt;a href="https://angular.io/docs/ts/latest/guide/upgrade.html"&gt;Angular-2-Upgrade-Guide&lt;/a&gt; empfiehlt zunächst, möglichst alle Direktiven in &lt;code&gt;component&lt;/code&gt;-Aufrufe umzuwandeln. Jedoch lassen sich diese dann &lt;em&gt;nicht&lt;/em&gt; per &lt;code&gt;upgradeAdapter.downgradeNg2Component&lt;/code&gt; füttern, diese Downgrades basieren weiterhin auf Direktiven. Allein damit habe ich einige Stunden verbracht, bis ich herausgefunden haben, warum meine Komponente partout nicht funktionieren&amp;nbsp;wollte&amp;#8230;&lt;/p&gt;
+&lt;p&gt;Am Ende lief die App dann aber als Hybrid-Applikation sowohl mit Angular 1 als auch Angular 2, und wenn man die Problemstellen kennt bleiben die Anpassungsarbeiten bei einer solch kleinen App auch im Rahmen. Ich werde demnächst die Portierung einer Produktivanwendung in Angriff nehmen, dann werde ich sicher weitere Erkenntnisse gewinnen und euch hier&amp;nbsp;mitteilen.&lt;/p&gt;</content><category term="Angular"></category><category term="Angular"></category><category term="JavaScript"></category></entry><entry><title>Making an Angular UI Bootstrap accordion scrolling to top when opening</title><link href="http://www.peterbouda.eu/making-an-angular-ui-bootstrap-accordion-scrolling-to-top-when-opening.html" rel="alternate"></link><published>2016-05-12T11:23:00+01:00</published><updated>2016-05-12T11:23:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2016-05-12:/making-an-angular-ui-bootstrap-accordion-scrolling-to-top-when-opening.html</id><summary type="html">&lt;p&gt;I am using the &lt;a href="https://angular-ui.github.io/bootstrap/"&gt;&lt;span class="caps"&gt;UI&lt;/span&gt; Bootstrap Angular directives&lt;/a&gt;,
+specifically the accordion directive, within one of our projects at &lt;span class="caps"&gt;MAJ&lt;/span&gt; Digital.
+Now I was looking for a way to scroll to the top of the accordion content,
+when it is too large to fit on a screen. By default, the directive …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am using the &lt;a href="https://angular-ui.github.io/bootstrap/"&gt;&lt;span class="caps"&gt;UI&lt;/span&gt; Bootstrap Angular directives&lt;/a&gt;,
+specifically the accordion directive, within one of our projects at &lt;span class="caps"&gt;MAJ&lt;/span&gt; Digital.
+Now I was looking for a way to scroll to the top of the accordion content,
+when it is too large to fit on a screen. By default, the directive will be opened
+at the middle of the content, so the user does not see the top and bottom of the
+panel. A compact solution requires jQuery, for example in a directive like
+the&amp;nbsp;following:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;use strict&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="cm"&gt;/**&lt;/span&gt;
+&lt;span class="cm"&gt;     * Makes the `uib-accordion-group` element scroll to top on the&lt;/span&gt;
+&lt;span class="cm"&gt;     * `shown.bs.collapse` event. We use it in bootstrap accordions, when the&lt;/span&gt;
+&lt;span class="cm"&gt;     * user opens one of the accordion items this directive will scroll the&lt;/span&gt;
+&lt;span class="cm"&gt;     * item to the top of the screen.&lt;/span&gt;
+&lt;span class="cm"&gt;     */&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;angular&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;app.shared&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;directive&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;scrollTop&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;scrollTop&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;scrollTop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="nx"&gt;restrict&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="nx"&gt;link&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;link&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;link&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;scope&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;element&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;scope&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;collapsing&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;jqElement&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;element&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;scope&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;$watch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;jqElement&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;.panel-collapse&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;hasClass&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;collapsing&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;status&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;scope&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;collapsing&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;status&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;                &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;jqElement&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;hasClass&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;panel-open&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;                    &lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;html,body&amp;#39;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;animate&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+&lt;span class="w"&gt;                        &lt;/span&gt;&lt;span class="nx"&gt;scrollTop&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;jqElement&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;offset&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="nx"&gt;top&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;20&lt;/span&gt;
+&lt;span class="w"&gt;                    &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;500&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;                &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="nx"&gt;scope&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;collapsing&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;status&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can then use the &lt;code&gt;scroll-top&lt;/code&gt; directive on the &lt;code&gt;uib-accordion-group&lt;/code&gt;, just like&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;uib-accordion-group&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;is-open=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;status.openPanel&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;scroll-top&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+...
+&lt;span class="nt"&gt;&amp;lt;/uib-accordion-group&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Angular"></category><category term="Angular"></category><category term="JavaScript"></category></entry><entry><title>Talk about Angular at AngularJS Portugal</title><link href="http://www.peterbouda.eu/talk-about-angular-at-angularjs-portugal.html" rel="alternate"></link><published>2016-05-10T10:58:00+01:00</published><updated>2016-05-10T10:58:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2016-05-10:/talk-about-angular-at-angularjs-portugal.html</id><content type="html">&lt;p&gt;Next week I will be giving a talk at the AngularJS Portugal Meetup, about porting an app from Angular 1 to Angular 2. Hope to meet you&amp;nbsp;there!&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.meetup.com/AngularJS-Portugal/events/230723687/"&gt;http://www.meetup.com/AngularJS-Portugal/events/230723687/&lt;/a&gt;&lt;/p&gt;</content><category term="Angular"></category><category term="Angular"></category><category term="JavaScript"></category><category term="Lisbon"></category></entry></feed>

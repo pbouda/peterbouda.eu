@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Peter Bouda - Language</title><link href="http://www.peterbouda.eu/" rel="alternate"></link><link href="http://www.peterbouda.eu/feeds/language.atom.xml" rel="self"></link><id>http://www.peterbouda.eu/</id><updated>2014-02-14T11:29:00+00:00</updated><subtitle>Natural Language Processing Consultant</subtitle><entry><title>Visualizing Swadesh words in dictionaries</title><link href="http://www.peterbouda.eu/visualizing-swadesh-words-in-dictionaries.html" rel="alternate"></link><published>2014-02-14T11:29:00+00:00</published><updated>2014-02-14T11:29:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2014-02-14:/visualizing-swadesh-words-in-dictionaries.html</id><summary type="html">&lt;div class="section" id="swadesh-viewer-for-dictionary-data"&gt;
+&lt;h2&gt;Swadesh viewer for dictionary&amp;nbsp;data&lt;/h2&gt;
+&lt;p&gt;In this tutorial we will demonstrate how to extract entries that contain
+words from a &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Swadesh_list"&gt;Swadesh
+list&lt;/a&gt; from data in
+digitized dictionaries. The translation graph connects entries in
+dioctionaries, via annotation for &amp;#8220;heads&amp;#8221; and &amp;#8220;translations&amp;#8221; within the
+dictionary. We will demonstrate how to visualize this …&lt;/p&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="section" id="swadesh-viewer-for-dictionary-data"&gt;
+&lt;h2&gt;Swadesh viewer for dictionary&amp;nbsp;data&lt;/h2&gt;
+&lt;p&gt;In this tutorial we will demonstrate how to extract entries that contain
+words from a &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Swadesh_list"&gt;Swadesh
+list&lt;/a&gt; from data in
+digitized dictionaries. The translation graph connects entries in
+dioctionaries, via annotation for &amp;#8220;heads&amp;#8221; and &amp;#8220;translations&amp;#8221; within the
+dictionary. We will demonstrate how to visualize this data with a
+plotting library and hwo to export parts of the graph to &lt;span class="caps"&gt;JSON&lt;/span&gt; for
+interactive visualizations in the&amp;nbsp;web.&lt;/p&gt;
+&lt;p&gt;You can download this tutorial as &lt;a class="reference external" href="http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html"&gt;IPython
+notebook&lt;/a&gt;&amp;nbsp;here:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/pbouda/notebooks/blob/master/Swadesh%20viewer%20for%20dictionary%20data.ipynb"&gt;https://github.com/pbouda/notebooks/blob/master/Swadesh%20viewer%20for%20dictionary%20data.ipynb&lt;/a&gt;&lt;/p&gt;
+&lt;div class="section" id="data"&gt;
+&lt;h3&gt;Data&lt;/h3&gt;
+&lt;p&gt;For this tutorial we will use data from the project &amp;#8220;&lt;a class="reference external" href="http://www.quanthistling.info/"&gt;Quantitative
+Historical Linguistics&lt;/a&gt;&amp;#8220;. The
+website of the project provides a &lt;span class="caps"&gt;ZIP&lt;/span&gt; package of GrAF/&lt;span class="caps"&gt;XML&lt;/span&gt; files for the
+printed sources that were digitized within the&amp;nbsp;project:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.quanthistling.info/data/downloads/xml/data.zip"&gt;http://www.quanthistling.info/data/downloads/xml/data.zip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;span class="caps"&gt;ZIP&lt;/span&gt; package contains several files encoded as described in the &lt;a class="reference external" href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326"&gt;&lt;span class="caps"&gt;ISO&lt;/span&gt;
+standard
+24612&lt;/a&gt;
+&amp;#8220;Linguistic annotation framework (&lt;span class="caps"&gt;LAF&lt;/span&gt;)&amp;#8221;. The QuantHistLing data contains
+dictionary and wordlist sources. Those were first tokenized into
+entries, for each entry you will find annotations for at least the head
+word(s) (&amp;#8220;head&amp;#8221; annotation) and translation(s) (&amp;#8220;translation&amp;#8221;
+annotation) in the case of dictionaries. We will only use the
+dictionaries of the &amp;#8220;Witotoan&amp;#8221; compoment in this tutorial. The &lt;span class="caps"&gt;ZIP&lt;/span&gt;
+package also contains a &lt;span class="caps"&gt;CSV&lt;/span&gt; file &amp;#8220;sources.csv&amp;#8221; with some information for
+each source, for example the languages as &lt;span class="caps"&gt;ISO&lt;/span&gt; codes, type of source,
+etc. Be aware that the &lt;span class="caps"&gt;ZIP&lt;/span&gt; package contains a filtered version of the
+sources: only entries that contain a Spanish word that is part of the
+Spanish swadesh list are included in the download&amp;nbsp;package.&lt;/p&gt;
+&lt;p&gt;For a simple example how to parse one of the source please see&amp;nbsp;here:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://graf-python.readthedocs.org/en/latest/Querying%20GrAF%20graphs.html"&gt;http://graf-python.readthedocs.org/en/latest/Querying%20GrAF%20graphs.html&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-are-translation-graphs"&gt;
+&lt;h3&gt;What are translation&amp;nbsp;graphs?&lt;/h3&gt;
+&lt;p&gt;In our case, translation graphs are graphs that connect all spanish
+translation with every head word that we find for each translation in
+our sources. The idea is that spanish is some kind of interlingua in our
+case: if a string of a spanish translation in one source matches a
+string in another source this will only be &lt;em&gt;one&lt;/em&gt; node in our graph. For
+the head words, this is not the case: matching strings in head words in
+different source are different nodes in the graph. This holds even if
+the different sources describe the same language, as different sources
+will use different&amp;nbsp;orthographies.&lt;/p&gt;
+&lt;p&gt;To fullfil that need, head words are internally represented as a string
+with two parts: the head word and its source. Both parts are seperated
+by a pipe symbol &amp;#8220;|&amp;#8221;. For example, in a &lt;a class="reference external" href="http://en.wikipedia.org/wiki/DOT_language"&gt;&lt;span class="caps"&gt;DOT&lt;/span&gt;
+file&lt;/a&gt; such a node looks
+like&amp;nbsp;this:&lt;/p&gt;
+&lt;blockquote&gt;
+&amp;#8220;ócáji|thiesen1998&amp;#8221; [lang=boa, source=thiesen1998_25_339];&lt;/blockquote&gt;
+&lt;p&gt;The square brackets contain additional attributes here. These attributes
+are not part of the node&amp;#8217;s name, they contain just additonal information
+that we store with the&amp;nbsp;nodes.&lt;/p&gt;
+&lt;p&gt;In comparison, a spanish translation looks like&amp;nbsp;this:&lt;/p&gt;
+&lt;blockquote&gt;
+&amp;#8220;vaca&amp;#8221; [lang=spa];&lt;/blockquote&gt;
+&lt;p&gt;There is no attribute &amp;#8220;source&amp;#8221; here, as this translation might occur in
+several sources. An edge connecting the two nodes looks like&amp;nbsp;this:&lt;/p&gt;
+&lt;blockquote&gt;
+&amp;#8220;vaca&amp;#8221; &amp;#8212; &amp;#8220;ócáji|thiesen1998&amp;#8221;;&lt;/blockquote&gt;
+&lt;p&gt;To handle such graphs our scripts use the &lt;a class="reference external" href="http://networkx.lanl.gov/"&gt;NetworkX Python
+library&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="requirements"&gt;
+&lt;h3&gt;Requirements&lt;/h3&gt;
+&lt;p&gt;The following Python libraries are required to process the GrAF/&lt;span class="caps"&gt;XML&lt;/span&gt;
+files and create the translation&amp;nbsp;graphs:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;NetworkX: &lt;a class="reference external" href="http://networkx.lanl.gov/"&gt;http://networkx.lanl.gov/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;graf-python: &lt;a class="reference external" href="https://github.com/cidles/graf-python"&gt;https://github.com/cidles/graf-python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;requests: &lt;a class="reference external" href="http://docs.python-requests.org/en/latest/"&gt;http://docs.python-requests.org/en/latest/&lt;/a&gt; (only if you
+want automated download of the&amp;nbsp;data)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To visualize the graphs we use the &lt;a class="reference external" href="http://d3js.org/"&gt;D3.js&lt;/a&gt; library,
+but we will load this on-the-fly when we start with the&amp;nbsp;visualization.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;csv&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;codecs&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;re&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;glob&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;networkx&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;graf&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="get-witotoan-sources"&gt;
+&lt;h3&gt;Get Witotoan&amp;nbsp;sources&lt;/h3&gt;
+&lt;p&gt;In the first step we download and extract the data. You may change to a
+local &amp;#8220;tmp&amp;#8221; directory before the download or just download the data to
+the current working directory. For this you need to install the Python
+library &lt;tt class="docutils literal"&gt;requests&lt;/tt&gt;. You may also download and extract the data
+manually, the data is only downloaded for you if the file
+&lt;tt class="docutils literal"&gt;sources.csv&lt;/tt&gt; is not&amp;nbsp;found.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;chdir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/Users/pbouda/Projects/git-github/notebooks/swadeshviewer&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exists&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;sources.csv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;requests&lt;/span&gt;
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;zipfile&lt;/span&gt;
+    &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;http://www.quanthistling.info/data/downloads/xml/data.zip&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;data.zip&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;wb&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;zipfile&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ZipFile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;data.zip&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;extractall&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now we open the file &amp;#8220;sources.csv&amp;#8221; and read out all the sources that are
+part of the component &amp;#8220;Witotoan&amp;#8221; and that are dictionaries. We will
+store a list of those source in &lt;tt class="docutils literal"&gt;witotoan_sources&lt;/tt&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sources&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;csv&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reader&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;sources.csv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;rU&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;delimiter&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\t&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;witotoan_sources&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;sources&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Witotoan&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;dictionary&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;witotoan_sources&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="graf-to-networkx"&gt;
+&lt;h3&gt;GrAF to&amp;nbsp;NetworkX&lt;/h3&gt;
+&lt;p&gt;Next we define a helper function that transform a GrAF graph into a
+networkx graph. For this we traverse the graph by querying for all
+entries. For each entry we look for connected nodes that have &amp;#8220;head&amp;#8221; or
+&amp;#8220;translation&amp;#8221; annotation. All of those nodes that are Spanish are stored
+in the list &lt;tt class="docutils literal"&gt;spa&lt;/tt&gt;. All non-Spanish annotations are stored in
+&lt;tt class="docutils literal"&gt;others&lt;/tt&gt;. In the end the collected annotation are added to the new
+networkx graph, and each spanish node is connected to all the other
+nodes for each&amp;nbsp;entry:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;graf_to_networkx&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;graf&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;g&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;networkx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Graph&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;node_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;graf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nodes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="n"&gt;spa&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;others&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;node_id&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;endswith&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;..entry&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;_&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pos_on_page&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;node_id&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;..&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out_edges&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;annotations&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_first&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;head&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;annotations&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_first&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;translation&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                    &lt;span class="c1"&gt;# get lang&lt;/span&gt;
+                    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_node&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;links&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nodes&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;annotations&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_first&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;label&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;iso-639-3&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;annotations&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_first&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;features&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_value&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;substring&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;spa&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                                &lt;span class="n"&gt;spa&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_node&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;annotations&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_first&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;features&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_value&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;substring&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+                                &lt;span class="k"&gt;break&lt;/span&gt;
+                            &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                                &lt;span class="n"&gt;others&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_node&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;annotations&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_first&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;features&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_value&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;substring&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;annotations&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_first&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;features&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_value&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;substring&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                                &lt;span class="k"&gt;break&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;spa&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;head&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;spa&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                    &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_node&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;attr_dict&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;lang&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;spa&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt;
+                    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;translation&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;others&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                        &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_node&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;u&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{0}&lt;/span&gt;&lt;span class="s2"&gt;|&lt;/span&gt;&lt;span class="si"&gt;{1}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;translation&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;attr_dict&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+                            &lt;span class="s2"&gt;&amp;quot;lang&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;others&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;translation&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+                            &lt;span class="s2"&gt;&amp;quot;source&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                            &lt;span class="s2"&gt;&amp;quot;page&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                            &lt;span class="s2"&gt;&amp;quot;pos_on_page&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;pos_on_page&lt;/span&gt;
+                        &lt;span class="p"&gt;})&lt;/span&gt;
+                        &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_edge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="sa"&gt;u&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;{0}&lt;/span&gt;&lt;span class="s2"&gt;|&lt;/span&gt;&lt;span class="si"&gt;{1}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;translation&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="parse-graf-xml-files"&gt;
+&lt;h3&gt;Parse GrAF/&lt;span class="caps"&gt;XML&lt;/span&gt;&amp;nbsp;files&lt;/h3&gt;
+&lt;p&gt;Now we parse all the &lt;span class="caps"&gt;XML&lt;/span&gt; files of the extracted &lt;span class="caps"&gt;ZIP&lt;/span&gt; package. For this we
+traverse through all the directories that have a name in
+`witotoan_sources&amp;#8217;. The files we are looking for are the
+&amp;#8220;-dictinterpretation.xml&amp;#8221; files within each directory, as those contain
+the annotations for &amp;#8220;heads&amp;#8221; and&amp;nbsp;&amp;#8220;translations&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;First we create an empty list &lt;tt class="docutils literal"&gt;graphs&lt;/tt&gt; that will later store all the
+networkx&amp;nbsp;graphs:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;parser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;graf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GraphParser&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;graphs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then we loop through all the Witotoan sources, parse the &lt;span class="caps"&gt;XML&lt;/span&gt; files and
+transform the graphs into networkx graph by calling the helper function
+that we defined above. We print a progress report within the loop, as
+parsing and transformation might take some&amp;nbsp;time:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;witotoan_sources&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;glob&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;glob&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;dict-*-dictinterpretation.xml&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Parsing &lt;/span&gt;&lt;span class="si"&gt;{0}&lt;/span&gt;&lt;span class="s2"&gt;...&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+        &lt;span class="n"&gt;graf_graph&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;g&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;graf_to_networkx&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;graf_graph&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;graphs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;OK&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;pre class="literal-block"&gt;
+Parsing thiesen1998/dict-thiesen1998-25-339-dictinterpretation.xml...
+Parsing minor1987/dict-minor1987-1-126-dictinterpretation.xml...
+Parsing minor1971/dict-minor1971-3-74-dictinterpretation.xml...
+Parsing burtch1983/dict-burtch1983-19-262-dictinterpretation.xml...
+Parsing leach1969/dict-leach1969-67-161-dictinterpretation.xml...
+Parsing walton1997/dict-walton1997-9-120-dictinterpretation.xml...
+Parsing preuss1994/dict-preuss1994-797-912-dictinterpretation.xml...
+OK
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="merge-all-graphs"&gt;
+&lt;h3&gt;Merge all&amp;nbsp;graphs&lt;/h3&gt;
+&lt;p&gt;Now we can merge all the individual graphs for each source into one big
+graph. This will collapse all Spanish nodes and so connect the nodes
+that have a common Spanish&amp;nbsp;translation:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;copy&lt;/span&gt;
+&lt;span class="n"&gt;combined_graph&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;copy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;deepcopy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;graphs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;gr&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;graphs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]:&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;gr&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;combined_graph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_node&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;gr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n2&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;gr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;edges_iter&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="n"&gt;combined_graph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_edge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;gr&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;edge&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n1&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;n2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We count the nodes in the graph and the &lt;a class="reference external" href="http://networkx.lanl.gov/reference/generated/networkx.algorithms.components.connected.number_connected_components.html#networkx.algorithms.components.connected.number_connected_components"&gt;number of connected
+components&lt;/a&gt;
+to get an impression how the graph &amp;#8220;looks&amp;#8221;. The number of nodes is much
+higher then the number of connected components, so we already have a lot
+of the nodes connected in groups, either as a consequence from being
+part of one dictionary entry or through the merge we did via the Spanish&amp;nbsp;node:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;combined_graph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nodes&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;pre class="literal-block"&gt;
+23749
+&lt;/pre&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;networkx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;algorithms&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;components&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;number_connected_components&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;combined_graph&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;pre class="literal-block"&gt;
+4614
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="extract-a-subgraph-for-all-the-words-in-the-spanish-swadesh-list"&gt;
+&lt;h3&gt;Extract a subgraph for all the words in the Spanish Swadesh&amp;nbsp;list&lt;/h3&gt;
+&lt;p&gt;Next we will extract a subgraph from full graph. We will only search for
+nodes that have a Spanish word that is a part of the &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Swadesh_list"&gt;Swadesh
+list&lt;/a&gt;. The &lt;a class="reference external" href="http://www.nltk.org/"&gt;Natural
+Language Toolkit (&lt;span class="caps"&gt;NLTK&lt;/span&gt;)&lt;/a&gt; contains Swadesh lists
+for several languages and we will use &lt;span class="caps"&gt;NLTK&lt;/span&gt;&amp;#8217;s version of the Spanish
+list. You don&amp;#8217;t need to install the &lt;span class="caps"&gt;NLTK&lt;/span&gt; library (although I recommend
+learning about it!), as we will load the data directly from the &lt;span class="caps"&gt;NLTK&lt;/span&gt;
+github repository. Again, we use &lt;tt class="docutils literal"&gt;requests&lt;/tt&gt; to download the data, but
+you may also download and extract the data&amp;nbsp;manually.&lt;/p&gt;
+&lt;p&gt;First we download and extract the Swadesh&amp;nbsp;data:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#os.chdir(&amp;quot;c:/Users/Peter/Documents/Corpora/qlc&amp;quot;)&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exists&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;swadesh&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;es&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;requests&lt;/span&gt;
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;zipfile&lt;/span&gt;
+    &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;https://github.com/nltk/nltk_data/blob/gh-pages/packages/corpora/swadesh.zip?raw=true&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;swadesh.zip&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;wb&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;zipfile&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ZipFile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;swadesh.zip&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;extractall&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Next, we get all the Spanish words from the Swadesh&amp;nbsp;file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;swadesh_words&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;codecs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;swadesh&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;es&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;swadesh_words&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now we are ready to loop through the graph and find all nodes are part
+of the Swadesh list. We will store all those nodes and their connections
+in seperate graphs, one graph for each Swadesh term. This allows us to
+use different word lists later, for example to extract semantic domains
+like &lt;em&gt;body parts&lt;/em&gt;, &lt;em&gt;food&lt;/em&gt;,&amp;nbsp;etc.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;swadesh_graphs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;swadesh_words&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;swadesh_graphs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;networkx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Graph&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;combined_graph&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;lang&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;combined_graph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; \
+            &lt;span class="n"&gt;combined_graph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;lang&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;spa&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# get the index of the word in the Swadesh list&lt;/span&gt;
+        &lt;span class="n"&gt;swadesh_index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;swadesh&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;swadesh_words&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;concepts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;swadesh&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;concepts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;swadesh_index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;swadesh_index&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;continue&lt;/span&gt;
+        &lt;span class="n"&gt;swadesh_graphs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;swadesh_index&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_node&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;combined_graph&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;lang&amp;quot;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;combined_graph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; \
+                    &lt;span class="n"&gt;combined_graph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;lang&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;spa&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;|&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="n"&gt;lang&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;combined_graph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;lang&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+                &lt;span class="n"&gt;page&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;combined_graph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;page&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+                &lt;span class="n"&gt;pos_on_page&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;combined_graph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;pos_on_page&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+                &lt;span class="n"&gt;swadesh_graphs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;swadesh_index&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_node&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="n"&gt;swadesh_graphs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;swadesh_index&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_edge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;node&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="n"&gt;swadesh_graphs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;swadesh_index&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_node&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;attr_dict&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;data_source&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                                &lt;span class="s2"&gt;&amp;quot;page&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;page&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                                &lt;span class="s2"&gt;&amp;quot;pos_on_page&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;pos_on_page&lt;/span&gt; &lt;span class="p"&gt;})&lt;/span&gt;
+                &lt;span class="n"&gt;swadesh_graphs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;swadesh_index&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_edge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="export-the-subgraph-as-json-data"&gt;
+&lt;h3&gt;Export the subgraph as &lt;span class="caps"&gt;JSON&lt;/span&gt;&amp;nbsp;data&lt;/h3&gt;
+&lt;p&gt;Another method to visualize the graph is the &lt;a class="reference external" href="http://d3js.org/"&gt;D3 Javascript
+library&lt;/a&gt;. For this we need to export the graph as
+&lt;span class="caps"&gt;JSON&lt;/span&gt; data that will be loaded by a &lt;span class="caps"&gt;HTML&lt;/span&gt; document. The networkx contains
+a &lt;tt class="docutils literal"&gt;networkx.readwrite.json_graph&lt;/tt&gt; module that allows us to easily
+transform the graph into a &lt;span class="caps"&gt;JSON&lt;/span&gt; document. The &lt;span class="caps"&gt;JSON&lt;/span&gt; data structure can
+then be writte to a file with the help of the Python &lt;tt class="docutils literal"&gt;json&lt;/tt&gt; module:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;networkx.readwrite&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;json_graph&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;json&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;swadesh_graphs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;json_data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;json_graph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;node_link_data&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dump&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;json_data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;codecs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;swadesh_data_&lt;/span&gt;&lt;span class="si"&gt;{0}&lt;/span&gt;&lt;span class="s2"&gt;.json&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;w&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dump&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;swadesh_words&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;codecs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;swadesh_list.json&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;w&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Finally we need to create a &lt;span class="caps"&gt;HTML&lt;/span&gt; file to display the data. You can
+download an &lt;span class="caps"&gt;HTML&lt;/span&gt; file form&amp;nbsp;here:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/pbouda/notebooks/blob/master/swadeshviewer/index.html"&gt;https://github.com/pbouda/notebooks/blob/master/swadeshviewer/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Put the file &lt;tt class="docutils literal"&gt;index.html&lt;/tt&gt; into the folder with the &lt;span class="caps"&gt;JSON&lt;/span&gt; files. Then
+open the file in any browser. You can view an online version&amp;nbsp;here:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.peterbouda.eu/tutorials/swadeshviewer/index.html"&gt;http://www.peterbouda.eu/tutorials/swadeshviewer/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Language"></category><category term="IPython"></category><category term="Swadesh"></category><category term="Witotoan"></category></entry><entry><title>pressagio: A predictive text system in Python</title><link href="http://www.peterbouda.eu/pressagio-a-predictive-text-system-in-python.html" rel="alternate"></link><published>2013-11-04T13:56:00+00:00</published><updated>2013-11-04T13:56:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2013-11-04:/pressagio-a-predictive-text-system-in-python.html</id><summary type="html">&lt;p&gt;&lt;a class="reference external" href="http://media.cidles.eu/poio/pressagio/"&gt;Pressagio&lt;/a&gt; is a predictive text
+library that I am currently working on. It is written in Python and I started
+this project as a pure Python port of the amazing &lt;a class="reference external" href="http://presage.sourceforge.net/"&gt;presage library&lt;/a&gt;. The original idea was to implement text
+prediction on mobile phones for under-resourced languages like Bavarian or
+Sorbian …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a class="reference external" href="http://media.cidles.eu/poio/pressagio/"&gt;Pressagio&lt;/a&gt; is a predictive text
+library that I am currently working on. It is written in Python and I started
+this project as a pure Python port of the amazing &lt;a class="reference external" href="http://presage.sourceforge.net/"&gt;presage library&lt;/a&gt;. The original idea was to implement text
+prediction on mobile phones for under-resourced languages like Bavarian or
+Sorbian, but pressagio could of course be used for any language for which some
+corpus is available. You can try out an online demo of the text prediction
+on the &lt;a class="reference external" href="http://www.poio.eu/"&gt;Poio website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here is a short introduction how to build an n-gram model for a language
+that you want to support via pressagio. First, you have to prepare some text
+file that contains raw text, without markup or any other content. A good
+example is the output of the &lt;a class="reference external" href="http://www.peterbouda.eu/parsing-wikipedia-dumps-and-conversion-to-iso-24612-graf-xml.html"&gt;Wikipedia to GrAF conversion that I described
+a few weeks ago&lt;/a&gt;.
+The GrAF package contains a .txt file that we will use for the tutorial in this&amp;nbsp;post.&lt;/p&gt;
+&lt;div class="section" id="build-the-n-gram-model"&gt;
+&lt;h2&gt;Build the n-gram&amp;nbsp;model&lt;/h2&gt;
+&lt;p&gt;We will build and store an n-gram model to allow text prediction for Bavarian.
+A sqlite database will store the model, so that you do not need any other
+database system on your computer. Python supports sqlite out-of-the-box.
+Besides sqlite, pressagio also support postgres as a store for the n-gram
+models. To create the model for a single cardinality (e.g. unigram or bigrams),
+the pressagio library contains a &lt;a class="reference external" href="https://github.com/cidles/pressagio/blob/master/scripts/text2ngram"&gt;text2ngram&lt;/a&gt; script
+in the &lt;tt class="docutils literal"&gt;scripts&lt;/tt&gt; folder of the source distribution. This script supports
+several command line options, for example to set the cardinality of the model
+and the output file. You can get a list of all options by passing &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;--help&lt;/span&gt;&lt;/tt&gt; to
+the&amp;nbsp;script:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="go"&gt;h:\ProjectsWin\git-github\pressagio\scripts&amp;gt;c:\Python33\python.exe text2ngram --help&lt;/span&gt;
+&lt;span class="go"&gt;Usage: text2ngram [options] file1 file2 ...&lt;/span&gt;
+
+&lt;span class="go"&gt;Options:&lt;/span&gt;
+&lt;span class="go"&gt;  --version             show program&amp;#39;s version number and exit&lt;/span&gt;
+&lt;span class="go"&gt;  -h, --help            show this help message and exit&lt;/span&gt;
+&lt;span class="go"&gt;  -n NGRAM, --ngram=NGRAM&lt;/span&gt;
+&lt;span class="go"&gt;                        Specify ngram cardinality N&lt;/span&gt;
+&lt;span class="go"&gt;  -l LOWERCASE, --lowercase=LOWERCASE&lt;/span&gt;
+&lt;span class="go"&gt;                        Enable lowercase conversion mode&lt;/span&gt;
+&lt;span class="go"&gt;  -a APPEND, --append=APPEND&lt;/span&gt;
+&lt;span class="go"&gt;                        Enable append mode for database&lt;/span&gt;
+&lt;span class="go"&gt;  -o OUTFILE, --output=OUTFILE&lt;/span&gt;
+&lt;span class="go"&gt;                        Output file name O&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We will generate a model for unigrams, bigrams and trigrams, as this is what
+we need for the text prediction. In addition to the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-n&lt;/span&gt;&lt;/tt&gt; option we will also
+pass a filename for sqlite database (&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-o&lt;/span&gt; bar.sqlite&lt;/tt&gt;) and the path to the text
+file with the Wikipedia articles (&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;barwiki-20131030.txt&lt;/span&gt;&lt;/tt&gt;). We have to call
+&lt;tt class="docutils literal"&gt;text2ngram&lt;/tt&gt; three times, once for each cardinality. For the unigrams we&amp;nbsp;use:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="go"&gt;h:\ProjectsWin\git-github\pressagio\scripts&amp;gt;c:\Python33\python.exe text2ngram -n 1 -o bar.sqlite barwiki-20131030.txt&lt;/span&gt;
+&lt;span class="go"&gt;Parsing barwiki-20131030.txt...&lt;/span&gt;
+&lt;span class="go"&gt;Writing result to bar.sqlite...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then the&amp;nbsp;bigrams:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="go"&gt;h:\ProjectsWin\git-github\pressagio\scripts&amp;gt;c:\Python33\python.exe text2ngram -n 2 -o bar.sqlite barwiki-20131030.txt&lt;/span&gt;
+&lt;span class="go"&gt;Parsing barwiki-20131030.txt...&lt;/span&gt;
+&lt;span class="go"&gt;Writing result to bar.sqlite...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And finally the&amp;nbsp;trigrams:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="go"&gt;h:\ProjectsWin\git-github\pressagio\scripts&amp;gt;c:\Python33\python.exe text2ngram -n 3 -o bar.sqlite barwiki-20131030.txt&lt;/span&gt;
+&lt;span class="go"&gt;Parsing barwiki-20131030.txt...&lt;/span&gt;
+&lt;span class="go"&gt;Writing result to bar.sqlite...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The result of the three steps will be a sqlite database with three tables
+&lt;tt class="docutils literal"&gt;_1_gram&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;_2_gram&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;_3_gram&lt;/tt&gt;. Those will contain the counts for each
+n-gram of the Wikipedia&amp;nbsp;corpus.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="use-pressagio-to-suggest-completions"&gt;
+&lt;h2&gt;Use pressagio to suggest&amp;nbsp;completions&lt;/h2&gt;
+&lt;p&gt;Based on this information pressagio can now calculate the most likely
+completions for any Bavarian string. The whole process is controlled via a
+configuration file that points to the database file and contains several option
+for smoothing, the number of suggestions etc. You can find an &lt;a class="reference external" href="https://github.com/cidles/pressagio/blob/master/scripts/example_profile.ini"&gt;example config file&lt;/a&gt;
+in the &lt;tt class="docutils literal"&gt;scripts&lt;/tt&gt; folder. The same folder also contains an &lt;a class="reference external" href="https://github.com/cidles/pressagio/blob/master/scripts/predict"&gt;example script
+for prediction&lt;/a&gt; that makes
+use of this config file. This example assumes that there is a file
+&lt;tt class="docutils literal"&gt;bar.sqlite&lt;/tt&gt; in the same folder as the prediction script and the config&amp;nbsp;file.&lt;/p&gt;
+&lt;p&gt;The script first imports the &lt;tt class="docutils literal"&gt;configparser&lt;/tt&gt; module. We emebed the import in
+a &lt;tt class="docutils literal"&gt;try&lt;/tt&gt; block in order to support both Python 2 and 3, as the name of the
+module changed between the two&amp;nbsp;versions:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;import pressagio.callback
+import pressagio
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Next, we define a sub-class of &lt;tt class="docutils literal"&gt;pressagio.callback.Callback&lt;/tt&gt;, which is used
+to pass the input string to the predictor. In a real-world setting this callback
+is called by the text predictor and has to return the strings before and after
+the cursor. For simplicity we assume that there is no text after the&amp;nbsp;cursor:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;DemoCallback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pressagio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;callback&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Callback&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;buffer&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="fm"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;buffer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;buffer&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;past_stream&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;buffer&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;future_stream&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We can now open and parse the config&amp;nbsp;file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;config_file&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;example_profile.ini&amp;quot;&lt;/span&gt;
+
+&lt;span class="n"&gt;config&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;configparser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ConfigParser&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;config_file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;With the parsed configuration and the callback we can create a &lt;tt class="docutils literal"&gt;Pressagio&lt;/tt&gt;
+object:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;callback&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;DemoCallback&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Des is a Te&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;prsgio&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pressagio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Pressagio&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;callback&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The object has a method &lt;tt class="docutils literal"&gt;predict()&lt;/tt&gt; that will return a list of the suggestions
+calculated from the n-gram&amp;nbsp;model:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;predictions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;prsgio&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;predict&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;predictions&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;That&amp;#8217;s it! Feel free to try this out with any corpus you have, and don&amp;#8217;t forget
+to try our online demo at the Poio&amp;nbsp;website:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.poio.eu/"&gt;http://www.poio.eu/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Poio is completely open source, the data we use is from Wikipedia and is
+completely free for download on the Poio&amp;nbsp;website.&lt;/p&gt;
+&lt;/div&gt;
+</content><category term="Language"></category><category term="Poio"></category><category term="LM"></category></entry><entry><title>Parsing Wikipedia dumps and conversion to ISO 24612 (GrAF-XML)</title><link href="http://www.peterbouda.eu/parsing-wikipedia-dumps-and-conversion-to-iso-24612-graf-xml.html" rel="alternate"></link><published>2013-09-10T15:53:00+01:00</published><updated>2013-09-10T15:53:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2013-09-10:/parsing-wikipedia-dumps-and-conversion-to-iso-24612-graf-xml.html</id><summary type="html">&lt;p&gt;At the moment I am heavily working on our data management and conversion library
+&lt;a href="http://media.cidles.eu/poio/poio-api/"&gt;Poio &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;. Until now it mainly targets
+files formats used in language documentation, but I am quite interested in using
+the content of Wikipedias to do some linguistic analysis like finding semantic
+classes or testing part-of-speech …&lt;/p&gt;</summary><content type="html">&lt;p&gt;At the moment I am heavily working on our data management and conversion library
+&lt;a href="http://media.cidles.eu/poio/poio-api/"&gt;Poio &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;. Until now it mainly targets
+files formats used in language documentation, but I am quite interested in using
+the content of Wikipedias to do some linguistic analysis like finding semantic
+classes or testing part-of-speech taggers. As you might know, the original
+&lt;a href="http://dumps.wikimedia.org/"&gt;Wikipedia dumps&lt;/a&gt; are somehow contaminated with
+Wiki markup that is not easy to erase. There are all kind of historical markup
+structures in there and sometimes the syntax is plainly wrong, but still works
+to generate a good-enough page on the Wikipedia website. In this post I will
+explain how to download and clean a Wikipedia dump and then use Poio &lt;span class="caps"&gt;API&lt;/span&gt; to
+transform it into a &lt;a href="http://www.balisage.net/Proceedings/vol10/html/Bouda01/BalisageVol10-Bouda01.html"&gt;GrAF-&lt;span class="caps"&gt;XML&lt;/span&gt; file&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;The Wikipeda&amp;nbsp;Extractor&lt;/h1&gt;
+&lt;p&gt;Two years ago I tested several Wikipedia extraction tools, and found that the
+&lt;a href="http://medialab.di.unipi.it/wiki/Wikipedia_Extractor"&gt;Wikipedia Extractor&lt;/a&gt;
+gives the best output. Things might have changed since then, but I stick to it,
+also because it is a single Python script that I can easily change if I need
+to. The newest version can output &lt;span class="caps"&gt;JSON&lt;/span&gt; or &lt;span class="caps"&gt;XML&lt;/span&gt;. As &lt;span class="caps"&gt;XML&lt;/span&gt; was the one and only
+output format two years ago I stick to the &lt;span class="caps"&gt;XML&lt;/span&gt; output as all my tools are based
+on this format. In fact, it is not &lt;em&gt;true&lt;/em&gt; &lt;span class="caps"&gt;XML&lt;/span&gt;, as the root element is missing
+(the Wikipedia Extractor calls the format &amp;#8220;tanl&amp;#8221;). All the Wikipedia articles
+are just enclosed by &lt;code&gt;&amp;lt;doc&amp;gt;&lt;/code&gt; tags, one after the&amp;nbsp;other:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;doc&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;55&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;url=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://bar.wikipedia.org/wiki?curid=55&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;title=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Wikipedia:Archiv/Boarische Umschrift&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Wikipedia:Archiv/Boarische&lt;span class="w"&gt; &lt;/span&gt;Umschrift
+Fürs&lt;span class="w"&gt; &lt;/span&gt;Boarische&lt;span class="w"&gt; &lt;/span&gt;gibts&lt;span class="w"&gt; &lt;/span&gt;koa&lt;span class="w"&gt; &lt;/span&gt;einheitliche&lt;span class="w"&gt; &lt;/span&gt;Umschrift.&lt;span class="w"&gt; &lt;/span&gt;Ma&lt;span class="w"&gt; &lt;/span&gt;orientiert&lt;span class="w"&gt; &lt;/span&gt;si&lt;span class="w"&gt; &lt;/span&gt;in&lt;span class="w"&gt; &lt;/span&gt;da&lt;span class="w"&gt; &lt;/span&gt;Schreibweis&lt;span class="w"&gt; &lt;/span&gt;an&lt;span class="w"&gt; &lt;/span&gt;da&lt;span class="w"&gt; &lt;/span&gt;deutschen&lt;span class="w"&gt; &lt;/span&gt;Orthografie....
+&lt;span class="nt"&gt;&amp;lt;/doc&amp;gt;&amp;lt;doc&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;60&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;url=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://bar.wikipedia.org/wiki?curid=60&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;title=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Deitschland&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Deitschland
+Deitschland&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;Staat&lt;span class="w"&gt; &lt;/span&gt;in&lt;span class="w"&gt; &lt;/span&gt;Mittleiropa.&lt;span class="w"&gt; &lt;/span&gt;Ois&lt;span class="w"&gt; &lt;/span&gt;Bundesstaat&lt;span class="w"&gt; &lt;/span&gt;wiad&lt;span class="w"&gt; &lt;/span&gt;de&lt;span class="w"&gt; &lt;/span&gt;&amp;quot;Bundesrepublik&lt;span class="w"&gt; &lt;/span&gt;Deutschland&amp;quot;&lt;span class="w"&gt; &lt;/span&gt;aus&lt;span class="w"&gt; &lt;/span&gt;dena&lt;span class="w"&gt; &lt;/span&gt;16&lt;span class="w"&gt; &lt;/span&gt;deitschn&lt;span class="w"&gt; &lt;/span&gt;Ländan&lt;span class="w"&gt; &lt;/span&gt;buidt....
+&lt;span class="nt"&gt;&amp;lt;/doc&amp;gt;&lt;/span&gt;
+[...]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The whole output is split over several files, where the files&amp;#8217; size is
+controllable via a command line variable. I use to call the Wikipedia Extractor
+with the following arguments (I use the [Bavarian Wikipedia dump]
+(http://dumps.wikimedia.org/barwiki/20130905/) as an example&amp;nbsp;here):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;WikiExtractor.py -w -f tanl barwiki-20130905-pages-articles.xml.bz2 extracted
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This will put all output files into a folder &lt;code&gt;extracted&lt;/code&gt;.&lt;/p&gt;
+&lt;h1&gt;Concatenate and clean the&amp;nbsp;files&lt;/h1&gt;
+&lt;p&gt;The next step is then to create a real &lt;span class="caps"&gt;XML&lt;/span&gt; file from this. It is not too hard,
+we just have to add a root tag and clean the data a bit more, otherwise an &lt;span class="caps"&gt;XML&lt;/span&gt;
+parser will complain about certain characters like the &amp;#8220;lower than&amp;#8221; &lt;code&gt;&amp;lt;&lt;/code&gt;. I
+start with the following code to get rid of certain general problems like
+unparsable characters, add the root tags and concatenate all the&amp;nbsp;files:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;re&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;codecs&lt;/span&gt;
+
+&lt;span class="n"&gt;re_apostroph&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;re_title_cleaned&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;matchobj&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;matchobj&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;re_apostroph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;matchobj&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;matchobj&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# Concatenate output files&lt;/span&gt;
+&lt;span class="n"&gt;filenames&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;glob&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;glob&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;extracted&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;*.raw&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;codecs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;barwiki.xml&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;utf-8&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;outfile&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;fname&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;filenames&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;codecs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fname&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;infile&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;infile&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;outfile&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# first clean step&lt;/span&gt;
+&lt;span class="n"&gt;f1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;codecs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;barwiki.xml&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;f2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;codecs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;barwiki_cleaned.xml&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;w&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;f2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt;xml&amp;gt;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;re_title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;(title=&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s2"&gt;)(.*)(&lt;/span&gt;&lt;span class="se"&gt;\&amp;quot;&lt;/span&gt;&lt;span class="s2"&gt;&amp;gt;)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;re_xml_tag&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt;(?!/?doc)[^&amp;gt;]*&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;re_and&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;amp;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;re_lower&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re_title&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;re_title_cleaned&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re_xml_tag&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re_and&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;amp;amp;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re_lower&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;amp;lt; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;f2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;f2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt;/xml&amp;gt;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;f1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;f2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There is one complex regular expression substition here, that cleans the &lt;code&gt;title&lt;/code&gt;
+attributes of the &lt;code&gt;&amp;lt;doc&amp;gt;&lt;/code&gt; tags. The titles sometimes contain an apostroph &lt;code&gt;"&lt;/code&gt;,
+which is also the seperator for attribute values in &lt;span class="caps"&gt;XML&lt;/span&gt; and cannot be used in
+this location. So I just remove them. The output of this script are two files:
+the &lt;code&gt;barwiki.xml&lt;/code&gt; just contains the concatenated files, the &lt;code&gt;barwiki_cleaned.xml&lt;/code&gt;
+contains the cleaned &lt;span class="caps"&gt;XML&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;In the case of the Bavarian Wikipedia there are still
+some more quirks in the data. You can find out what kind of problems there are
+if you try to parse the file now with the Python ElementTree module, for&amp;nbsp;example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;xml.etree.cElementTree&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;ET&lt;/span&gt;
+&lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;ImportError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;xml.etree.ElementTree&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;ET&lt;/span&gt;
+&lt;span class="n"&gt;tree&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ET&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ElementTree&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;barwiki_cleaned.xml&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The parser will throw an error and tell you which line and column caused the
+problem. So I went through all the remaining problems in the Bavarian Wikipedia,
+and added several more lines to my clean script to remove or modify the lines
+that cause the&amp;nbsp;problems:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;f1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;codecs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;barwiki_cleaned.xml&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;f2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;codecs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;barwiki_cleaned2.xml&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;w&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;re_date&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;\-?\-? ?\d\d?:\d\d, \d\d?. .{2,8}\.? \d\d\d\d \(CES?T\)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;re_dashes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;\-\-&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;re_wrong_tags&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt;/noinclude[^&amp;gt;]&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;re_arrows&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;(&amp;lt;==&amp;lt;==&amp;lt;==&amp;lt;|&amp;gt;==&amp;gt;==&amp;gt;==&amp;gt;)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;re_special1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Le&amp;lt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;re_special2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ci&amp;lt;:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;re_img&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; [^ ]*\.jpg\|&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;lines_to_delete&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="sa"&gt;u&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt;!-- BITTE bei den Biografien der entsprechenden Personen auf der Bearbeitungsseite unten bei  Kategorien die folgende Zeile EINFÜGEN:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="sa"&gt;u&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;  &amp;lt;/noinclude&amp;lt;/includeonly»&amp;lt;includeonly&amp;lt;/includeonly» BITTSCHÖN ENTFERN DII KOMMENTARE &amp;lt;/includeonly&amp;lt;/includeonly»&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="sa"&gt;u&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;lt;!-- BITTE bei den Biografien der entsprechenden Personen auf der Bearbeitungsseite unten bei Kategorien die folgende Zeile EINFÜGEN:&amp;quot;&lt;/span&gt;
+&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;f1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rstrip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;lines_to_delete&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;f2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;continue&lt;/span&gt;
+
+    &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re_date&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;re_empty&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re_dashes&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;-&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re_arrows&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re_wrong_tags&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re_special1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Le&amp;amp;lt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re_special2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ci&amp;amp;lt;:&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re_img&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;f2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;f1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;f2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In the end I have a clean file &lt;code&gt;barwiki_cleaned2.xml&lt;/code&gt; that contains &lt;span class="caps"&gt;XML&lt;/span&gt; with
+all the articles of the Bavarian Wikipedia and is parsable with&amp;nbsp;EementTree.&lt;/p&gt;
+&lt;p&gt;I still add a third cleaning step to remove articles that are not real content.
+Wikipedia contains several helper and meta-data articles that contain
+explanations for authors and other stuff that we don&amp;#8217;t need. Luckily, those have
+a title that contains a prefix that ends with a colon &lt;code&gt;:&lt;/code&gt;, so we can just look
+for a certain pattern in the titles and remove those &lt;code&gt;&amp;lt;doc&amp;gt;&lt;/code&gt; elements from the
+&lt;span class="caps"&gt;XML&lt;/span&gt; tree. I also remove articles that are smaller than 200
+characters (those are too short to measure semantic similarity, in one of my
+use&amp;nbsp;cases):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;tree&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ET&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ElementTree&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;barwiki_cleaned2.xml&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tree&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getroot&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;re_special_title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;\w+:\w&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;UNICODE&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;remove_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;doc&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;doc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;attrib&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;re_special_title&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;match&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;remove_list&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;doc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;doc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;remove_list&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;doc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;doc&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;remove_list&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;doc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;tree&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;barwiki_cleaned3.xml&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;encoding&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After this step I finally end up with a &lt;code&gt;barwiki_cleaned3.xml&lt;/code&gt; that contains
+clean data with only the content articles. This file can already be used to
+process the Wikipedia, but I wanted to also publish the files in a standardized
+format. I chose &lt;a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326"&gt;&lt;span class="caps"&gt;ISO&lt;/span&gt; 24612&lt;/a&gt;,
+as this makes it extremely easy to later combine heterogenous data sources or
+add layers of annotations in the resulting annotation&amp;nbsp;graph.&lt;/p&gt;
+&lt;h1&gt;Conversion to GrAF-&lt;span class="caps"&gt;XML&lt;/span&gt; with Poio &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;The last step is extremely simple, as one of Poio &lt;span class="caps"&gt;API&lt;/span&gt;&amp;#8217;s core use case is the
+conversion of files. Normally, you would have to write a parser and a writer
+for each of the file formats you want to support. But for the &lt;span class="caps"&gt;XML&lt;/span&gt; output of
+the Wikipedia Extractor there already exists a parser in Poio &lt;span class="caps"&gt;API&lt;/span&gt;, and GrAF-&lt;span class="caps"&gt;XML&lt;/span&gt;
+is supported as the basic pivot format. Which means that any file format that
+is supported in Poio &lt;span class="caps"&gt;API&lt;/span&gt; can be converted to GrAF-&lt;span class="caps"&gt;XML&lt;/span&gt;. The conversion is
+dead simple: we initialize a &lt;code&gt;Converter&lt;/code&gt; object with the Wikipedia parser
+and the GrAF writer, and then tell the converter to &lt;code&gt;parse()&lt;/code&gt; and &lt;code&gt;write()&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;parser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;poioapi&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wikipedia_extractor&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Parser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Wikipedia.xml&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;writer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;poioapi&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;graf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Writer&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;converter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;poioapi&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;graf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GrAFConverter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;writer&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;converter&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;converter&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Wikipedia.hdr&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This will write a set of GrAF files that you can read and query with the
+&lt;a href="http://media.cidles.eu/poio/graf-python/"&gt;graf-python&lt;/a&gt; library or
+with any of the &lt;a href="http://www.anc.org/software/"&gt;tools and connectors&lt;/a&gt; that were
+developed at the American National Corpus to work with their GrAF-&lt;span class="caps"&gt;XML&lt;/span&gt; corpus&amp;nbsp;files.&lt;/p&gt;</content><category term="Language"></category><category term="Poio"></category><category term="Wikipedia"></category></entry><entry><title>Creating a dictionary: Excel to Toolbox conversion</title><link href="http://www.peterbouda.eu/creating-a-dictionary-excel-to-toolbox-conversion.html" rel="alternate"></link><published>2013-08-29T11:18:00+01:00</published><updated>2013-08-29T11:18:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2013-08-29:/creating-a-dictionary-excel-to-toolbox-conversion.html</id><summary type="html">&lt;p&gt;In our current dictionary project &amp;#8220;Bilingual Dictionary Piação-Portuguese&amp;#8221; we
+decided to use Microsoft Excel to edit the dictionary data. This choice had
+some pragmatic reasons, like that most people/linguists can easily work with a
+stylesheet, even if they don&amp;#8217;t know about all the features of Excel, and that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In our current dictionary project &amp;#8220;Bilingual Dictionary Piação-Portuguese&amp;#8221; we
+decided to use Microsoft Excel to edit the dictionary data. This choice had
+some pragmatic reasons, like that most people/linguists can easily work with a
+stylesheet, even if they don&amp;#8217;t know about all the features of Excel, and that
+Excel allows to export data in a structured way (as &amp;#8220;comma separated values&amp;#8221; in
+a &amp;#8220;&lt;span class="caps"&gt;CSV&lt;/span&gt; file&amp;#8221;). Still, as the &lt;a href="http://www-01.sil.org/computing/toolbox/"&gt;Toolbox&lt;/a&gt;
+dictionary generator is state-of-the-art in language documentation, we needed a
+way to convert the Excel data to a Toolbox file. We did some first tests with
+a simple Python script and everything worked out well until now, so here is a
+short description of our&amp;nbsp;workflow.&lt;/p&gt;
+&lt;p&gt;We created an empty Toolbox project that will give you a list of standard fields
+like &lt;code&gt;Lexeme&lt;/code&gt;, &lt;code&gt;Sound file&lt;/code&gt;, etc. We added two or three example sentences,
+customized the fields, and generated a first dictionary to see how the output
+will look in the end and to get an example data file that we could use as a
+template for the Excel data. The data file will be saved in the project folder
+somewhere, in our case it was in
+&lt;code&gt;Toolbox Project\DictionaryFactoryPackage\Dictionary.txt&lt;/code&gt;. You can open the
+file in a simple text editor to see the content. In our case, an entry looked
+like&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;\lx à bia
+\sf
+\pc
+\ph aβiɐ
+\se
+\ps adv.
+\un
+\dn rápido, depressa
+\sn
+\rn rápido
+\va
+\et antropónimo Bia
+\ec referência metonímica à alcunha de
+um homem para designar uma
+característica que lhe era peculiar
+\wh da alcunha de um senhor (Bia) que
+achava que tudo se podia resolver
+rapidamente, mesmo que sem
+qualidade. Doc. em CAORG 2004
+\pce
+\xv A covana colou do parreiral à bia e
+a resmar.
+\sfx
+\ff
+\xn &amp;quot;&amp;quot;A mulher saiu de casa depressa e a
+falar sozinha.&amp;quot;
+\rf Ferreira 2000-2011. 
+\nt
+\cf
+\dt 19
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;For most of the Toolbox fields we defined a column in Excel, with a custom name
+so that our editors where able to understand the column&amp;#8217;s content from the name
+in Excel. With the column names and the field names in Toolbox we created the
+following template in&amp;nbsp;Python:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;TEMPLATE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;lx &lt;/span&gt;&lt;span class="si"&gt;{Lexema}&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;sf &lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;pc &lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;ph {Transcrição Fonética}&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;se&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;ps {Classe de Palavras}&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;un&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;dn &lt;/span&gt;&lt;span class="si"&gt;{Significado}&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;sn&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;rn &lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;va&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;et &lt;/span&gt;&lt;span class="si"&gt;{Etimologia}&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;ec {Comentário de etimologia}&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;wh {Historia da Palavra}&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;pce&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;xv &lt;/span&gt;&lt;span class="si"&gt;{Exemplos}&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;sfx&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;ff&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;xn {Exemplos PT}&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;rf {Fonte dos exemplos}&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;nt&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;cf&lt;/span&gt;
+&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s2"&gt;dt 31.07.2013&lt;/span&gt;
+&lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The Excel column names are in the curely brackets, so that we can use Python&amp;#8217;s
+&lt;code&gt;format()&lt;/code&gt; method to fill in the content. For the &lt;span class="caps"&gt;CSV&lt;/span&gt; file we had to export the
+Excel data in LibreOffice Calc, as Excel does not support &lt;span class="caps"&gt;UTF&lt;/span&gt;-8 export (shame
+on you, Microsoft!). We exported a single &lt;span class="caps"&gt;CSV&lt;/span&gt; file for each sheet in Calc,
+so that we had a list of &lt;span class="caps"&gt;CSV&lt;/span&gt; files. With the template above and this collection
+of &lt;span class="caps"&gt;CSV&lt;/span&gt; files it was easy to create a new &lt;code&gt;Dictionary.txt&lt;/code&gt; for&amp;nbsp;Toolbox:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;csv&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;codecs&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;glob&lt;/span&gt;
+
+&lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;codecs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Dictionary.txt&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;w&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;tbfile&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;tbfile&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;\_sh v3.0  231  MDF 4.0&lt;/span&gt;&lt;span class="se"&gt;\n\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;glob&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;glob&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Dictionary_database_NEW_*.csv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;codecs&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;r&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;csvfile&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;minderico&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;csv&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reader&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;csvfile&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;dialect&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;excel&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;delimiter&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;quotechar&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;quot;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+            &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;minderico&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                        &lt;span class="n"&gt;header&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;
+                &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                    &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+                    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;header&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+                        &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;h&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;j&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+                    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                        &lt;span class="n"&gt;tbfile&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TEMPLATE&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+                    &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;KeyError&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                        &lt;span class="k"&gt;break&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The code even catches the error when a column name is wrong in the Excel sheet.
+This will output a file &lt;code&gt;Dictionary.txt&lt;/code&gt; that you can copy to your Toolbox
+project folder to overwrite the original &lt;code&gt;Dictionary.txt&lt;/code&gt;. With this we were
+able to generate the whole dictionary in&amp;nbsp;Toolbox.&lt;/p&gt;</content><category term="Language"></category><category term="Toolbox"></category><category term="Excel"></category></entry><entry><title>Annotation graphs and the IPython notebook</title><link href="http://www.peterbouda.eu/annotation-graphs-and-the-ipython-notebook.html" rel="alternate"></link><published>2012-12-18T10:53:00+00:00</published><updated>2012-12-18T10:53:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2012-12-18:/annotation-graphs-and-the-ipython-notebook.html</id><summary type="html">&lt;p&gt;I recently became obsessed with annotation graphs and linguistic graphs
+in general. Since September I am working with the &lt;a class="reference external" href="https://github.com/cidles/graf-python"&gt;graf-python&lt;/a&gt; library
+that implements the &lt;a class="reference external" href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326"&gt;&lt;span class="caps"&gt;ISO&lt;/span&gt; 24612 - Linguistic annotation framework (&lt;span class="caps"&gt;LAF&lt;/span&gt;)&lt;/a&gt;
+standard. I planned to publish the corpora of our research center in an
+&lt;span class="caps"&gt;XML&lt;/span&gt; format that is easy to use …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I recently became obsessed with annotation graphs and linguistic graphs
+in general. Since September I am working with the &lt;a class="reference external" href="https://github.com/cidles/graf-python"&gt;graf-python&lt;/a&gt; library
+that implements the &lt;a class="reference external" href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326"&gt;&lt;span class="caps"&gt;ISO&lt;/span&gt; 24612 - Linguistic annotation framework (&lt;span class="caps"&gt;LAF&lt;/span&gt;)&lt;/a&gt;
+standard. I planned to publish the corpora of our research center in an
+&lt;span class="caps"&gt;XML&lt;/span&gt; format that is easy to use, that is somehow officially recognized
+and that allows stand-off annotations so that I can share data and sets
+of annotations independently. GrAF/&lt;span class="caps"&gt;XML&lt;/span&gt; looked like an optimal solution,
+so I gave it a&amp;nbsp;try.&lt;/p&gt;
+&lt;p&gt;First, I published a subset of the data of the &lt;a class="reference external" href="http://www.quanthistling.info/"&gt;QuantHistLing&lt;/a&gt; project
+as GrAF/&lt;span class="caps"&gt;XML&lt;/span&gt; files. I wrote a tutorial how to access the data in Python
+&lt;a class="reference external" href="http://graf-python.readthedocs.org/en/latest/Querying%20GrAF%20graphs.html"&gt;which is available as part of the graf-python documentation&lt;/a&gt;. But I
+also had the idea of making the dictionary data of the project more
+accessible to researchers. One thing we commonly use in language
+comparison are &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Swadesh_list"&gt;Swadesh lists&lt;/a&gt; that contain a fixed set of words for
+200 concepts that are supposed to be general and exist in most of the
+languages. As most of our dictionaries contain a Spanish translation my
+idea was to connect the dictionaries via those translations, but only
+use the words of the Spanish Swadesh list. I developed an &lt;a class="reference external" href="http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html"&gt;IPython
+notebook&lt;/a&gt; to connect the dictionaries of the Witotoan language family
+via the stem of the Spanish word &lt;em&gt;comer&lt;/em&gt;. I basically transformed the
+annotation graphs from GrAF into a &lt;a class="reference external" href="http://networkx.lanl.gov/"&gt;networkX&lt;/a&gt; graph that I could easily
+visualize using the &lt;a class="reference external" href="http://d3js.org/"&gt;D3 javascript library&lt;/a&gt;:&lt;/p&gt;
+&lt;iframe class="gist-src" style="border: 1px solid #DEDEDE; height: 500px; width: 100%" marginwidth="0" marginheight="0" scrolling="no" src="http://bl.ocks.org/d/4250342/"&gt;&lt;/iframe&gt;&lt;p&gt;Published at &lt;a class="reference external" href="http://bl.ocks.org/4250342"&gt;http://bl.ocks.org/4250342&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can find an in-depth description about the transformation and the
+complete notebook &lt;a class="reference external" href="http://graf-python.readthedocs.org/en/latest/Translation%20Graph%20from%20GrAF.html"&gt;in another turotial for graf-python&lt;/a&gt;. It already
+looks quite nice, &lt;span class="caps"&gt;IMO&lt;/span&gt;. I am now trying to make the visualization more
+useful to linguists, by providing more interactivity and maybe search
+options to query for words or sets of words. As an intermediate summary
+I can already tell that IPython helped a lot in working interactively
+with linguistic data in this case. I could try out different ways to
+combine and visualize graphs easily and use a &lt;span class="caps"&gt;JSON&lt;/span&gt; representation of
+Python data structures to publish the results in a &lt;span class="caps"&gt;HTML&lt;/span&gt;/Javascript
+application. Right now I save the &lt;span class="caps"&gt;JSON&lt;/span&gt; data into files and I am still
+looking for a way to directly stream the data from IPython to Javascript
+somehow. There are different ways how Python and Javascript can interact
+in an IPython notebook, the “official” solution is to provide an &lt;span class="caps"&gt;HTML&lt;/span&gt;
+representation of the Python objects as far as I understand. My goal is
+to completely decouple the two if&amp;nbsp;possible.&lt;/p&gt;
+</content><category term="Language"></category><category term="AG"></category><category term="IPython"></category></entry></feed>

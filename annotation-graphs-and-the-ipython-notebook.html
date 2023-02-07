@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--
+    Miniport by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Peter Bouda - Natural Language Processing Consultant</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="Natural Language Processing, Python, Software Development, Consultant"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/theme/js/jquery.min.js"></script>
+    <script src="/theme/js/jquery.scrolly.min.js"></script>
+    <script src="/theme/js/skel.min.js"></script>
+    <script src="/theme/js/init.js"></script>
+    <link
+      href="http://www.peterbouda.eu/feeds/all.atom.xml"
+      type="application/atom+xml"
+      rel="alternate"
+      title="Peter Bouda Atom Feed"
+    />
+     <link
+      href="http://www.peterbouda.eu/feeds/all.rss"
+      type="application/rss+xml"
+      rel="alternate"
+      title="Peter Bouda RSS Feed"
+    />
+
+    <link rel="stylesheet" href="/theme/css/pygment.css" />
+
+    <noscript>
+      <link rel="stylesheet" href="/theme/css/skel.css" />
+      <link rel="stylesheet" href="/theme/css/style.css" />
+      <link rel="stylesheet" href="/theme/css/style-desktop.css" />
+    </noscript>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Peter Bouda",
+        "url": "https://www.peterbouda.eu",
+        "jobTitle": "Natural Language Processing Consultant",
+        "alumniOf": "LMU Munich",
+        "gender": "male",
+        "image": "https://www.peterbouda.eu/theme/images/pic00.jpg",
+        "sameAs": ["https://dev.to/pbouda", "https://github.com/pbouda"]
+      }
+    </script>
+
+    <!--[if lte IE 8
+      ]><link rel="stylesheet" href="/theme/css/ie/v8.css"
+    /><![endif]-->
+    <!--[if lte IE 9
+      ]><link rel="stylesheet" href="/theme/css/ie/v9.css"
+    /><![endif]-->
+  </head>
+  <body>
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="/#top">Home</a></li>
+					<!--<li><a href="/#work">Work</a></li>-->
+					<li><a href="/#portfolio">Portfolio</a></li>
+					<li><a href="/#feed">Blog</a></li>
+					<li><a href="/#contact">Contact</a></li>
+				</ul>
+			</nav> <section id="content" class="body">
+  <article class="h-entry">
+    <header>
+      <h1 class="entry-title e-title">
+        <a
+          class="p-name u-url"
+          href="http://www.peterbouda.eu/annotation-graphs-and-the-ipython-notebook.html"
+          rel="bookmark"
+          title="Permalink to Annotation graphs and the IPython notebook"
+          >Annotation graphs and the IPython&nbsp;notebook</a
+        >
+      </h1>
+    </header>
+
+    <div class="entry-content e-content container">
+      <div class="row">
+        <div class="8u">
+ <footer class="post-info">
+    <p>
+        Published by <a href="http://www.peterbouda.eu" class="p-author">Peter Bouda</a> at <b><time class="dt-published" datetime="2012-12-18 10:53:00+00:00">Ter 18 Dezembro 2012</time></b>
+        in <b><a class="p-category" href="/category/language.html">Language</a></b>.
+    </p>
+    
+
+        
+</footer><!-- /.post-info -->          <p>I recently became obsessed with annotation graphs and linguistic graphs
+in general. Since September I am working with the <a class="reference external" href="https://github.com/cidles/graf-python">graf-python</a> library
+that implements the <a class="reference external" href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326"><span class="caps">ISO</span> 24612 - Linguistic annotation framework (<span class="caps">LAF</span>)</a>
+standard. I planned to publish the corpora of our research center in an
+<span class="caps">XML</span> format that is easy to use, that is somehow officially recognized
+and that allows stand-off annotations so that I can share data and sets
+of annotations independently. GrAF/<span class="caps">XML</span> looked like an optimal solution,
+so I gave it a&nbsp;try.</p>
+<p>First, I published a subset of the data of the <a class="reference external" href="http://www.quanthistling.info/">QuantHistLing</a> project
+as GrAF/<span class="caps">XML</span> files. I wrote a tutorial how to access the data in Python
+<a class="reference external" href="http://graf-python.readthedocs.org/en/latest/Querying%20GrAF%20graphs.html">which is available as part of the graf-python documentation</a>. But I
+also had the idea of making the dictionary data of the project more
+accessible to researchers. One thing we commonly use in language
+comparison are <a class="reference external" href="http://en.wikipedia.org/wiki/Swadesh_list">Swadesh lists</a> that contain a fixed set of words for
+200 concepts that are supposed to be general and exist in most of the
+languages. As most of our dictionaries contain a Spanish translation my
+idea was to connect the dictionaries via those translations, but only
+use the words of the Spanish Swadesh list. I developed an <a class="reference external" href="http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html">IPython
+notebook</a> to connect the dictionaries of the Witotoan language family
+via the stem of the Spanish word <em>comer</em>. I basically transformed the
+annotation graphs from GrAF into a <a class="reference external" href="http://networkx.lanl.gov/">networkX</a> graph that I could easily
+visualize using the <a class="reference external" href="http://d3js.org/">D3 javascript library</a>:</p>
+<iframe class="gist-src" style="border: 1px solid #DEDEDE; height: 500px; width: 100%" marginwidth="0" marginheight="0" scrolling="no" src="http://bl.ocks.org/d/4250342/"></iframe><p>Published at <a class="reference external" href="http://bl.ocks.org/4250342">http://bl.ocks.org/4250342</a></p>
+<p>You can find an in-depth description about the transformation and the
+complete notebook <a class="reference external" href="http://graf-python.readthedocs.org/en/latest/Translation%20Graph%20from%20GrAF.html">in another turotial for graf-python</a>. It already
+looks quite nice, <span class="caps">IMO</span>. I am now trying to make the visualization more
+useful to linguists, by providing more interactivity and maybe search
+options to query for words or sets of words. As an intermediate summary
+I can already tell that IPython helped a lot in working interactively
+with linguistic data in this case. I could try out different ways to
+combine and visualize graphs easily and use a <span class="caps">JSON</span> representation of
+Python data structures to publish the results in a <span class="caps">HTML</span>/Javascript
+application. Right now I save the <span class="caps">JSON</span> data into files and I am still
+looking for a way to directly stream the data from IPython to Javascript
+somehow. There are different ways how Python and Javascript can interact
+in an IPython notebook, the “official” solution is to provide an <span class="caps">HTML</span>
+representation of the Python objects as far as I understand. My goal is
+to completely decouple the two if&nbsp;possible.</p>
+
+          <div id="comments">
+			<script src="https://utteranc.es/client.js"
+					repo="pbouda/peterbouda.eu"
+					issue-term="pathname"
+					label="Comment"
+					theme="github-light"
+					crossorigin="anonymous"
+					async>
+			</script>
+          </div>
+        </div>
+        <!-- /.entry-content -->
+
+        <div class="4u">
+          <article class="box style2">
+            <div>
+              <img
+                style="border-radius:50%; width:80%;"
+                src="theme/images/pic00.jpg"
+                alt=""
+              />
+            </div>
+            <h3>About me</h3>
+            <p>
+              My name is Peter Bouda and I am a software developer with more than 20 years of
+              professional experience in application development. I help
+              you to bring your application to market as quickly as possible.
+            </p>
+            <!-- <p>
+              Join our <a href="http://www.ng-lisbon.com/#trainings">next Angular training</a>
+              in Lisbon, October 2-4.
+            </p> -->
+            <p>
+              <a href="/#top">Read about my work</a><br />
+              or<br />
+              <a href="/#contact">Contact me</a>
+            </p>
+          </article>
+        </div>
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </article>
+</section>
+
+ <!-- Contact -->
+<div class="wrapper style4" id="contact">
+  <article class="container 75%">
+    <div class="row">
+      <div class="12u">
+        <h2>Send me a message and I will get back to you.</h2>
+        <ul class="social">
+          <li>
+            <a href="mailto:pbouda@outlook.com" class="icon fa-envelope-o"
+              ><span class="label">Mail</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/pbouda" class="icon fa-github"
+              ><span class="label">Github</span></a
+            >
+          </li>
+        </ul>
+        <br />
+        <h2>RSS Feed</h2>
+        <ul class="social">
+          <li>
+            <a href="http://www.peterbouda.eu/feeds/all.rss" class="icon fa-rss"
+              ><span class="label">RSS</span></a
+            >
+          </li>
+        </ul>
+        <hr />
+      </div>
+    </div>
+
+    <footer>
+      <ul id="copyright">
+        <li>&copy; Peter Bouda. All rights reserved.</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+      <div>
+        Rua Conselheiro Martins de Carvalho 23 1esq, 1400-069 Lisbon, Portugal,
+        +351 917403181
+      </div>
+    </footer>
+  </article>
+</div>  </body>
+</html>
