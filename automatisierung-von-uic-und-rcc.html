@@ -27,13 +27,13 @@
     <script src="/theme/js/skel.min.js"></script>
     <script src="/theme/js/init.js"></script>
     <link
-      href="https://www.peterbouda.eu/feeds/all.atom.xml"
+      href="http://www.peterbouda.eu/feeds/all.atom.xml"
       type="application/atom+xml"
       rel="alternate"
       title="Peter Bouda Atom Feed"
     />
      <link
-      href="https://www.peterbouda.eu/feeds/all.rss"
+      href="http://www.peterbouda.eu/feeds/all.rss"
       type="application/rss+xml"
       rel="alternate"
       title="Peter Bouda RSS Feed"
@@ -84,7 +84,7 @@
       <h1 class="entry-title e-title">
         <a
           class="p-name u-url"
-          href="https://www.peterbouda.eu/automatisierung-von-uic-und-rcc.html"
+          href="http://www.peterbouda.eu/automatisierung-von-uic-und-rcc.html"
           rel="bookmark"
           title="Permalink to Automatisierung von uic und rcc"
           >Automatisierung von uic und&nbsp;rcc</a
@@ -106,7 +106,7 @@
 </footer><!-- /.post-info -->          <p>In einem PyQt- oder PySide-Projekt verwaltet man oft ein oder mehrere Ressourcen- und <span class="caps">UI</span>-Dateien. Diese Dateien erstellt man in einem C++-Qt-Projekt innerhalb des Qt Creator mit dem Qt Designer, mit den Kommandozeilen-Utilities <code>uic</code> bzw. <code>rcc</code> werden diese Dateien dann in C++-Code umgewandelt. Der Qt Creator bzw. Projektdatei und <code>qmake</code> nehmen dem Entwickler dabei die meiste Arbeit ab: die Code-Dateien werden automatisch aus den entsprechenden <code>ui</code>- und <code>qrc</code>-Dateien generiert. Sobald man eine der Dateien im visuellen Editor bearbeitet, wird beim nächsten Build alles automatisch aktualisiert. Wie sieht es aber unter Python aus? Häufig verwendet man hier ja nicht einmal eine komplette <span class="caps">IDE</span>, für kleine Projekte zut es gut und gern auch ein einfacher Code-Editor. Ich stelle hier ein kleines Skript vor, das auch ohne <span class="caps">IDE</span> zumindest einen Teil der Arbeit übernimmt. Zwar muss man das Skript bei jeder Änderung der <code>ui</code>- und <code>qrc</code>-Dateien manuell starten, aber zumindest muss man nicht mehr alle Dateien per Hand&nbsp;umwandeln.</p>
 <h1>Projektgerüst</h1>
 <p>Ich setze hier voraus, dass ihr ein bestimmtes Projektgerüst verwendet. Die Ressourcendateien, <span class="caps">UI</span>-Dateien sowie Python-Code-Dateien befinden sich dabei in je einem eigenen Ordner. Da Ressourcendateien auf projektweite Dateien verweisen, befinden sie sich häufig im Hauptordner des Projekts. Ein typisches PyQt- bzw. PySide-Projekt sieht bei mir folgendermaßen&nbsp;aus:</p>
-<p><img alt="Projektgerüst PyQt-Projekt" src="https://www.peterbouda.eu/tutorials/11/tut11_1.png"></p>
+<p><img alt="Projektgerüst PyQt-Projekt" src="http://www.peterbouda.eu/tutorials/11/tut11_1.png"></p>
 <p>Der <code>bin</code>-Ordner enthält das Einstiegsskript der Anwendung. Dieses lädt die Klasse des Hauptfensters aus dem Package <code>helloworld</code>, das sich im Ordner <code>src</code> befindet. Die Hauptfensterklasse wiederum lädt den <span class="caps">UI</span>-Code aus dem Unterordner <code>ui</code>, also aus dem Package <code>helloworld.ui</code>. Die Original-<span class="caps">UI</span>-Dateien liegen unter <code>ui</code>, die Ressourcendatei <code>helloworld.qrc</code> liegt im Hauptordner des Projekts. Das Ziel ist es jetzt also, möglichst unkompliziert die <span class="caps">UI</span>-Dateien aus <code>ui</code> sowie die Ressourcendatei in Python-Code umzuwandeln und in den enstsprechenden Dateien im Ordner <code>src/helloworld/ui</code> abzulegen.</p>
 <h1>Das&nbsp;Skript</h1>
 <p>Um diesen Schritt möglichst einfach und möglichst plattformunabhängig durchführen zu können, habe ich folgendes kleines Python-Skript geschrieben, dass diese Arbeit&nbsp;durchführt:</p>
@@ -220,7 +220,7 @@ python generate_ui.py
         <h2>RSS Feed</h2>
         <ul class="social">
           <li>
-            <a href="https://www.peterbouda.eu/feeds/all.rss" class="icon fa-rss"
+            <a href="http://www.peterbouda.eu/feeds/all.rss" class="icon fa-rss"
               ><span class="label">RSS</span></a
             >
           </li>
