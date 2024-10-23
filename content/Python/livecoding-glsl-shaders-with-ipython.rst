@@ -6,9 +6,7 @@ Live coding GLSL shaders with IPython
 
 .. raw:: html
 
-   <video tabindex="0" controls="" preload="none" style="width:500px" poster="https://owncloud.cidles.eu/public.php?service=files&amp;t=2801f63835c70e1a9df8009e5c8c44f1&amp;download">
-   		<source src="https://owncloud.cidles.eu/public.php?service=files&amp;t=9ec8f25530bcd7b8e0dfbf97961025d9&amp;download" type="video/mp4" />
-   </video>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/kmXRukIcyso?si=Su0U_Kqofej2J-0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 I recently started to learn some OpenGL and was looking for a nice way to use
 Python for this. I wanted to be able to update the shaders quickly so that I

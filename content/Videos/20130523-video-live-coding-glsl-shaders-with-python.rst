@@ -2,8 +2,9 @@ Video: Live Coding GLSL shaders with Python
 ###########################################
 :date: 2013-05-23 17:43
 :tags: Python, Live Coding, GLSL, Graphics
-:video: https://www.peterbouda.eu/images/Live_coding_GLSL_shaders_with_IPython.m4v
-:videoposter: https://www.peterbouda.eu/images/Live_coding_GLSL_shaders_with_IPython.png
+:iframe: https://www.youtube.com/embed/kmXRukIcyso
+:iframeheight: 315
+:iframewidth: 560
 
 Screencast of a (private) live coding session that demonstrates how to modify fragment shaders on-the-fly.
 
