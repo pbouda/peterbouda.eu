@@ -27,13 +27,13 @@
     <script src="/theme/js/skel.min.js"></script>
     <script src="/theme/js/init.js"></script>
     <link
-      href="http://www.peterbouda.eu/feeds/all.atom.xml"
+      href="https://www.peterbouda.eu/feeds/all.atom.xml"
       type="application/atom+xml"
       rel="alternate"
       title="Peter Bouda Atom Feed"
     />
      <link
-      href="http://www.peterbouda.eu/feeds/all.rss"
+      href="https://www.peterbouda.eu/feeds/all.rss"
       type="application/rss+xml"
       rel="alternate"
       title="Peter Bouda RSS Feed"
@@ -84,7 +84,7 @@
       <h1 class="entry-title e-title">
         <a
           class="p-name u-url"
-          href="http://www.peterbouda.eu/update-fur-die-opengl-renderschleife-in-pyqt.html"
+          href="https://www.peterbouda.eu/update-fur-die-opengl-renderschleife-in-pyqt.html"
           rel="bookmark"
           title="Permalink to Update für die OpenGL-Renderschleife in PyQt"
           >Update für die OpenGL-Renderschleife in&nbsp;PyQt</a
@@ -106,7 +106,7 @@
     
 
         
-</footer><!-- /.post-info -->          <p>Ich versuche gerade mich in das Thema Raytraching bzw. Raymarching einzuarbeiten. Dabei bin wieder auf mein Qt-OpenGL-Programmgerüst zurückgekommen, dass ich in <a class="reference external" href="http://www.peterbouda.eu/revisiting-pyqt-and-opengl.html">einem meiner letzten Artikel</a> beschrieben habe. Leider hat das Skript nicht auf Anhieb auf einem neuen Rechner funktioniert, was ich auf unterschiedliche Implementierungen der OpenGL-Bibliothek in Qt oder gar den Grafiktreiber zurückführe. Bestimme von mir verwendete Befehle erzeugten Fehlermeldungen, u.a. konnte ich das OpenGL-Viereck für das Fraktal nicht per <tt class="docutils literal">QL_QUADS</tt> zeichnen. Ich habe also das Programmgerüst etwas angepasst und auf reine OpenGL <span class="caps">ES</span> 2.0 Befehle reduziert. Statt einem Viereck zeichne ich jetzt zwei Dreiecke, die ich per <em>Vertex Array</em> übergebe. Ich benutze dafür die Methode <tt class="docutils literal">glDrawElements()</tt>, der ich die Indizes auf die einzelnen Dreickspunkte im <em>Vertex Array</em> übergebe. Die <tt class="docutils literal">render</tt>-Schleife sieht jetzt in etwa folgendermaßen&nbsp;aus:</p>
+</footer><!-- /.post-info -->          <p>Ich versuche gerade mich in das Thema Raytraching bzw. Raymarching einzuarbeiten. Dabei bin wieder auf mein Qt-OpenGL-Programmgerüst zurückgekommen, dass ich in <a class="reference external" href="https://www.peterbouda.eu/revisiting-pyqt-and-opengl.html">einem meiner letzten Artikel</a> beschrieben habe. Leider hat das Skript nicht auf Anhieb auf einem neuen Rechner funktioniert, was ich auf unterschiedliche Implementierungen der OpenGL-Bibliothek in Qt oder gar den Grafiktreiber zurückführe. Bestimme von mir verwendete Befehle erzeugten Fehlermeldungen, u.a. konnte ich das OpenGL-Viereck für das Fraktal nicht per <tt class="docutils literal">QL_QUADS</tt> zeichnen. Ich habe also das Programmgerüst etwas angepasst und auf reine OpenGL <span class="caps">ES</span> 2.0 Befehle reduziert. Statt einem Viereck zeichne ich jetzt zwei Dreiecke, die ich per <em>Vertex Array</em> übergebe. Ich benutze dafür die Methode <tt class="docutils literal">glDrawElements()</tt>, der ich die Indizes auf die einzelnen Dreickspunkte im <em>Vertex Array</em> übergebe. Die <tt class="docutils literal">render</tt>-Schleife sieht jetzt in etwa folgendermaßen&nbsp;aus:</p>
 <div class="highlight"><pre><span></span><span class="n">gl</span><span class="o">.</span><span class="n">glViewport</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">())</span>
 <span class="n">gl</span><span class="o">.</span><span class="n">glClear</span><span class="p">(</span><span class="n">gl</span><span class="o">.</span><span class="n">GL_COLOR_BUFFER_BIT</span><span class="p">)</span>
 
@@ -204,7 +204,7 @@
         <h2>RSS Feed</h2>
         <ul class="social">
           <li>
-            <a href="http://www.peterbouda.eu/feeds/all.rss" class="icon fa-rss"
+            <a href="https://www.peterbouda.eu/feeds/all.rss" class="icon fa-rss"
               ><span class="label">RSS</span></a
             >
           </li>
