@@ -23,7 +23,6 @@
 
     <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
     <script src="/theme/js/jquery.min.js"></script>
-    <script src="/theme/js/jquery.scrolly.min.js"></script>
     <script src="/theme/js/skel.min.js"></script>
     <script src="/theme/js/init.js"></script>
     <link
@@ -69,16 +68,16 @@
     /><![endif]-->
   </head>
   <body>
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="/#top">Home</a></li>
-					<!--<li><a href="/#work">Work</a></li>-->
-					<li><a href="/#portfolio">Portfolio</a></li>
-					<li><a href="/#feed">Blog</a></li>
-					<li><a href="/#contact">Contact</a></li>
-				</ul>
-			</nav> <section id="content" class="body">
+<!-- Nav -->
+<nav id="nav">
+  <ul class="container">
+    <li><a href="/#top">Home</a></li>
+    <li><a href="/#workshops">AI Workshops</a></li>
+    <li><a href="/#portfolio">Portfolio</a></li>
+    <li><a href="/#feed">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+</nav> <section id="content" class="body">
   <article class="h-entry">
     <header>
       <h1 class="entry-title e-title">
@@ -103,7 +102,7 @@
     
 
         
-</footer><!-- /.post-info -->          <p>In einem PyQt- oder PySide-Projekt verwaltet man oft ein oder mehrere Ressourcen- und <span class="caps">UI</span>-Dateien. Diese Dateien erstellt man in einem C++-Qt-Projekt innerhalb des Qt Creator mit dem Qt Designer, mit den Kommandozeilen-Utilities <code>uic</code> bzw. <code>rcc</code> werden diese Dateien dann in C++-Code umgewandelt. Der Qt Creator bzw. Projektdatei und <code>qmake</code> nehmen dem Entwickler dabei die meiste Arbeit ab: die Code-Dateien werden automatisch aus den entsprechenden <code>ui</code>- und <code>qrc</code>-Dateien generiert. Sobald man eine der Dateien im visuellen Editor bearbeitet, wird beim nächsten Build alles automatisch aktualisiert. Wie sieht es aber unter Python aus? Häufig verwendet man hier ja nicht einmal eine komplette <span class="caps">IDE</span>, für kleine Projekte zut es gut und gern auch ein einfacher Code-Editor. Ich stelle hier ein kleines Skript vor, das auch ohne <span class="caps">IDE</span> zumindest einen Teil der Arbeit übernimmt. Zwar muss man das Skript bei jeder Änderung der <code>ui</code>- und <code>qrc</code>-Dateien manuell starten, aber zumindest muss man nicht mehr alle Dateien per Hand&nbsp;umwandeln.</p>
+</footer><!-- /.post-info --> <p>In einem PyQt- oder PySide-Projekt verwaltet man oft ein oder mehrere Ressourcen- und <span class="caps">UI</span>-Dateien. Diese Dateien erstellt man in einem C++-Qt-Projekt innerhalb des Qt Creator mit dem Qt Designer, mit den Kommandozeilen-Utilities <code>uic</code> bzw. <code>rcc</code> werden diese Dateien dann in C++-Code umgewandelt. Der Qt Creator bzw. Projektdatei und <code>qmake</code> nehmen dem Entwickler dabei die meiste Arbeit ab: die Code-Dateien werden automatisch aus den entsprechenden <code>ui</code>- und <code>qrc</code>-Dateien generiert. Sobald man eine der Dateien im visuellen Editor bearbeitet, wird beim nächsten Build alles automatisch aktualisiert. Wie sieht es aber unter Python aus? Häufig verwendet man hier ja nicht einmal eine komplette <span class="caps">IDE</span>, für kleine Projekte zut es gut und gern auch ein einfacher Code-Editor. Ich stelle hier ein kleines Skript vor, das auch ohne <span class="caps">IDE</span> zumindest einen Teil der Arbeit übernimmt. Zwar muss man das Skript bei jeder Änderung der <code>ui</code>- und <code>qrc</code>-Dateien manuell starten, aber zumindest muss man nicht mehr alle Dateien per Hand&nbsp;umwandeln.</p>
 <h1>Projektgerüst</h1>
 <p>Ich setze hier voraus, dass ihr ein bestimmtes Projektgerüst verwendet. Die Ressourcendateien, <span class="caps">UI</span>-Dateien sowie Python-Code-Dateien befinden sich dabei in je einem eigenen Ordner. Da Ressourcendateien auf projektweite Dateien verweisen, befinden sie sich häufig im Hauptordner des Projekts. Ein typisches PyQt- bzw. PySide-Projekt sieht bei mir folgendermaßen&nbsp;aus:</p>
 <p><img alt="Projektgerüst PyQt-Projekt" src="https://www.peterbouda.eu/tutorials/11/tut11_1.png"></p>
@@ -153,14 +152,15 @@ python generate_ui.py
 <p>Und schon habt ihr die Code-Dateien wieder auf dem aktuellen&nbsp;Stand.</p>
 <p>Mehr über dieses Thema findet ihr zum Beispiel in meinem Buch <a href="http://www.amazon.de/gp/product/3941841505/ref=as_li_tf_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=3941841505&linkCode=as2&tag=jsusde-21">PyQt und PySide. <span class="caps">GUI</span>- und Anwendungsentwicklung mit Python und Qt</a><img src="http://www.assoc-amazon.de/e/ir?t=jsusde-21&l=as2&o=3&a=3941841505" width="1" height="1" border="0" alt="book cover" style="border:none !important; margin:0px !important;" />.</p>
           <div id="comments">
-			<script src="https://utteranc.es/client.js"
-					repo="pbouda/peterbouda.eu"
-					issue-term="pathname"
-					label="Comment"
-					theme="github-light"
-					crossorigin="anonymous"
-					async>
-			</script>
+            <script
+              src="https://utteranc.es/client.js"
+              repo="pbouda/peterbouda.eu"
+              issue-term="pathname"
+              label="Comment"
+              theme="github-light"
+              crossorigin="anonymous"
+              async
+            ></script>
           </div>
         </div>
         <!-- /.entry-content -->
@@ -169,26 +169,20 @@ python generate_ui.py
           <article class="box style2">
             <div>
               <img
-                style="border-radius:50%; width:80%;"
+                style="border-radius: 50%; width: 80%"
                 src="theme/images/pic00.jpg"
                 alt=""
               />
             </div>
             <h3>About me</h3>
             <p>
-              My name is Peter Bouda and I am a software developer with more than 20 years of
-              professional experience in application development. I help
-              you to bring your application to market as quickly as possible.
+              I work since more than 20 years as a developer, product manager
+              and AI lead with language technologies. Starting with speech
+              recognition and machine translation I now focus on education in
+              semantic technologies and LLMs.
             </p>
-            <!-- <p>
-              Join our <a href="http://www.ng-lisbon.com/#trainings">next Angular training</a>
-              in Lisbon, October 2-4.
-            </p> -->
-            <p>
-              <a href="/#top">Read about my work</a><br />
-              or<br />
-              <a href="/#contact">Contact me</a>
-            </p>
+            <p>Check out my <a href="/#workshops">AI trainings</a>.</p>
+            <p><a href="/#contact">Contact me</a> and book your training.</p>
           </article>
         </div>
       </div>
@@ -211,14 +205,34 @@ python generate_ui.py
             >
           </li>
           <li>
+            <a href="tel:+351917403181" class="icon fa-phone"
+              ><span class="label">Phone</span></a
+            >
+          </li>
+        </ul>
+        <div><a href="mailto:pbouda@outlook.com">pbouda@outlook.com</a></div>
+        <div><a href="tel:+351917403181">+351 917403181</a></div>
+        <br />
+        <ul class="social">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/peter-bouda/"
+              class="icon fa-linkedin"
+              ><span class="label">LinkedIn</span></a
+            >
+          </li>
+          <li>
             <a href="https://github.com/pbouda" class="icon fa-github"
               ><span class="label">Github</span></a
             >
           </li>
-        </ul>
-        <br />
-        <h2>RSS Feed</h2>
-        <ul class="social">
+          <li>
+            <a
+              href="https://www.youtube.com/@peterbouda6349"
+              class="icon fa-youtube"
+              ><span class="label">Youtube</span></a
+            >
+          </li>
           <li>
             <a href="https://www.peterbouda.eu/feeds/all.rss" class="icon fa-rss"
               ><span class="label">RSS</span></a
@@ -234,7 +248,6 @@ python generate_ui.py
         <li>&copy; Peter Bouda. All rights reserved.</li>
         <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
       </ul>
-      <div>+351 917403181</div>
     </footer>
   </article>
 </div>  </body>

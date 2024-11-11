@@ -8,63 +8,56 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
-	form input[type=text],
-	form input[type=password],
-	form select,
-	form textarea,
-	input[type="button"],
-	input[type="submit"],
-	input[type="reset"],
-	.button,
-	#top .image,
-	#top .image img,
-	#nav a
-	{
-		position: relative;
-		-ms-behavior: url('css/ie/PIE.htc');
-	}
+form input[type="text"],
+form input[type="password"],
+form select,
+form textarea,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.button,
+#top .image,
+#top .image img,
+#nav a {
+  position: relative;
+  -ms-behavior: url("css/ie/PIE.htc");
+}
 
-	/* Section/Article */
-	
-		section > .last-child,
-		article > .last-child
-		{
-			margin-bottom: 0;
-		}
+/* Section/Article */
 
-		section.last-child,
-		article.last-child
-		{
-			margin-bottom: 0;
-		}
-		
-	/* Box */
+section > .last-child,
+article > .last-child {
+  margin-bottom: 0;
+}
 
-		.box
-		{
-			border: solid 1px #ddd;
-		}
+section.last-child,
+article.last-child {
+  margin-bottom: 0;
+}
 
-	/* List */
+/* Box */
 
-		ul.social li a
-		{
-			position: relative;
-			top: 0 !important;
-			overflow: hidden;
-			-ms-behavior: url('css/ie/PIE.htc');
-		}
+.box {
+  border: solid 1px #ddd;
+}
 
-			ul.social li a:before
-			{
-				background: none;
-			}
+/* List */
+
+ul.social li a {
+  position: relative;
+  top: 0 !important;
+  overflow: hidden;
+  -ms-behavior: url("css/ie/PIE.htc");
+}
+
+ul.social li a:before {
+  background: none;
+}
 
 /*********************************************************************************/
 /* Wrappers                                                                      */
 /*********************************************************************************/
 
-	.wrapper
-	{
-		border-top: solid 1px #ddd;
-	}
+.wrapper {
+  border-top: solid 1px #ddd;
+}

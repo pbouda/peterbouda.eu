@@ -8,27 +8,23 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
-	/* Button */
+/* Button */
 
-		input[type="button"],
-		input[type="submit"],
-		input[type="reset"],
-		.button
-		{
-			background-image: url('images/grad0-20.svg');
-		}
-		
-	/* List */
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.button {
+  background-image: url("images/grad0-20.svg");
+}
 
-		ul
-		{
-		}
+/* List */
 
-			ul.social
-			{
-			}
-			
-				ul.social li a:before
-				{
-					background-image: url('images/grad0-20.svg');
-				}
+ul {
+}
+
+ul.social {
+}
+
+ul.social li a:before {
+  background-image: url("images/grad0-20.svg");
+}
