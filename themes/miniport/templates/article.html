@@ -1,5 +1,5 @@
-{% extends "base.html" %} {% block title %}{{ SITENAME }} -
-{{ article.title | striptags }}{% endblock %} {% block content %}
+{% extends "base.html" %} {% block title %}{{ SITENAME }} - {{ article.title |
+striptags }}{% endblock %} {% block content %}
 <section id="content" class="body">
   <article class="h-entry">
     <header>
@@ -32,7 +32,7 @@
             tabindex="0"
             controls=""
             preload="none"
-            style="width:600px;"
+            style="width: 600px"
             {%
             if
             article.videoposter
@@ -48,8 +48,7 @@
           <div class="article-top-image">
             <img src="{{ article.image }}" />
           </div>
-          {% endif %} {% include 'article_infos.html' %}
-          {{ article.content }}
+          {% endif %} {% include 'article_infos.html' %} {{ article.content }}
           {% if article.twitter or article.linkedin %}
           <div id="twitter">
             {% if article.linkedin %} I also published this on
@@ -63,14 +62,15 @@
           </div>
           {% endif %}
           <div id="comments">
-			<script src="https://utteranc.es/client.js"
-					repo="pbouda/peterbouda.eu"
-					issue-term="pathname"
-					label="Comment"
-					theme="github-light"
-					crossorigin="anonymous"
-					async>
-			</script>
+            <script
+              src="https://utteranc.es/client.js"
+              repo="pbouda/peterbouda.eu"
+              issue-term="pathname"
+              label="Comment"
+              theme="github-light"
+              crossorigin="anonymous"
+              async
+            ></script>
           </div>
         </div>
         <!-- /.entry-content -->
@@ -79,26 +79,20 @@
           <article class="box style2">
             <div>
               <img
-                style="border-radius:50%; width:80%;"
+                style="border-radius: 50%; width: 80%"
                 src="theme/images/pic00.jpg"
                 alt=""
               />
             </div>
             <h3>About me</h3>
             <p>
-              My name is Peter Bouda and I am a software developer with more than 20 years of
-              professional experience in application development. I help
-              you to bring your application to market as quickly as possible.
+              I work since more than 20 years as a developer, product manager
+              and AI lead with language technologies. Starting with speech
+              recognition and machine translation I now focus on education in
+              semantic technologies and LLMs.
             </p>
-            <!-- <p>
-              Join our <a href="http://www.ng-lisbon.com/#trainings">next Angular training</a>
-              in Lisbon, October 2-4.
-            </p> -->
-            <p>
-              <a href="/#top">Read about my work</a><br />
-              or<br />
-              <a href="/#contact">Contact me</a>
-            </p>
+            <p>Check out my <a href="/#workshops">AI trainings</a>.</p>
+            <p><a href="/#contact">Contact me</a> and book your training.</p>
           </article>
         </div>
       </div>

@@ -1,0 +1,52 @@
+{% extends "base.html" %} {% block title %}{{ SITENAME }} - {{ page.title |
+striptags }}{% endblock %} {% block content %}
+<section id="content" class="body">
+  <article class="h-entry">
+    <header>
+      <h2 class="entry-title e-title">
+        <a
+          class="p-name u-url"
+          href="{{ SITEURL }}/{{ page.url }}"
+          rel="bookmark"
+          title="Permalink to {{ page.title | striptags }}"
+          >{{ page.title }}</a
+        >
+      </h2>
+    </header>
+
+    <div class="entry-content e-content container">
+      <div class="row">
+        <div class="8u">
+          {% if page.image %}
+          <div class="article-top-image">
+            <img src="{{ page.image }}" />
+          </div>
+          {% endif %} {{ page.content }}
+        </div>
+
+        <div class="4u">
+          <article class="box style2">
+            <div>
+              <img
+                style="border-radius: 50%; width: 80%"
+                src="/theme/images/pic00.jpg"
+                alt=""
+              />
+            </div>
+            <h3>About me</h3>
+            <p>
+              I work since more than 20 years as a developer, product manager
+              and AI lead with language technologies. Starting with speech
+              recognition and machine translation I now focus on education in
+              semantic technologies and LLMs.
+            </p>
+            <p>Check out my <a href="/#workshops">AI trainings</a>.</p>
+            <p><a href="/#contact">Contact me</a> and book your training.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+{% endblock %}

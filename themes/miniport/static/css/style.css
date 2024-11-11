@@ -177,10 +177,6 @@ tt.literal {
 }
 
 /* Form */
-
-form {
-}
-
 form div#formError {
   color: red;
 }
@@ -286,12 +282,6 @@ table.default th {
 table.default thead {
   background: #4f4f4f;
   color: #fff;
-}
-
-table.default tfoot {
-}
-
-table.default tbody {
 }
 
 /* Section/Article */
@@ -502,14 +492,14 @@ ul.social li a.fa-twitter {
 ul.social li a.fa-facebook {
   background-color: #3c5a98;
 }
-ul.social li a.fa-dribbble {
+ul.social li a.fa-phone {
   background-color: #c4376b;
 }
 ul.social li a.fa-envelope-o {
-  background-color: #006599;
+  background-color: #e0d7c8;
 }
-ul.social li a.fa-tumblr {
-  background-color: #51718a;
+ul.social li a.fa-linkedin {
+  background-color: #0a66c2;
 }
 ul.social li a.fa-google-plus {
   background-color: #da2713;
@@ -534,9 +524,6 @@ ul.social li a.fa-soundcloud {
 }
 ul.social li a.fa-youtube {
   background-color: #bf2e25;
-}
-ul.social li a.fa-blogger {
-  background-color: #ff6501;
 }
 ul.social li a.fa-flickr {
   background-color: #0062db;
@@ -790,4 +777,43 @@ div.entry-content {
 
 #copyright a:hover {
   color: #777;
+}
+
+/*********************************************************************************/
+/* Contact                                                                     */
+/*********************************************************************************/
+
+#contact a {
+  color: inherit;
+
+  -moz-transition: color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+
+#contact a:hover {
+  color: #777;
+}
+
+#workshops .workshops-details {
+  margin-top: 1em;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+#workshops .workshops-details .icon {
+  margin-right: 5px;
+  margin-top: -4px;
+}
+
+article .entry-content ul {
+  list-style-type: disc;
+}
+
+article .entry-content ul li {
+  margin-left: 15px;
 }

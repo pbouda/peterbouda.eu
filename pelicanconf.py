@@ -49,7 +49,7 @@ EXTRA_PATH_METADATA = {
     "extra/safari-pinned-tab.svg": {"path": "safari-pinned-tab.svg"},
 }
 
-# DISPLAY_PAGES_ON_MENU = True
+DISPLAY_PAGES_ON_MENU = True
 # DISPLAY_CATEGORIES_ON_MENU = False
 
 TIMEZONE = "Europe/Lisbon"
