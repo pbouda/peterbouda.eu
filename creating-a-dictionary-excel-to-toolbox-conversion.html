@@ -6,7 +6,7 @@
 -->
 <html>
   <head>
-    <title>Peter Bouda - Working on Free and Open Source AI Projects</title>
+    <title>Peter Bouda - Onsite and online AI trainings for your team</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta
@@ -72,7 +72,7 @@
 <nav id="nav">
   <ul class="container">
     <li><a href="/#top">Home</a></li>
-    <!-- <li><a href="/#workshops">AI Workshops</a></li> -->
+    <li><a href="/#workshops">AI Workshops</a></li>
     <li><a href="/#portfolio">Portfolio</a></li>
     <li><a href="/#feed">Blog</a></li>
     <li><a href="/#contact">Contact</a></li>
@@ -112,12 +112,11 @@ dictionary generator is state-of-the-art in language documentation, we needed a
 way to convert the Excel data to a Toolbox file. We did some first tests with
 a simple Python script and everything worked out well until now, so here is a
 short description of our&nbsp;workflow.</p>
-<p>We created an empty Toolbox project that will give you a list of standard fields
-like <code>Lexeme</code>, <code>Sound file</code>, etc. We added two or three example sentences,
+<p>We created an empty Toolbox project that will give you a list of standard fields&nbsp;like <code>Lexeme</code>, <code>Sound file</code>, etc. We added two or three example sentences,
 customized the fields, and generated a first dictionary to see how the output
 will look in the end and to get an example data file that we could use as a
 template for the Excel data. The data file will be saved in the project folder
-somewhere, in our case it was in
+somewhere, in our case it was&nbsp;in
 <code>Toolbox Project\DictionaryFactoryPackage\Dictionary.txt</code>. You can open the
 file in a simple text editor to see the content. In our case, an entry looked
 like&nbsp;this:</p>
@@ -183,12 +182,12 @@ following template in&nbsp;Python:</p>
 <span class="s2">&quot;&quot;&quot;</span>
 </code></pre></div>
 
-<p>The Excel column names are in the curely brackets, so that we can use Python&#8217;s
+<p>The Excel column names are in the curely brackets, so that we can use&nbsp;Python&#8217;s
 <code>format()</code> method to fill in the content. For the <span class="caps">CSV</span> file we had to export the
 Excel data in LibreOffice Calc, as Excel does not support <span class="caps">UTF</span>-8 export (shame
 on you, Microsoft!). We exported a single <span class="caps">CSV</span> file for each sheet in Calc,
 so that we had a list of <span class="caps">CSV</span> files. With the template above and this collection
-of <span class="caps">CSV</span> files it was easy to create a new <code>Dictionary.txt</code> for&nbsp;Toolbox:</p>
+of <span class="caps">CSV</span> files it was easy to create a&nbsp;new <code>Dictionary.txt</code> for&nbsp;Toolbox:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
 <span class="kn">import</span> <span class="nn">codecs</span>
 <span class="kn">import</span> <span class="nn">glob</span>
@@ -215,8 +214,8 @@ of <span class="caps">CSV</span> files it was easy to create a new <code>Diction
 </code></pre></div>
 
 <p>The code even catches the error when a column name is wrong in the Excel sheet.
-This will output a file <code>Dictionary.txt</code> that you can copy to your Toolbox
-project folder to overwrite the original <code>Dictionary.txt</code>. With this we were
+This will output a&nbsp;file <code>Dictionary.txt</code> that you can copy to your Toolbox
+project folder to overwrite the&nbsp;original <code>Dictionary.txt</code>. With this we were
 able to generate the whole dictionary in&nbsp;Toolbox.</p>
           <div id="comments">
             <script

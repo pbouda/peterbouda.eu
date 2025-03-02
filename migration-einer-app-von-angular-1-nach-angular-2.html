@@ -6,7 +6,7 @@
 -->
 <html>
   <head>
-    <title>Peter Bouda - Working on Free and Open Source AI Projects</title>
+    <title>Peter Bouda - Onsite and online AI trainings for your team</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta
@@ -72,7 +72,7 @@
 <nav id="nav">
   <ul class="container">
     <li><a href="/#top">Home</a></li>
-    <!-- <li><a href="/#workshops">AI Workshops</a></li> -->
+    <li><a href="/#workshops">AI Workshops</a></li>
     <li><a href="/#portfolio">Portfolio</a></li>
     <li><a href="/#feed">Blog</a></li>
     <li><a href="/#contact">Contact</a></li>
@@ -110,12 +110,12 @@
 <p>Die App ist ein kleiner <span class="caps">RSS</span>-Feedreader, der aber letztendlich gar kein <span class="caps">RSS</span> lädt sondern schon eine geparste <span class="caps">JSON</span>-Version&#8230; Also ein <span class="caps">JSON</span>-Feedreader&nbsp;:-)</p>
 <p>Der Angular-2-Port war dann die nächste Herausforderung, weil ich weiterhin bei <span class="caps">ES6</span> bleiben und nicht noch TypeScript zum Projekt hinzufügen wollte. Letztendlich blieb es dann auch bei kleineren Änderungen für die ersten Schritte hin zu Angular 2, wobei die Nachforschung teilweise doch zeitintensiv war, weil viele der Online-Tutorials eben auf TyeScript&nbsp;setzen.</p>
 <p>Die ersten Schritte bei der Portierung werden am Besten im Vergleich der Branches des git-Repositories sichtbar. Hier nur ein schneller Überblick, mehr Details werde ich dann in kommenden Posts&nbsp;veröffentlichen.</p>
-<p>Als Erstes habe ich einfach alle Angular-2-Abhängigkeiten zum Projekt hinzugefügt, und die App per <code>UpgradeAdapter</code> initialisiert:</p>
+<p>Als Erstes habe ich einfach alle Angular-2-Abhängigkeiten zum Projekt hinzugefügt, und die App&nbsp;per <code>UpgradeAdapter</code> initialisiert:</p>
 <p><a href="https://github.com/pbouda/angular-es6-boilerplate/compare/master...step1/addangular2">https://github.com/pbouda/angular-es6-boilerplate/compare/master&#8230;step1/addangular2</a></p>
-<p>Im Zweiten Schritt habe ich dann die Komponente <code>RssFeedListComponent</code> nach Angular 2 portiert und das entsprechende Template angepasst. Da Angular 2 bestimmte Syntax-Features kommender JavaScript- bzw. eben derzeitiger TypeScript-Versionen benutzt (wie <a href="https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841#.v0nqw1gyr">Dekatoren</a>), musste ich außerdem das preset <code>anguar2</code> zu meinen babelify-Setup&nbsp;hinzufügen:</p>
+<p>Im Zweiten Schritt habe ich dann die&nbsp;Komponente <code>RssFeedListComponent</code> nach Angular 2 portiert und das entsprechende Template angepasst. Da Angular 2 bestimmte Syntax-Features kommender JavaScript- bzw. eben derzeitiger TypeScript-Versionen benutzt (wie <a href="https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841#.v0nqw1gyr">Dekatoren</a>), musste ich außerdem das&nbsp;preset <code>anguar2</code> zu meinen babelify-Setup&nbsp;hinzufügen:</p>
 <p><a href="https://github.com/pbouda/angular-es6-boilerplate/compare/step1/addangular2...step2/upgradecomponent">https://github.com/pbouda/angular-es6-boilerplate/compare/step1/addangular2&#8230;step2/upgradecomponent</a></p>
 <p>Dabei habe ich auch jshint erst einmal entfernt, um die Sache nicht zu verkomplizieren. Alternativ hätte ich auch die Dekoratoren u.a. für jshint ausklammern können. Ich plane aber dann in Zukunft <a href="http://eslint.org/">eslint</a> zu benutzen, da es sich besser an den eigenen Stil anpassen&nbsp;lässt.</p>
-<p>Als besondere Stolperstelle erwies sich die &#8220;Rückportierung&#8221; der Komponente von <code>component</code> nach <code>directive</code>. Der ansonsten sehr nützliche <a href="https://angular.io/docs/ts/latest/guide/upgrade.html">Angular-2-Upgrade-Guide</a> empfiehlt zunächst, möglichst alle Direktiven in <code>component</code>-Aufrufe umzuwandeln. Jedoch lassen sich diese dann <em>nicht</em> per <code>upgradeAdapter.downgradeNg2Component</code> füttern, diese Downgrades basieren weiterhin auf Direktiven. Allein damit habe ich einige Stunden verbracht, bis ich herausgefunden haben, warum meine Komponente partout nicht funktionieren&nbsp;wollte&#8230;</p>
+<p>Als besondere Stolperstelle erwies sich die &#8220;Rückportierung&#8221; der Komponente&nbsp;von <code>component</code> nach <code>directive</code>. Der ansonsten sehr nützliche <a href="https://angular.io/docs/ts/latest/guide/upgrade.html">Angular-2-Upgrade-Guide</a> empfiehlt zunächst, möglichst alle Direktiven&nbsp;in <code>component</code>-Aufrufe umzuwandeln. Jedoch lassen sich diese dann <em>nicht</em>&nbsp;per <code>upgradeAdapter.downgradeNg2Component</code> füttern, diese Downgrades basieren weiterhin auf Direktiven. Allein damit habe ich einige Stunden verbracht, bis ich herausgefunden haben, warum meine Komponente partout nicht funktionieren&nbsp;wollte&#8230;</p>
 <p>Am Ende lief die App dann aber als Hybrid-Applikation sowohl mit Angular 1 als auch Angular 2, und wenn man die Problemstellen kennt bleiben die Anpassungsarbeiten bei einer solch kleinen App auch im Rahmen. Ich werde demnächst die Portierung einer Produktivanwendung in Angriff nehmen, dann werde ich sicher weitere Erkenntnisse gewinnen und euch hier&nbsp;mitteilen.</p>
           <div id="comments">
             <script

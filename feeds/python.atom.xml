@@ -68,7 +68,7 @@ Scheibe berechnen können. Dazu&amp;nbsp;gehört:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;der gesamte Flächeninhalt der Scheibe: $$A_1 =&amp;nbsp;R^2\pi$$&lt;/li&gt;
 &lt;li&gt;der Ring auf der Scheibe, der insgesamt bei Rotation mit der Flüssigkeit in
-Berührung kommt(wobei &lt;code&gt;r&lt;/code&gt; dann der Höhe der Achse über der Flüssigkeit
+Berührung&amp;nbsp;kommt(wobei &lt;code&gt;r&lt;/code&gt; dann der Höhe der Achse über der Flüssigkeit
 entspricht): $$A_2 =&amp;nbsp;r^2\pi$$&lt;/li&gt;
 &lt;li&gt;der Teil der Scheibe, der jeweils unter Wasser ist (siehe
 http://de.wikipedia.org/wiki/Kreissegment): $$A_3 = R^2\arccos{r\over R} -
@@ -90,7 +90,7 @@ also eingesetzt: $$A = R^2\pi - r^2\pi - R^2\arccos{r\over R} + r\sqrt{R^2 -&amp
 &lt;p&gt;$$- R^{2} \operatorname{acos}{\left (\frac{r}{R} \right )} + \pi R^{2} - \pi r^{2} + r \sqrt{R^{2} -&amp;nbsp;r^{2}}$$&lt;/p&gt;
 &lt;h2&gt;Empirisches&amp;nbsp;Maximum&lt;/h2&gt;
 &lt;p&gt;Als Erstes wollen wir das Maximum empirisch bestimmen, also einfach gegebene
-Werte für &lt;code&gt;R&lt;/code&gt; und &lt;code&gt;r&lt;/code&gt; einsetzen und ausgeben. Dazu können wir als zunächst &lt;code&gt;R&lt;/code&gt;
+Werte&amp;nbsp;für &lt;code&gt;R&lt;/code&gt; und &lt;code&gt;r&lt;/code&gt; einsetzen und ausgeben. Dazu können wir als&amp;nbsp;zunächst &lt;code&gt;R&lt;/code&gt;
 einen festen Wert zuweisen, ich nehme einfach 10 für den Radius der&amp;nbsp;Scheibe:&lt;/p&gt;
 &lt;p&gt;In[52]:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;A_10 = A.subs(R, 10)
@@ -116,8 +116,8 @@ A_10
 &lt;span class="mf"&gt;9&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;53.8176697304459&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Die benetzte Fläche ist hier also maximal für &lt;code&gt;r = 3/10*R&lt;/code&gt; (also &lt;code&gt;r = 3&lt;/code&gt; für &lt;code&gt;R
-= 10&lt;/code&gt;). Wir können uns die Werte zwischen 2 und 4 für &lt;code&gt;r&lt;/code&gt; noch genauer&amp;nbsp;anschauen:&lt;/p&gt;
+&lt;p&gt;Die benetzte Fläche ist hier also maximal&amp;nbsp;für &lt;code&gt;r = 3/10*R&lt;/code&gt; (also &lt;code&gt;r = 3&lt;/code&gt; für &lt;code&gt;R
+= 10&lt;/code&gt;). Wir können uns die Werte zwischen 2 und 4&amp;nbsp;für &lt;code&gt;r&lt;/code&gt; noch genauer&amp;nbsp;anschauen:&lt;/p&gt;
 &lt;p&gt;In[27]:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;numpy&lt;/span&gt;
 &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;)]:&lt;/span&gt;
@@ -146,11 +146,11 @@ A_10
 &lt;span class="mf"&gt;3.9000000000000004&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;185.270947093061&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Hier ist der Wert bei &lt;code&gt;3.0&lt;/code&gt; maximal. Wir können also annehmen, dass die Höhe der
-Scheibe in etwa &lt;code&gt;3/10*R&lt;/code&gt; sein sollte. Das ist auch der Wert, der in der Antike
+&lt;p&gt;Hier ist der Wert&amp;nbsp;bei &lt;code&gt;3.0&lt;/code&gt; maximal. Wir können also annehmen, dass die Höhe der
+Scheibe in&amp;nbsp;etwa &lt;code&gt;3/10*R&lt;/code&gt; sein sollte. Das ist auch der Wert, der in der Antike
 berechnet und dann für die Höhe der Scheibe verwendet&amp;nbsp;wurde.&lt;/p&gt;
 &lt;h2&gt;Analytisches&amp;nbsp;Maximum&lt;/h2&gt;
-&lt;p&gt;Das analytische Maximum bestimmen wir einfach aus der Ableitung von &lt;code&gt;A&lt;/code&gt; nach
+&lt;p&gt;Das analytische Maximum bestimmen wir einfach aus der Ableitung&amp;nbsp;von &lt;code&gt;A&lt;/code&gt; nach
 &lt;code&gt;r&lt;/code&gt;:&lt;/p&gt;
 &lt;p&gt;In[33]:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;A_diff = diff(A, r, 1)
@@ -159,15 +159,14 @@ A_diff
 
 &lt;p&gt;$$\frac{R}{\sqrt{1 - \frac{r^{2}}{R^{2}}}} - \frac{r^{2}}{\sqrt{R^{2} - r^{2}}} - 2 \pi r + \sqrt{R^{2} -&amp;nbsp;r^{2}}$$&lt;/p&gt;
 &lt;p&gt;Es lohnt sich übrigens als Übung diese Ableitung auch einmal manuell aus der
-Formel zu berechnen. Um die Extremwerte zu bestimmten setzen wir die Ableitung
-auf &lt;code&gt;0&lt;/code&gt;:&lt;/p&gt;
+Formel zu berechnen. Um die Extremwerte zu bestimmten setzen wir die Ableitung&amp;nbsp;auf &lt;code&gt;0&lt;/code&gt;:&lt;/p&gt;
 &lt;p&gt;In[43]:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;extremwerte = solve(A_diff, r)
 extremwerte
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;$$\begin{bmatrix}- \frac{\sqrt{R^{2}}}{\sqrt{1 + \pi^{2}}}, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; \frac{\sqrt{R^{2}}}{\sqrt{1 + \pi^{2}}}, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; - \frac{\pi \sqrt{R^{2}}}{\sqrt{1 + \pi^{2}}}, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; \frac{\pi \sqrt{R^{2}}}{\sqrt{1 +&amp;nbsp;\pi^{2}}}\end{bmatrix}$$&lt;/p&gt;
-&lt;p&gt;Die negativen Werte können wir in diesem Fall beseite lassen. Für &lt;code&gt;R = 10&lt;/code&gt;
+&lt;p&gt;Die negativen Werte können wir in diesem Fall beseite lassen.&amp;nbsp;Für &lt;code&gt;R = 10&lt;/code&gt;
 werden die anderen beiden Extremwerte&amp;nbsp;zu:&lt;/p&gt;
 &lt;p&gt;In[48]:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;maximum = extremwerte[1].subs(R, 10).evalf()
@@ -177,7 +176,7 @@ maximum, minimum
 
 &lt;p&gt;$$\begin{pmatrix}3.03314471053353, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;&amp;nbsp;9.52890513988687\end{pmatrix}$$&lt;/p&gt;
 &lt;p&gt;Das es sich tatsächlich um ein Maximum und ein Minimum handelt sieht man zum
-Beispiel, wenn man die Werte in die Formel von &lt;code&gt;A_10&lt;/code&gt; einsetzt:&lt;/p&gt;
+Beispiel, wenn man die Werte in die Formel&amp;nbsp;von &lt;code&gt;A_10&lt;/code&gt; einsetzt:&lt;/p&gt;
 &lt;p&gt;In[51]:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;(A_10.subs(r, maximum).evalf(), A_10.subs(r, minimum).evalf())
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -364,11 +363,11 @@ unter Python 2.x entwickeln. Übrigens habe ich letztendlich einen
 anderen Weg für das Speicherproblem gefunden. Das Problem war ein
 Parser; mit regulären Audrücken komme ich jetzt mit weniger Speicher und
 viel schneller ans&amp;nbsp;Ziel.&lt;/p&gt;
-</content><category term="Python"></category></entry><entry><title>Automatisierung von uic und rcc</title><link href="https://www.peterbouda.eu/automatisierung-von-uic-und-rcc.html" rel="alternate"></link><published>2011-08-09T16:17:00+01:00</published><updated>2011-08-09T16:17:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-08-09:/automatisierung-von-uic-und-rcc.html</id><summary type="html">&lt;p&gt;In einem PyQt- oder PySide-Projekt verwaltet man oft ein oder mehrere Ressourcen- und &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien. Diese Dateien erstellt man in einem C++-Qt-Projekt innerhalb des Qt Creator mit dem Qt Designer, mit den Kommandozeilen-Utilities &lt;code&gt;uic&lt;/code&gt; bzw. &lt;code&gt;rcc&lt;/code&gt; werden diese Dateien dann in C++-Code umgewandelt. Der Qt Creator bzw. Projektdatei …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In einem PyQt- oder PySide-Projekt verwaltet man oft ein oder mehrere Ressourcen- und &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien. Diese Dateien erstellt man in einem C++-Qt-Projekt innerhalb des Qt Creator mit dem Qt Designer, mit den Kommandozeilen-Utilities &lt;code&gt;uic&lt;/code&gt; bzw. &lt;code&gt;rcc&lt;/code&gt; werden diese Dateien dann in C++-Code umgewandelt. Der Qt Creator bzw. Projektdatei und &lt;code&gt;qmake&lt;/code&gt; nehmen dem Entwickler dabei die meiste Arbeit ab: die Code-Dateien werden automatisch aus den entsprechenden &lt;code&gt;ui&lt;/code&gt;- und &lt;code&gt;qrc&lt;/code&gt;-Dateien generiert. Sobald man eine der Dateien im visuellen Editor bearbeitet, wird beim nächsten Build alles automatisch aktualisiert. Wie sieht es aber unter Python aus? Häufig verwendet man hier ja nicht einmal eine komplette &lt;span class="caps"&gt;IDE&lt;/span&gt;, für kleine Projekte zut es gut und gern auch ein einfacher Code-Editor. Ich stelle hier ein kleines Skript vor, das auch ohne &lt;span class="caps"&gt;IDE&lt;/span&gt; zumindest einen Teil der Arbeit übernimmt. Zwar muss man das Skript bei jeder Änderung der &lt;code&gt;ui&lt;/code&gt;- und &lt;code&gt;qrc&lt;/code&gt;-Dateien manuell starten, aber zumindest muss man nicht mehr alle Dateien per Hand&amp;nbsp;umwandeln.&lt;/p&gt;
+</content><category term="Python"></category></entry><entry><title>Automatisierung von uic und rcc</title><link href="https://www.peterbouda.eu/automatisierung-von-uic-und-rcc.html" rel="alternate"></link><published>2011-08-09T16:17:00+01:00</published><updated>2011-08-09T16:17:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-08-09:/automatisierung-von-uic-und-rcc.html</id><summary type="html">&lt;p&gt;In einem PyQt- oder PySide-Projekt verwaltet man oft ein oder mehrere Ressourcen- und &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien. Diese Dateien erstellt man in einem C++-Qt-Projekt innerhalb des Qt Creator mit dem Qt Designer, mit den&amp;nbsp;Kommandozeilen-Utilities &lt;code&gt;uic&lt;/code&gt; bzw. &lt;code&gt;rcc&lt;/code&gt; werden diese Dateien dann in C++-Code umgewandelt. Der Qt Creator bzw. Projektdatei …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In einem PyQt- oder PySide-Projekt verwaltet man oft ein oder mehrere Ressourcen- und &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien. Diese Dateien erstellt man in einem C++-Qt-Projekt innerhalb des Qt Creator mit dem Qt Designer, mit den&amp;nbsp;Kommandozeilen-Utilities &lt;code&gt;uic&lt;/code&gt; bzw. &lt;code&gt;rcc&lt;/code&gt; werden diese Dateien dann in C++-Code umgewandelt. Der Qt Creator bzw. Projektdatei&amp;nbsp;und &lt;code&gt;qmake&lt;/code&gt; nehmen dem Entwickler dabei die meiste Arbeit ab: die Code-Dateien werden automatisch aus den&amp;nbsp;entsprechenden &lt;code&gt;ui&lt;/code&gt;-&amp;nbsp;und &lt;code&gt;qrc&lt;/code&gt;-Dateien generiert. Sobald man eine der Dateien im visuellen Editor bearbeitet, wird beim nächsten Build alles automatisch aktualisiert. Wie sieht es aber unter Python aus? Häufig verwendet man hier ja nicht einmal eine komplette &lt;span class="caps"&gt;IDE&lt;/span&gt;, für kleine Projekte zut es gut und gern auch ein einfacher Code-Editor. Ich stelle hier ein kleines Skript vor, das auch ohne &lt;span class="caps"&gt;IDE&lt;/span&gt; zumindest einen Teil der Arbeit übernimmt. Zwar muss man das Skript bei jeder Änderung&amp;nbsp;der &lt;code&gt;ui&lt;/code&gt;-&amp;nbsp;und &lt;code&gt;qrc&lt;/code&gt;-Dateien manuell starten, aber zumindest muss man nicht mehr alle Dateien per Hand&amp;nbsp;umwandeln.&lt;/p&gt;
 &lt;h1&gt;Projektgerüst&lt;/h1&gt;
 &lt;p&gt;Ich setze hier voraus, dass ihr ein bestimmtes Projektgerüst verwendet. Die Ressourcendateien, &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien sowie Python-Code-Dateien befinden sich dabei in je einem eigenen Ordner. Da Ressourcendateien auf projektweite Dateien verweisen, befinden sie sich häufig im Hauptordner des Projekts. Ein typisches PyQt- bzw. PySide-Projekt sieht bei mir folgendermaßen&amp;nbsp;aus:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Projektgerüst PyQt-Projekt" src="https://www.peterbouda.eu/tutorials/11/tut11_1.png"&gt;&lt;/p&gt;
-&lt;p&gt;Der &lt;code&gt;bin&lt;/code&gt;-Ordner enthält das Einstiegsskript der Anwendung. Dieses lädt die Klasse des Hauptfensters aus dem Package &lt;code&gt;helloworld&lt;/code&gt;, das sich im Ordner &lt;code&gt;src&lt;/code&gt; befindet. Die Hauptfensterklasse wiederum lädt den &lt;span class="caps"&gt;UI&lt;/span&gt;-Code aus dem Unterordner &lt;code&gt;ui&lt;/code&gt;, also aus dem Package &lt;code&gt;helloworld.ui&lt;/code&gt;. Die Original-&lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien liegen unter &lt;code&gt;ui&lt;/code&gt;, die Ressourcendatei &lt;code&gt;helloworld.qrc&lt;/code&gt; liegt im Hauptordner des Projekts. Das Ziel ist es jetzt also, möglichst unkompliziert die &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien aus &lt;code&gt;ui&lt;/code&gt; sowie die Ressourcendatei in Python-Code umzuwandeln und in den enstsprechenden Dateien im Ordner &lt;code&gt;src/helloworld/ui&lt;/code&gt; abzulegen.&lt;/p&gt;
+&lt;p&gt;Der &lt;code&gt;bin&lt;/code&gt;-Ordner enthält das Einstiegsskript der Anwendung. Dieses lädt die Klasse des Hauptfensters aus dem&amp;nbsp;Package &lt;code&gt;helloworld&lt;/code&gt;, das sich im&amp;nbsp;Ordner &lt;code&gt;src&lt;/code&gt; befindet. Die Hauptfensterklasse wiederum lädt den &lt;span class="caps"&gt;UI&lt;/span&gt;-Code aus dem&amp;nbsp;Unterordner &lt;code&gt;ui&lt;/code&gt;, also aus dem&amp;nbsp;Package &lt;code&gt;helloworld.ui&lt;/code&gt;. Die Original-&lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien liegen&amp;nbsp;unter &lt;code&gt;ui&lt;/code&gt;, die&amp;nbsp;Ressourcendatei &lt;code&gt;helloworld.qrc&lt;/code&gt; liegt im Hauptordner des Projekts. Das Ziel ist es jetzt also, möglichst unkompliziert die &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien&amp;nbsp;aus &lt;code&gt;ui&lt;/code&gt; sowie die Ressourcendatei in Python-Code umzuwandeln und in den enstsprechenden Dateien im&amp;nbsp;Ordner &lt;code&gt;src/helloworld/ui&lt;/code&gt; abzulegen.&lt;/p&gt;
 &lt;h1&gt;Das&amp;nbsp;Skript&lt;/h1&gt;
 &lt;p&gt;Um diesen Schritt möglichst einfach und möglichst plattformunabhängig durchführen zu können, habe ich folgendes kleines Python-Skript geschrieben, dass diese Arbeit&amp;nbsp;durchführt:&lt;/p&gt;
 &lt;pre class="brush:python;"&gt;
@@ -406,7 +405,7 @@ for file in rc_files:
     call([rcc_path, file_path, "-o", out_file_path])
 &lt;/pre&gt;
 
-&lt;p&gt;Das Skript überprüft zunächst die Plattform und setzt entsprechend den Pfad zur den &lt;code&gt;rcc&lt;/code&gt;- und &lt;code&gt;uic&lt;/code&gt;-Tools von PyQt oder PySide (für PySide müssen die Kommentare entfernt werden). Falls die Tools in einem anderen Verzeichnis liegen (z.B. unter &lt;code&gt;/usr/local/bin&lt;/code&gt; statt &lt;code&gt;/usr/bin&lt;/code&gt;) dann müsst ihr nur die Variable &lt;code&gt;bindir&lt;/code&gt; entsprechend anpassen. In den beiden Variablen &lt;code&gt;ui_files&lt;/code&gt; und &lt;code&gt;rc_files&lt;/code&gt; listet ihr dann alle eure &lt;span class="caps"&gt;UI&lt;/span&gt;- und Ressourcendateien auf, und gebt als Wert jeweils den gewünschten Ausgabedateinamen an. Bei mir landen alle Dateien ausschlueßlich in &lt;code&gt;src/helloworld/ui&lt;/code&gt;, aber das könnt ihr selbstverständlich an eure Bedingungen anpassen. Jedes Mal, wenn ihr die Dateien dann in eurem Projekt ändert oder Dateien hinzufügt, dann ruft ihr einfach das Skript&amp;nbsp;auf:&lt;/p&gt;
+&lt;p&gt;Das Skript überprüft zunächst die Plattform und setzt entsprechend den Pfad zur&amp;nbsp;den &lt;code&gt;rcc&lt;/code&gt;-&amp;nbsp;und &lt;code&gt;uic&lt;/code&gt;-Tools von PyQt oder PySide (für PySide müssen die Kommentare entfernt werden). Falls die Tools in einem anderen Verzeichnis liegen (z.B.&amp;nbsp;unter &lt;code&gt;/usr/local/bin&lt;/code&gt; statt &lt;code&gt;/usr/bin&lt;/code&gt;) dann müsst ihr nur die&amp;nbsp;Variable &lt;code&gt;bindir&lt;/code&gt; entsprechend anpassen. In den beiden&amp;nbsp;Variablen &lt;code&gt;ui_files&lt;/code&gt; und &lt;code&gt;rc_files&lt;/code&gt; listet ihr dann alle eure &lt;span class="caps"&gt;UI&lt;/span&gt;- und Ressourcendateien auf, und gebt als Wert jeweils den gewünschten Ausgabedateinamen an. Bei mir landen alle Dateien ausschlueßlich&amp;nbsp;in &lt;code&gt;src/helloworld/ui&lt;/code&gt;, aber das könnt ihr selbstverständlich an eure Bedingungen anpassen. Jedes Mal, wenn ihr die Dateien dann in eurem Projekt ändert oder Dateien hinzufügt, dann ruft ihr einfach das Skript&amp;nbsp;auf:&lt;/p&gt;
 &lt;pre class="brush:bash;"&gt;
 python generate_ui.py
 &lt;/pre&gt;
@@ -462,7 +461,7 @@ mlab.axes()
 mlab.show()
 &lt;/pre&gt;
 
-&lt;p&gt;Übersichtlich, oder? Zunächst erzeugen wir in &lt;code&gt;r&lt;/code&gt; und &lt;code&gt;s&lt;/code&gt; die Eingangswerte zwischen 0 und 1 in einem numpy-Grid. Die Funktion der relativen Entropie definieren wir in &lt;code&gt;d&lt;/code&gt;. Danach erfolgt die Definition der Koordinaten &lt;code&gt;x&lt;/code&gt;, &lt;code&gt;y&lt;/code&gt; und &lt;code&gt;z&lt;/code&gt;. Hier erlaubt mayavi für jede Koordinate die Angabe einer Funktion, so entsteht dann die Oberfläche des Objekts der Klasse &lt;code&gt;ParametricSurface&lt;/code&gt;. In unserem Fall bilden wir die x- und y-Werte einfach auf die Eingangswerte ab, der z-Wert ist dann der Funktionswert. Wir plotten also einfach die Funktion ins Dreidimensional. Schließlich malen wir das Objekt als &lt;code&gt;mesh&lt;/code&gt;, fügen noch Achsen per &lt;code&gt;axes()&lt;/code&gt; hinzu und zeigen das Ganze per &lt;code&gt;show()&lt;/code&gt;, damit sich das Skript nicht gleich beendet und das Ausgabefenster geöffnet bleibt. Es öffnet sich ein Fenster mit unserer&amp;nbsp;Funktion:&lt;/p&gt;
+&lt;p&gt;Übersichtlich, oder? Zunächst erzeugen wir&amp;nbsp;in &lt;code&gt;r&lt;/code&gt; und &lt;code&gt;s&lt;/code&gt; die Eingangswerte zwischen 0 und 1 in einem numpy-Grid. Die Funktion der relativen Entropie definieren wir&amp;nbsp;in &lt;code&gt;d&lt;/code&gt;. Danach erfolgt die Definition der&amp;nbsp;Koordinaten &lt;code&gt;x&lt;/code&gt;, &lt;code&gt;y&lt;/code&gt; und &lt;code&gt;z&lt;/code&gt;. Hier erlaubt mayavi für jede Koordinate die Angabe einer Funktion, so entsteht dann die Oberfläche des Objekts der&amp;nbsp;Klasse &lt;code&gt;ParametricSurface&lt;/code&gt;. In unserem Fall bilden wir die x- und y-Werte einfach auf die Eingangswerte ab, der z-Wert ist dann der Funktionswert. Wir plotten also einfach die Funktion ins Dreidimensional. Schließlich malen wir das Objekt&amp;nbsp;als &lt;code&gt;mesh&lt;/code&gt;, fügen noch Achsen&amp;nbsp;per &lt;code&gt;axes()&lt;/code&gt; hinzu und zeigen das Ganze&amp;nbsp;per &lt;code&gt;show()&lt;/code&gt;, damit sich das Skript nicht gleich beendet und das Ausgabefenster geöffnet bleibt. Es öffnet sich ein Fenster mit unserer&amp;nbsp;Funktion:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Visualization of relative entropy" src="https://www.peterbouda.eu/tutorials/relative_entropy.png"&gt;&lt;/p&gt;
 &lt;p&gt;Schön konvex :-) Das Ausgabefenster lädt zum Herumspielen ein, das Objekt lässt sich drehen, Parallelprojektion einschalten und das komplette Mayavi starten, um weitere Daten und Objekte hinzu zu fügen. Oder man arbeitet mit IPython und macht mit der Shell weiter. Viel&amp;nbsp;Spaß!&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>Bluetooth mit Arduino, N900 und Python</title><link href="https://www.peterbouda.eu/bluetooth-mit-arduino-n900-und-python.html" rel="alternate"></link><published>2011-04-15T08:25:00+01:00</published><updated>2011-04-15T08:25:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-04-15:/bluetooth-mit-arduino-n900-und-python.html</id><summary type="html">&lt;p&gt;Im Prinzip handelt es sich auch um einen schon etwas älteren Beitrag in
 einem meiner alten Blogs, aber neu ist er trotzdem hier im&amp;nbsp;Wiki:&lt;/p&gt;

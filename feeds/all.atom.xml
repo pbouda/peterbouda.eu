@@ -94,7 +94,7 @@ project and think that the development experience is awesome. There is a great
 &lt;a href="http://loopback.io/doc/en/lb3/AngularJS-JavaScript-SDK.html"&gt;client &lt;span class="caps"&gt;SDK&lt;/span&gt; for Angular&lt;/a&gt;,
 which makes connecting an Angular front-end super easy. Both AngularJS and
 Angular are supported, so I could just attach my Angular front-end and replace
-the Firebase &lt;code&gt;AuthService&lt;/code&gt; with a LoopBack version. It even supports
+the&amp;nbsp;Firebase &lt;code&gt;AuthService&lt;/code&gt; with a LoopBack version. It even supports
 Firebase-like real-time communication via the
 &lt;a href="http://fireloop.io/"&gt;FireLoop platform&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;Meanwhile I also decided to replace MongoDB with a PostgreSQL database. I know
@@ -188,12 +188,12 @@ join in and show your superheroic Angular&amp;nbsp;powers!&lt;/p&gt;
 &lt;p&gt;Die App ist ein kleiner &lt;span class="caps"&gt;RSS&lt;/span&gt;-Feedreader, der aber letztendlich gar kein &lt;span class="caps"&gt;RSS&lt;/span&gt; lädt sondern schon eine geparste &lt;span class="caps"&gt;JSON&lt;/span&gt;-Version&amp;#8230; Also ein &lt;span class="caps"&gt;JSON&lt;/span&gt;-Feedreader&amp;nbsp;:-)&lt;/p&gt;
 &lt;p&gt;Der Angular-2-Port war dann die nächste Herausforderung, weil ich weiterhin bei &lt;span class="caps"&gt;ES6&lt;/span&gt; bleiben und nicht noch TypeScript zum Projekt hinzufügen wollte. Letztendlich blieb es dann auch bei kleineren Änderungen für die ersten Schritte hin zu Angular 2, wobei die Nachforschung teilweise doch zeitintensiv war, weil viele der Online-Tutorials eben auf TyeScript&amp;nbsp;setzen.&lt;/p&gt;
 &lt;p&gt;Die ersten Schritte bei der Portierung werden am Besten im Vergleich der Branches des git-Repositories sichtbar. Hier nur ein schneller Überblick, mehr Details werde ich dann in kommenden Posts&amp;nbsp;veröffentlichen.&lt;/p&gt;
-&lt;p&gt;Als Erstes habe ich einfach alle Angular-2-Abhängigkeiten zum Projekt hinzugefügt, und die App per &lt;code&gt;UpgradeAdapter&lt;/code&gt; initialisiert:&lt;/p&gt;
+&lt;p&gt;Als Erstes habe ich einfach alle Angular-2-Abhängigkeiten zum Projekt hinzugefügt, und die App&amp;nbsp;per &lt;code&gt;UpgradeAdapter&lt;/code&gt; initialisiert:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/pbouda/angular-es6-boilerplate/compare/master...step1/addangular2"&gt;https://github.com/pbouda/angular-es6-boilerplate/compare/master&amp;#8230;step1/addangular2&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Im Zweiten Schritt habe ich dann die Komponente &lt;code&gt;RssFeedListComponent&lt;/code&gt; nach Angular 2 portiert und das entsprechende Template angepasst. Da Angular 2 bestimmte Syntax-Features kommender JavaScript- bzw. eben derzeitiger TypeScript-Versionen benutzt (wie &lt;a href="https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841#.v0nqw1gyr"&gt;Dekatoren&lt;/a&gt;), musste ich außerdem das preset &lt;code&gt;anguar2&lt;/code&gt; zu meinen babelify-Setup&amp;nbsp;hinzufügen:&lt;/p&gt;
+&lt;p&gt;Im Zweiten Schritt habe ich dann die&amp;nbsp;Komponente &lt;code&gt;RssFeedListComponent&lt;/code&gt; nach Angular 2 portiert und das entsprechende Template angepasst. Da Angular 2 bestimmte Syntax-Features kommender JavaScript- bzw. eben derzeitiger TypeScript-Versionen benutzt (wie &lt;a href="https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841#.v0nqw1gyr"&gt;Dekatoren&lt;/a&gt;), musste ich außerdem das&amp;nbsp;preset &lt;code&gt;anguar2&lt;/code&gt; zu meinen babelify-Setup&amp;nbsp;hinzufügen:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/pbouda/angular-es6-boilerplate/compare/step1/addangular2...step2/upgradecomponent"&gt;https://github.com/pbouda/angular-es6-boilerplate/compare/step1/addangular2&amp;#8230;step2/upgradecomponent&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Dabei habe ich auch jshint erst einmal entfernt, um die Sache nicht zu verkomplizieren. Alternativ hätte ich auch die Dekoratoren u.a. für jshint ausklammern können. Ich plane aber dann in Zukunft &lt;a href="http://eslint.org/"&gt;eslint&lt;/a&gt; zu benutzen, da es sich besser an den eigenen Stil anpassen&amp;nbsp;lässt.&lt;/p&gt;
-&lt;p&gt;Als besondere Stolperstelle erwies sich die &amp;#8220;Rückportierung&amp;#8221; der Komponente von &lt;code&gt;component&lt;/code&gt; nach &lt;code&gt;directive&lt;/code&gt;. Der ansonsten sehr nützliche &lt;a href="https://angular.io/docs/ts/latest/guide/upgrade.html"&gt;Angular-2-Upgrade-Guide&lt;/a&gt; empfiehlt zunächst, möglichst alle Direktiven in &lt;code&gt;component&lt;/code&gt;-Aufrufe umzuwandeln. Jedoch lassen sich diese dann &lt;em&gt;nicht&lt;/em&gt; per &lt;code&gt;upgradeAdapter.downgradeNg2Component&lt;/code&gt; füttern, diese Downgrades basieren weiterhin auf Direktiven. Allein damit habe ich einige Stunden verbracht, bis ich herausgefunden haben, warum meine Komponente partout nicht funktionieren&amp;nbsp;wollte&amp;#8230;&lt;/p&gt;
+&lt;p&gt;Als besondere Stolperstelle erwies sich die &amp;#8220;Rückportierung&amp;#8221; der Komponente&amp;nbsp;von &lt;code&gt;component&lt;/code&gt; nach &lt;code&gt;directive&lt;/code&gt;. Der ansonsten sehr nützliche &lt;a href="https://angular.io/docs/ts/latest/guide/upgrade.html"&gt;Angular-2-Upgrade-Guide&lt;/a&gt; empfiehlt zunächst, möglichst alle Direktiven&amp;nbsp;in &lt;code&gt;component&lt;/code&gt;-Aufrufe umzuwandeln. Jedoch lassen sich diese dann &lt;em&gt;nicht&lt;/em&gt;&amp;nbsp;per &lt;code&gt;upgradeAdapter.downgradeNg2Component&lt;/code&gt; füttern, diese Downgrades basieren weiterhin auf Direktiven. Allein damit habe ich einige Stunden verbracht, bis ich herausgefunden haben, warum meine Komponente partout nicht funktionieren&amp;nbsp;wollte&amp;#8230;&lt;/p&gt;
 &lt;p&gt;Am Ende lief die App dann aber als Hybrid-Applikation sowohl mit Angular 1 als auch Angular 2, und wenn man die Problemstellen kennt bleiben die Anpassungsarbeiten bei einer solch kleinen App auch im Rahmen. Ich werde demnächst die Portierung einer Produktivanwendung in Angriff nehmen, dann werde ich sicher weitere Erkenntnisse gewinnen und euch hier&amp;nbsp;mitteilen.&lt;/p&gt;</content><category term="Angular"></category><category term="Angular"></category><category term="JavaScript"></category></entry><entry><title>Making an Angular UI Bootstrap accordion scrolling to top when opening</title><link href="https://www.peterbouda.eu/making-an-angular-ui-bootstrap-accordion-scrolling-to-top-when-opening.html" rel="alternate"></link><published>2016-05-12T11:23:00+01:00</published><updated>2016-05-12T11:23:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2016-05-12:/making-an-angular-ui-bootstrap-accordion-scrolling-to-top-when-opening.html</id><summary type="html">&lt;p&gt;I am using the &lt;a href="https://angular-ui.github.io/bootstrap/"&gt;&lt;span class="caps"&gt;UI&lt;/span&gt; Bootstrap Angular directives&lt;/a&gt;,
 specifically the accordion directive, within one of our projects at &lt;span class="caps"&gt;MAJ&lt;/span&gt; Digital.
 Now I was looking for a way to scroll to the top of the accordion content,
@@ -243,7 +243,7 @@ the&amp;nbsp;following:&lt;/p&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)();&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;You can then use the &lt;code&gt;scroll-top&lt;/code&gt; directive on the &lt;code&gt;uib-accordion-group&lt;/code&gt;, just like&amp;nbsp;this:&lt;/p&gt;
+&lt;p&gt;You can then use&amp;nbsp;the &lt;code&gt;scroll-top&lt;/code&gt; directive on&amp;nbsp;the &lt;code&gt;uib-accordion-group&lt;/code&gt;, just like&amp;nbsp;this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;uib-accordion-group&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;is-open=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;status.openPanel&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;scroll-top&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
 ...
 &lt;span class="nt"&gt;&amp;lt;/uib-accordion-group&amp;gt;&lt;/span&gt;
@@ -1013,7 +1013,7 @@ to. The newest version can output &lt;span class="caps"&gt;JSON&lt;/span&gt; or 
 output format two years ago I stick to the &lt;span class="caps"&gt;XML&lt;/span&gt; output as all my tools are based
 on this format. In fact, it is not &lt;em&gt;true&lt;/em&gt; &lt;span class="caps"&gt;XML&lt;/span&gt;, as the root element is missing
 (the Wikipedia Extractor calls the format &amp;#8220;tanl&amp;#8221;). All the Wikipedia articles
-are just enclosed by &lt;code&gt;&amp;lt;doc&amp;gt;&lt;/code&gt; tags, one after the&amp;nbsp;other:&lt;/p&gt;
+are just enclosed&amp;nbsp;by &lt;code&gt;&amp;lt;doc&amp;gt;&lt;/code&gt; tags, one after the&amp;nbsp;other:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;doc&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;55&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;url=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://bar.wikipedia.org/wiki?curid=55&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;title=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Wikipedia:Archiv/Boarische Umschrift&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Wikipedia:Archiv/Boarische&lt;span class="w"&gt; &lt;/span&gt;Umschrift
 Fürs&lt;span class="w"&gt; &lt;/span&gt;Boarische&lt;span class="w"&gt; &lt;/span&gt;gibts&lt;span class="w"&gt; &lt;/span&gt;koa&lt;span class="w"&gt; &lt;/span&gt;einheitliche&lt;span class="w"&gt; &lt;/span&gt;Umschrift.&lt;span class="w"&gt; &lt;/span&gt;Ma&lt;span class="w"&gt; &lt;/span&gt;orientiert&lt;span class="w"&gt; &lt;/span&gt;si&lt;span class="w"&gt; &lt;/span&gt;in&lt;span class="w"&gt; &lt;/span&gt;da&lt;span class="w"&gt; &lt;/span&gt;Schreibweis&lt;span class="w"&gt; &lt;/span&gt;an&lt;span class="w"&gt; &lt;/span&gt;da&lt;span class="w"&gt; &lt;/span&gt;deutschen&lt;span class="w"&gt; &lt;/span&gt;Orthografie....
 &lt;span class="nt"&gt;&amp;lt;/doc&amp;gt;&amp;lt;doc&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;60&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;url=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://bar.wikipedia.org/wiki?curid=60&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;title=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Deitschland&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Deitschland
@@ -1029,11 +1029,11 @@ with the following arguments (I use the [Bavarian Wikipedia dump]
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;WikiExtractor.py -w -f tanl barwiki-20130905-pages-articles.xml.bz2 extracted
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;This will put all output files into a folder &lt;code&gt;extracted&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This will put all output files into a&amp;nbsp;folder &lt;code&gt;extracted&lt;/code&gt;.&lt;/p&gt;
 &lt;h1&gt;Concatenate and clean the&amp;nbsp;files&lt;/h1&gt;
 &lt;p&gt;The next step is then to create a real &lt;span class="caps"&gt;XML&lt;/span&gt; file from this. It is not too hard,
 we just have to add a root tag and clean the data a bit more, otherwise an &lt;span class="caps"&gt;XML&lt;/span&gt;
-parser will complain about certain characters like the &amp;#8220;lower than&amp;#8221; &lt;code&gt;&amp;lt;&lt;/code&gt;. I
+parser will complain about certain characters like the &amp;#8220;lower&amp;nbsp;than&amp;#8221; &lt;code&gt;&amp;lt;&lt;/code&gt;. I
 start with the following code to get rid of certain general problems like
 unparsable characters, add the root tags and concatenate all the&amp;nbsp;files:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
@@ -1080,11 +1080,10 @@ unparsable characters, add the root tags and concatenate all the&amp;nbsp;files:
 &lt;span class="n"&gt;f2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;There is one complex regular expression substition here, that cleans the &lt;code&gt;title&lt;/code&gt;
-attributes of the &lt;code&gt;&amp;lt;doc&amp;gt;&lt;/code&gt; tags. The titles sometimes contain an apostroph &lt;code&gt;"&lt;/code&gt;,
+&lt;p&gt;There is one complex regular expression substition here, that cleans&amp;nbsp;the &lt;code&gt;title&lt;/code&gt;
+attributes of&amp;nbsp;the &lt;code&gt;&amp;lt;doc&amp;gt;&lt;/code&gt; tags. The titles sometimes contain an&amp;nbsp;apostroph &lt;code&gt;"&lt;/code&gt;,
 which is also the seperator for attribute values in &lt;span class="caps"&gt;XML&lt;/span&gt; and cannot be used in
-this location. So I just remove them. The output of this script are two files:
-the &lt;code&gt;barwiki.xml&lt;/code&gt; just contains the concatenated files, the &lt;code&gt;barwiki_cleaned.xml&lt;/code&gt;
+this location. So I just remove them. The output of this script are two files:&amp;nbsp;the &lt;code&gt;barwiki.xml&lt;/code&gt; just contains the concatenated files,&amp;nbsp;the &lt;code&gt;barwiki_cleaned.xml&lt;/code&gt;
 contains the cleaned &lt;span class="caps"&gt;XML&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;In the case of the Bavarian Wikipedia there are still
 some more quirks in the data. You can find out what kind of problems there are
@@ -1138,13 +1137,13 @@ that cause the&amp;nbsp;problems:&lt;/p&gt;
 &lt;span class="n"&gt;f2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;In the end I have a clean file &lt;code&gt;barwiki_cleaned2.xml&lt;/code&gt; that contains &lt;span class="caps"&gt;XML&lt;/span&gt; with
+&lt;p&gt;In the end I have a clean&amp;nbsp;file &lt;code&gt;barwiki_cleaned2.xml&lt;/code&gt; that contains &lt;span class="caps"&gt;XML&lt;/span&gt; with
 all the articles of the Bavarian Wikipedia and is parsable with&amp;nbsp;EementTree.&lt;/p&gt;
 &lt;p&gt;I still add a third cleaning step to remove articles that are not real content.
 Wikipedia contains several helper and meta-data articles that contain
 explanations for authors and other stuff that we don&amp;#8217;t need. Luckily, those have
-a title that contains a prefix that ends with a colon &lt;code&gt;:&lt;/code&gt;, so we can just look
-for a certain pattern in the titles and remove those &lt;code&gt;&amp;lt;doc&amp;gt;&lt;/code&gt; elements from the
+a title that contains a prefix that ends with a&amp;nbsp;colon &lt;code&gt;:&lt;/code&gt;, so we can just look
+for a certain pattern in the titles and remove&amp;nbsp;those &lt;code&gt;&amp;lt;doc&amp;gt;&lt;/code&gt; elements from the
 &lt;span class="caps"&gt;XML&lt;/span&gt; tree. I also remove articles that are smaller than 200
 characters (those are too short to measure semantic similarity, in one of my
 use&amp;nbsp;cases):&lt;/p&gt;
@@ -1167,7 +1166,7 @@ use&amp;nbsp;cases):&lt;/p&gt;
 &lt;span class="n"&gt;tree&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;barwiki_cleaned3.xml&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;encoding&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;After this step I finally end up with a &lt;code&gt;barwiki_cleaned3.xml&lt;/code&gt; that contains
+&lt;p&gt;After this step I finally end up with&amp;nbsp;a &lt;code&gt;barwiki_cleaned3.xml&lt;/code&gt; that contains
 clean data with only the content articles. This file can already be used to
 process the Wikipedia, but I wanted to also publish the files in a standardized
 format. I chose &lt;a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326"&gt;&lt;span class="caps"&gt;ISO&lt;/span&gt; 24612&lt;/a&gt;,
@@ -1180,8 +1179,8 @@ for each of the file formats you want to support. But for the &lt;span class="ca
 the Wikipedia Extractor there already exists a parser in Poio &lt;span class="caps"&gt;API&lt;/span&gt;, and GrAF-&lt;span class="caps"&gt;XML&lt;/span&gt;
 is supported as the basic pivot format. Which means that any file format that
 is supported in Poio &lt;span class="caps"&gt;API&lt;/span&gt; can be converted to GrAF-&lt;span class="caps"&gt;XML&lt;/span&gt;. The conversion is
-dead simple: we initialize a &lt;code&gt;Converter&lt;/code&gt; object with the Wikipedia parser
-and the GrAF writer, and then tell the converter to &lt;code&gt;parse()&lt;/code&gt; and &lt;code&gt;write()&lt;/code&gt;:&lt;/p&gt;
+dead simple: we initialize&amp;nbsp;a &lt;code&gt;Converter&lt;/code&gt; object with the Wikipedia parser
+and the GrAF writer, and then tell the converter&amp;nbsp;to &lt;code&gt;parse()&lt;/code&gt; and &lt;code&gt;write()&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;parser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;poioapi&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wikipedia_extractor&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Parser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Wikipedia.xml&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;writer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;poioapi&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;graf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Writer&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
@@ -1206,12 +1205,11 @@ dictionary generator is state-of-the-art in language documentation, we needed a
 way to convert the Excel data to a Toolbox file. We did some first tests with
 a simple Python script and everything worked out well until now, so here is a
 short description of our&amp;nbsp;workflow.&lt;/p&gt;
-&lt;p&gt;We created an empty Toolbox project that will give you a list of standard fields
-like &lt;code&gt;Lexeme&lt;/code&gt;, &lt;code&gt;Sound file&lt;/code&gt;, etc. We added two or three example sentences,
+&lt;p&gt;We created an empty Toolbox project that will give you a list of standard fields&amp;nbsp;like &lt;code&gt;Lexeme&lt;/code&gt;, &lt;code&gt;Sound file&lt;/code&gt;, etc. We added two or three example sentences,
 customized the fields, and generated a first dictionary to see how the output
 will look in the end and to get an example data file that we could use as a
 template for the Excel data. The data file will be saved in the project folder
-somewhere, in our case it was in
+somewhere, in our case it was&amp;nbsp;in
 &lt;code&gt;Toolbox Project\DictionaryFactoryPackage\Dictionary.txt&lt;/code&gt;. You can open the
 file in a simple text editor to see the content. In our case, an entry looked
 like&amp;nbsp;this:&lt;/p&gt;
@@ -1277,12 +1275,12 @@ following template in&amp;nbsp;Python:&lt;/p&gt;
 &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;The Excel column names are in the curely brackets, so that we can use Python&amp;#8217;s
+&lt;p&gt;The Excel column names are in the curely brackets, so that we can use&amp;nbsp;Python&amp;#8217;s
 &lt;code&gt;format()&lt;/code&gt; method to fill in the content. For the &lt;span class="caps"&gt;CSV&lt;/span&gt; file we had to export the
 Excel data in LibreOffice Calc, as Excel does not support &lt;span class="caps"&gt;UTF&lt;/span&gt;-8 export (shame
 on you, Microsoft!). We exported a single &lt;span class="caps"&gt;CSV&lt;/span&gt; file for each sheet in Calc,
 so that we had a list of &lt;span class="caps"&gt;CSV&lt;/span&gt; files. With the template above and this collection
-of &lt;span class="caps"&gt;CSV&lt;/span&gt; files it was easy to create a new &lt;code&gt;Dictionary.txt&lt;/code&gt; for&amp;nbsp;Toolbox:&lt;/p&gt;
+of &lt;span class="caps"&gt;CSV&lt;/span&gt; files it was easy to create a&amp;nbsp;new &lt;code&gt;Dictionary.txt&lt;/code&gt; for&amp;nbsp;Toolbox:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;csv&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;codecs&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;glob&lt;/span&gt;
@@ -1309,8 +1307,8 @@ of &lt;span class="caps"&gt;CSV&lt;/span&gt; files it was easy to create a new &
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The code even catches the error when a column name is wrong in the Excel sheet.
-This will output a file &lt;code&gt;Dictionary.txt&lt;/code&gt; that you can copy to your Toolbox
-project folder to overwrite the original &lt;code&gt;Dictionary.txt&lt;/code&gt;. With this we were
+This will output a&amp;nbsp;file &lt;code&gt;Dictionary.txt&lt;/code&gt; that you can copy to your Toolbox
+project folder to overwrite the&amp;nbsp;original &lt;code&gt;Dictionary.txt&lt;/code&gt;. With this we were
 able to generate the whole dictionary in&amp;nbsp;Toolbox.&lt;/p&gt;</content><category term="Language"></category><category term="Toolbox"></category><category term="Excel"></category></entry><entry><title>Sirup, Scheiben und Kreissegmente mit SymPy</title><link href="https://www.peterbouda.eu/sirup-scheiben-und-kreissegmente-mit-sympy.html" rel="alternate"></link><published>2013-06-14T14:58:00+01:00</published><updated>2013-06-14T14:58:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2013-06-14:/sirup-scheiben-und-kreissegmente-mit-sympy.html</id><summary type="html">&lt;script type="text/javascript"
   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;
 &lt;/script&gt;
@@ -1366,7 +1364,7 @@ Scheibe berechnen können. Dazu&amp;nbsp;gehört:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;der gesamte Flächeninhalt der Scheibe: $$A_1 =&amp;nbsp;R^2\pi$$&lt;/li&gt;
 &lt;li&gt;der Ring auf der Scheibe, der insgesamt bei Rotation mit der Flüssigkeit in
-Berührung kommt(wobei &lt;code&gt;r&lt;/code&gt; dann der Höhe der Achse über der Flüssigkeit
+Berührung&amp;nbsp;kommt(wobei &lt;code&gt;r&lt;/code&gt; dann der Höhe der Achse über der Flüssigkeit
 entspricht): $$A_2 =&amp;nbsp;r^2\pi$$&lt;/li&gt;
 &lt;li&gt;der Teil der Scheibe, der jeweils unter Wasser ist (siehe
 http://de.wikipedia.org/wiki/Kreissegment): $$A_3 = R^2\arccos{r\over R} -
@@ -1388,7 +1386,7 @@ also eingesetzt: $$A = R^2\pi - r^2\pi - R^2\arccos{r\over R} + r\sqrt{R^2 -&amp
 &lt;p&gt;$$- R^{2} \operatorname{acos}{\left (\frac{r}{R} \right )} + \pi R^{2} - \pi r^{2} + r \sqrt{R^{2} -&amp;nbsp;r^{2}}$$&lt;/p&gt;
 &lt;h2&gt;Empirisches&amp;nbsp;Maximum&lt;/h2&gt;
 &lt;p&gt;Als Erstes wollen wir das Maximum empirisch bestimmen, also einfach gegebene
-Werte für &lt;code&gt;R&lt;/code&gt; und &lt;code&gt;r&lt;/code&gt; einsetzen und ausgeben. Dazu können wir als zunächst &lt;code&gt;R&lt;/code&gt;
+Werte&amp;nbsp;für &lt;code&gt;R&lt;/code&gt; und &lt;code&gt;r&lt;/code&gt; einsetzen und ausgeben. Dazu können wir als&amp;nbsp;zunächst &lt;code&gt;R&lt;/code&gt;
 einen festen Wert zuweisen, ich nehme einfach 10 für den Radius der&amp;nbsp;Scheibe:&lt;/p&gt;
 &lt;p&gt;In[52]:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;A_10 = A.subs(R, 10)
@@ -1414,8 +1412,8 @@ A_10
 &lt;span class="mf"&gt;9&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;53.8176697304459&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Die benetzte Fläche ist hier also maximal für &lt;code&gt;r = 3/10*R&lt;/code&gt; (also &lt;code&gt;r = 3&lt;/code&gt; für &lt;code&gt;R
-= 10&lt;/code&gt;). Wir können uns die Werte zwischen 2 und 4 für &lt;code&gt;r&lt;/code&gt; noch genauer&amp;nbsp;anschauen:&lt;/p&gt;
+&lt;p&gt;Die benetzte Fläche ist hier also maximal&amp;nbsp;für &lt;code&gt;r = 3/10*R&lt;/code&gt; (also &lt;code&gt;r = 3&lt;/code&gt; für &lt;code&gt;R
+= 10&lt;/code&gt;). Wir können uns die Werte zwischen 2 und 4&amp;nbsp;für &lt;code&gt;r&lt;/code&gt; noch genauer&amp;nbsp;anschauen:&lt;/p&gt;
 &lt;p&gt;In[27]:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;numpy&lt;/span&gt;
 &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;2.0&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;)]:&lt;/span&gt;
@@ -1444,11 +1442,11 @@ A_10
 &lt;span class="mf"&gt;3.9000000000000004&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mf"&gt;185.270947093061&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Hier ist der Wert bei &lt;code&gt;3.0&lt;/code&gt; maximal. Wir können also annehmen, dass die Höhe der
-Scheibe in etwa &lt;code&gt;3/10*R&lt;/code&gt; sein sollte. Das ist auch der Wert, der in der Antike
+&lt;p&gt;Hier ist der Wert&amp;nbsp;bei &lt;code&gt;3.0&lt;/code&gt; maximal. Wir können also annehmen, dass die Höhe der
+Scheibe in&amp;nbsp;etwa &lt;code&gt;3/10*R&lt;/code&gt; sein sollte. Das ist auch der Wert, der in der Antike
 berechnet und dann für die Höhe der Scheibe verwendet&amp;nbsp;wurde.&lt;/p&gt;
 &lt;h2&gt;Analytisches&amp;nbsp;Maximum&lt;/h2&gt;
-&lt;p&gt;Das analytische Maximum bestimmen wir einfach aus der Ableitung von &lt;code&gt;A&lt;/code&gt; nach
+&lt;p&gt;Das analytische Maximum bestimmen wir einfach aus der Ableitung&amp;nbsp;von &lt;code&gt;A&lt;/code&gt; nach
 &lt;code&gt;r&lt;/code&gt;:&lt;/p&gt;
 &lt;p&gt;In[33]:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;A_diff = diff(A, r, 1)
@@ -1457,15 +1455,14 @@ A_diff
 
 &lt;p&gt;$$\frac{R}{\sqrt{1 - \frac{r^{2}}{R^{2}}}} - \frac{r^{2}}{\sqrt{R^{2} - r^{2}}} - 2 \pi r + \sqrt{R^{2} -&amp;nbsp;r^{2}}$$&lt;/p&gt;
 &lt;p&gt;Es lohnt sich übrigens als Übung diese Ableitung auch einmal manuell aus der
-Formel zu berechnen. Um die Extremwerte zu bestimmten setzen wir die Ableitung
-auf &lt;code&gt;0&lt;/code&gt;:&lt;/p&gt;
+Formel zu berechnen. Um die Extremwerte zu bestimmten setzen wir die Ableitung&amp;nbsp;auf &lt;code&gt;0&lt;/code&gt;:&lt;/p&gt;
 &lt;p&gt;In[43]:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;extremwerte = solve(A_diff, r)
 extremwerte
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;$$\begin{bmatrix}- \frac{\sqrt{R^{2}}}{\sqrt{1 + \pi^{2}}}, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; \frac{\sqrt{R^{2}}}{\sqrt{1 + \pi^{2}}}, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; - \frac{\pi \sqrt{R^{2}}}{\sqrt{1 + \pi^{2}}}, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; \frac{\pi \sqrt{R^{2}}}{\sqrt{1 +&amp;nbsp;\pi^{2}}}\end{bmatrix}$$&lt;/p&gt;
-&lt;p&gt;Die negativen Werte können wir in diesem Fall beseite lassen. Für &lt;code&gt;R = 10&lt;/code&gt;
+&lt;p&gt;Die negativen Werte können wir in diesem Fall beseite lassen.&amp;nbsp;Für &lt;code&gt;R = 10&lt;/code&gt;
 werden die anderen beiden Extremwerte&amp;nbsp;zu:&lt;/p&gt;
 &lt;p&gt;In[48]:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;maximum = extremwerte[1].subs(R, 10).evalf()
@@ -1475,7 +1472,7 @@ maximum, minimum
 
 &lt;p&gt;$$\begin{pmatrix}3.03314471053353, &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;&amp;nbsp;9.52890513988687\end{pmatrix}$$&lt;/p&gt;
 &lt;p&gt;Das es sich tatsächlich um ein Maximum und ein Minimum handelt sieht man zum
-Beispiel, wenn man die Werte in die Formel von &lt;code&gt;A_10&lt;/code&gt; einsetzt:&lt;/p&gt;
+Beispiel, wenn man die Werte in die Formel&amp;nbsp;von &lt;code&gt;A_10&lt;/code&gt; einsetzt:&lt;/p&gt;
 &lt;p&gt;In[51]:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;(A_10.subs(r, maximum).evalf(), A_10.subs(r, minimum).evalf())
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1845,11 +1842,11 @@ unter Python 2.x entwickeln. Übrigens habe ich letztendlich einen
 anderen Weg für das Speicherproblem gefunden. Das Problem war ein
 Parser; mit regulären Audrücken komme ich jetzt mit weniger Speicher und
 viel schneller ans&amp;nbsp;Ziel.&lt;/p&gt;
-</content><category term="Python"></category></entry><entry><title>Automatisierung von uic und rcc</title><link href="https://www.peterbouda.eu/automatisierung-von-uic-und-rcc.html" rel="alternate"></link><published>2011-08-09T16:17:00+01:00</published><updated>2011-08-09T16:17:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-08-09:/automatisierung-von-uic-und-rcc.html</id><summary type="html">&lt;p&gt;In einem PyQt- oder PySide-Projekt verwaltet man oft ein oder mehrere Ressourcen- und &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien. Diese Dateien erstellt man in einem C++-Qt-Projekt innerhalb des Qt Creator mit dem Qt Designer, mit den Kommandozeilen-Utilities &lt;code&gt;uic&lt;/code&gt; bzw. &lt;code&gt;rcc&lt;/code&gt; werden diese Dateien dann in C++-Code umgewandelt. Der Qt Creator bzw. Projektdatei …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In einem PyQt- oder PySide-Projekt verwaltet man oft ein oder mehrere Ressourcen- und &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien. Diese Dateien erstellt man in einem C++-Qt-Projekt innerhalb des Qt Creator mit dem Qt Designer, mit den Kommandozeilen-Utilities &lt;code&gt;uic&lt;/code&gt; bzw. &lt;code&gt;rcc&lt;/code&gt; werden diese Dateien dann in C++-Code umgewandelt. Der Qt Creator bzw. Projektdatei und &lt;code&gt;qmake&lt;/code&gt; nehmen dem Entwickler dabei die meiste Arbeit ab: die Code-Dateien werden automatisch aus den entsprechenden &lt;code&gt;ui&lt;/code&gt;- und &lt;code&gt;qrc&lt;/code&gt;-Dateien generiert. Sobald man eine der Dateien im visuellen Editor bearbeitet, wird beim nächsten Build alles automatisch aktualisiert. Wie sieht es aber unter Python aus? Häufig verwendet man hier ja nicht einmal eine komplette &lt;span class="caps"&gt;IDE&lt;/span&gt;, für kleine Projekte zut es gut und gern auch ein einfacher Code-Editor. Ich stelle hier ein kleines Skript vor, das auch ohne &lt;span class="caps"&gt;IDE&lt;/span&gt; zumindest einen Teil der Arbeit übernimmt. Zwar muss man das Skript bei jeder Änderung der &lt;code&gt;ui&lt;/code&gt;- und &lt;code&gt;qrc&lt;/code&gt;-Dateien manuell starten, aber zumindest muss man nicht mehr alle Dateien per Hand&amp;nbsp;umwandeln.&lt;/p&gt;
+</content><category term="Python"></category></entry><entry><title>Automatisierung von uic und rcc</title><link href="https://www.peterbouda.eu/automatisierung-von-uic-und-rcc.html" rel="alternate"></link><published>2011-08-09T16:17:00+01:00</published><updated>2011-08-09T16:17:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-08-09:/automatisierung-von-uic-und-rcc.html</id><summary type="html">&lt;p&gt;In einem PyQt- oder PySide-Projekt verwaltet man oft ein oder mehrere Ressourcen- und &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien. Diese Dateien erstellt man in einem C++-Qt-Projekt innerhalb des Qt Creator mit dem Qt Designer, mit den&amp;nbsp;Kommandozeilen-Utilities &lt;code&gt;uic&lt;/code&gt; bzw. &lt;code&gt;rcc&lt;/code&gt; werden diese Dateien dann in C++-Code umgewandelt. Der Qt Creator bzw. Projektdatei …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In einem PyQt- oder PySide-Projekt verwaltet man oft ein oder mehrere Ressourcen- und &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien. Diese Dateien erstellt man in einem C++-Qt-Projekt innerhalb des Qt Creator mit dem Qt Designer, mit den&amp;nbsp;Kommandozeilen-Utilities &lt;code&gt;uic&lt;/code&gt; bzw. &lt;code&gt;rcc&lt;/code&gt; werden diese Dateien dann in C++-Code umgewandelt. Der Qt Creator bzw. Projektdatei&amp;nbsp;und &lt;code&gt;qmake&lt;/code&gt; nehmen dem Entwickler dabei die meiste Arbeit ab: die Code-Dateien werden automatisch aus den&amp;nbsp;entsprechenden &lt;code&gt;ui&lt;/code&gt;-&amp;nbsp;und &lt;code&gt;qrc&lt;/code&gt;-Dateien generiert. Sobald man eine der Dateien im visuellen Editor bearbeitet, wird beim nächsten Build alles automatisch aktualisiert. Wie sieht es aber unter Python aus? Häufig verwendet man hier ja nicht einmal eine komplette &lt;span class="caps"&gt;IDE&lt;/span&gt;, für kleine Projekte zut es gut und gern auch ein einfacher Code-Editor. Ich stelle hier ein kleines Skript vor, das auch ohne &lt;span class="caps"&gt;IDE&lt;/span&gt; zumindest einen Teil der Arbeit übernimmt. Zwar muss man das Skript bei jeder Änderung&amp;nbsp;der &lt;code&gt;ui&lt;/code&gt;-&amp;nbsp;und &lt;code&gt;qrc&lt;/code&gt;-Dateien manuell starten, aber zumindest muss man nicht mehr alle Dateien per Hand&amp;nbsp;umwandeln.&lt;/p&gt;
 &lt;h1&gt;Projektgerüst&lt;/h1&gt;
 &lt;p&gt;Ich setze hier voraus, dass ihr ein bestimmtes Projektgerüst verwendet. Die Ressourcendateien, &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien sowie Python-Code-Dateien befinden sich dabei in je einem eigenen Ordner. Da Ressourcendateien auf projektweite Dateien verweisen, befinden sie sich häufig im Hauptordner des Projekts. Ein typisches PyQt- bzw. PySide-Projekt sieht bei mir folgendermaßen&amp;nbsp;aus:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Projektgerüst PyQt-Projekt" src="https://www.peterbouda.eu/tutorials/11/tut11_1.png"&gt;&lt;/p&gt;
-&lt;p&gt;Der &lt;code&gt;bin&lt;/code&gt;-Ordner enthält das Einstiegsskript der Anwendung. Dieses lädt die Klasse des Hauptfensters aus dem Package &lt;code&gt;helloworld&lt;/code&gt;, das sich im Ordner &lt;code&gt;src&lt;/code&gt; befindet. Die Hauptfensterklasse wiederum lädt den &lt;span class="caps"&gt;UI&lt;/span&gt;-Code aus dem Unterordner &lt;code&gt;ui&lt;/code&gt;, also aus dem Package &lt;code&gt;helloworld.ui&lt;/code&gt;. Die Original-&lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien liegen unter &lt;code&gt;ui&lt;/code&gt;, die Ressourcendatei &lt;code&gt;helloworld.qrc&lt;/code&gt; liegt im Hauptordner des Projekts. Das Ziel ist es jetzt also, möglichst unkompliziert die &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien aus &lt;code&gt;ui&lt;/code&gt; sowie die Ressourcendatei in Python-Code umzuwandeln und in den enstsprechenden Dateien im Ordner &lt;code&gt;src/helloworld/ui&lt;/code&gt; abzulegen.&lt;/p&gt;
+&lt;p&gt;Der &lt;code&gt;bin&lt;/code&gt;-Ordner enthält das Einstiegsskript der Anwendung. Dieses lädt die Klasse des Hauptfensters aus dem&amp;nbsp;Package &lt;code&gt;helloworld&lt;/code&gt;, das sich im&amp;nbsp;Ordner &lt;code&gt;src&lt;/code&gt; befindet. Die Hauptfensterklasse wiederum lädt den &lt;span class="caps"&gt;UI&lt;/span&gt;-Code aus dem&amp;nbsp;Unterordner &lt;code&gt;ui&lt;/code&gt;, also aus dem&amp;nbsp;Package &lt;code&gt;helloworld.ui&lt;/code&gt;. Die Original-&lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien liegen&amp;nbsp;unter &lt;code&gt;ui&lt;/code&gt;, die&amp;nbsp;Ressourcendatei &lt;code&gt;helloworld.qrc&lt;/code&gt; liegt im Hauptordner des Projekts. Das Ziel ist es jetzt also, möglichst unkompliziert die &lt;span class="caps"&gt;UI&lt;/span&gt;-Dateien&amp;nbsp;aus &lt;code&gt;ui&lt;/code&gt; sowie die Ressourcendatei in Python-Code umzuwandeln und in den enstsprechenden Dateien im&amp;nbsp;Ordner &lt;code&gt;src/helloworld/ui&lt;/code&gt; abzulegen.&lt;/p&gt;
 &lt;h1&gt;Das&amp;nbsp;Skript&lt;/h1&gt;
 &lt;p&gt;Um diesen Schritt möglichst einfach und möglichst plattformunabhängig durchführen zu können, habe ich folgendes kleines Python-Skript geschrieben, dass diese Arbeit&amp;nbsp;durchführt:&lt;/p&gt;
 &lt;pre class="brush:python;"&gt;
@@ -1887,7 +1884,7 @@ for file in rc_files:
     call([rcc_path, file_path, "-o", out_file_path])
 &lt;/pre&gt;
 
-&lt;p&gt;Das Skript überprüft zunächst die Plattform und setzt entsprechend den Pfad zur den &lt;code&gt;rcc&lt;/code&gt;- und &lt;code&gt;uic&lt;/code&gt;-Tools von PyQt oder PySide (für PySide müssen die Kommentare entfernt werden). Falls die Tools in einem anderen Verzeichnis liegen (z.B. unter &lt;code&gt;/usr/local/bin&lt;/code&gt; statt &lt;code&gt;/usr/bin&lt;/code&gt;) dann müsst ihr nur die Variable &lt;code&gt;bindir&lt;/code&gt; entsprechend anpassen. In den beiden Variablen &lt;code&gt;ui_files&lt;/code&gt; und &lt;code&gt;rc_files&lt;/code&gt; listet ihr dann alle eure &lt;span class="caps"&gt;UI&lt;/span&gt;- und Ressourcendateien auf, und gebt als Wert jeweils den gewünschten Ausgabedateinamen an. Bei mir landen alle Dateien ausschlueßlich in &lt;code&gt;src/helloworld/ui&lt;/code&gt;, aber das könnt ihr selbstverständlich an eure Bedingungen anpassen. Jedes Mal, wenn ihr die Dateien dann in eurem Projekt ändert oder Dateien hinzufügt, dann ruft ihr einfach das Skript&amp;nbsp;auf:&lt;/p&gt;
+&lt;p&gt;Das Skript überprüft zunächst die Plattform und setzt entsprechend den Pfad zur&amp;nbsp;den &lt;code&gt;rcc&lt;/code&gt;-&amp;nbsp;und &lt;code&gt;uic&lt;/code&gt;-Tools von PyQt oder PySide (für PySide müssen die Kommentare entfernt werden). Falls die Tools in einem anderen Verzeichnis liegen (z.B.&amp;nbsp;unter &lt;code&gt;/usr/local/bin&lt;/code&gt; statt &lt;code&gt;/usr/bin&lt;/code&gt;) dann müsst ihr nur die&amp;nbsp;Variable &lt;code&gt;bindir&lt;/code&gt; entsprechend anpassen. In den beiden&amp;nbsp;Variablen &lt;code&gt;ui_files&lt;/code&gt; und &lt;code&gt;rc_files&lt;/code&gt; listet ihr dann alle eure &lt;span class="caps"&gt;UI&lt;/span&gt;- und Ressourcendateien auf, und gebt als Wert jeweils den gewünschten Ausgabedateinamen an. Bei mir landen alle Dateien ausschlueßlich&amp;nbsp;in &lt;code&gt;src/helloworld/ui&lt;/code&gt;, aber das könnt ihr selbstverständlich an eure Bedingungen anpassen. Jedes Mal, wenn ihr die Dateien dann in eurem Projekt ändert oder Dateien hinzufügt, dann ruft ihr einfach das Skript&amp;nbsp;auf:&lt;/p&gt;
 &lt;pre class="brush:bash;"&gt;
 python generate_ui.py
 &lt;/pre&gt;
@@ -1943,7 +1940,7 @@ mlab.axes()
 mlab.show()
 &lt;/pre&gt;
 
-&lt;p&gt;Übersichtlich, oder? Zunächst erzeugen wir in &lt;code&gt;r&lt;/code&gt; und &lt;code&gt;s&lt;/code&gt; die Eingangswerte zwischen 0 und 1 in einem numpy-Grid. Die Funktion der relativen Entropie definieren wir in &lt;code&gt;d&lt;/code&gt;. Danach erfolgt die Definition der Koordinaten &lt;code&gt;x&lt;/code&gt;, &lt;code&gt;y&lt;/code&gt; und &lt;code&gt;z&lt;/code&gt;. Hier erlaubt mayavi für jede Koordinate die Angabe einer Funktion, so entsteht dann die Oberfläche des Objekts der Klasse &lt;code&gt;ParametricSurface&lt;/code&gt;. In unserem Fall bilden wir die x- und y-Werte einfach auf die Eingangswerte ab, der z-Wert ist dann der Funktionswert. Wir plotten also einfach die Funktion ins Dreidimensional. Schließlich malen wir das Objekt als &lt;code&gt;mesh&lt;/code&gt;, fügen noch Achsen per &lt;code&gt;axes()&lt;/code&gt; hinzu und zeigen das Ganze per &lt;code&gt;show()&lt;/code&gt;, damit sich das Skript nicht gleich beendet und das Ausgabefenster geöffnet bleibt. Es öffnet sich ein Fenster mit unserer&amp;nbsp;Funktion:&lt;/p&gt;
+&lt;p&gt;Übersichtlich, oder? Zunächst erzeugen wir&amp;nbsp;in &lt;code&gt;r&lt;/code&gt; und &lt;code&gt;s&lt;/code&gt; die Eingangswerte zwischen 0 und 1 in einem numpy-Grid. Die Funktion der relativen Entropie definieren wir&amp;nbsp;in &lt;code&gt;d&lt;/code&gt;. Danach erfolgt die Definition der&amp;nbsp;Koordinaten &lt;code&gt;x&lt;/code&gt;, &lt;code&gt;y&lt;/code&gt; und &lt;code&gt;z&lt;/code&gt;. Hier erlaubt mayavi für jede Koordinate die Angabe einer Funktion, so entsteht dann die Oberfläche des Objekts der&amp;nbsp;Klasse &lt;code&gt;ParametricSurface&lt;/code&gt;. In unserem Fall bilden wir die x- und y-Werte einfach auf die Eingangswerte ab, der z-Wert ist dann der Funktionswert. Wir plotten also einfach die Funktion ins Dreidimensional. Schließlich malen wir das Objekt&amp;nbsp;als &lt;code&gt;mesh&lt;/code&gt;, fügen noch Achsen&amp;nbsp;per &lt;code&gt;axes()&lt;/code&gt; hinzu und zeigen das Ganze&amp;nbsp;per &lt;code&gt;show()&lt;/code&gt;, damit sich das Skript nicht gleich beendet und das Ausgabefenster geöffnet bleibt. Es öffnet sich ein Fenster mit unserer&amp;nbsp;Funktion:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Visualization of relative entropy" src="https://www.peterbouda.eu/tutorials/relative_entropy.png"&gt;&lt;/p&gt;
 &lt;p&gt;Schön konvex :-) Das Ausgabefenster lädt zum Herumspielen ein, das Objekt lässt sich drehen, Parallelprojektion einschalten und das komplette Mayavi starten, um weitere Daten und Objekte hinzu zu fügen. Oder man arbeitet mit IPython und macht mit der Shell weiter. Viel&amp;nbsp;Spaß!&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>Buchempfehlung: Mastering Regular Expressions von Jeffrey E.F. Friedl</title><link href="https://www.peterbouda.eu/buchempfehlung-mastering-regular-expressions-von-jeffrey-ef-friedl-dasskriptcom.html" rel="alternate"></link><published>2011-05-13T10:28:00+01:00</published><updated>2011-05-13T10:28:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2011-05-13:/buchempfehlung-mastering-regular-expressions-von-jeffrey-ef-friedl-dasskriptcom.html</id><summary type="html">&lt;p&gt;Und da dachte ich, ich weiß schon so Einiges über reguläre Ausdrücke.
 Aber nichts da: spätestens im dritten Kapitel von &lt;em&gt;Mastering Regular

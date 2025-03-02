@@ -6,7 +6,7 @@
 -->
 <html>
   <head>
-    <title>Peter Bouda - Working on Free and Open Source AI Projects</title>
+    <title>Peter Bouda - Onsite and online AI trainings for your team</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta
@@ -72,7 +72,7 @@
 <nav id="nav">
   <ul class="container">
     <li><a href="/#top">Home</a></li>
-    <!-- <li><a href="/#workshops">AI Workshops</a></li> -->
+    <li><a href="/#workshops">AI Workshops</a></li>
     <li><a href="/#portfolio">Portfolio</a></li>
     <li><a href="/#feed">Blog</a></li>
     <li><a href="/#contact">Contact</a></li>
@@ -144,7 +144,7 @@ Scheibe berechnen können. Dazu&nbsp;gehört:</p>
 <ul>
 <li>der gesamte Flächeninhalt der Scheibe: $$A_1 =&nbsp;R^2\pi$$</li>
 <li>der Ring auf der Scheibe, der insgesamt bei Rotation mit der Flüssigkeit in
-Berührung kommt(wobei <code>r</code> dann der Höhe der Achse über der Flüssigkeit
+Berührung&nbsp;kommt(wobei <code>r</code> dann der Höhe der Achse über der Flüssigkeit
 entspricht): $$A_2 =&nbsp;r^2\pi$$</li>
 <li>der Teil der Scheibe, der jeweils unter Wasser ist (siehe
 http://de.wikipedia.org/wiki/Kreissegment): $$A_3 = R^2\arccos{r\over R} -
@@ -166,7 +166,7 @@ also eingesetzt: $$A = R^2\pi - r^2\pi - R^2\arccos{r\over R} + r\sqrt{R^2 -&nbs
 <p>$$- R^{2} \operatorname{acos}{\left (\frac{r}{R} \right )} + \pi R^{2} - \pi r^{2} + r \sqrt{R^{2} -&nbsp;r^{2}}$$</p>
 <h2>Empirisches&nbsp;Maximum</h2>
 <p>Als Erstes wollen wir das Maximum empirisch bestimmen, also einfach gegebene
-Werte für <code>R</code> und <code>r</code> einsetzen und ausgeben. Dazu können wir als zunächst <code>R</code>
+Werte&nbsp;für <code>R</code> und <code>r</code> einsetzen und ausgeben. Dazu können wir als&nbsp;zunächst <code>R</code>
 einen festen Wert zuweisen, ich nehme einfach 10 für den Radius der&nbsp;Scheibe:</p>
 <p>In[52]:</p>
 <div class="highlight"><pre><span></span><code>A_10 = A.subs(R, 10)
@@ -192,8 +192,8 @@ A_10
 <span class="mf">9</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">53.8176697304459</span>
 </code></pre></div>
 
-<p>Die benetzte Fläche ist hier also maximal für <code>r = 3/10*R</code> (also <code>r = 3</code> für <code>R
-= 10</code>). Wir können uns die Werte zwischen 2 und 4 für <code>r</code> noch genauer&nbsp;anschauen:</p>
+<p>Die benetzte Fläche ist hier also maximal&nbsp;für <code>r = 3/10*R</code> (also <code>r = 3</code> für <code>R
+= 10</code>). Wir können uns die Werte zwischen 2 und 4&nbsp;für <code>r</code> noch genauer&nbsp;anschauen:</p>
 <p>In[27]:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
 <span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="p">[</span><span class="mf">2.0</span><span class="o">+</span><span class="n">k</span><span class="o">*</span><span class="mf">0.1</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)]:</span>
@@ -222,11 +222,11 @@ A_10
 <span class="mf">3.9000000000000004</span><span class="o">/</span><span class="mf">10</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">185.270947093061</span>
 </code></pre></div>
 
-<p>Hier ist der Wert bei <code>3.0</code> maximal. Wir können also annehmen, dass die Höhe der
-Scheibe in etwa <code>3/10*R</code> sein sollte. Das ist auch der Wert, der in der Antike
+<p>Hier ist der Wert&nbsp;bei <code>3.0</code> maximal. Wir können also annehmen, dass die Höhe der
+Scheibe in&nbsp;etwa <code>3/10*R</code> sein sollte. Das ist auch der Wert, der in der Antike
 berechnet und dann für die Höhe der Scheibe verwendet&nbsp;wurde.</p>
 <h2>Analytisches&nbsp;Maximum</h2>
-<p>Das analytische Maximum bestimmen wir einfach aus der Ableitung von <code>A</code> nach
+<p>Das analytische Maximum bestimmen wir einfach aus der Ableitung&nbsp;von <code>A</code> nach
 <code>r</code>:</p>
 <p>In[33]:</p>
 <div class="highlight"><pre><span></span><code>A_diff = diff(A, r, 1)
@@ -235,15 +235,14 @@ A_diff
 
 <p>$$\frac{R}{\sqrt{1 - \frac{r^{2}}{R^{2}}}} - \frac{r^{2}}{\sqrt{R^{2} - r^{2}}} - 2 \pi r + \sqrt{R^{2} -&nbsp;r^{2}}$$</p>
 <p>Es lohnt sich übrigens als Übung diese Ableitung auch einmal manuell aus der
-Formel zu berechnen. Um die Extremwerte zu bestimmten setzen wir die Ableitung
-auf <code>0</code>:</p>
+Formel zu berechnen. Um die Extremwerte zu bestimmten setzen wir die Ableitung&nbsp;auf <code>0</code>:</p>
 <p>In[43]:</p>
 <div class="highlight"><pre><span></span><code>extremwerte = solve(A_diff, r)
 extremwerte
 </code></pre></div>
 
 <p>$$\begin{bmatrix}- \frac{\sqrt{R^{2}}}{\sqrt{1 + \pi^{2}}}, <span class="amp">&amp;</span> \frac{\sqrt{R^{2}}}{\sqrt{1 + \pi^{2}}}, <span class="amp">&amp;</span> - \frac{\pi \sqrt{R^{2}}}{\sqrt{1 + \pi^{2}}}, <span class="amp">&amp;</span> \frac{\pi \sqrt{R^{2}}}{\sqrt{1 +&nbsp;\pi^{2}}}\end{bmatrix}$$</p>
-<p>Die negativen Werte können wir in diesem Fall beseite lassen. Für <code>R = 10</code>
+<p>Die negativen Werte können wir in diesem Fall beseite lassen.&nbsp;Für <code>R = 10</code>
 werden die anderen beiden Extremwerte&nbsp;zu:</p>
 <p>In[48]:</p>
 <div class="highlight"><pre><span></span><code>maximum = extremwerte[1].subs(R, 10).evalf()
@@ -253,7 +252,7 @@ maximum, minimum
 
 <p>$$\begin{pmatrix}3.03314471053353, <span class="amp">&amp;</span>&nbsp;9.52890513988687\end{pmatrix}$$</p>
 <p>Das es sich tatsächlich um ein Maximum und ein Minimum handelt sieht man zum
-Beispiel, wenn man die Werte in die Formel von <code>A_10</code> einsetzt:</p>
+Beispiel, wenn man die Werte in die Formel&nbsp;von <code>A_10</code> einsetzt:</p>
 <p>In[51]:</p>
 <div class="highlight"><pre><span></span><code>(A_10.subs(r, maximum).evalf(), A_10.subs(r, minimum).evalf())
 </code></pre></div>

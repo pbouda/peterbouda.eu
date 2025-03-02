@@ -6,7 +6,7 @@
 -->
 <html>
   <head>
-    <title>Peter Bouda - Working on Free and Open Source AI Projects</title>
+    <title>Peter Bouda - Onsite and online AI trainings for your team</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta
@@ -72,7 +72,7 @@
 <nav id="nav">
   <ul class="container">
     <li><a href="/#top">Home</a></li>
-    <!-- <li><a href="/#workshops">AI Workshops</a></li> -->
+    <li><a href="/#workshops">AI Workshops</a></li>
     <li><a href="/#portfolio">Portfolio</a></li>
     <li><a href="/#feed">Blog</a></li>
     <li><a href="/#contact">Contact</a></li>
@@ -122,7 +122,7 @@ to. The newest version can output <span class="caps">JSON</span> or <span class=
 output format two years ago I stick to the <span class="caps">XML</span> output as all my tools are based
 on this format. In fact, it is not <em>true</em> <span class="caps">XML</span>, as the root element is missing
 (the Wikipedia Extractor calls the format &#8220;tanl&#8221;). All the Wikipedia articles
-are just enclosed by <code>&lt;doc&gt;</code> tags, one after the&nbsp;other:</p>
+are just enclosed&nbsp;by <code>&lt;doc&gt;</code> tags, one after the&nbsp;other:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">&lt;doc</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;55&quot;</span><span class="w"> </span><span class="na">url=</span><span class="s">&quot;http://bar.wikipedia.org/wiki?curid=55&quot;</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Wikipedia:Archiv/Boarische Umschrift&quot;</span><span class="nt">&gt;</span>Wikipedia:Archiv/Boarische<span class="w"> </span>Umschrift
 Fürs<span class="w"> </span>Boarische<span class="w"> </span>gibts<span class="w"> </span>koa<span class="w"> </span>einheitliche<span class="w"> </span>Umschrift.<span class="w"> </span>Ma<span class="w"> </span>orientiert<span class="w"> </span>si<span class="w"> </span>in<span class="w"> </span>da<span class="w"> </span>Schreibweis<span class="w"> </span>an<span class="w"> </span>da<span class="w"> </span>deutschen<span class="w"> </span>Orthografie....
 <span class="nt">&lt;/doc&gt;&lt;doc</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;60&quot;</span><span class="w"> </span><span class="na">url=</span><span class="s">&quot;http://bar.wikipedia.org/wiki?curid=60&quot;</span><span class="w"> </span><span class="na">title=</span><span class="s">&quot;Deitschland&quot;</span><span class="nt">&gt;</span>Deitschland
@@ -138,11 +138,11 @@ with the following arguments (I use the [Bavarian Wikipedia dump]
 <div class="highlight"><pre><span></span><code>WikiExtractor.py -w -f tanl barwiki-20130905-pages-articles.xml.bz2 extracted
 </code></pre></div>
 
-<p>This will put all output files into a folder <code>extracted</code>.</p>
+<p>This will put all output files into a&nbsp;folder <code>extracted</code>.</p>
 <h1>Concatenate and clean the&nbsp;files</h1>
 <p>The next step is then to create a real <span class="caps">XML</span> file from this. It is not too hard,
 we just have to add a root tag and clean the data a bit more, otherwise an <span class="caps">XML</span>
-parser will complain about certain characters like the &#8220;lower than&#8221; <code>&lt;</code>. I
+parser will complain about certain characters like the &#8220;lower&nbsp;than&#8221; <code>&lt;</code>. I
 start with the following code to get rid of certain general problems like
 unparsable characters, add the root tags and concatenate all the&nbsp;files:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
@@ -189,11 +189,10 @@ unparsable characters, add the root tags and concatenate all the&nbsp;files:</p>
 <span class="n">f2</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
 
-<p>There is one complex regular expression substition here, that cleans the <code>title</code>
-attributes of the <code>&lt;doc&gt;</code> tags. The titles sometimes contain an apostroph <code>"</code>,
+<p>There is one complex regular expression substition here, that cleans&nbsp;the <code>title</code>
+attributes of&nbsp;the <code>&lt;doc&gt;</code> tags. The titles sometimes contain an&nbsp;apostroph <code>"</code>,
 which is also the seperator for attribute values in <span class="caps">XML</span> and cannot be used in
-this location. So I just remove them. The output of this script are two files:
-the <code>barwiki.xml</code> just contains the concatenated files, the <code>barwiki_cleaned.xml</code>
+this location. So I just remove them. The output of this script are two files:&nbsp;the <code>barwiki.xml</code> just contains the concatenated files,&nbsp;the <code>barwiki_cleaned.xml</code>
 contains the cleaned <span class="caps">XML</span>.</p>
 <p>In the case of the Bavarian Wikipedia there are still
 some more quirks in the data. You can find out what kind of problems there are
@@ -247,13 +246,13 @@ that cause the&nbsp;problems:</p>
 <span class="n">f2</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
 
-<p>In the end I have a clean file <code>barwiki_cleaned2.xml</code> that contains <span class="caps">XML</span> with
+<p>In the end I have a clean&nbsp;file <code>barwiki_cleaned2.xml</code> that contains <span class="caps">XML</span> with
 all the articles of the Bavarian Wikipedia and is parsable with&nbsp;EementTree.</p>
 <p>I still add a third cleaning step to remove articles that are not real content.
 Wikipedia contains several helper and meta-data articles that contain
 explanations for authors and other stuff that we don&#8217;t need. Luckily, those have
-a title that contains a prefix that ends with a colon <code>:</code>, so we can just look
-for a certain pattern in the titles and remove those <code>&lt;doc&gt;</code> elements from the
+a title that contains a prefix that ends with a&nbsp;colon <code>:</code>, so we can just look
+for a certain pattern in the titles and remove&nbsp;those <code>&lt;doc&gt;</code> elements from the
 <span class="caps">XML</span> tree. I also remove articles that are smaller than 200
 characters (those are too short to measure semantic similarity, in one of my
 use&nbsp;cases):</p>
@@ -276,7 +275,7 @@ use&nbsp;cases):</p>
 <span class="n">tree</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;barwiki_cleaned3.xml&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<p>After this step I finally end up with a <code>barwiki_cleaned3.xml</code> that contains
+<p>After this step I finally end up with&nbsp;a <code>barwiki_cleaned3.xml</code> that contains
 clean data with only the content articles. This file can already be used to
 process the Wikipedia, but I wanted to also publish the files in a standardized
 format. I chose <a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326"><span class="caps">ISO</span> 24612</a>,
@@ -289,8 +288,8 @@ for each of the file formats you want to support. But for the <span class="caps"
 the Wikipedia Extractor there already exists a parser in Poio <span class="caps">API</span>, and GrAF-<span class="caps">XML</span>
 is supported as the basic pivot format. Which means that any file format that
 is supported in Poio <span class="caps">API</span> can be converted to GrAF-<span class="caps">XML</span>. The conversion is
-dead simple: we initialize a <code>Converter</code> object with the Wikipedia parser
-and the GrAF writer, and then tell the converter to <code>parse()</code> and <code>write()</code>:</p>
+dead simple: we initialize&nbsp;a <code>Converter</code> object with the Wikipedia parser
+and the GrAF writer, and then tell the converter&nbsp;to <code>parse()</code> and <code>write()</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="n">parser</span> <span class="o">=</span> <span class="n">poioapi</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">wikipedia_extractor</span><span class="o">.</span><span class="n">Parser</span><span class="p">(</span><span class="s2">&quot;Wikipedia.xml&quot;</span><span class="p">)</span>
 <span class="n">writer</span> <span class="o">=</span> <span class="n">poioapi</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">graf</span><span class="o">.</span><span class="n">Writer</span><span class="p">()</span>
 

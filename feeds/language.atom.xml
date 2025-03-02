@@ -471,7 +471,7 @@ to. The newest version can output &lt;span class="caps"&gt;JSON&lt;/span&gt; or 
 output format two years ago I stick to the &lt;span class="caps"&gt;XML&lt;/span&gt; output as all my tools are based
 on this format. In fact, it is not &lt;em&gt;true&lt;/em&gt; &lt;span class="caps"&gt;XML&lt;/span&gt;, as the root element is missing
 (the Wikipedia Extractor calls the format &amp;#8220;tanl&amp;#8221;). All the Wikipedia articles
-are just enclosed by &lt;code&gt;&amp;lt;doc&amp;gt;&lt;/code&gt; tags, one after the&amp;nbsp;other:&lt;/p&gt;
+are just enclosed&amp;nbsp;by &lt;code&gt;&amp;lt;doc&amp;gt;&lt;/code&gt; tags, one after the&amp;nbsp;other:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;&amp;lt;doc&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;55&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;url=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://bar.wikipedia.org/wiki?curid=55&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;title=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Wikipedia:Archiv/Boarische Umschrift&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Wikipedia:Archiv/Boarische&lt;span class="w"&gt; &lt;/span&gt;Umschrift
 Fürs&lt;span class="w"&gt; &lt;/span&gt;Boarische&lt;span class="w"&gt; &lt;/span&gt;gibts&lt;span class="w"&gt; &lt;/span&gt;koa&lt;span class="w"&gt; &lt;/span&gt;einheitliche&lt;span class="w"&gt; &lt;/span&gt;Umschrift.&lt;span class="w"&gt; &lt;/span&gt;Ma&lt;span class="w"&gt; &lt;/span&gt;orientiert&lt;span class="w"&gt; &lt;/span&gt;si&lt;span class="w"&gt; &lt;/span&gt;in&lt;span class="w"&gt; &lt;/span&gt;da&lt;span class="w"&gt; &lt;/span&gt;Schreibweis&lt;span class="w"&gt; &lt;/span&gt;an&lt;span class="w"&gt; &lt;/span&gt;da&lt;span class="w"&gt; &lt;/span&gt;deutschen&lt;span class="w"&gt; &lt;/span&gt;Orthografie....
 &lt;span class="nt"&gt;&amp;lt;/doc&amp;gt;&amp;lt;doc&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;60&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;url=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://bar.wikipedia.org/wiki?curid=60&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;title=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Deitschland&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Deitschland
@@ -487,11 +487,11 @@ with the following arguments (I use the [Bavarian Wikipedia dump]
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;WikiExtractor.py -w -f tanl barwiki-20130905-pages-articles.xml.bz2 extracted
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;This will put all output files into a folder &lt;code&gt;extracted&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This will put all output files into a&amp;nbsp;folder &lt;code&gt;extracted&lt;/code&gt;.&lt;/p&gt;
 &lt;h1&gt;Concatenate and clean the&amp;nbsp;files&lt;/h1&gt;
 &lt;p&gt;The next step is then to create a real &lt;span class="caps"&gt;XML&lt;/span&gt; file from this. It is not too hard,
 we just have to add a root tag and clean the data a bit more, otherwise an &lt;span class="caps"&gt;XML&lt;/span&gt;
-parser will complain about certain characters like the &amp;#8220;lower than&amp;#8221; &lt;code&gt;&amp;lt;&lt;/code&gt;. I
+parser will complain about certain characters like the &amp;#8220;lower&amp;nbsp;than&amp;#8221; &lt;code&gt;&amp;lt;&lt;/code&gt;. I
 start with the following code to get rid of certain general problems like
 unparsable characters, add the root tags and concatenate all the&amp;nbsp;files:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
@@ -538,11 +538,10 @@ unparsable characters, add the root tags and concatenate all the&amp;nbsp;files:
 &lt;span class="n"&gt;f2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;There is one complex regular expression substition here, that cleans the &lt;code&gt;title&lt;/code&gt;
-attributes of the &lt;code&gt;&amp;lt;doc&amp;gt;&lt;/code&gt; tags. The titles sometimes contain an apostroph &lt;code&gt;"&lt;/code&gt;,
+&lt;p&gt;There is one complex regular expression substition here, that cleans&amp;nbsp;the &lt;code&gt;title&lt;/code&gt;
+attributes of&amp;nbsp;the &lt;code&gt;&amp;lt;doc&amp;gt;&lt;/code&gt; tags. The titles sometimes contain an&amp;nbsp;apostroph &lt;code&gt;"&lt;/code&gt;,
 which is also the seperator for attribute values in &lt;span class="caps"&gt;XML&lt;/span&gt; and cannot be used in
-this location. So I just remove them. The output of this script are two files:
-the &lt;code&gt;barwiki.xml&lt;/code&gt; just contains the concatenated files, the &lt;code&gt;barwiki_cleaned.xml&lt;/code&gt;
+this location. So I just remove them. The output of this script are two files:&amp;nbsp;the &lt;code&gt;barwiki.xml&lt;/code&gt; just contains the concatenated files,&amp;nbsp;the &lt;code&gt;barwiki_cleaned.xml&lt;/code&gt;
 contains the cleaned &lt;span class="caps"&gt;XML&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;In the case of the Bavarian Wikipedia there are still
 some more quirks in the data. You can find out what kind of problems there are
@@ -596,13 +595,13 @@ that cause the&amp;nbsp;problems:&lt;/p&gt;
 &lt;span class="n"&gt;f2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;In the end I have a clean file &lt;code&gt;barwiki_cleaned2.xml&lt;/code&gt; that contains &lt;span class="caps"&gt;XML&lt;/span&gt; with
+&lt;p&gt;In the end I have a clean&amp;nbsp;file &lt;code&gt;barwiki_cleaned2.xml&lt;/code&gt; that contains &lt;span class="caps"&gt;XML&lt;/span&gt; with
 all the articles of the Bavarian Wikipedia and is parsable with&amp;nbsp;EementTree.&lt;/p&gt;
 &lt;p&gt;I still add a third cleaning step to remove articles that are not real content.
 Wikipedia contains several helper and meta-data articles that contain
 explanations for authors and other stuff that we don&amp;#8217;t need. Luckily, those have
-a title that contains a prefix that ends with a colon &lt;code&gt;:&lt;/code&gt;, so we can just look
-for a certain pattern in the titles and remove those &lt;code&gt;&amp;lt;doc&amp;gt;&lt;/code&gt; elements from the
+a title that contains a prefix that ends with a&amp;nbsp;colon &lt;code&gt;:&lt;/code&gt;, so we can just look
+for a certain pattern in the titles and remove&amp;nbsp;those &lt;code&gt;&amp;lt;doc&amp;gt;&lt;/code&gt; elements from the
 &lt;span class="caps"&gt;XML&lt;/span&gt; tree. I also remove articles that are smaller than 200
 characters (those are too short to measure semantic similarity, in one of my
 use&amp;nbsp;cases):&lt;/p&gt;
@@ -625,7 +624,7 @@ use&amp;nbsp;cases):&lt;/p&gt;
 &lt;span class="n"&gt;tree&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;barwiki_cleaned3.xml&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;encoding&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;After this step I finally end up with a &lt;code&gt;barwiki_cleaned3.xml&lt;/code&gt; that contains
+&lt;p&gt;After this step I finally end up with&amp;nbsp;a &lt;code&gt;barwiki_cleaned3.xml&lt;/code&gt; that contains
 clean data with only the content articles. This file can already be used to
 process the Wikipedia, but I wanted to also publish the files in a standardized
 format. I chose &lt;a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326"&gt;&lt;span class="caps"&gt;ISO&lt;/span&gt; 24612&lt;/a&gt;,
@@ -638,8 +637,8 @@ for each of the file formats you want to support. But for the &lt;span class="ca
 the Wikipedia Extractor there already exists a parser in Poio &lt;span class="caps"&gt;API&lt;/span&gt;, and GrAF-&lt;span class="caps"&gt;XML&lt;/span&gt;
 is supported as the basic pivot format. Which means that any file format that
 is supported in Poio &lt;span class="caps"&gt;API&lt;/span&gt; can be converted to GrAF-&lt;span class="caps"&gt;XML&lt;/span&gt;. The conversion is
-dead simple: we initialize a &lt;code&gt;Converter&lt;/code&gt; object with the Wikipedia parser
-and the GrAF writer, and then tell the converter to &lt;code&gt;parse()&lt;/code&gt; and &lt;code&gt;write()&lt;/code&gt;:&lt;/p&gt;
+dead simple: we initialize&amp;nbsp;a &lt;code&gt;Converter&lt;/code&gt; object with the Wikipedia parser
+and the GrAF writer, and then tell the converter&amp;nbsp;to &lt;code&gt;parse()&lt;/code&gt; and &lt;code&gt;write()&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;parser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;poioapi&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wikipedia_extractor&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Parser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Wikipedia.xml&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;writer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;poioapi&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;graf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Writer&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 
@@ -664,12 +663,11 @@ dictionary generator is state-of-the-art in language documentation, we needed a
 way to convert the Excel data to a Toolbox file. We did some first tests with
 a simple Python script and everything worked out well until now, so here is a
 short description of our&amp;nbsp;workflow.&lt;/p&gt;
-&lt;p&gt;We created an empty Toolbox project that will give you a list of standard fields
-like &lt;code&gt;Lexeme&lt;/code&gt;, &lt;code&gt;Sound file&lt;/code&gt;, etc. We added two or three example sentences,
+&lt;p&gt;We created an empty Toolbox project that will give you a list of standard fields&amp;nbsp;like &lt;code&gt;Lexeme&lt;/code&gt;, &lt;code&gt;Sound file&lt;/code&gt;, etc. We added two or three example sentences,
 customized the fields, and generated a first dictionary to see how the output
 will look in the end and to get an example data file that we could use as a
 template for the Excel data. The data file will be saved in the project folder
-somewhere, in our case it was in
+somewhere, in our case it was&amp;nbsp;in
 &lt;code&gt;Toolbox Project\DictionaryFactoryPackage\Dictionary.txt&lt;/code&gt;. You can open the
 file in a simple text editor to see the content. In our case, an entry looked
 like&amp;nbsp;this:&lt;/p&gt;
@@ -735,12 +733,12 @@ following template in&amp;nbsp;Python:&lt;/p&gt;
 &lt;span class="s2"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;The Excel column names are in the curely brackets, so that we can use Python&amp;#8217;s
+&lt;p&gt;The Excel column names are in the curely brackets, so that we can use&amp;nbsp;Python&amp;#8217;s
 &lt;code&gt;format()&lt;/code&gt; method to fill in the content. For the &lt;span class="caps"&gt;CSV&lt;/span&gt; file we had to export the
 Excel data in LibreOffice Calc, as Excel does not support &lt;span class="caps"&gt;UTF&lt;/span&gt;-8 export (shame
 on you, Microsoft!). We exported a single &lt;span class="caps"&gt;CSV&lt;/span&gt; file for each sheet in Calc,
 so that we had a list of &lt;span class="caps"&gt;CSV&lt;/span&gt; files. With the template above and this collection
-of &lt;span class="caps"&gt;CSV&lt;/span&gt; files it was easy to create a new &lt;code&gt;Dictionary.txt&lt;/code&gt; for&amp;nbsp;Toolbox:&lt;/p&gt;
+of &lt;span class="caps"&gt;CSV&lt;/span&gt; files it was easy to create a&amp;nbsp;new &lt;code&gt;Dictionary.txt&lt;/code&gt; for&amp;nbsp;Toolbox:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;csv&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;codecs&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;glob&lt;/span&gt;
@@ -767,8 +765,8 @@ of &lt;span class="caps"&gt;CSV&lt;/span&gt; files it was easy to create a new &
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;The code even catches the error when a column name is wrong in the Excel sheet.
-This will output a file &lt;code&gt;Dictionary.txt&lt;/code&gt; that you can copy to your Toolbox
-project folder to overwrite the original &lt;code&gt;Dictionary.txt&lt;/code&gt;. With this we were
+This will output a&amp;nbsp;file &lt;code&gt;Dictionary.txt&lt;/code&gt; that you can copy to your Toolbox
+project folder to overwrite the&amp;nbsp;original &lt;code&gt;Dictionary.txt&lt;/code&gt;. With this we were
 able to generate the whole dictionary in&amp;nbsp;Toolbox.&lt;/p&gt;</content><category term="Language"></category><category term="Toolbox"></category><category term="Excel"></category></entry><entry><title>Annotation graphs and the IPython notebook</title><link href="https://www.peterbouda.eu/annotation-graphs-and-the-ipython-notebook.html" rel="alternate"></link><published>2012-12-18T10:53:00+00:00</published><updated>2012-12-18T10:53:00+00:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2012-12-18:/annotation-graphs-and-the-ipython-notebook.html</id><summary type="html">&lt;p&gt;I recently became obsessed with annotation graphs and linguistic graphs
 in general. Since September I am working with the &lt;a class="reference external" href="https://github.com/cidles/graf-python"&gt;graf-python&lt;/a&gt; library
 that implements the &lt;a class="reference external" href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=37326"&gt;&lt;span class="caps"&gt;ISO&lt;/span&gt; 24612 - Linguistic annotation framework (&lt;span class="caps"&gt;LAF&lt;/span&gt;)&lt;/a&gt;

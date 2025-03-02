@@ -6,7 +6,7 @@
 -->
 <html>
   <head>
-    <title>Peter Bouda - Working on Free and Open Source AI Projects</title>
+    <title>Peter Bouda - Onsite and online AI trainings for your team</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta
@@ -72,7 +72,7 @@
 <nav id="nav">
   <ul class="container">
     <li><a href="/#top">Home</a></li>
-    <!-- <li><a href="/#workshops">AI Workshops</a></li> -->
+    <li><a href="/#workshops">AI Workshops</a></li>
     <li><a href="/#portfolio">Portfolio</a></li>
     <li><a href="/#feed">Blog</a></li>
     <li><a href="/#contact">Contact</a></li>
@@ -102,11 +102,11 @@
     
 
         
-</footer><!-- /.post-info --> <p>In einem PyQt- oder PySide-Projekt verwaltet man oft ein oder mehrere Ressourcen- und <span class="caps">UI</span>-Dateien. Diese Dateien erstellt man in einem C++-Qt-Projekt innerhalb des Qt Creator mit dem Qt Designer, mit den Kommandozeilen-Utilities <code>uic</code> bzw. <code>rcc</code> werden diese Dateien dann in C++-Code umgewandelt. Der Qt Creator bzw. Projektdatei und <code>qmake</code> nehmen dem Entwickler dabei die meiste Arbeit ab: die Code-Dateien werden automatisch aus den entsprechenden <code>ui</code>- und <code>qrc</code>-Dateien generiert. Sobald man eine der Dateien im visuellen Editor bearbeitet, wird beim nächsten Build alles automatisch aktualisiert. Wie sieht es aber unter Python aus? Häufig verwendet man hier ja nicht einmal eine komplette <span class="caps">IDE</span>, für kleine Projekte zut es gut und gern auch ein einfacher Code-Editor. Ich stelle hier ein kleines Skript vor, das auch ohne <span class="caps">IDE</span> zumindest einen Teil der Arbeit übernimmt. Zwar muss man das Skript bei jeder Änderung der <code>ui</code>- und <code>qrc</code>-Dateien manuell starten, aber zumindest muss man nicht mehr alle Dateien per Hand&nbsp;umwandeln.</p>
+</footer><!-- /.post-info --> <p>In einem PyQt- oder PySide-Projekt verwaltet man oft ein oder mehrere Ressourcen- und <span class="caps">UI</span>-Dateien. Diese Dateien erstellt man in einem C++-Qt-Projekt innerhalb des Qt Creator mit dem Qt Designer, mit den&nbsp;Kommandozeilen-Utilities <code>uic</code> bzw. <code>rcc</code> werden diese Dateien dann in C++-Code umgewandelt. Der Qt Creator bzw. Projektdatei&nbsp;und <code>qmake</code> nehmen dem Entwickler dabei die meiste Arbeit ab: die Code-Dateien werden automatisch aus den&nbsp;entsprechenden <code>ui</code>-&nbsp;und <code>qrc</code>-Dateien generiert. Sobald man eine der Dateien im visuellen Editor bearbeitet, wird beim nächsten Build alles automatisch aktualisiert. Wie sieht es aber unter Python aus? Häufig verwendet man hier ja nicht einmal eine komplette <span class="caps">IDE</span>, für kleine Projekte zut es gut und gern auch ein einfacher Code-Editor. Ich stelle hier ein kleines Skript vor, das auch ohne <span class="caps">IDE</span> zumindest einen Teil der Arbeit übernimmt. Zwar muss man das Skript bei jeder Änderung&nbsp;der <code>ui</code>-&nbsp;und <code>qrc</code>-Dateien manuell starten, aber zumindest muss man nicht mehr alle Dateien per Hand&nbsp;umwandeln.</p>
 <h1>Projektgerüst</h1>
 <p>Ich setze hier voraus, dass ihr ein bestimmtes Projektgerüst verwendet. Die Ressourcendateien, <span class="caps">UI</span>-Dateien sowie Python-Code-Dateien befinden sich dabei in je einem eigenen Ordner. Da Ressourcendateien auf projektweite Dateien verweisen, befinden sie sich häufig im Hauptordner des Projekts. Ein typisches PyQt- bzw. PySide-Projekt sieht bei mir folgendermaßen&nbsp;aus:</p>
 <p><img alt="Projektgerüst PyQt-Projekt" src="https://www.peterbouda.eu/tutorials/11/tut11_1.png"></p>
-<p>Der <code>bin</code>-Ordner enthält das Einstiegsskript der Anwendung. Dieses lädt die Klasse des Hauptfensters aus dem Package <code>helloworld</code>, das sich im Ordner <code>src</code> befindet. Die Hauptfensterklasse wiederum lädt den <span class="caps">UI</span>-Code aus dem Unterordner <code>ui</code>, also aus dem Package <code>helloworld.ui</code>. Die Original-<span class="caps">UI</span>-Dateien liegen unter <code>ui</code>, die Ressourcendatei <code>helloworld.qrc</code> liegt im Hauptordner des Projekts. Das Ziel ist es jetzt also, möglichst unkompliziert die <span class="caps">UI</span>-Dateien aus <code>ui</code> sowie die Ressourcendatei in Python-Code umzuwandeln und in den enstsprechenden Dateien im Ordner <code>src/helloworld/ui</code> abzulegen.</p>
+<p>Der <code>bin</code>-Ordner enthält das Einstiegsskript der Anwendung. Dieses lädt die Klasse des Hauptfensters aus dem&nbsp;Package <code>helloworld</code>, das sich im&nbsp;Ordner <code>src</code> befindet. Die Hauptfensterklasse wiederum lädt den <span class="caps">UI</span>-Code aus dem&nbsp;Unterordner <code>ui</code>, also aus dem&nbsp;Package <code>helloworld.ui</code>. Die Original-<span class="caps">UI</span>-Dateien liegen&nbsp;unter <code>ui</code>, die&nbsp;Ressourcendatei <code>helloworld.qrc</code> liegt im Hauptordner des Projekts. Das Ziel ist es jetzt also, möglichst unkompliziert die <span class="caps">UI</span>-Dateien&nbsp;aus <code>ui</code> sowie die Ressourcendatei in Python-Code umzuwandeln und in den enstsprechenden Dateien im&nbsp;Ordner <code>src/helloworld/ui</code> abzulegen.</p>
 <h1>Das&nbsp;Skript</h1>
 <p>Um diesen Schritt möglichst einfach und möglichst plattformunabhängig durchführen zu können, habe ich folgendes kleines Python-Skript geschrieben, dass diese Arbeit&nbsp;durchführt:</p>
 <pre class="brush:python;">
@@ -144,7 +144,7 @@ for file in rc_files:
     call([rcc_path, file_path, "-o", out_file_path])
 </pre>
 
-<p>Das Skript überprüft zunächst die Plattform und setzt entsprechend den Pfad zur den <code>rcc</code>- und <code>uic</code>-Tools von PyQt oder PySide (für PySide müssen die Kommentare entfernt werden). Falls die Tools in einem anderen Verzeichnis liegen (z.B. unter <code>/usr/local/bin</code> statt <code>/usr/bin</code>) dann müsst ihr nur die Variable <code>bindir</code> entsprechend anpassen. In den beiden Variablen <code>ui_files</code> und <code>rc_files</code> listet ihr dann alle eure <span class="caps">UI</span>- und Ressourcendateien auf, und gebt als Wert jeweils den gewünschten Ausgabedateinamen an. Bei mir landen alle Dateien ausschlueßlich in <code>src/helloworld/ui</code>, aber das könnt ihr selbstverständlich an eure Bedingungen anpassen. Jedes Mal, wenn ihr die Dateien dann in eurem Projekt ändert oder Dateien hinzufügt, dann ruft ihr einfach das Skript&nbsp;auf:</p>
+<p>Das Skript überprüft zunächst die Plattform und setzt entsprechend den Pfad zur&nbsp;den <code>rcc</code>-&nbsp;und <code>uic</code>-Tools von PyQt oder PySide (für PySide müssen die Kommentare entfernt werden). Falls die Tools in einem anderen Verzeichnis liegen (z.B.&nbsp;unter <code>/usr/local/bin</code> statt <code>/usr/bin</code>) dann müsst ihr nur die&nbsp;Variable <code>bindir</code> entsprechend anpassen. In den beiden&nbsp;Variablen <code>ui_files</code> und <code>rc_files</code> listet ihr dann alle eure <span class="caps">UI</span>- und Ressourcendateien auf, und gebt als Wert jeweils den gewünschten Ausgabedateinamen an. Bei mir landen alle Dateien ausschlueßlich&nbsp;in <code>src/helloworld/ui</code>, aber das könnt ihr selbstverständlich an eure Bedingungen anpassen. Jedes Mal, wenn ihr die Dateien dann in eurem Projekt ändert oder Dateien hinzufügt, dann ruft ihr einfach das Skript&nbsp;auf:</p>
 <pre class="brush:bash;">
 python generate_ui.py
 </pre>
