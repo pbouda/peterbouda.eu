@@ -1,0 +1,12 @@
+[project]
+name = "peterbouda-eu"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ghp-import>=2.1.0",
+    "markdown>=3.7",
+    "pelican>=4.11.0",
+    "typogrify>=2.1.0",
+]
