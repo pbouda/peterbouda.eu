@@ -50,3 +50,5 @@ implementation to available low-code solutions on the market. Evaluation and
 testing is a large part to build a production-ready solution, so we will study
 existing approaches and apply state-of-the-art evaluation metrics on our
 implementation to allow you to improve the answer quality iteratively.
+
+[< See all workshops](/#workshops)

@@ -30,3 +30,5 @@ In this course, you’ll explore how AI tools for software developers, for examp
 We will have a look how Copilot can help you to write unit tests for existing code and support you in the full code review process, including writing good commit and pull request messages. We will also explore how AI tools can help with code review itself so that humans can focus on the review of architectural decisions and the more detailed code analysis.
 
 Besides software development tools there is a now a growing offer of AI-based tools that help with planning and testing software. We will try the most promising tools in an existing software projects in order to learn how you can improve the productivity in the whole life cycle of a software product.
+
+[< See all workshops](/#workshops)
