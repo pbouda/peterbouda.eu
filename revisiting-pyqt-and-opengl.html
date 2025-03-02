@@ -98,14 +98,27 @@
             <img src="/images/pyqt_opengl.png" />
           </div>
  <footer class="post-info">
-    <p>
-        Published by <a href="http://www.peterbouda.eu" class="p-author">Peter Bouda</a> at <b><time class="dt-published" datetime="2014-07-23 10:00:00+01:00">Wed 23 July 2014</time></b>
-        in <b><a class="p-category" href="/category/graphics.html">Graphics</a></b>.
-    </p>
-    
+  <p>
+    Published by
+    <a href="http://www.peterbouda.eu" class="p-author">Peter Bouda</a> at
+    <b
+      ><time class="dt-published" datetime="2014-07-23 10:00:00+01:00"
+        >Wed 23 July 2014</time
+      ></b
+    >
+    in
+    <b
+      ><a class="p-category" href="/category/graphics.html"
+        >Graphics</a
+      ></b
+    >.
+  </p>
 
-        
-</footer><!-- /.post-info --> <p>It&#8217;s been I while since I used OpenGL with PyQt, for example in my <a class="reference external" href="https://www.peterbouda.eu/live-coding-glsl-shaders-with-ipython.html">live coding experiments with <span class="caps">GLSL</span> shaders</a>. Those were still done with PyQt4 and the good old <tt class="docutils literal">QGLWidget</tt>. In Qt5 the preferred way to render in OpenGL canvases is to use the new <tt class="docutils literal">QOpenGL*</tt> classes. Those have the advantage that they provide a full collection of OpenGL drawing functions, so it is not necessary to import any external OpenGL library (like PyOpenGL) anymore. The disadvantage is that there is currently no convenient way to create and initialize such a window with a nice render function, as was provided by the <tt class="docutils literal">QGLWidget</tt>.</p>
+  
+  </p>
+</footer>
+
+<!-- /.post-info --> <p>It&#8217;s been I while since I used OpenGL with PyQt, for example in my <a class="reference external" href="https://www.peterbouda.eu/live-coding-glsl-shaders-with-ipython.html">live coding experiments with <span class="caps">GLSL</span> shaders</a>. Those were still done with PyQt4 and the good old <tt class="docutils literal">QGLWidget</tt>. In Qt5 the preferred way to render in OpenGL canvases is to use the new <tt class="docutils literal">QOpenGL*</tt> classes. Those have the advantage that they provide a full collection of OpenGL drawing functions, so it is not necessary to import any external OpenGL library (like PyOpenGL) anymore. The disadvantage is that there is currently no convenient way to create and initialize such a window with a nice render function, as was provided by the <tt class="docutils literal">QGLWidget</tt>.</p>
 <p>I finally collected some code from the PyQt5 OpenGL examples and with some modification I was able to run it (<a class="reference external" href="https://github.com/baoboa/pyqt5/blob/master/examples/opengl/openglwindow.py">from the snapshot of PyQt5 on Github</a>). Their class <tt class="docutils literal">OpenGLWindow</tt> provides what you need for the first steps, you can just subclass it and add your code to your own <tt class="docutils literal">render()</tt> function. I added some more interesting shaders from <a class="reference external" href="http://www.iquilezles.org/www/material/nvscene2008/rwwtt.pdf">here</a>, et voilà le&nbsp;chocolat:</p>
 <p><a class="reference external" href="https://github.com/pbouda/stuff/blob/master/opengl/pyqt/chocolux.py">https://github.com/pbouda/stuff/blob/master/opengl/pyqt/chocolux.py</a></p>
 <p>Time to connect this with some live&nbsp;coding&#8230;</p>

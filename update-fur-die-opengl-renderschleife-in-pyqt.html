@@ -98,14 +98,27 @@
             <img src="/images/pyqt_opengl_raymarching.png" />
           </div>
  <footer class="post-info">
-    <p>
-        Published by <a href="http://www.peterbouda.eu" class="p-author">Peter Bouda</a> at <b><time class="dt-published" datetime="2015-01-30 11:00:00+00:00">Fri 30 January 2015</time></b>
-        in <b><a class="p-category" href="/category/graphics.html">Graphics</a></b>.
-    </p>
-    
+  <p>
+    Published by
+    <a href="http://www.peterbouda.eu" class="p-author">Peter Bouda</a> at
+    <b
+      ><time class="dt-published" datetime="2015-01-30 11:00:00+00:00"
+        >Fri 30 January 2015</time
+      ></b
+    >
+    in
+    <b
+      ><a class="p-category" href="/category/graphics.html"
+        >Graphics</a
+      ></b
+    >.
+  </p>
 
-        
-</footer><!-- /.post-info --> <p>Ich versuche gerade mich in das Thema Raytraching bzw. Raymarching einzuarbeiten. Dabei bin wieder auf mein Qt-OpenGL-Programmgerüst zurückgekommen, dass ich in <a class="reference external" href="https://www.peterbouda.eu/revisiting-pyqt-and-opengl.html">einem meiner letzten Artikel</a> beschrieben habe. Leider hat das Skript nicht auf Anhieb auf einem neuen Rechner funktioniert, was ich auf unterschiedliche Implementierungen der OpenGL-Bibliothek in Qt oder gar den Grafiktreiber zurückführe. Bestimme von mir verwendete Befehle erzeugten Fehlermeldungen, u.a. konnte ich das OpenGL-Viereck für das Fraktal nicht per <tt class="docutils literal">QL_QUADS</tt> zeichnen. Ich habe also das Programmgerüst etwas angepasst und auf reine OpenGL <span class="caps">ES</span> 2.0 Befehle reduziert. Statt einem Viereck zeichne ich jetzt zwei Dreiecke, die ich per <em>Vertex Array</em> übergebe. Ich benutze dafür die Methode <tt class="docutils literal">glDrawElements()</tt>, der ich die Indizes auf die einzelnen Dreickspunkte im <em>Vertex Array</em> übergebe. Die <tt class="docutils literal">render</tt>-Schleife sieht jetzt in etwa folgendermaßen&nbsp;aus:</p>
+  
+  </p>
+</footer>
+
+<!-- /.post-info --> <p>Ich versuche gerade mich in das Thema Raytraching bzw. Raymarching einzuarbeiten. Dabei bin wieder auf mein Qt-OpenGL-Programmgerüst zurückgekommen, dass ich in <a class="reference external" href="https://www.peterbouda.eu/revisiting-pyqt-and-opengl.html">einem meiner letzten Artikel</a> beschrieben habe. Leider hat das Skript nicht auf Anhieb auf einem neuen Rechner funktioniert, was ich auf unterschiedliche Implementierungen der OpenGL-Bibliothek in Qt oder gar den Grafiktreiber zurückführe. Bestimme von mir verwendete Befehle erzeugten Fehlermeldungen, u.a. konnte ich das OpenGL-Viereck für das Fraktal nicht per <tt class="docutils literal">QL_QUADS</tt> zeichnen. Ich habe also das Programmgerüst etwas angepasst und auf reine OpenGL <span class="caps">ES</span> 2.0 Befehle reduziert. Statt einem Viereck zeichne ich jetzt zwei Dreiecke, die ich per <em>Vertex Array</em> übergebe. Ich benutze dafür die Methode <tt class="docutils literal">glDrawElements()</tt>, der ich die Indizes auf die einzelnen Dreickspunkte im <em>Vertex Array</em> übergebe. Die <tt class="docutils literal">render</tt>-Schleife sieht jetzt in etwa folgendermaßen&nbsp;aus:</p>
 <div class="highlight"><pre><span></span><span class="n">gl</span><span class="o">.</span><span class="n">glViewport</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">())</span>
 <span class="n">gl</span><span class="o">.</span><span class="n">glClear</span><span class="p">(</span><span class="n">gl</span><span class="o">.</span><span class="n">GL_COLOR_BUFFER_BIT</span><span class="p">)</span>
 
