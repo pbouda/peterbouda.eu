@@ -1,7 +1,7 @@
 Title: BrickBand - Make Music With Bricks
 Date: 2020-04-08 13:22
 Tags: AR, HCI
-Iframe: https://www.youtube.com/embed/o2mnpAgWg8U
+Iframe: https://clip.place/videos/embed/497dc10b-8c79-4a73-8fb2-e26ba53bf22f
 Iframewidth: 560
 Iframeheight: 315
 
