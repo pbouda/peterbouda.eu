@@ -2,7 +2,7 @@ Video: Live Coding GLSL shaders with Python
 ###########################################
 :date: 2013-05-23 17:43
 :tags: Python, Live Coding, GLSL, Graphics
-:iframe: https://www.youtube.com/embed/kmXRukIcyso
+:iframe: https://clip.place/videos/embed/0ec78110-beb5-41f3-b740-464f1a740986
 :iframeheight: 315
 :iframewidth: 560
 

@@ -2,7 +2,7 @@ The Spelling Loom: a word game for Minderico
 ############################################
 :date: 2014-05-12 11:22
 :tags: HCI
-:iframe: https://www.youtube.com/embed/sqjw08STDoQ
+:iframe: https://clip.place/videos/embed/12f0822e-0e4a-48fd-a56d-5f9fc99e275d
 :iframeheight: 315
 :iframewidth: 560
 
