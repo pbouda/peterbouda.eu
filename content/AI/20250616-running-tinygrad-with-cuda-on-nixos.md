@@ -6,7 +6,7 @@ I started to play around with NixOS a few weeks ago and until now I am quite hap
 PC with a Geforce GT 1030 and wanted to see if I get tinygrad running with the CUDA back-end on it. I learned about
 nix-shell and, after a while, was able to set up such a shell that supports tinygrad on CUDA. I was not able to find
 examples that worked directly for my use case, so I will post that here, for future reference. The main customizations
-for me where:
+for me were:
 
 - Adding clang as the shell compiler
 - LD_LIBRARY_PATH needs `${pkgs.cudatoolkit}/lib` for `libnvrtc.so`
