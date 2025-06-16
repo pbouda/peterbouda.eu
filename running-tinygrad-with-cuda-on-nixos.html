@@ -119,7 +119,7 @@
 <span class="caps">PC</span> with a Geforce <span class="caps">GT</span> 1030 and wanted to see if I get tinygrad running with the <span class="caps">CUDA</span> back-end on it. I learned about
 nix-shell and, after a while, was able to set up such a shell that supports tinygrad on <span class="caps">CUDA</span>. I was not able to find
 examples that worked directly for my use case, so I will post that here, for future reference. The main customizations
-for me&nbsp;where:</p>
+for me&nbsp;were:</p>
 <ul>
 <li>Adding clang as the shell&nbsp;compiler</li>
 <li>LD_LIBRARY_PATH&nbsp;needs <code>${pkgs.cudatoolkit}/lib</code> for <code>libnvrtc.so</code></li>
