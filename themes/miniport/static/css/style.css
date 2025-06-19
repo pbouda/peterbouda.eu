@@ -33,6 +33,10 @@ select {
   font-weight: 300;
 }
 
+code {
+  font-family: "Courier New", Courier, monospace;
+}
+
 body.is-loading * {
   -moz-transition: none !important;
   -webkit-transition: none !important;
