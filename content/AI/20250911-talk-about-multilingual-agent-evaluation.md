@@ -8,4 +8,4 @@ consumer GPUs to find out which work best for agentic use cases. I hope to see y
 
 We just released the repository so you can find all code, results and visualizations here:
 
-https://github.com/Nodehaus/evaluation/tree/main/multilingual_agent
+[https://github.com/Nodehaus/evaluation/tree/main/multilingual_agent](https://github.com/Nodehaus/evaluation/tree/main/multilingual_agent)
