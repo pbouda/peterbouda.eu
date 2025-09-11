@@ -1,5 +1,5 @@
 Title: Talk about multilingual agent evaluation
-Date: 2025-08-11 09:20
+Date: 2025-09-11 09:20
 Tags: AI
 
 This Thursday, today, I am happy to give a talk about multilingual agents and their performance on European languages
