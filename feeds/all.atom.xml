@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Peter Bouda</title><link href="https://www.peterbouda.eu/" rel="alternate"></link><link href="https://www.peterbouda.eu/feeds/all.atom.xml" rel="self"></link><id>https://www.peterbouda.eu/</id><updated>2025-09-30T10:36:00+01:00</updated><subtitle>Natural Language Processing Consultant</subtitle><entry><title>🔬 Fascinating research from NVIDIA: Small Language Models are the Future of Agentic AI</title><link href="https://www.peterbouda.eu/fascinating-research-from-nvidia-small-language-models-are-the-future-of-agentic-ai.html" rel="alternate"></link><published>2025-09-30T10:36:00+01:00</published><updated>2025-09-30T10:36:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2025-09-30:/fascinating-research-from-nvidia-small-language-models-are-the-future-of-agentic-ai.html</id><summary type="html">&lt;p&gt;While everyone&amp;#8217;s focused on making models bigger, this paper makes a compelling case for going smaller—especially for agentic &lt;span class="caps"&gt;AI&lt;/span&gt;&amp;nbsp;systems.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Peter Bouda</title><link href="https://www.peterbouda.eu/" rel="alternate"></link><link href="https://www.peterbouda.eu/feeds/all.atom.xml" rel="self"></link><id>https://www.peterbouda.eu/</id><updated>2025-10-09T09:28:00+01:00</updated><subtitle>Natural Language Processing Consultant</subtitle><entry><title>Using Claude Code for clean architecture</title><link href="https://www.peterbouda.eu/using-claude-code-for-clean-architecture.html" rel="alternate"></link><published>2025-10-09T09:28:00+01:00</published><updated>2025-10-09T09:28:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2025-10-09:/using-claude-code-for-clean-architecture.html</id><summary type="html">&lt;p&gt;I&amp;#8217;ve been using Claude Code to build a Go &lt;span class="caps"&gt;API&lt;/span&gt; with hexagonal architecture, and I&amp;#8217;m genuinely impressed. The workflow is smooth: I maintain a &lt;span class="caps"&gt;CLAUDE&lt;/span&gt;.md file with my architecture decisions, add documentation about database models, and then just prompt Claude to implement new&amp;nbsp;endpoints.&lt;/p&gt;
+&lt;p&gt;Example prompt: &lt;em&gt;&amp;#8220;Add …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;I&amp;#8217;ve been using Claude Code to build a Go &lt;span class="caps"&gt;API&lt;/span&gt; with hexagonal architecture, and I&amp;#8217;m genuinely impressed. The workflow is smooth: I maintain a &lt;span class="caps"&gt;CLAUDE&lt;/span&gt;.md file with my architecture decisions, add documentation about database models, and then just prompt Claude to implement new&amp;nbsp;endpoints.&lt;/p&gt;
+&lt;p&gt;Example prompt: &lt;em&gt;&amp;#8220;Add an endpoint to create a new project. You can find information about the database models in plans/database_models.md. For now we only want one more &lt;span class="caps"&gt;POST&lt;/span&gt; endpoint /api/projects that reveives a {&amp;#8220;name&amp;#8221;: &amp;#8220;Project name&amp;#8221;} &lt;span class="caps"&gt;JSON&lt;/span&gt;. The owner will be the currently logged in user. The training dataset and finetune are empty. The status is &lt;span class="caps"&gt;ACTIVE&lt;/span&gt;&amp;#8221;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Claude Code respects the architecture patterns, follows the established conventions, and produces clean, testable code. Less context-switching between &lt;span class="caps"&gt;IDE&lt;/span&gt; and chat&amp;nbsp;interface.&lt;/p&gt;
+&lt;p&gt;The full &lt;span class="caps"&gt;CLAUDE&lt;/span&gt;.md template is here if you want to try this approach: &lt;a href="github.com/pbouda/claude-code-prompts/blob/main/CLAUDE_go_api_architecture.md"&gt;github.com/pbouda/claude-code-prompts/blob/main/CLAUDE_go_api_architecture.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is what good developer tooling looks like - it understands your codebase and amplifies your architecture decisions rather than fighting them. For me it brought back a lot of joy in developing new&amp;nbsp;software!&lt;/p&gt;</content><category term="Engineering"></category><category term="Engineering"></category></entry><entry><title>🔬 Fascinating research from NVIDIA: Small Language Models are the Future of Agentic AI</title><link href="https://www.peterbouda.eu/fascinating-research-from-nvidia-small-language-models-are-the-future-of-agentic-ai.html" rel="alternate"></link><published>2025-09-30T10:36:00+01:00</published><updated>2025-09-30T10:36:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2025-09-30:/fascinating-research-from-nvidia-small-language-models-are-the-future-of-agentic-ai.html</id><summary type="html">&lt;p&gt;While everyone&amp;#8217;s focused on making models bigger, this paper makes a compelling case for going smaller—especially for agentic &lt;span class="caps"&gt;AI&lt;/span&gt;&amp;nbsp;systems.&lt;/p&gt;
 &lt;p&gt;The core insight: Most &lt;span class="caps"&gt;AI&lt;/span&gt; agents don&amp;#8217;t need vast general knowledge. They perform specialized, repetitive tasks where fine-tuned small language models (SLMs) are not just sufficient—they …&lt;/p&gt;</summary><content type="html">&lt;p&gt;While everyone&amp;#8217;s focused on making models bigger, this paper makes a compelling case for going smaller—especially for agentic &lt;span class="caps"&gt;AI&lt;/span&gt;&amp;nbsp;systems.&lt;/p&gt;
 &lt;p&gt;The core insight: Most &lt;span class="caps"&gt;AI&lt;/span&gt; agents don&amp;#8217;t need vast general knowledge. They perform specialized, repetitive tasks where fine-tuned small language models (SLMs) are not just sufficient—they&amp;#8217;re&amp;nbsp;superior.&lt;/p&gt;
 &lt;p&gt;Why this matters for&amp;nbsp;Europe:&lt;/p&gt;
@@ -2850,58 +2855,4 @@ als Release Candidate&lt;/a&gt; verfügbar ist. Soweit ich das überblicke, ist,
 außer Bugfixes und Verbesserungen der Oberfläche, die Hauptneuigkeit,
 dass man mit dem Qt Creator 2.0 auf dem Nokia N8 debuggen kann. Bzw.
 debuggen können wird, sobald das Gerät verfügbar&amp;nbsp;ist.&lt;/p&gt;
-</content><category term="Museum"></category></entry><entry><title>Vorteil Kommandozeile</title><link href="https://www.peterbouda.eu/vorteil-kommandozeile.html" rel="alternate"></link><published>2010-06-04T10:19:00+01:00</published><updated>2010-06-04T10:19:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-06-04:/vorteil-kommandozeile.html</id><summary type="html">&lt;p&gt;Das N900 wird ja allgemein (noch?) nicht so sehr als &lt;strong&gt;der&lt;/strong&gt; iPhone-
-oder Android-Konkurrent wahrgenommen. Als halbwegs interessierter
-Linux-Anwender oder gar -Entwickler ist aber schnell festzustellen, wo
-ein offenes Betriebssystem einen Vorteil hat: es gibt die Kommandozeile,
-also eine Shell :-). Zwei schöne Beispiel wurden dazu in den letzten
-Wochen veröffentlicht …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Das N900 wird ja allgemein (noch?) nicht so sehr als &lt;strong&gt;der&lt;/strong&gt; iPhone-
-oder Android-Konkurrent wahrgenommen. Als halbwegs interessierter
-Linux-Anwender oder gar -Entwickler ist aber schnell festzustellen, wo
-ein offenes Betriebssystem einen Vorteil hat: es gibt die Kommandozeile,
-also eine Shell :-). Zwei schöne Beispiel wurden dazu in den letzten
-Wochen veröffentlicht, also zeigt die folgenden Sachen mal euren Kumpels
-mit den Apfel-Handys. Sie werden zwar nicht kapieren worum es geht, aber
-Hauptsache ihr selbst wisst den Vorteil auf eurer&amp;nbsp;Seite.&lt;/p&gt;
-&lt;p&gt;Beim ersten Beispiel handelt es sich &lt;a class="reference external" href="http://blog.adl.pl/saving-n900-battery-power-with-simple-shell-script/495"&gt;um eine kleines Shell-Skript zum
-Energiesparen&lt;/a&gt;. Dazu schaltet es einfach die Internetverbindung aus,
-setzt das Netz auf 2G und schaltet den automatischen E-Mail-Abruf aus.
-Genauso schnell lässts sich alles auch wieder aktiveren, drei bzw. vier
-Zeilen Code reichen aus. Und weil es so elegant ist, hier das ganze&amp;nbsp;Skript:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-#!/bin/sh
-
-# Simple shell script created in order to preserve battery power in your N900
-
-# Actions taken:
-# 1. Sets internet connection mode 'Always ask' /(available under Settings -&amp;gt; Internet connections -&amp;gt; Connect automatically).
-# 2. Disconnects current internet connection.
-# 3. Switches cellular radio into 2G-only mode.
-# 4. Disables automatic email send&amp;amp;receive in Modest email client.
-
-# Created by Dawid Lorenz aka evad, http://adl.pl
-
-if [ &amp;quot;$1&amp;quot; == &amp;quot;off&amp;quot; ]
- then
-  echo &amp;quot;Restoring power suckers...&amp;quot;
-  gconftool-2 --set --type list --list-type string /system/osso/connectivity/network_type/auto_connect [*]
-  gconftool-2 --set --type bool /apps/modest/auto_update true
-  run-standalone.sh dbus-send --system --type=method_call --dest=com.nokia.phone.net /com/nokia/phone/net Phone.Net.set_selected_radio_access_technology byte:0
- else
-  echo &amp;quot;Going into power saving mode...&amp;quot;
-  gconftool-2 --set --type list --list-type string /system/osso/connectivity/network_type/auto_connect []
-  gconftool-2 --set --type bool /apps/modest/auto_update false
-  run-standalone.sh dbus-send --system --dest=com.nokia.icd /com/nokia/icd_ui com.nokia.icd_ui.disconnect boolean:true
-  run-standalone.sh dbus-send --system --type=method_call --dest=com.nokia.phone.net /com/nokia/phone/net Phone.Net.set_selected_radio_access_technology byte:1
-fi
-&lt;/pre&gt;
-&lt;p&gt;Einfach als &amp;#8220;power-saver.sh&amp;#8221; auf dem N900 ablegen, und dann per
-&amp;#8220;power-saver.sh&amp;#8221; den Energiesparmodus aktivieren bzw. per
-&amp;#8220;power-saver.sh off&amp;#8221; wieder&amp;nbsp;deaktivieren.&lt;/p&gt;
-&lt;p&gt;Das zweite Beispiel ist wohl etwas allgemeinverständlicher: &lt;a class="reference external" href="http://thpmaemo.blogspot.com/2010/06/streaming-video-to-big-screen.html"&gt;Videos per
-&lt;span class="caps"&gt;HTTP&lt;/span&gt; oder &lt;span class="caps"&gt;SSH&lt;/span&gt; vom N900 auf den Desktop streamen&lt;/a&gt;. Benutzt werden nur
-auf dem Gerät vorinstallierte Programme. Dekodiert wird dabei alles auf
-dem Desktop, so dass bei ausreichend potenter Netzverbindung sogar
-&lt;span class="caps"&gt;HD&lt;/span&gt;-Videos gestreamt werden können. Da lacht das Linux-Anwender-Herz und
-der Apfelfan schaut in die Röhre, wenigstens&amp;nbsp;kurzzeitig.&lt;/p&gt;
 </content><category term="Museum"></category></entry></feed>
