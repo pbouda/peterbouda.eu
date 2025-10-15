@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Peter Bouda</title><link href="https://www.peterbouda.eu/" rel="alternate"></link><link href="https://www.peterbouda.eu/feeds/all.atom.xml" rel="self"></link><id>https://www.peterbouda.eu/</id><updated>2025-10-09T09:28:00+01:00</updated><subtitle>Natural Language Processing Consultant</subtitle><entry><title>Using Claude Code for clean architecture</title><link href="https://www.peterbouda.eu/using-claude-code-for-clean-architecture.html" rel="alternate"></link><published>2025-10-09T09:28:00+01:00</published><updated>2025-10-09T09:28:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2025-10-09:/using-claude-code-for-clean-architecture.html</id><summary type="html">&lt;p&gt;I&amp;#8217;ve been using Claude Code to build a Go &lt;span class="caps"&gt;API&lt;/span&gt; with hexagonal architecture, and I&amp;#8217;m genuinely impressed. The workflow is smooth: I maintain a &lt;span class="caps"&gt;CLAUDE&lt;/span&gt;.md file with my architecture decisions, add documentation about database models, and then just prompt Claude to implement new&amp;nbsp;endpoints.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Peter Bouda</title><link href="https://www.peterbouda.eu/" rel="alternate"></link><link href="https://www.peterbouda.eu/feeds/all.atom.xml" rel="self"></link><id>https://www.peterbouda.eu/</id><updated>2025-10-15T16:47:00+01:00</updated><subtitle>Natural Language Processing Consultant</subtitle><entry><title>Running AI at home</title><link href="https://www.peterbouda.eu/running-ai-at-home.html" rel="alternate"></link><published>2025-10-15T16:47:00+01:00</published><updated>2025-10-15T16:47:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2025-10-15:/running-ai-at-home.html</id><summary type="html">&lt;p&gt;The first reviews of &lt;span class="caps"&gt;NVIDIA&lt;/span&gt; &lt;span class="caps"&gt;DGX&lt;/span&gt; Spark review are being published, so I want to
+write about the current state of self-hosting&amp;nbsp;LLMs.&lt;/p&gt;
+&lt;p&gt;First, I think it&amp;#8217;s quite amazing that you can run state-of-the-art models on
+your own machines. This sets &lt;span class="caps"&gt;AI&lt;/span&gt; apart from technologies like search engines and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The first reviews of &lt;span class="caps"&gt;NVIDIA&lt;/span&gt; &lt;span class="caps"&gt;DGX&lt;/span&gt; Spark review are being published, so I want to
+write about the current state of self-hosting&amp;nbsp;LLMs.&lt;/p&gt;
+&lt;p&gt;First, I think it&amp;#8217;s quite amazing that you can run state-of-the-art models on
+your own machines. This sets &lt;span class="caps"&gt;AI&lt;/span&gt; apart from technologies like search engines and
+cloud service providing that are hard to replicate &amp;#8220;at home&amp;#8221;. It brings back
+experiences from personal computing after the mainframe era:
+&lt;a href="https://www.computinghistory.org.uk/pages/3971/There-is-no-reason-anyone-would-want-a-computer-in-their-home"&gt;&amp;#8220;There is no reason for any individual to have a computer in their home&amp;#8221;&lt;/a&gt;&amp;nbsp;:)&lt;/p&gt;
+&lt;p&gt;Models that you can run at home nowadays show performance similar to models that
+the big &lt;span class="caps"&gt;AI&lt;/span&gt; companies published 9-12 months ago, so &lt;span class="caps"&gt;GPT&lt;/span&gt;-4 performance is not
+compeletely out of&amp;nbsp;reach.&lt;/p&gt;
+&lt;p&gt;The main problem that home &lt;span class="caps"&gt;AI&lt;/span&gt; enthusiasts currently face is limited, fast
+memory. The LLMs that reach &lt;span class="caps"&gt;GPT&lt;/span&gt;-4 performance require probably more than &lt;span class="caps"&gt;128GB&lt;/span&gt;
+of memory, which might be out-of-scope with limited financial budgets. If you
+want to run &lt;span class="caps"&gt;AI&lt;/span&gt; with reasonable resources you basically have two&amp;nbsp;options:&lt;/p&gt;
+&lt;p&gt;First, you buy a consumer &lt;span class="caps"&gt;GPU&lt;/span&gt; where currently the maximum memory would be &lt;span class="caps"&gt;24GB&lt;/span&gt;.
+But that memory is super-fast, which is what you&amp;nbsp;want.&lt;/p&gt;
+&lt;p&gt;Second, you use the option with unified memory that is shared between &lt;span class="caps"&gt;CPU&lt;/span&gt; and
+&lt;span class="caps"&gt;GPU&lt;/span&gt;, where you can choose among Apple&amp;#8217;s platforms, &lt;span class="caps"&gt;AMD&lt;/span&gt; Ryzen &lt;span class="caps"&gt;AI&lt;/span&gt; Max or now the
+&lt;span class="caps"&gt;NVIDIA&lt;/span&gt; &lt;span class="caps"&gt;DGX&lt;/span&gt; Spark. Unfortunately unified memory is slower then pure &lt;span class="caps"&gt;GPU&lt;/span&gt; memory,
+the fastest you get with Apple&amp;#8217;s M* Max series. But up to &lt;span class="caps"&gt;64GB&lt;/span&gt; memory or even
+&lt;span class="caps"&gt;128GB&lt;/span&gt; are possible&amp;nbsp;then!&lt;/p&gt;
+&lt;p&gt;When you know your memory size you can begin to choose the models. Normally
+models come in a size labelled in billions, like &amp;#8220;30b&amp;#8221;, which means they have
+so-and-so many paramers, e.g. 30 billion parameters. Each parameter in standard
+models has 2 bytes, so a &amp;#8220;30b&amp;#8221; model is roughly 60 gigabytes. With unified
+memory you need some memory to run applications besides the models, so a
+standard 30b model will barely fit into &lt;span class="caps"&gt;64GB&lt;/span&gt; unified memory, and definitely not
+on any consumer &lt;span class="caps"&gt;GPU&lt;/span&gt;. People started to &amp;#8220;quantize&amp;#8221; models, so that each parameter
+has only 1 byte or even half a byte, and voilà, 30b models fit into &lt;span class="caps"&gt;24GB&lt;/span&gt; &lt;span class="caps"&gt;GPU&lt;/span&gt;
+memory (maybe try &lt;a href="https://ollama.com/library/qwen3:30b-a3b-instruct-2507-q4_K_M"&gt;Qwen3 30b&lt;/a&gt;,
+my standard model now for local inference) and a 106b model into your &lt;span class="caps"&gt;64GB&lt;/span&gt;
+Macbook Pro (possibly
+&lt;a href="https://simonwillison.net/2025/Jul/29/space-invaders/"&gt;&lt;span class="caps"&gt;GLM&lt;/span&gt;-4.5 Air&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;To run models you can start with &lt;a href="https://ollama.com/"&gt;Ollama&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Hope that helps to start your first local chat :) and let me know about any
+doubts or questions about running your local &lt;span class="caps"&gt;AI&lt;/span&gt;!&lt;/p&gt;</content><category term="AI"></category><category term="AI"></category></entry><entry><title>Using Claude Code for clean architecture</title><link href="https://www.peterbouda.eu/using-claude-code-for-clean-architecture.html" rel="alternate"></link><published>2025-10-09T09:28:00+01:00</published><updated>2025-10-09T09:28:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2025-10-09:/using-claude-code-for-clean-architecture.html</id><summary type="html">&lt;p&gt;I&amp;#8217;ve been using Claude Code to build a Go &lt;span class="caps"&gt;API&lt;/span&gt; with hexagonal architecture, and I&amp;#8217;m genuinely impressed. The workflow is smooth: I maintain a &lt;span class="caps"&gt;CLAUDE&lt;/span&gt;.md file with my architecture decisions, add documentation about database models, and then just prompt Claude to implement new&amp;nbsp;endpoints.&lt;/p&gt;
 &lt;p&gt;Example prompt: &lt;em&gt;&amp;#8220;Add …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;I&amp;#8217;ve been using Claude Code to build a Go &lt;span class="caps"&gt;API&lt;/span&gt; with hexagonal architecture, and I&amp;#8217;m genuinely impressed. The workflow is smooth: I maintain a &lt;span class="caps"&gt;CLAUDE&lt;/span&gt;.md file with my architecture decisions, add documentation about database models, and then just prompt Claude to implement new&amp;nbsp;endpoints.&lt;/p&gt;
 &lt;p&gt;Example prompt: &lt;em&gt;&amp;#8220;Add an endpoint to create a new project. You can find information about the database models in plans/database_models.md. For now we only want one more &lt;span class="caps"&gt;POST&lt;/span&gt; endpoint /api/projects that reveives a {&amp;#8220;name&amp;#8221;: &amp;#8220;Project name&amp;#8221;} &lt;span class="caps"&gt;JSON&lt;/span&gt;. The owner will be the currently logged in user. The training dataset and finetune are empty. The status is &lt;span class="caps"&gt;ACTIVE&lt;/span&gt;&amp;#8221;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Claude Code respects the architecture patterns, follows the established conventions, and produces clean, testable code. Less context-switching between &lt;span class="caps"&gt;IDE&lt;/span&gt; and chat&amp;nbsp;interface.&lt;/p&gt;
@@ -2840,19 +2878,4 @@ sein&amp;nbsp;könnt:&lt;/p&gt;
 &lt;p&gt;Mittlerweile würde ich es sogar unterschreiben, dass MicroB der
 beste mobile Browser ist. Nicht der Schnellste, aber dank Flash und
 WebGL definitiv der technisch&amp;nbsp;Fortgeschrittenste.&lt;/p&gt;
-</content><category term="Museum"></category></entry><entry><title>Qt SDK 1.0 Release Candidate ist draußen</title><link href="https://www.peterbouda.eu/qt-sdk-10-release-candidate-ist-draussen.html" rel="alternate"></link><published>2010-06-11T10:04:00+01:00</published><updated>2010-06-11T10:04:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-06-11:/qt-sdk-10-release-candidate-ist-draussen.html</id><summary type="html">&lt;p&gt;Vorgestern wurde nun der erste und letzte (?) &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/06/09/nokia-qt-sdk-10rc-released/"&gt;Release Candidate des Qt
-&lt;span class="caps"&gt;SDK&lt;/span&gt; 1.0 veröffentlicht&lt;/a&gt;, ein großer Schritt hin zum fertigen
-Entwicklungskit. Das &lt;span class="caps"&gt;SDK&lt;/span&gt; wird die Qt-Version 4.6.3 enthalten, und damit
-kein Qt Quick und den ganzen dekarativen Kram, der erst mit Qt 4.7
-kommen soll. Dazu …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Vorgestern wurde nun der erste und letzte (?) &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/06/09/nokia-qt-sdk-10rc-released/"&gt;Release Candidate des Qt
-&lt;span class="caps"&gt;SDK&lt;/span&gt; 1.0 veröffentlicht&lt;/a&gt;, ein großer Schritt hin zum fertigen
-Entwicklungskit. Das &lt;span class="caps"&gt;SDK&lt;/span&gt; wird die Qt-Version 4.6.3 enthalten, und damit
-kein Qt Quick und den ganzen dekarativen Kram, der erst mit Qt 4.7
-kommen soll. Dazu gab es, auch vorgestern, ein &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/06/09/updated-release-schedule-for-qt-47-qt-creator-20-and-qt-creator-21/"&gt;Update der Roadmap&lt;/a&gt; zur
-Veröffentlichung des Qt Creators 2.0 und 2.1 sowie Qt 4.7. Das &lt;span class="caps"&gt;SDK&lt;/span&gt; 1.0
-wird demnach außerdem den Qt Creator 2.0 enthalten, der &lt;a class="reference external" href="http://labs.trolltech.com/blogs/2010/06/09/qt-creator-20-its-a-release-candidate/"&gt;ab sofort auch
-als Release Candidate&lt;/a&gt; verfügbar ist. Soweit ich das überblicke, ist,
-außer Bugfixes und Verbesserungen der Oberfläche, die Hauptneuigkeit,
-dass man mit dem Qt Creator 2.0 auf dem Nokia N8 debuggen kann. Bzw.
-debuggen können wird, sobald das Gerät verfügbar&amp;nbsp;ist.&lt;/p&gt;
 </content><category term="Museum"></category></entry></feed>

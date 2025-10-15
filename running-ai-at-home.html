@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--
+    Miniport by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Peter Bouda - Onsite and online AI trainings for your team</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="AI, LLM, Natural Language Processing, Python, Trainings, Workshops, Software Development, Consultant"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/theme/js/jquery.min.js"></script>
+    <script src="/theme/js/skel.min.js"></script>
+    <script src="/theme/js/init.js"></script>
+    <link
+      href="https://www.peterbouda.eu/feeds/all.atom.xml"
+      type="application/atom+xml"
+      rel="alternate"
+      title="Peter Bouda Atom Feed"
+    />
+     <link
+      href="https://www.peterbouda.eu/feeds/all.rss"
+      type="application/rss+xml"
+      rel="alternate"
+      title="Peter Bouda RSS Feed"
+    />
+
+    <link rel="stylesheet" href="/theme/css/pygment.css" />
+
+    <noscript>
+      <link rel="stylesheet" href="/theme/css/skel.css" />
+      <link rel="stylesheet" href="/theme/css/style.css" />
+      <link rel="stylesheet" href="/theme/css/style-desktop.css" />
+    </noscript>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Peter Bouda",
+        "url": "https://www.peterbouda.eu",
+        "jobTitle": "Working on Free and Open Source AI Projects",
+        "alumniOf": "LMU Munich",
+        "gender": "male",
+        "image": "https://www.peterbouda.eu/theme/images/pic00.jpg",
+        "sameAs": ["https://github.com/pbouda"]
+      }
+    </script>
+
+    <!--[if lte IE 8
+      ]><link rel="stylesheet" href="/theme/css/ie/v8.css"
+    /><![endif]-->
+    <!--[if lte IE 9
+      ]><link rel="stylesheet" href="/theme/css/ie/v9.css"
+    /><![endif]-->
+  </head>
+  <body>
+<!-- Nav -->
+<nav id="nav">
+  <ul class="container">
+    <li><a href="/#top">Home</a></li>
+    <li><a href="/#portfolio">Portfolio</a></li>
+    <li><a href="/#feed">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+</nav> <section id="content" class="body">
+  <article class="h-entry">
+    <header>
+      <h1 class="entry-title e-title">
+        <a
+          class="p-name u-url"
+          href="https://www.peterbouda.eu/running-ai-at-home.html"
+          rel="bookmark"
+          title="Permalink to Running AI at home"
+          >Running <span class="caps">AI</span> at&nbsp;home</a
+        >
+      </h1>
+    </header>
+
+    <div class="entry-content e-content container">
+      <div class="row">
+        <div class="8u">
+ <footer class="post-info">
+  <p>
+    Published by
+    <a href="http://www.peterbouda.eu" class="p-author">Peter Bouda</a> at
+    <b
+      ><time class="dt-published" datetime="2025-10-15 16:47:00+01:00"
+        >Wed 15 October 2025</time
+      ></b
+    >
+    in
+    <b
+      ><a class="p-category" href="/category/ai.html"
+        >AI</a
+      ></b
+    >.
+  </p>
+
+  
+  </p>
+</footer>
+
+<!-- /.post-info --> <p>The first reviews of <span class="caps">NVIDIA</span> <span class="caps">DGX</span> Spark review are being published, so I want to
+write about the current state of self-hosting&nbsp;LLMs.</p>
+<p>First, I think it&#8217;s quite amazing that you can run state-of-the-art models on
+your own machines. This sets <span class="caps">AI</span> apart from technologies like search engines and
+cloud service providing that are hard to replicate &#8220;at home&#8221;. It brings back
+experiences from personal computing after the mainframe era:
+<a href="https://www.computinghistory.org.uk/pages/3971/There-is-no-reason-anyone-would-want-a-computer-in-their-home">&#8220;There is no reason for any individual to have a computer in their home&#8221;</a>&nbsp;:)</p>
+<p>Models that you can run at home nowadays show performance similar to models that
+the big <span class="caps">AI</span> companies published 9-12 months ago, so <span class="caps">GPT</span>-4 performance is not
+compeletely out of&nbsp;reach.</p>
+<p>The main problem that home <span class="caps">AI</span> enthusiasts currently face is limited, fast
+memory. The LLMs that reach <span class="caps">GPT</span>-4 performance require probably more than <span class="caps">128GB</span>
+of memory, which might be out-of-scope with limited financial budgets. If you
+want to run <span class="caps">AI</span> with reasonable resources you basically have two&nbsp;options:</p>
+<p>First, you buy a consumer <span class="caps">GPU</span> where currently the maximum memory would be <span class="caps">24GB</span>.
+But that memory is super-fast, which is what you&nbsp;want.</p>
+<p>Second, you use the option with unified memory that is shared between <span class="caps">CPU</span> and
+<span class="caps">GPU</span>, where you can choose among Apple&#8217;s platforms, <span class="caps">AMD</span> Ryzen <span class="caps">AI</span> Max or now the
+<span class="caps">NVIDIA</span> <span class="caps">DGX</span> Spark. Unfortunately unified memory is slower then pure <span class="caps">GPU</span> memory,
+the fastest you get with Apple&#8217;s M* Max series. But up to <span class="caps">64GB</span> memory or even
+<span class="caps">128GB</span> are possible&nbsp;then!</p>
+<p>When you know your memory size you can begin to choose the models. Normally
+models come in a size labelled in billions, like &#8220;30b&#8221;, which means they have
+so-and-so many paramers, e.g. 30 billion parameters. Each parameter in standard
+models has 2 bytes, so a &#8220;30b&#8221; model is roughly 60 gigabytes. With unified
+memory you need some memory to run applications besides the models, so a
+standard 30b model will barely fit into <span class="caps">64GB</span> unified memory, and definitely not
+on any consumer <span class="caps">GPU</span>. People started to &#8220;quantize&#8221; models, so that each parameter
+has only 1 byte or even half a byte, and voilà, 30b models fit into <span class="caps">24GB</span> <span class="caps">GPU</span>
+memory (maybe try <a href="https://ollama.com/library/qwen3:30b-a3b-instruct-2507-q4_K_M">Qwen3 30b</a>,
+my standard model now for local inference) and a 106b model into your <span class="caps">64GB</span>
+Macbook Pro (possibly
+<a href="https://simonwillison.net/2025/Jul/29/space-invaders/"><span class="caps">GLM</span>-4.5 Air</a>).</p>
+<p>To run models you can start with <a href="https://ollama.com/">Ollama</a>.</p>
+<p>Hope that helps to start your first local chat :) and let me know about any
+doubts or questions about running your local <span class="caps">AI</span>!</p>
+          <div id="comments">
+            <script
+              src="https://utteranc.es/client.js"
+              repo="pbouda/peterbouda.eu"
+              issue-term="pathname"
+              label="Comment"
+              theme="github-light"
+              crossorigin="anonymous"
+              async
+            ></script>
+          </div>
+        </div>
+        <!-- /.entry-content -->
+
+        <div class="4u">
+          <article class="box style2">
+            <div>
+              <img
+                style="border-radius: 50%; width: 80%"
+                src="theme/images/pic00.jpg"
+                alt=""
+              />
+            </div>
+            <h3>About me</h3>
+            <p>
+              I work since more than 20 years as a developer, product manager
+              and AI lead with language technologies. Starting with speech
+              recognition and machine translation I now focus on education in
+              semantic technologies and LLMs.
+            </p>
+            <p>
+              Check out my
+              <a href="https://www.aiworkshops.eu">AI trainings</a>.
+            </p>
+            <p><a href="/#contact">Contact me</a> and book your training.</p>
+          </article>
+        </div>
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </article>
+</section>
+
+ <!-- Contact -->
+<div class="wrapper style4" id="contact">
+  <article class="container 75%">
+    <div class="row">
+      <div class="12u">
+        <h2>Send me a message and I will get back to you.</h2>
+        <ul class="social">
+          <li>
+            <a href="mailto:pbouda@outlook.com" class="icon fa-envelope-o"
+              ><span class="label">Mail</span></a
+            >
+          </li>
+          <li>
+            <a href="tel:+351917403181" class="icon fa-phone"
+              ><span class="label">Phone</span></a
+            >
+          </li>
+        </ul>
+        <div><a href="mailto:pbouda@outlook.com">pbouda@outlook.com</a></div>
+        <div><a href="tel:+351917403181">+351 917403181</a></div>
+        <div>Lisbon, Portugal</div>
+        <br />
+        <ul class="social">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/peter-bouda/"
+              class="icon fa-linkedin"
+              ><span class="label">LinkedIn</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/pbouda" class="icon fa-github"
+              ><span class="label">Github</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/@peterbouda6349"
+              class="icon fa-youtube"
+              ><span class="label">Youtube</span></a
+            >
+          </li>
+          <li>
+            <a href="https://www.peterbouda.eu/feeds/all.rss" class="icon fa-rss"
+              ><span class="label">RSS</span></a
+            >
+          </li>
+        </ul>
+        <hr />
+      </div>
+    </div>
+
+    <footer>
+      <ul id="copyright">
+        <li>&copy; Peter Bouda. All rights reserved.</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </footer>
+  </article>
+</div>  </body>
+</html>

@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Peter Bouda - AI</title><link href="https://www.peterbouda.eu/" rel="alternate"></link><link href="https://www.peterbouda.eu/feeds/ai.atom.xml" rel="self"></link><id>https://www.peterbouda.eu/</id><updated>2025-09-30T10:36:00+01:00</updated><subtitle>Natural Language Processing Consultant</subtitle><entry><title>🔬 Fascinating research from NVIDIA: Small Language Models are the Future of Agentic AI</title><link href="https://www.peterbouda.eu/fascinating-research-from-nvidia-small-language-models-are-the-future-of-agentic-ai.html" rel="alternate"></link><published>2025-09-30T10:36:00+01:00</published><updated>2025-09-30T10:36:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2025-09-30:/fascinating-research-from-nvidia-small-language-models-are-the-future-of-agentic-ai.html</id><summary type="html">&lt;p&gt;While everyone&amp;#8217;s focused on making models bigger, this paper makes a compelling case for going smaller—especially for agentic &lt;span class="caps"&gt;AI&lt;/span&gt;&amp;nbsp;systems.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Peter Bouda - AI</title><link href="https://www.peterbouda.eu/" rel="alternate"></link><link href="https://www.peterbouda.eu/feeds/ai.atom.xml" rel="self"></link><id>https://www.peterbouda.eu/</id><updated>2025-10-15T16:47:00+01:00</updated><subtitle>Natural Language Processing Consultant</subtitle><entry><title>Running AI at home</title><link href="https://www.peterbouda.eu/running-ai-at-home.html" rel="alternate"></link><published>2025-10-15T16:47:00+01:00</published><updated>2025-10-15T16:47:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2025-10-15:/running-ai-at-home.html</id><summary type="html">&lt;p&gt;The first reviews of &lt;span class="caps"&gt;NVIDIA&lt;/span&gt; &lt;span class="caps"&gt;DGX&lt;/span&gt; Spark review are being published, so I want to
+write about the current state of self-hosting&amp;nbsp;LLMs.&lt;/p&gt;
+&lt;p&gt;First, I think it&amp;#8217;s quite amazing that you can run state-of-the-art models on
+your own machines. This sets &lt;span class="caps"&gt;AI&lt;/span&gt; apart from technologies like search engines and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The first reviews of &lt;span class="caps"&gt;NVIDIA&lt;/span&gt; &lt;span class="caps"&gt;DGX&lt;/span&gt; Spark review are being published, so I want to
+write about the current state of self-hosting&amp;nbsp;LLMs.&lt;/p&gt;
+&lt;p&gt;First, I think it&amp;#8217;s quite amazing that you can run state-of-the-art models on
+your own machines. This sets &lt;span class="caps"&gt;AI&lt;/span&gt; apart from technologies like search engines and
+cloud service providing that are hard to replicate &amp;#8220;at home&amp;#8221;. It brings back
+experiences from personal computing after the mainframe era:
+&lt;a href="https://www.computinghistory.org.uk/pages/3971/There-is-no-reason-anyone-would-want-a-computer-in-their-home"&gt;&amp;#8220;There is no reason for any individual to have a computer in their home&amp;#8221;&lt;/a&gt;&amp;nbsp;:)&lt;/p&gt;
+&lt;p&gt;Models that you can run at home nowadays show performance similar to models that
+the big &lt;span class="caps"&gt;AI&lt;/span&gt; companies published 9-12 months ago, so &lt;span class="caps"&gt;GPT&lt;/span&gt;-4 performance is not
+compeletely out of&amp;nbsp;reach.&lt;/p&gt;
+&lt;p&gt;The main problem that home &lt;span class="caps"&gt;AI&lt;/span&gt; enthusiasts currently face is limited, fast
+memory. The LLMs that reach &lt;span class="caps"&gt;GPT&lt;/span&gt;-4 performance require probably more than &lt;span class="caps"&gt;128GB&lt;/span&gt;
+of memory, which might be out-of-scope with limited financial budgets. If you
+want to run &lt;span class="caps"&gt;AI&lt;/span&gt; with reasonable resources you basically have two&amp;nbsp;options:&lt;/p&gt;
+&lt;p&gt;First, you buy a consumer &lt;span class="caps"&gt;GPU&lt;/span&gt; where currently the maximum memory would be &lt;span class="caps"&gt;24GB&lt;/span&gt;.
+But that memory is super-fast, which is what you&amp;nbsp;want.&lt;/p&gt;
+&lt;p&gt;Second, you use the option with unified memory that is shared between &lt;span class="caps"&gt;CPU&lt;/span&gt; and
+&lt;span class="caps"&gt;GPU&lt;/span&gt;, where you can choose among Apple&amp;#8217;s platforms, &lt;span class="caps"&gt;AMD&lt;/span&gt; Ryzen &lt;span class="caps"&gt;AI&lt;/span&gt; Max or now the
+&lt;span class="caps"&gt;NVIDIA&lt;/span&gt; &lt;span class="caps"&gt;DGX&lt;/span&gt; Spark. Unfortunately unified memory is slower then pure &lt;span class="caps"&gt;GPU&lt;/span&gt; memory,
+the fastest you get with Apple&amp;#8217;s M* Max series. But up to &lt;span class="caps"&gt;64GB&lt;/span&gt; memory or even
+&lt;span class="caps"&gt;128GB&lt;/span&gt; are possible&amp;nbsp;then!&lt;/p&gt;
+&lt;p&gt;When you know your memory size you can begin to choose the models. Normally
+models come in a size labelled in billions, like &amp;#8220;30b&amp;#8221;, which means they have
+so-and-so many paramers, e.g. 30 billion parameters. Each parameter in standard
+models has 2 bytes, so a &amp;#8220;30b&amp;#8221; model is roughly 60 gigabytes. With unified
+memory you need some memory to run applications besides the models, so a
+standard 30b model will barely fit into &lt;span class="caps"&gt;64GB&lt;/span&gt; unified memory, and definitely not
+on any consumer &lt;span class="caps"&gt;GPU&lt;/span&gt;. People started to &amp;#8220;quantize&amp;#8221; models, so that each parameter
+has only 1 byte or even half a byte, and voilà, 30b models fit into &lt;span class="caps"&gt;24GB&lt;/span&gt; &lt;span class="caps"&gt;GPU&lt;/span&gt;
+memory (maybe try &lt;a href="https://ollama.com/library/qwen3:30b-a3b-instruct-2507-q4_K_M"&gt;Qwen3 30b&lt;/a&gt;,
+my standard model now for local inference) and a 106b model into your &lt;span class="caps"&gt;64GB&lt;/span&gt;
+Macbook Pro (possibly
+&lt;a href="https://simonwillison.net/2025/Jul/29/space-invaders/"&gt;&lt;span class="caps"&gt;GLM&lt;/span&gt;-4.5 Air&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;To run models you can start with &lt;a href="https://ollama.com/"&gt;Ollama&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Hope that helps to start your first local chat :) and let me know about any
+doubts or questions about running your local &lt;span class="caps"&gt;AI&lt;/span&gt;!&lt;/p&gt;</content><category term="AI"></category><category term="AI"></category></entry><entry><title>🔬 Fascinating research from NVIDIA: Small Language Models are the Future of Agentic AI</title><link href="https://www.peterbouda.eu/fascinating-research-from-nvidia-small-language-models-are-the-future-of-agentic-ai.html" rel="alternate"></link><published>2025-09-30T10:36:00+01:00</published><updated>2025-09-30T10:36:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2025-09-30:/fascinating-research-from-nvidia-small-language-models-are-the-future-of-agentic-ai.html</id><summary type="html">&lt;p&gt;While everyone&amp;#8217;s focused on making models bigger, this paper makes a compelling case for going smaller—especially for agentic &lt;span class="caps"&gt;AI&lt;/span&gt;&amp;nbsp;systems.&lt;/p&gt;
 &lt;p&gt;The core insight: Most &lt;span class="caps"&gt;AI&lt;/span&gt; agents don&amp;#8217;t need vast general knowledge. They perform specialized, repetitive tasks where fine-tuned small language models (SLMs) are not just sufficient—they …&lt;/p&gt;</summary><content type="html">&lt;p&gt;While everyone&amp;#8217;s focused on making models bigger, this paper makes a compelling case for going smaller—especially for agentic &lt;span class="caps"&gt;AI&lt;/span&gt;&amp;nbsp;systems.&lt;/p&gt;
 &lt;p&gt;The core insight: Most &lt;span class="caps"&gt;AI&lt;/span&gt; agents don&amp;#8217;t need vast general knowledge. They perform specialized, repetitive tasks where fine-tuned small language models (SLMs) are not just sufficient—they&amp;#8217;re&amp;nbsp;superior.&lt;/p&gt;
 &lt;p&gt;Why this matters for&amp;nbsp;Europe:&lt;/p&gt;
