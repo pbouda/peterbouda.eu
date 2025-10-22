@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Peter Bouda</title><link href="https://www.peterbouda.eu/" rel="alternate"></link><link href="https://www.peterbouda.eu/feeds/all.atom.xml" rel="self"></link><id>https://www.peterbouda.eu/</id><updated>2025-10-15T16:47:00+01:00</updated><subtitle>Natural Language Processing Consultant</subtitle><entry><title>Running AI at home</title><link href="https://www.peterbouda.eu/running-ai-at-home.html" rel="alternate"></link><published>2025-10-15T16:47:00+01:00</published><updated>2025-10-15T16:47:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2025-10-15:/running-ai-at-home.html</id><summary type="html">&lt;p&gt;The first reviews of &lt;span class="caps"&gt;NVIDIA&lt;/span&gt; &lt;span class="caps"&gt;DGX&lt;/span&gt; Spark review are being published, so I want to
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Peter Bouda</title><link href="https://www.peterbouda.eu/" rel="alternate"></link><link href="https://www.peterbouda.eu/feeds/all.atom.xml" rel="self"></link><id>https://www.peterbouda.eu/</id><updated>2025-10-22T08:45:00+01:00</updated><subtitle>Natural Language Processing Consultant</subtitle><entry><title>Nodehaus AI Platform</title><link href="https://www.peterbouda.eu/nodehaus-ai-platform.html" rel="alternate"></link><published>2025-10-22T08:45:00+01:00</published><updated>2025-10-22T08:45:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2025-10-22:/nodehaus-ai-platform.html</id><summary type="html">&lt;h2&gt;Own Your &lt;span class="caps"&gt;AI&lt;/span&gt;. Train and Deploy your Finetuned&amp;nbsp;Models.&lt;/h2&gt;
+&lt;p&gt;We at Nodehaus build a platform to create synthetic training data for &lt;span class="caps"&gt;LLM&lt;/span&gt;
+training and curation of additional training data while the model is used. The
+code is open source, available&amp;nbsp;at:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://nodehaus.github.io/"&gt;https://nodehaus.github.io/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;AI&lt;/span&gt; models used in agents …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Own Your &lt;span class="caps"&gt;AI&lt;/span&gt;. Train and Deploy your Finetuned&amp;nbsp;Models.&lt;/h2&gt;
+&lt;p&gt;We at Nodehaus build a platform to create synthetic training data for &lt;span class="caps"&gt;LLM&lt;/span&gt;
+training and curation of additional training data while the model is used. The
+code is open source, available&amp;nbsp;at:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://nodehaus.github.io/"&gt;https://nodehaus.github.io/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;AI&lt;/span&gt; models used in agents mostly perform repetitive tasks that small models can
+perform a lot more economically than larger models. This approach is
+&lt;a href="https://research.nvidia.com/labs/lpr/slm-agents/"&gt;faster, saves money and reduces ecological impact&lt;/a&gt;.&lt;/p&gt;</content><category term="Videos"></category><category term="AI"></category><category term="LLM"></category></entry><entry><title>Running AI at home</title><link href="https://www.peterbouda.eu/running-ai-at-home.html" rel="alternate"></link><published>2025-10-15T16:47:00+01:00</published><updated>2025-10-15T16:47:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2025-10-15:/running-ai-at-home.html</id><summary type="html">&lt;p&gt;The first reviews of &lt;span class="caps"&gt;NVIDIA&lt;/span&gt; &lt;span class="caps"&gt;DGX&lt;/span&gt; Spark review are being published, so I want to
 write about the current state of self-hosting&amp;nbsp;LLMs.&lt;/p&gt;
 &lt;p&gt;First, I think it&amp;#8217;s quite amazing that you can run state-of-the-art models on
 your own machines. This sets &lt;span class="caps"&gt;AI&lt;/span&gt; apart from technologies like search engines and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The first reviews of &lt;span class="caps"&gt;NVIDIA&lt;/span&gt; &lt;span class="caps"&gt;DGX&lt;/span&gt; Spark review are being published, so I want to
@@ -2855,27 +2867,4 @@ Symbian-Anwendungen. Außerdem nimmt der Ovi Store ab sofort
 Qt-Anwendungen entgegen, und zwar für das N900, das N97 mini und das X6.
 Per &amp;#8220;Smart Installer&amp;#8221; werden dabei je nach Bedarf noch die
 Qt-Bibliotheken auf das Gerät installiert. Weitere Geräte sollen bald&amp;nbsp;folgen.&lt;/p&gt;
-</content><category term="Museum"></category></entry><entry><title>MicroB machts in 3D</title><link href="https://www.peterbouda.eu/microb-machts-in-3d.html" rel="alternate"></link><published>2010-06-20T09:17:00+01:00</published><updated>2010-06-20T09:17:00+01:00</updated><author><name>Peter Bouda</name></author><id>tag:www.peterbouda.eu,2010-06-20:/microb-machts-in-3d.html</id><summary type="html">&lt;p&gt;Ich muss sagen, dass mich Nokia nach langer Zeit mal wieder beeindruckt
-hat, und dass ausgerechnet auf der technischen Seite. Bisher dachte ich,
-dass die neue Firmware für das N900 vor allem kleine Verbesserungen,
-Bugfixes und natürlich Qt 4.6 bringt. Aber weit gefehlt: ich wollte mich
-mal ein bisschen …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ich muss sagen, dass mich Nokia nach langer Zeit mal wieder beeindruckt
-hat, und dass ausgerechnet auf der technischen Seite. Bisher dachte ich,
-dass die neue Firmware für das N900 vor allem kleine Verbesserungen,
-Bugfixes und natürlich Qt 4.6 bringt. Aber weit gefehlt: ich wollte mich
-mal ein bisschen mit &lt;a class="reference external" href="http://en.wikipedia.org/wiki/WebGL"&gt;WebGL&lt;/a&gt; auseinandersetzen, und der einzige
-Browser, der das von Hause aus unterstützt ist tatsächlich: MicroB auf
-dem N900, der Standardbrowser des Geräts. &lt;a class="reference external" href="http://learningwebgl.com/blog/?p=2303"&gt;Gil Thomas&lt;/a&gt; hat eine Reihe
-von Demos gelistet, die ihr euch auf dem N900 anschauen könnt. Auf der
-Seite wird auch erwähnt (und das war die nächste Überraschung), dass
-MicroB das MozOrientation-Event untersützt, für den
-Beschleunigungssensor. Ich konnte es nicht lassen, und habe &lt;a class="reference external" href="http://learningwebgl.com/webgl-cube/index-n900-hack.html"&gt;eines der
-Demos&lt;/a&gt; von Gil abgewandelt, um die WebGL-Szene per Sensor zu steuern.
-Ein Video habe ich für euch davon gemacht, damit ihr auch beeindruckt
-sein&amp;nbsp;könnt:&lt;/p&gt;
-&lt;iframe width="420" height="315" src="http://www.youtube.com/embed/CYwGY_A3Ck4" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;p&gt;Und wer das Ganze live samt Code sehen&amp;nbsp;will:&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://www.peterbouda.de/webgl"&gt;http://www.peterbouda.de/webgl&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Mittlerweile würde ich es sogar unterschreiben, dass MicroB der
-beste mobile Browser ist. Nicht der Schnellste, aber dank Flash und
-WebGL definitiv der technisch&amp;nbsp;Fortgeschrittenste.&lt;/p&gt;
 </content><category term="Museum"></category></entry></feed>
