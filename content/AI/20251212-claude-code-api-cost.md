@@ -1,5 +1,5 @@
 Title: Claude Code API cost
-Date: 2025-12-112 09:55
+Date: 2025-12-12 09:55
 Tags: AI
 
 Today I was curious about the API costs for Claude Code, so I tried to implement a new feature in the Nodehaus AI Platform. Normally I use the monthly Pro plan, but I didn't want to buy it this month as I don't know how much I will use it and then there is (mainly AI-free) Christmas :)
