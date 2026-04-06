@@ -8,6 +8,6 @@ Example prompt: _"Add an endpoint to create a new project. You can find informat
 
 Claude Code respects the architecture patterns, follows the established conventions, and produces clean, testable code. Less context-switching between IDE and chat interface.
 
-The full CLAUDE.md template is here if you want to try this approach: [github.com/pbouda/claude-code-prompts/blob/main/CLAUDE_go_api_architecture.md](github.com/pbouda/claude-code-prompts/blob/main/CLAUDE_go_api_architecture.md)
+The full CLAUDE.md template is here if you want to try this approach: [https://github.com/pbouda/claude-code-prompts/blob/main/CLAUDE_go_api_architecture.md](https://github.com/pbouda/claude-code-prompts/blob/main/CLAUDE_go_api_architecture.md)
 
 This is what good developer tooling looks like - it understands your codebase and amplifies your architecture decisions rather than fighting them. For me it brought back a lot of joy in developing new software!
